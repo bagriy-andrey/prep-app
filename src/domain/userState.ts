@@ -1,5 +1,7 @@
 // Состояние пользователя (разд. 4 спеки) и чистые функции его изменения.
 
+import { dayOfWeek } from "./dates";
+
 export type Outcome = "clean" | "hint" | "failed";
 export type SessionStatus = "done" | "light" | "moved";
 
@@ -148,6 +150,48 @@ export function markUnmarked(
   const sessions = { ...state.sessions };
   for (const id of todo) sessions[id] = { status, date };
   return { ...state, sessions };
+}
+
+export type JournalKey = "mocks" | "stories" | "applications";
+export interface JournalEntries {
+  mocks: MockEntry;
+  stories: StoryEntry;
+  applications: ApplicationEntry;
+}
+export type JournalEntry = JournalEntries[JournalKey];
+
+function withJournal(state: UserState, key: JournalKey, list: JournalEntry[]): UserState {
+  return { ...state, [key]: list };
+}
+
+export function addEntry(state: UserState, key: JournalKey, entry: JournalEntry): UserState {
+  return withJournal(state, key, [...state[key], entry]);
+}
+
+/** Меняет поля записи. Поля со значением undefined удаляются. */
+export function updateEntry(state: UserState, key: JournalKey, index: number, patch: Partial<JournalEntry>): UserState {
+  const list = state[key];
+  if (index < 0 || index >= list.length) return state;
+  const next: Record<string, unknown> = { ...list[index], ...patch };
+  for (const field of Object.keys(next)) if (next[field] === undefined) delete next[field];
+  return withJournal(state, key, list.map((e, i) => (i === index ? (next as unknown as JournalEntry) : e)));
+}
+
+export function removeEntry(state: UserState, key: JournalKey, index: number): UserState {
+  if (index < 0 || index >= state[key].length) return state;
+  return withJournal(state, key, state[key].filter((_, i) => i !== index));
+}
+
+/** Переопределяет дату старта; null возвращает дату из плана. Дата должна быть понедельником. */
+export function setStartDate(state: UserState, date: string | null): UserState {
+  const next = { ...state };
+  if (date === null) {
+    delete next.startDate;
+    return next;
+  }
+  if (!isDate(date) || dayOfWeek(date) !== 1) throw new StateParseError("Дата старта должна быть понедельником");
+  next.startDate = date;
+  return next;
 }
 
 // ---------- чтение сохранённых данных ----------

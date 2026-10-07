@@ -1,16 +1,18 @@
 import { Link } from "react-router";
 import Countdown from "../components/Countdown";
 import DayCard from "../components/DayCard";
+import LoadWarning from "../components/LoadWarning";
 import PhaseBadge from "../components/PhaseBadge";
 import DayNote from "../components/DayNote";
 import PrizeBadge from "../components/PrizeBadge";
+import StreakStats from "../components/StreakStats";
 import ReviewQueue from "../components/ReviewQueue";
 import WeekProgressBar from "../components/WeekProgressBar";
 import { plan } from "../data/plan";
 import type { Day } from "../data/types";
 import { prizeInfo } from "../domain/prizes";
 import { weekProgress } from "../domain/progress";
-import { resolveToday } from "../domain/schedule";
+import { maintenanceSessionId, resolveToday } from "../domain/schedule";
 import { useToday } from "../hooks/useToday";
 import { dayName, formatDateRu, plural } from "../lib/format";
 import { useUserState } from "../state/UserStateProvider";
@@ -30,13 +32,13 @@ export default function TodayPage() {
   }
 
   if (pos.kind === "after") {
-    // У сессий недели 17+ нет id: ключ отметки строится из даты и номера (m-<дата>-s<номер>).
+    // У сессий недели 17+ нет id: ключ отметки строится из даты и номера.
     const maintenanceDay: Day | null = pos.day
       ? {
           dow: pos.dow,
           offset: 0,
           lightAlternative: null,
-          sessions: pos.day.sessions.map((s, i) => ({ ...s, id: `m-${today}-s${i + 1}` })),
+          sessions: pos.day.sessions.map((s, i) => ({ ...s, id: maintenanceSessionId(today, i) })),
         }
       : null;
     return (
@@ -45,6 +47,7 @@ export default function TodayPage() {
           {dayName(pos.dow)}, {formatDateRu(today)}
         </h1>
         <p className="mb-4 text-sm text-slate-600 dark:text-slate-400">{plan.maintenanceWeek.title}</p>
+        <LoadWarning today={today} />
         {maintenanceDay ? (
           <DayCard day={maintenanceDay} date={today} isToday isSelected={false} />
         ) : (
@@ -76,6 +79,8 @@ export default function TodayPage() {
         <p className="text-sm text-slate-600 dark:text-slate-400">Веб-основы: {week.webTopic}</p>
       </div>
 
+      <LoadWarning today={today} />
+
       <DayCard day={day} date={today} isToday isSelected={false} />
 
       <ReviewQueue today={today} />
@@ -87,6 +92,7 @@ export default function TodayPage() {
         className="mt-4 space-y-3 rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900"
       >
         <WeekProgressBar progress={progress} label="Сессии недели" />
+        <StreakStats today={today} />
         <div className="space-y-1">
           <PrizeBadge prize={week.prize} />
           <p className="text-sm text-slate-600 dark:text-slate-400">

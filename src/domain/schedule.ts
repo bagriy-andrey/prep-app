@@ -60,3 +60,8 @@ export function locateDate(
   if (week > plan.meta.weeksCount) return null;
   return { week, offset: sinceStart % 7 };
 }
+
+/** Ключ отметки для сессии недели 17+, у которой нет id: m-<дата>-s<номер с единицы>. */
+export function maintenanceSessionId(date: string, index: number): string {
+  return `m-${date}-s${index + 1}`;
+}

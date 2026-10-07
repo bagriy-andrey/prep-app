@@ -4,8 +4,11 @@ import { useUserState } from "../state/UserStateProvider";
 const links = [
   { to: "/", label: "Сегодня", end: true },
   { to: "/plan", label: "План", end: false },
+  { to: "/calendar", label: "Календарь", end: false },
   { to: "/tracker", label: "Трекер", end: false },
   { to: "/prizes", label: "Призы", end: false },
+  { to: "/journals", label: "Журналы", end: false },
+  { to: "/settings", label: "Настройки", end: false },
 ];
 
 export default function AppShell() {
@@ -34,10 +37,10 @@ export default function AppShell() {
 
       <nav
         aria-label="Основная навигация"
-        className="fixed inset-x-0 bottom-0 z-10 flex border-t border-slate-200 bg-slate-50/95 pb-[env(safe-area-inset-bottom)] backdrop-blur sm:hidden dark:border-slate-800 dark:bg-slate-950/95"
+        className="fixed inset-x-0 bottom-0 z-10 flex overflow-x-auto border-t border-slate-200 bg-slate-50/95 pb-[env(safe-area-inset-bottom)] backdrop-blur sm:hidden dark:border-slate-800 dark:bg-slate-950/95"
       >
         {links.map((l) => (
-          <NavLink key={l.to} to={l.to} end={l.end} className={(s) => `${navClass(s)} flex-1 justify-center py-3`}>
+          <NavLink key={l.to} to={l.to} end={l.end} className={(s) => `${navClass(s)} flex-1 shrink-0 justify-center py-3`}>
             {l.label}
           </NavLink>
         ))}

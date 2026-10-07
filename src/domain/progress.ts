@@ -13,7 +13,7 @@ export function isManualSession(session: Pick<Session, "itemId">): boolean {
   return !session.itemId;
 }
 
-export function isSessionDone(session: Session, state: UserState): boolean {
+export function isSessionDone(session: Pick<Session, "id" | "itemId">, state: UserState): boolean {
   if (session.itemId) return (state.items[session.itemId]?.attempts.length ?? 0) > 0;
   const status = state.sessions[session.id]?.status;
   return status === "done" || status === "light";

@@ -1,11 +1,15 @@
 import { describe, expect, it } from "vitest";
 import {
   addAttempt,
+  addEntry,
   createInitialState,
   parseUserState,
+  removeEntry,
   removeLastAttempt,
   setItemTitle,
+  setStartDate,
   StateParseError,
+  updateEntry,
 } from "./userState";
 
 describe("изменения состояния", () => {
@@ -52,5 +56,48 @@ describe("parseUserState", () => {
       { ...createInitialState(), mocks: {} },
     ];
     for (const value of bad) expect(() => parseUserState(value)).toThrow(StateParseError);
+  });
+});
+
+describe("журналы", () => {
+  it("добавляет, меняет и удаляет записи", () => {
+    let s = addEntry(createInitialState(), "stories", { topic: "Конфликт", ready: false });
+    s = addEntry(s, "stories", { topic: "Провал", ready: false });
+    s = updateEntry(s, "stories", 0, { ready: true, result: "+20%" });
+    expect(s.stories[0]).toEqual({ topic: "Конфликт", ready: true, result: "+20%" });
+    expect(s.stories[1].ready).toBe(false);
+    s = removeEntry(s, "stories", 0);
+    expect(s.stories).toEqual([{ topic: "Провал", ready: false }]);
+  });
+
+  it("поле со значением undefined удаляется из записи", () => {
+    let s = addEntry(createInitialState(), "mocks", { week: 4, type: "Алгоритмы", date: "2026-11-01" });
+    s = updateEntry(s, "mocks", 0, { date: undefined });
+    expect(s.mocks[0]).toEqual({ week: 4, type: "Алгоритмы" });
+  });
+
+  it("неверный индекс состояние не меняет", () => {
+    const s = createInitialState();
+    expect(updateEntry(s, "mocks", 3, { type: "x" })).toBe(s);
+    expect(removeEntry(s, "mocks", 0)).toBe(s);
+  });
+
+  it("не мутирует исходное состояние", () => {
+    const s0 = createInitialState();
+    addEntry(s0, "applications", { company: "X", status: "Подана" });
+    expect(s0.applications).toEqual([]);
+  });
+});
+
+describe("setStartDate", () => {
+  it("принимает понедельник и очищается значением null", () => {
+    const s = setStartDate(createInitialState(), "2026-11-02");
+    expect(s.startDate).toBe("2026-11-02");
+    expect(setStartDate(s, null).startDate).toBeUndefined();
+  });
+
+  it("отклоняет не понедельник и неверный формат", () => {
+    expect(() => setStartDate(createInitialState(), "2026-11-03")).toThrow(StateParseError);
+    expect(() => setStartDate(createInitialState(), "завтра")).toThrow(StateParseError);
   });
 });

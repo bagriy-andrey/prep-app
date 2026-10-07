@@ -3,16 +3,24 @@ import type { ReactNode } from "react";
 import { plan } from "../data/plan";
 import { todayString } from "../domain/dates";
 import { claimPrize } from "../domain/prizes";
+import { createSeededState } from "../domain/seed";
 import {
   addAttempt,
+  addEntry,
   createInitialState,
   markUnmarked,
+  removeEntry,
   removeLastAttempt,
   setDayNote,
   setItemText,
   setItemTitle,
   setSessionStatus,
+  setStartDate,
+  updateEntry,
   type ItemTextField,
+  type JournalEntries,
+  type JournalEntry,
+  type JournalKey,
   type Outcome,
   type SessionStatus,
   type UserState,
@@ -30,7 +38,11 @@ type Action =
   | { type: "setDayNote"; date: string; text: string }
   | { type: "setSession"; id: string; status: SessionStatus | null; date: string }
   | { type: "markUnmarked"; ids: string[]; status: SessionStatus; date: string }
-  | { type: "claimPrize"; week: number; date: string };
+  | { type: "claimPrize"; week: number; date: string }
+  | { type: "setStartDate"; date: string | null }
+  | { type: "addEntry"; key: JournalKey; entry: JournalEntry }
+  | { type: "updateEntry"; key: JournalKey; index: number; patch: Partial<JournalEntry> }
+  | { type: "removeEntry"; key: JournalKey; index: number };
 
 function reducer(state: UserState, action: Action): UserState {
   switch (action.type) {
@@ -52,6 +64,18 @@ function reducer(state: UserState, action: Action): UserState {
       return markUnmarked(state, action.ids, action.status, action.date);
     case "claimPrize":
       return claimPrize(plan, state, action.week, action.date);
+    case "setStartDate":
+      try {
+        return setStartDate(state, action.date);
+      } catch {
+        return state; // не понедельник: интерфейс проверяет дату заранее
+      }
+    case "addEntry":
+      return addEntry(state, action.key, action.entry);
+    case "updateEntry":
+      return updateEntry(state, action.key, action.index, action.patch);
+    case "removeEntry":
+      return removeEntry(state, action.key, action.index);
   }
 }
 
@@ -65,6 +89,17 @@ export interface UserStateActions {
   setSession(id: string, status: SessionStatus | null): void;
   markUnmarked(ids: string[], status: SessionStatus): void;
   claimPrize(week: number): void;
+  /** Дата старта (понедельник); null возвращает дату из плана. */
+  setStartDate(date: string | null): void;
+  addEntry<K extends JournalKey>(key: K, entry: JournalEntries[K]): void;
+  updateEntry<K extends JournalKey>(key: K, index: number, patch: Partial<JournalEntries[K]>): void;
+  removeEntry(key: JournalKey, index: number): void;
+  /** JSON-текст текущего состояния для файла резервной копии. */
+  exportJson(): Promise<string>;
+  /** Заменяет состояние данными из JSON. Бросает ошибку, если данные неверны. */
+  importJson(json: string): Promise<void>;
+  /** Полный сброс: прогресс очищается, журналы заполняются заготовками плана. */
+  reset(): void;
 }
 
 interface Ctx {
@@ -98,6 +133,8 @@ export default function UserStateProvider({
   const [saveError, setSaveError] = useState<string | null>(null);
   // Последнее состояние, которое уже лежит в хранилище: его повторно не пишем.
   const persisted = useRef<UserState | null>(null);
+  const latest = useRef(state);
+  latest.current = state;
 
   const applyLoad = useCallback((result: LoadResult) => {
     if (result.kind === "corrupt") {
@@ -107,6 +144,9 @@ export default function UserStateProvider({
     if (result.kind === "ok") {
       persisted.current = result.state;
       dispatch({ type: "replace", state: result.state });
+    } else {
+      // Первый запуск: журналы заполняются заготовками плана.
+      dispatch({ type: "replace", state: createSeededState(plan) });
     }
     setPhase({ kind: "ready" });
   }, []);
@@ -141,8 +181,28 @@ export default function UserStateProvider({
       setSession: (id, status) => dispatch({ type: "setSession", id, status, date: todayString() }),
       markUnmarked: (ids, status) => dispatch({ type: "markUnmarked", ids, status, date: todayString() }),
       claimPrize: (week) => dispatch({ type: "claimPrize", week, date: todayString() }),
+      setStartDate: (date) => dispatch({ type: "setStartDate", date }),
+      addEntry: (key, entry) => dispatch({ type: "addEntry", key, entry }),
+      updateEntry: (key, index, patch) => dispatch({ type: "updateEntry", key, index, patch }),
+      removeEntry: (key, index) => dispatch({ type: "removeEntry", key, index }),
+      exportJson: async () => {
+        const current = latest.current;
+        try {
+          await adapter.save(current); // чтобы в файл попало всё, что на экране
+          persisted.current = current;
+          return await adapter.export();
+        } catch {
+          return JSON.stringify(current, null, 2); // хранилище недоступно: отдаём состояние из памяти
+        }
+      },
+      importJson: async (json) => {
+        const imported = await adapter.import(json);
+        persisted.current = imported;
+        dispatch({ type: "replace", state: imported });
+      },
+      reset: () => dispatch({ type: "replace", state: createSeededState(plan) }),
     }),
-    [],
+    [adapter],
   );
 
   if (phase.kind === "loading") return null;
@@ -160,7 +220,7 @@ export default function UserStateProvider({
         }}
         onStartFresh={() => {
           persisted.current = null;
-          dispatch({ type: "replace", state: createInitialState() });
+          dispatch({ type: "replace", state: createSeededState(plan) });
           setPhase({ kind: "ready" });
         }}
       />
