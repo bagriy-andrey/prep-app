@@ -8,8 +8,11 @@ import {
   createInitialState,
   markUnmarked,
   removeLastAttempt,
+  setDayNote,
+  setItemText,
   setItemTitle,
   setSessionStatus,
+  type ItemTextField,
   type Outcome,
   type SessionStatus,
   type UserState,
@@ -23,6 +26,8 @@ type Action =
   | { type: "addAttempt"; itemId: string; outcome: Outcome; date: string }
   | { type: "removeLastAttempt"; itemId: string }
   | { type: "setItemTitle"; itemId: string; title: string }
+  | { type: "setItemText"; itemId: string; field: ItemTextField; text: string }
+  | { type: "setDayNote"; date: string; text: string }
   | { type: "setSession"; id: string; status: SessionStatus | null; date: string }
   | { type: "markUnmarked"; ids: string[]; status: SessionStatus; date: string }
   | { type: "claimPrize"; week: number; date: string };
@@ -37,6 +42,10 @@ function reducer(state: UserState, action: Action): UserState {
       return removeLastAttempt(state, action.itemId);
     case "setItemTitle":
       return setItemTitle(state, action.itemId, action.title);
+    case "setItemText":
+      return setItemText(state, action.itemId, action.field, action.text);
+    case "setDayNote":
+      return setDayNote(state, action.date, action.text);
     case "setSession":
       return setSessionStatus(state, action.id, action.status, action.date);
     case "markUnmarked":
@@ -50,6 +59,8 @@ export interface UserStateActions {
   addAttempt(itemId: string, outcome: Outcome): void;
   removeLastAttempt(itemId: string): void;
   setItemTitle(itemId: string, title: string): void;
+  setItemText(itemId: string, field: ItemTextField, text: string): void;
+  setDayNote(date: string, text: string): void;
   /** status = null снимает отметку. */
   setSession(id: string, status: SessionStatus | null): void;
   markUnmarked(ids: string[], status: SessionStatus): void;
@@ -125,6 +136,8 @@ export default function UserStateProvider({
       addAttempt: (itemId, outcome) => dispatch({ type: "addAttempt", itemId, outcome, date: todayString() }),
       removeLastAttempt: (itemId) => dispatch({ type: "removeLastAttempt", itemId }),
       setItemTitle: (itemId, title) => dispatch({ type: "setItemTitle", itemId, title }),
+      setItemText: (itemId, field, text) => dispatch({ type: "setItemText", itemId, field, text }),
+      setDayNote: (date, text) => dispatch({ type: "setDayNote", date, text }),
       setSession: (id, status) => dispatch({ type: "setSession", id, status, date: todayString() }),
       markUnmarked: (ids, status) => dispatch({ type: "markUnmarked", ids, status, date: todayString() }),
       claimPrize: (week) => dispatch({ type: "claimPrize", week, date: todayString() }),

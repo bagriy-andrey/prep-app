@@ -104,6 +104,25 @@ export function setItemTitle(state: UserState, itemId: string, title: string): U
   return { ...state, items: { ...state.items, [itemId]: next } };
 }
 
+export type ItemTextField = "keyIdea" | "note";
+
+/** Ключевая идея и заметка к задаче. Пустой текст удаляет поле. Текст хранится как введён, без обрезки. */
+export function setItemText(state: UserState, itemId: string, field: ItemTextField, text: string): UserState {
+  const item = state.items[itemId] ?? { attempts: [] };
+  const next = { ...item };
+  if (text) next[field] = text;
+  else delete next[field];
+  return { ...state, items: { ...state.items, [itemId]: next } };
+}
+
+/** Заметка дня по дате YYYY-MM-DD. Пустой текст удаляет заметку. */
+export function setDayNote(state: UserState, date: string, text: string): UserState {
+  const dayNotes = { ...state.dayNotes };
+  if (text) dayNotes[date] = text;
+  else delete dayNotes[date];
+  return { ...state, dayNotes };
+}
+
 /** status = null снимает отметку. */
 export function setSessionStatus(
   state: UserState,

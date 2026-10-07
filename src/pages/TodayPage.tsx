@@ -2,7 +2,9 @@ import { Link } from "react-router";
 import Countdown from "../components/Countdown";
 import DayCard from "../components/DayCard";
 import PhaseBadge from "../components/PhaseBadge";
+import DayNote from "../components/DayNote";
 import PrizeBadge from "../components/PrizeBadge";
+import ReviewQueue from "../components/ReviewQueue";
 import WeekProgressBar from "../components/WeekProgressBar";
 import { plan } from "../data/plan";
 import type { Day } from "../data/types";
@@ -50,6 +52,8 @@ export default function TodayPage() {
             Сегодня по плану отдых.
           </p>
         )}
+        <ReviewQueue today={today} />
+        <DayNote date={today} />
       </>
     );
   }
@@ -73,6 +77,10 @@ export default function TodayPage() {
       </div>
 
       <DayCard day={day} date={today} isToday isSelected={false} />
+
+      <ReviewQueue today={today} />
+
+      <DayNote date={today} />
 
       <section
         aria-label="Прогресс недели"

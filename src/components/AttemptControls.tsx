@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { itemsById } from "../data/plan";
-import { OUTCOME_LABEL, type Outcome } from "../domain/userState";
+import { OUTCOME_LABEL } from "../domain/userState";
+import OutcomeButtons from "./OutcomeButtons";
 import { formatDateRu } from "../lib/format";
 import { useUserState } from "../state/UserStateProvider";
-import { chipButton, chipIdle, subtleButton } from "./ui";
-
-const OUTCOMES: Outcome[] = ["clean", "hint", "failed"];
+import { subtleButton } from "./ui";
 
 /** Попытки по задаче: сессия с задачей считается сделанной после первой попытки. */
 export default function AttemptControls({ itemId }: { itemId: string }) {
@@ -22,18 +21,9 @@ export default function AttemptControls({ itemId }: { itemId: string }) {
     <div className="mt-2 space-y-2">
       {item.userNamed && <TitleInput itemId={itemId} hint={item.hint} />}
 
-      <div role="group" aria-label={`Добавить попытку: ${label}`} className="flex flex-wrap items-center gap-2">
+      <div className="flex flex-wrap items-center gap-2">
         <span className="text-sm text-slate-600 dark:text-slate-400">Попытка:</span>
-        {OUTCOMES.map((o) => (
-          <button
-            key={o}
-            type="button"
-            onClick={() => actions.addAttempt(itemId, o)}
-            className={`${chipButton} ${chipIdle}`}
-          >
-            {OUTCOME_LABEL[o]}
-          </button>
-        ))}
+        <OutcomeButtons label={`Добавить попытку: ${label}`} onPick={(o) => actions.addAttempt(itemId, o)} />
       </div>
 
       {last && (

@@ -4,6 +4,7 @@ import { useUserState } from "../state/UserStateProvider";
 const links = [
   { to: "/", label: "Сегодня", end: true },
   { to: "/plan", label: "План", end: false },
+  { to: "/tracker", label: "Трекер", end: false },
   { to: "/prizes", label: "Призы", end: false },
 ];
 
