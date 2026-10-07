@@ -6,6 +6,7 @@ import { isMonday, todayString } from "../domain/dates";
 import { buildIcs } from "../domain/ics";
 import { downloadFile } from "../lib/download";
 import { formatDateRu } from "../lib/format";
+import { getSyncToken, setSyncToken } from "../storage/remoteAdapter";
 import { useUserState } from "../state/UserStateProvider";
 
 const card = "rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900";
@@ -18,6 +19,7 @@ export default function SettingsPage() {
         <Resources />
         <StartDate />
         <Schedule />
+        <Sync />
         <Data />
       </div>
     </>
@@ -143,6 +145,59 @@ function Schedule() {
   );
 }
 
+function Sync() {
+  const active = getSyncToken() !== null;
+  const [token, setToken] = useState("");
+
+  function apply(value: string | null) {
+    setSyncToken(value);
+    window.location.reload(); // хранилище выбирается при запуске
+  }
+
+  return (
+    <section aria-labelledby="sync" className={card}>
+      <h2 id="sync" className="font-semibold">
+        Синхронизация
+      </h2>
+      <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
+        {active
+          ? "Включена: прогресс сохраняется на сервере и одинаков на всех устройствах."
+          : "Выключена: данные только в этом браузере. Введите токен (SYNC_TOKEN из настроек Vercel), чтобы хранить их на сервере."}
+      </p>
+      {active ? (
+        <button type="button" onClick={() => apply(null)} className={`${subtleButton} mt-3`}>
+          Отключить на этом устройстве
+        </button>
+      ) : (
+        <form
+          className="mt-3 flex flex-wrap items-end gap-3"
+          onSubmit={(e) => {
+            e.preventDefault();
+            if (token.trim()) apply(token.trim());
+          }}
+        >
+          <div>
+            <label htmlFor="sync-token" className="block text-sm font-medium">
+              Токен
+            </label>
+            <input
+              id="sync-token"
+              type="password"
+              autoComplete="off"
+              value={token}
+              onChange={(e) => setToken(e.target.value)}
+              className="mt-1 rounded-md border border-slate-300 bg-white px-2 py-1.5 text-sm dark:border-slate-700 dark:bg-slate-900"
+            />
+          </div>
+          <button type="submit" className={primaryButton}>
+            Включить
+          </button>
+        </form>
+      )}
+    </section>
+  );
+}
+
 function Data() {
   const { actions } = useUserState();
   const [message, setMessage] = useState<{ kind: "ok" | "error"; text: string } | null>(null);
@@ -179,7 +234,7 @@ function Data() {
         Данные
       </h2>
       <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
-        Всё хранится только в этом браузере. Делайте резервную копию, особенно перед очисткой данных сайта.
+        Копия лежит в этом браузере, а если включена синхронизация, то и на сервере. Резервный файл не помешает в любом случае.
       </p>
       <div className="mt-3 flex flex-wrap items-start gap-3">
         <button type="button" onClick={() => void exportData()} className={primaryButton}>

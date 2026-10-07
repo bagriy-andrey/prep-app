@@ -36,6 +36,7 @@ import {
   type UserState,
 } from "../domain/userState";
 import { LocalStorageAdapter } from "../storage/localStorageAdapter";
+import { getSyncToken, RemoteStorageAdapter } from "../storage/remoteAdapter";
 import type { LoadResult, StorageAdapter } from "../storage/types";
 import CorruptStateScreen from "./CorruptStateScreen";
 
@@ -173,7 +174,11 @@ export default function UserStateProvider({
   children: ReactNode;
   adapter?: StorageAdapter;
 }) {
-  const adapter = useMemo(() => adapterProp ?? new LocalStorageAdapter(), [adapterProp]);
+  const adapter = useMemo(() => {
+    if (adapterProp) return adapterProp;
+    const token = getSyncToken();
+    return token ? new RemoteStorageAdapter(token) : new LocalStorageAdapter();
+  }, [adapterProp]);
   const [state, dispatch] = useReducer(reducer, undefined, createInitialState);
   const [phase, setPhase] = useState<Phase>({ kind: "loading" });
   const [saveError, setSaveError] = useState<string | null>(null);

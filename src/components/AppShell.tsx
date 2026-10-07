@@ -33,7 +33,7 @@ export default function AppShell() {
 
       {saveError && (
         <div role="alert" className="bg-red-600 px-4 py-2 text-sm text-white sm:px-6 lg:px-8">
-          Не удалось сохранить изменения: {saveError}. Скачайте резервную копию или освободите место в браузере.
+          Не удалось сохранить изменения: {saveError}. Скачайте резервную копию на странице настроек.
         </div>
       )}
 
