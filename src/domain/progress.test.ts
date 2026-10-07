@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { plan } from "../data/plan";
 import { countsTowardProgress, courseProgress, isManualSession, markableSessionIds, toPercent, isSessionDone, isWeekClosed, weekProgress, weekSessions } from "./progress";
 import { completeWeek, DATE, emptyState } from "./testing";
-import { addAttempt, markUnmarked, setSessionStatus } from "./userState";
+import { addAttempt, addExtraTask, markUnmarked, setSessionStatus } from "./userState";
 
 const week1 = plan.weeks[0];
 const find = (pred: (s: (typeof week1.days)[0]["sessions"][0]) => boolean) => weekSessions(week1).find(pred)!;
@@ -141,5 +141,13 @@ describe("courseProgress", () => {
     let state = emptyState();
     for (let n = 1; n <= 16; n++) state = completeWeek(state, n);
     expect(courseProgress(plan, state)).toMatchObject({ done: total, percent: 100, closedWeeks: 16 });
+  });
+});
+
+describe("свои задачи и прогресс", () => {
+  it("не меняют прогресс недели и курса", () => {
+    const state = addExtraTask(emptyState(), { id: "t", date: "2026-10-14", title: "своя", topic: "js", done: true });
+    expect(weekProgress(week1, state)).toEqual(weekProgress(week1, emptyState()));
+    expect(courseProgress(plan, state)).toEqual(courseProgress(plan, emptyState()));
   });
 });

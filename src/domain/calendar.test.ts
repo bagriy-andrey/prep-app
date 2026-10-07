@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { plan } from "../data/plan";
 import { dayProgress, dayStatus, hasLoadWarning, isLightDay, plannedDayAt, streak, type PlannedDay } from "./calendar";
 import { dayDate } from "./schedule";
-import { addAttempt, createInitialState, setSessionStatus, type UserState } from "./userState";
+import { addAttempt, addExtraTask, createInitialState, setSessionStatus, type UserState } from "./userState";
 
 const start = plan.meta.startDate; // 2026-10-12, понедельник
 const empty = createInitialState();
@@ -194,5 +194,25 @@ describe("dayProgress", () => {
 
   it("у выходного нет обязательных сессий", () => {
     expect(dayProgress(day("2026-10-16"), empty)).toEqual({ done: 0, total: 0, remainingIds: [] });
+  });
+});
+
+describe("свои задачи и стрик", () => {
+  const task = (date: string, done: boolean) => ({ id: `t-${date}`, date, title: "своя", topic: "other" as const, done });
+
+  it("выполненная своя задача это активность дня", () => {
+    const state = addExtraTask(empty, task("2026-10-12", true));
+    expect(streak(plan, state, "2026-10-12", start)).toEqual({ current: 1, record: 1 });
+  });
+
+  it("невыполненная своя задача активностью не считается", () => {
+    const state = addExtraTask(empty, task("2026-10-12", false));
+    expect(streak(plan, state, "2026-10-13", start)).toEqual({ current: 0, record: 0 });
+  });
+
+  it("на статус дня и прогресс дня свои задачи не влияют", () => {
+    const state = addExtraTask(empty, task("2026-10-12", true));
+    expect(dayStatus(day("2026-10-12"), state, "2026-10-14")).toBe("missed");
+    expect(dayProgress(day("2026-10-12"), state)).toMatchObject({ done: 0, total: 3 });
   });
 });

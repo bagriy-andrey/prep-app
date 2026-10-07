@@ -1,6 +1,7 @@
 // Состояние пользователя (разд. 4 спеки) и чистые функции его изменения.
 
 import { dayOfWeek } from "./dates";
+import { TOPICS, type TopicKey } from "./topics";
 
 export type Outcome = "clean" | "hint" | "failed";
 export type SessionStatus = "done" | "light" | "moved";
@@ -60,6 +61,20 @@ export interface ApplicationEntry {
   notes?: string;
 }
 
+/**
+ * Своя дополнительная задача на день. Сверх плана: на прогресс недели и призы не влияет,
+ * время идёт в статистику по теме, выполненная задача считается активностью для стрика.
+ */
+export interface ExtraTask {
+  id: string;
+  date: string;
+  title: string;
+  topic: TopicKey;
+  done: boolean;
+  /** Потраченное время в минутах; учитывается, как только указано. */
+  minutes?: number;
+}
+
 export interface UserState {
   version: 1;
   startDate?: string;
@@ -68,6 +83,8 @@ export interface UserState {
   dayNotes: Record<string, string>;
   /** Заметки к ручным сессиям (ключ: id сессии). Для сессий с задачей заметка хранится в items[id].note. */
   sessionNotes: Record<string, string>;
+  /** Свои дополнительные задачи. Заметка к задаче лежит в sessionNotes[id]. */
+  extraTasks: ExtraTask[];
   prizesClaimed: Record<number, string>;
   mocks: MockEntry[];
   stories: StoryEntry[];
@@ -87,6 +104,7 @@ export function createInitialState(): UserState {
     sessions: {},
     dayNotes: {},
     sessionNotes: {},
+    extraTasks: [],
     prizesClaimed: {},
     mocks: [],
     stories: [],
@@ -158,6 +176,38 @@ export function setItemText(state: UserState, itemId: string, field: ItemTextFie
   else delete next[field];
   return { ...state, items: { ...state.items, [itemId]: next } };
 }
+
+export function addExtraTask(state: UserState, task: ExtraTask): UserState {
+  return { ...state, extraTasks: [...state.extraTasks, task] };
+}
+
+/** Меняет поля задачи. Поле minutes со значением undefined удаляется. */
+export function updateExtraTask(
+  state: UserState,
+  id: string,
+  patch: Partial<Omit<ExtraTask, "id">>,
+): UserState {
+  if (!state.extraTasks.some((t) => t.id === id)) return state;
+  return {
+    ...state,
+    extraTasks: state.extraTasks.map((t) => {
+      if (t.id !== id) return t;
+      const next = { ...t, ...patch };
+      if (next.minutes === undefined) delete next.minutes;
+      return next;
+    }),
+  };
+}
+
+/** Удаляет задачу вместе с её заметкой. */
+export function removeExtraTask(state: UserState, id: string): UserState {
+  if (!state.extraTasks.some((t) => t.id === id)) return state;
+  const sessionNotes = { ...state.sessionNotes };
+  delete sessionNotes[id];
+  return { ...state, extraTasks: state.extraTasks.filter((t) => t.id !== id), sessionNotes };
+}
+
+export const extraTasksOn = (state: UserState, date: string) => state.extraTasks.filter((t) => t.date === date);
 
 /** Заметка к ручной сессии. Пустой текст удаляет заметку. */
 export function setSessionNote(state: UserState, sessionId: string, text: string): UserState {
@@ -325,6 +375,29 @@ export function parseUserState(raw: unknown): UserState {
     if (typeof note !== "string") fail(`sessionNotes.${id}: ожидалась строка`);
   }
 
+  // Поле добавлено позже: в старых сохранениях его нет.
+  const extraTasks = raw.extraTasks ?? [];
+  if (!Array.isArray(extraTasks)) fail("extraTasks: ожидался массив");
+  const topicKeys = new Set<string>(TOPICS.map((t) => t.key));
+  const taskIds = new Set<string>();
+  for (const t of extraTasks) {
+    if (
+      !isRecord(t) ||
+      typeof t.id !== "string" ||
+      t.id === "" ||
+      !isDate(t.date) ||
+      typeof t.title !== "string" ||
+      typeof t.topic !== "string" ||
+      !topicKeys.has(t.topic) ||
+      typeof t.done !== "boolean" ||
+      (t.minutes !== undefined && !isMinutes(t.minutes))
+    ) {
+      fail("extraTasks: неверная задача");
+    }
+    if (taskIds.has(t.id)) fail(`extraTasks: повторяющийся id ${t.id}`);
+    taskIds.add(t.id);
+  }
+
   if (!isRecord(raw.prizesClaimed)) fail("prizesClaimed: ожидался объект");
   for (const [week, date] of Object.entries(raw.prizesClaimed)) {
     if (!/^\d+$/.test(week) || !isDate(date)) fail(`prizesClaimed.${week}: неверная запись`);
@@ -342,6 +415,7 @@ export function parseUserState(raw: unknown): UserState {
     sessions: raw.sessions as Record<string, SessionMark>,
     dayNotes: raw.dayNotes as Record<string, string>,
     sessionNotes: sessionNotes as Record<string, string>,
+    extraTasks: extraTasks as ExtraTask[],
     prizesClaimed: raw.prizesClaimed as Record<number, string>,
     mocks: raw.mocks as MockEntry[],
     stories: raw.stories as StoryEntry[],

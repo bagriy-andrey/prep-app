@@ -71,7 +71,7 @@ export function dayStatus(day: PlannedDay, state: UserState, today: string): Day
   return day.date < today ? "missed" : "future";
 }
 
-/** Даты, в которые сделана сессия (done, light) или добавлена попытка. */
+/** Даты, в которые сделана сессия (done, light), добавлена попытка или выполнена своя задача. */
 function activityDates(state: UserState): Set<string> {
   const dates = new Set<string>();
   for (const mark of Object.values(state.sessions)) {
@@ -79,6 +79,9 @@ function activityDates(state: UserState): Set<string> {
   }
   for (const item of Object.values(state.items)) {
     for (const attempt of item.attempts) dates.add(attempt.date);
+  }
+  for (const task of state.extraTasks) {
+    if (task.done) dates.add(task.date);
   }
   return dates;
 }

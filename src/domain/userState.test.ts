@@ -2,15 +2,19 @@ import { describe, expect, it } from "vitest";
 import {
   addAttempt,
   addEntry,
+  addExtraTask,
   createInitialState,
+  extraTasksOn,
   parseUserState,
   removeEntry,
+  removeExtraTask,
   removeLastAttempt,
   setItemTitle,
   setSessionNote,
   setStartDate,
   StateParseError,
   updateEntry,
+  updateExtraTask,
 } from "./userState";
 
 describe("изменения состояния", () => {
@@ -47,6 +51,12 @@ describe("parseUserState", () => {
     expect(parseUserState(old).sessionNotes).toEqual({});
   });
 
+  it("старое сохранение без extraTasks читается с пустым списком", () => {
+    const { extraTasks: _omit, ...old } = createInitialState();
+    void _omit;
+    expect(parseUserState(old).extraTasks).toEqual([]);
+  });
+
   it("отклоняет повреждённые данные", () => {
     const bad: unknown[] = [
       null,
@@ -63,6 +73,18 @@ describe("parseUserState", () => {
       { ...createInitialState(), mocks: {} },
       { ...createInitialState(), sessionNotes: { s: 5 } },
       { ...createInitialState(), sessionNotes: [] },
+      { ...createInitialState(), extraTasks: {} },
+      { ...createInitialState(), extraTasks: [{ id: "a", date: "2026-10-12", title: "x", topic: "nope", done: false }] },
+      { ...createInitialState(), extraTasks: [{ id: "a", date: "завтра", title: "x", topic: "js", done: false }] },
+      { ...createInitialState(), extraTasks: [{ id: "a", date: "2026-10-12", title: "x", topic: "js", done: "да" }] },
+      { ...createInitialState(), extraTasks: [{ id: "a", date: "2026-10-12", title: "x", topic: "js", done: true, minutes: -5 }] },
+      {
+        ...createInitialState(),
+        extraTasks: [
+          { id: "a", date: "2026-10-12", title: "x", topic: "js", done: true },
+          { id: "a", date: "2026-10-13", title: "y", topic: "js", done: true },
+        ],
+      },
     ];
     for (const value of bad) expect(() => parseUserState(value)).toThrow(StateParseError);
   });
@@ -116,5 +138,41 @@ describe("заметки к сессиям", () => {
     const s = setSessionNote(createInitialState(), "w01-d3-s1", "прочитал, не понял this");
     expect(s.sessionNotes).toEqual({ "w01-d3-s1": "прочитал, не понял this" });
     expect(setSessionNote(s, "w01-d3-s1", "").sessionNotes).toEqual({});
+  });
+});
+
+describe("свои задачи на день", () => {
+  const task = { id: "t1", date: "2026-10-14", title: "Разобрать LRU Cache", topic: "algorithms" as const, done: false };
+
+  it("добавляет, фильтрует по дате и не мутирует состояние", () => {
+    const s0 = createInitialState();
+    const s1 = addExtraTask(addExtraTask(s0, task), { ...task, id: "t2", date: "2026-10-15" });
+    expect(s0.extraTasks).toEqual([]);
+    expect(extraTasksOn(s1, "2026-10-14").map((t) => t.id)).toEqual(["t1"]);
+    expect(extraTasksOn(s1, "2026-10-16")).toEqual([]);
+  });
+
+  it("меняет поля; minutes: undefined убирает время", () => {
+    let s = addExtraTask(createInitialState(), task);
+    s = updateExtraTask(s, "t1", { done: true, minutes: 40, topic: "js" });
+    expect(s.extraTasks[0]).toEqual({ ...task, done: true, minutes: 40, topic: "js" });
+    s = updateExtraTask(s, "t1", { minutes: undefined });
+    expect("minutes" in s.extraTasks[0]).toBe(false);
+    expect(updateExtraTask(s, "нет", { done: true })).toBe(s);
+  });
+
+  it("удаление убирает и заметку к задаче", () => {
+    let s = addExtraTask(createInitialState(), task);
+    s = setSessionNote(s, "t1", "идея: хеш + двусвязный список");
+    s = setSessionNote(s, "w01-d1-s1", "чужая заметка");
+    s = removeExtraTask(s, "t1");
+    expect(s.extraTasks).toEqual([]);
+    expect(s.sessionNotes).toEqual({ "w01-d1-s1": "чужая заметка" });
+    expect(removeExtraTask(s, "t1")).toBe(s);
+  });
+
+  it("переживает JSON", () => {
+    const s = addExtraTask(createInitialState(), { ...task, done: true, minutes: 30 });
+    expect(parseUserState(JSON.parse(JSON.stringify(s))).extraTasks).toEqual(s.extraTasks);
   });
 });

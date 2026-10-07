@@ -5,35 +5,10 @@ import type { Day, Plan } from "../data/types";
 import { addDays, dayOfWeek } from "./dates";
 import { countsTowardProgress } from "./progress";
 import { weekRange } from "./schedule";
+import { TOPICS, topicOfBlock, type TopicKey } from "./topics";
 import type { UserState } from "./userState";
 
-export type TopicKey =
-  | "algorithms"
-  | "js"
-  | "ui"
-  | "system-design"
-  | "web"
-  | "behavioral"
-  | "mock"
-  | "review"
-  | "other";
-
-/** Темы статистики: каждая объединяет блоки плана. */
-export const TOPICS: { key: TopicKey; label: string; blocks: string[] }[] = [
-  { key: "algorithms", label: "Алгоритмы", blocks: ["dsa", "warmup"] },
-  { key: "js", label: "JS-кодинг", blocks: ["js"] },
-  { key: "ui", label: "UI-компоненты", blocks: ["ui"] },
-  { key: "system-design", label: "System design", blocks: ["fe-sd", "be-sd", "sd-review", "sd-theory"] },
-  { key: "web", label: "Веб-основы и теория", blocks: ["web", "theory"] },
-  { key: "behavioral", label: "Behavioral", blocks: ["behavioral"] },
-  { key: "mock", label: "Моки и симуляции", blocks: ["mock", "simulation"] },
-  { key: "review", label: "Повторения", blocks: ["review"] },
-  { key: "other", label: "Прочее", blocks: ["checkpoint", "week-review", "spare"] },
-];
-
-export function topicOfBlock(block: string): TopicKey {
-  return TOPICS.find((t) => t.blocks.includes(block))?.key ?? "other";
-}
+export { TOPICS, topicOfBlock, type TopicKey } from "./topics";
 
 const MAINTENANCE_ID = /^m-(\d{4}-\d{2}-\d{2})-s(\d+)$/;
 
@@ -64,7 +39,7 @@ export interface TimeEntry {
   topic: TopicKey;
 }
 
-/** Все записи времени: сделанные сессии (done, light) и попытки по задачам. */
+/** Все записи времени: сделанные сессии (done, light), попытки по задачам и свои задачи. */
 export function timeEntries(plan: Plan, state: UserState): TimeEntry[] {
   const entries: TimeEntry[] = [];
   for (const [id, mark] of Object.entries(state.sessions)) {
@@ -78,6 +53,9 @@ export function timeEntries(plan: Plan, state: UserState): TimeEntry[] {
       if (!attempt.minutes) continue;
       entries.push({ date: attempt.date, minutes: attempt.minutes, topic: kind ? topicOfBlock(kind) : "other" });
     }
+  }
+  for (const task of state.extraTasks) {
+    if (task.minutes) entries.push({ date: task.date, minutes: task.minutes, topic: task.topic });
   }
   return entries;
 }

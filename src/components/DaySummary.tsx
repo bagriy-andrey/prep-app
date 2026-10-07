@@ -5,6 +5,7 @@ import { toPercent } from "../domain/progress";
 import { minutesOnDate, plannedMinutesForDay } from "../domain/time";
 import { useTimeEntries } from "../hooks/useTimeEntries";
 import { formatMinutes } from "../lib/format";
+import { extraTasksOn } from "../domain/userState";
 import { useUserState } from "../state/UserStateProvider";
 
 const HEADLINE: Record<DayStatus, string> = {
@@ -25,6 +26,7 @@ export default function DaySummary({ day, date, today }: { day: Day; date: strin
   const { done, total, remainingIds } = dayProgress(planned, state);
   const isPast = date < today;
   const skipped = day.sessions.filter((s) => remainingIds.includes(s.id));
+  const extra = extraTasksOn(state, date);
 
   if (status === "rest") {
     return <p className="rounded-lg bg-slate-100 p-3 text-sm dark:bg-slate-800">{HEADLINE.rest}.</p>;
@@ -47,6 +49,7 @@ export default function DaySummary({ day, date, today }: { day: Day; date: strin
       <p className="mt-1 text-slate-600 dark:text-slate-400">
         Потрачено: <strong className="font-semibold text-slate-900 dark:text-slate-100">{formatMinutes(minutesOnDate(entries, date))}</strong>
         {" "}из {formatMinutes(plannedMinutesForDay(day))} по плану.
+        {extra.length > 0 && ` Свои задачи: сделано ${extra.filter((t) => t.done).length} из ${extra.length}.`}
       </p>
       {isPast && skipped.length > 0 && (
         <div className="mt-2">

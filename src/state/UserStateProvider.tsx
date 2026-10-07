@@ -2,14 +2,18 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useReducer,
 import type { ReactNode } from "react";
 import { plan } from "../data/plan";
 import { todayString } from "../domain/dates";
+import type { TopicKey } from "../domain/topics";
+import { newId } from "../lib/id";
 import { claimPrize } from "../domain/prizes";
 import { createSeededState } from "../domain/seed";
 import {
   addAttempt,
   addEntry,
+  addExtraTask,
   createInitialState,
   markUnmarked,
   removeEntry,
+  removeExtraTask,
   removeLastAttempt,
   setDayNote,
   setItemText,
@@ -20,6 +24,8 @@ import {
   setSessionStatus,
   setStartDate,
   updateEntry,
+  updateExtraTask,
+  type ExtraTask,
   type ItemTextField,
   type JournalEntries,
   type JournalEntry,
@@ -42,6 +48,9 @@ type Action =
   | { type: "setItemText"; itemId: string; field: ItemTextField; text: string }
   | { type: "setDayNote"; date: string; text: string }
   | { type: "setSessionNote"; id: string; text: string }
+  | { type: "addExtraTask"; task: ExtraTask }
+  | { type: "updateExtraTask"; id: string; patch: Partial<Omit<ExtraTask, "id">> }
+  | { type: "removeExtraTask"; id: string }
   | { type: "setSession"; id: string; status: SessionStatus | null; date: string; minutes?: number }
   | { type: "markUnmarked"; ids: string[]; status: SessionStatus; date: string; minutesById?: Record<string, number> }
   | { type: "claimPrize"; week: number; date: string }
@@ -70,6 +79,12 @@ function reducer(state: UserState, action: Action): UserState {
       return setDayNote(state, action.date, action.text);
     case "setSessionNote":
       return setSessionNote(state, action.id, action.text);
+    case "addExtraTask":
+      return addExtraTask(state, action.task);
+    case "updateExtraTask":
+      return updateExtraTask(state, action.id, action.patch);
+    case "removeExtraTask":
+      return removeExtraTask(state, action.id);
     case "setSession":
       return setSessionStatus(state, action.id, action.status, action.date, action.minutes);
     case "markUnmarked":
@@ -101,6 +116,10 @@ export interface UserStateActions {
   setItemText(itemId: string, field: ItemTextField, text: string): void;
   setDayNote(date: string, text: string): void;
   setSessionNote(id: string, text: string): void;
+  /** Добавляет свою дополнительную задачу на день и возвращает её id. */
+  addExtraTask(task: { date: string; title: string; topic: TopicKey; minutes?: number }): string;
+  updateExtraTask(id: string, patch: Partial<Omit<ExtraTask, "id">>): void;
+  removeExtraTask(id: string): void;
   /** status = null снимает отметку. */
   setSession(id: string, status: SessionStatus | null, minutes?: number): void;
   /** minutesById: время по умолчанию для отмечаемых сессий. */
@@ -206,6 +225,13 @@ export default function UserStateProvider({
       setItemText: (itemId, field, text) => dispatch({ type: "setItemText", itemId, field, text }),
       setDayNote: (date, text) => dispatch({ type: "setDayNote", date, text }),
       setSessionNote: (id, text) => dispatch({ type: "setSessionNote", id, text }),
+      addExtraTask: (task) => {
+        const id = newId();
+        dispatch({ type: "addExtraTask", task: { ...task, id, done: false } });
+        return id;
+      },
+      updateExtraTask: (id, patch) => dispatch({ type: "updateExtraTask", id, patch }),
+      removeExtraTask: (id) => dispatch({ type: "removeExtraTask", id }),
       setSession: (id, status, minutes) => dispatch({ type: "setSession", id, status, date: todayString(), minutes }),
       markUnmarked: (ids, status, minutesById) =>
         dispatch({ type: "markUnmarked", ids, status, date: todayString(), minutesById }),

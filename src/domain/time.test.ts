@@ -17,6 +17,7 @@ import {
 } from "./time";
 import {
   addAttempt,
+  addExtraTask,
   createInitialState,
   markUnmarked,
   parseMinutes,
@@ -206,5 +207,21 @@ describe("плановое время", () => {
     expect(plannedMinutesForDay(plan.weeks[0].days[0])).toBe(75); // 20 + 25 + 30
     expect(plannedMinutesForDay(plan.weeks[0].days[5])).toBe(195); // 90 + 60 + 45, запас 15 не входит
     expect(plannedMinutesForDay(plan.weeks[0].days[4])).toBe(0); // выходной
+  });
+});
+
+describe("свои задачи во времени", () => {
+  const task = { id: "t1", date: "2026-10-14", title: "LRU Cache", topic: "algorithms" as const, done: false };
+
+  it("время попадает в тему и на дату задачи, даже если она ещё не отмечена сделанной", () => {
+    const s = addExtraTask(addExtraTask(empty, { ...task, minutes: 40 }), { ...task, id: "t2", topic: "ui", minutes: 25, done: true });
+    expect(timeEntries(plan, s)).toEqual([
+      { date: "2026-10-14", minutes: 40, topic: "algorithms" },
+      { date: "2026-10-14", minutes: 25, topic: "ui" },
+    ]);
+  });
+
+  it("задача без времени ничего не добавляет", () => {
+    expect(timeEntries(plan, addExtraTask(empty, task))).toEqual([]);
   });
 });

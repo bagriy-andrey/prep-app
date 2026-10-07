@@ -4,6 +4,7 @@ import type { SessionStatus } from "../domain/userState";
 import { dayName, formatDateRu, formatMinutes } from "../lib/format";
 import { useUserState } from "../state/UserStateProvider";
 import AttemptControls from "./AttemptControls";
+import ExtraTasks from "./ExtraTasks";
 import LightAlternative from "./LightAlternative";
 import ManualMarkControls from "./ManualMarkControls";
 import SessionNote from "./SessionNote";
@@ -84,6 +85,8 @@ export default function DayCard({ day, date, isToday }: Props) {
           markLightDisabled={unmarked.length === 0}
         />
       )}
+
+      <ExtraTasks date={date} />
     </section>
   );
 }

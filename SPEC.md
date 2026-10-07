@@ -78,6 +78,7 @@ interface UserState {
   sessions: Record<string, { status: "done" | "light" | "moved"; date: string; minutes?: number }>; // date: когда поставлена отметка
   dayNotes: Record<string, string>;      // ключ: дата YYYY-MM-DD
   sessionNotes: Record<string, string>;  // заметки к ручным сессиям; у сессий с задачей заметка в items[id].note
+  extraTasks: { id: string; date: string; title: string; topic: string; done: boolean; minutes?: number }[]; // свои задачи на день; заметка к ним в sessionNotes[id]
   prizesClaimed: Record<number, string>; // неделя → дата получения
   mocks: { week: number; type: string; date?: string; notes?: string }[];
   stories: { topic: string; situation?: string; ready: boolean; result?: string }[];
@@ -152,6 +153,13 @@ interface UserState {
 
 - В верхней части каждого экрана полоса «Курс»: процент и число закрытых недель из 16.
 - Считается из прогресса недель: сумма сделанных обязательных сессий по всем неделям делится на сумму всех обязательных сессий.
+
+### 5.10 Свои задачи на день
+
+- Под сессиями дня («Сегодня» и «План») блок «Свои задачи»: форма «Новая задача» с темой и необязательным временем.
+- У каждой задачи: отметка «Сделано», название, тема, время, заметка, удаление.
+- Это задачи сверх плана: на прогресс недели, призы и общий прогресс курса они не влияют.
+- Время идёт в статистику по выбранной теме на дату задачи, как только указано. Выполненная задача считается активностью дня для стрика.
 
 ## 6. Правила
 
