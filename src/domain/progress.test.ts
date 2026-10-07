@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { plan } from "../data/plan";
-import { countsTowardProgress, courseProgress, isManualSession, markableSessionIds, toPercent, isSessionDone, isWeekClosed, weekProgress, weekSessions } from "./progress";
+import { countsTowardProgress, courseProgress, sessionStatus, isManualSession, markableSessionIds, toPercent, isSessionDone, isWeekClosed, weekProgress, weekSessions } from "./progress";
 import { completeWeek, DATE, emptyState } from "./testing";
 import { addAttempt, addExtraTask, markUnmarked, setSessionStatus } from "./userState";
 
@@ -149,5 +149,26 @@ describe("свои задачи и прогресс", () => {
     const state = addExtraTask(emptyState(), { id: "t", date: "2026-10-14", title: "своя", topic: "js", done: true });
     expect(weekProgress(week1, state)).toEqual(weekProgress(week1, emptyState()));
     expect(courseProgress(plan, state)).toEqual(courseProgress(plan, emptyState()));
+  });
+});
+
+describe("sessionStatus", () => {
+  const manual = weekSessions(week1).find((s) => isManualSession(s) && countsTowardProgress(s))!;
+  const item = weekSessions(week1).find((s) => !!s.itemId)!;
+
+  it("открытая сессия это null", () => {
+    expect(sessionStatus(manual, emptyState())).toBeNull();
+    expect(sessionStatus(item, emptyState())).toBeNull();
+  });
+
+  it("ручная сессия берёт свою отметку", () => {
+    for (const status of ["done", "light", "moved"] as const) {
+      expect(sessionStatus(manual, setSessionStatus(emptyState(), manual.id, status, DATE))).toBe(status);
+    }
+  });
+
+  it("сессия с задачей это done после любой попытки, ручная отметка не в счёт", () => {
+    expect(sessionStatus(item, addAttempt(emptyState(), item.itemId!, "failed", DATE))).toBe("done");
+    expect(sessionStatus(item, setSessionStatus(emptyState(), item.id, "light", DATE))).toBeNull();
   });
 });

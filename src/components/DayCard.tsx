@@ -1,14 +1,19 @@
+import { useState } from "react";
+import { itemsById, plan } from "../data/plan";
 import type { Day } from "../data/types";
-import { isManualSession, isSessionDone, markableSessionIds } from "../domain/progress";
-import type { SessionStatus } from "../domain/userState";
+import { markableSessionIds, sessionStatus } from "../domain/progress";
+import { itemTitle } from "../domain/tracker";
+import { extraTasksOn } from "../domain/userState";
 import { dayName, formatDateRu, formatMinutes } from "../lib/format";
 import { useUserState } from "../state/UserStateProvider";
 import AttemptControls from "./AttemptControls";
-import ExtraTasks from "./ExtraTasks";
+import ExtraTaskPanel from "./ExtraTaskPanel";
 import LightAlternative from "./LightAlternative";
 import ManualMarkControls from "./ManualMarkControls";
+import NewTaskPanel from "./NewTaskPanel";
 import SessionNote from "./SessionNote";
 import SessionRow from "./SessionRow";
+import TaskTabs, { NEW_TASK_KEY, taskPanelId, taskTabId, type TaskTab } from "./TaskTabs";
 import { subtleButton } from "./ui";
 
 interface Props {
@@ -26,6 +31,44 @@ export default function DayCard({ day, date, isToday }: Props) {
   const plannedById = Object.fromEntries(day.sessions.map((s) => [s.id, s.minutes]));
   const headingId = `day-${date}`;
 
+  const sessions = day.sessions.filter((s) => s.block !== "rest");
+  const rest = day.sessions.find((s) => s.block === "rest");
+  const extras = extraTasksOn(state, date);
+
+  // Подписи вкладок: название задачи или блок. Повторяющиеся подписи нумеруются.
+  const baseLabels = sessions.map((s) => {
+    const item = s.itemId ? itemsById.get(s.itemId) : undefined;
+    return (item && itemTitle(item, state)) || (item ? "Своя задача" : (plan.blocks[s.block] ?? s.block));
+  });
+  const seen: Record<string, number> = {};
+  const tabs: TaskTab[] = [
+    ...sessions.map((s, i) => {
+      const label = baseLabels[i];
+      const repeated = baseLabels.filter((l) => l === label).length > 1;
+      seen[label] = (seen[label] ?? 0) + 1;
+      return {
+        key: s.id,
+        label: repeated ? `${label} ${seen[label]}` : label,
+        status: sessionStatus(s, state),
+        optional: s.optional,
+      };
+    }),
+    ...extras.map((t) => ({ key: t.id, label: t.title, status: t.done ? ("done" as const) : null })),
+  ];
+
+  // По умолчанию открыта первая несделанная задача, а если всё сделано, первая.
+  const [selected, setSelected] = useState<string | null>(() => {
+    const firstOpen = sessions.find((s) => sessionStatus(s, state) === null);
+    return (firstOpen ?? sessions[0])?.id ?? null;
+  });
+  const activeKey =
+    selected !== null && (selected === NEW_TASK_KEY || tabs.some((t) => t.key === selected))
+      ? selected
+      : (tabs[0]?.key ?? null);
+
+  const activeSession = sessions.find((s) => s.id === activeKey);
+  const activeExtra = extras.find((t) => t.id === activeKey);
+
   return (
     <section
       aria-labelledby={headingId}
@@ -42,30 +85,33 @@ export default function DayCard({ day, date, isToday }: Props) {
         {total > 0 && <span className="text-xs text-slate-500 dark:text-slate-400">{formatMinutes(total)}</span>}
       </header>
 
-      <ul className="divide-y divide-slate-200 dark:divide-slate-800">
-        {day.sessions.map((s) => {
-          const status: SessionStatus | null = isManualSession(s)
-            ? (state.sessions[s.id]?.status ?? null)
-            : isSessionDone(s, state)
-              ? "done"
-              : null;
-          const isRest = s.block === "rest";
-          return (
-            <SessionRow key={s.id} {...s} status={status}>
-              {isRest ? null : (
-                <>
-                  {s.itemId ? (
-                    <AttemptControls itemId={s.itemId} plannedMinutes={s.minutes} />
-                  ) : (
-                    <ManualMarkControls id={s.id} title={s.title} plannedMinutes={s.minutes} />
-                  )}
-                  <SessionNote sessionId={s.id} itemId={s.itemId} />
-                </>
-              )}
-            </SessionRow>
-          );
-        })}
-      </ul>
+      <TaskTabs scope={date} tabs={tabs} activeKey={activeKey} onSelect={setSelected} />
+
+      <div
+        role="tabpanel"
+        id={taskPanelId(date)}
+        aria-labelledby={activeKey ? taskTabId(date, activeKey) : headingId}
+        className="mt-3 rounded-lg border border-slate-200 p-3 dark:border-slate-800"
+      >
+        {activeSession ? (
+          <SessionRow {...activeSession} status={sessionStatus(activeSession, state)}>
+            {activeSession.itemId ? (
+              <AttemptControls itemId={activeSession.itemId} plannedMinutes={activeSession.minutes} />
+            ) : (
+              <ManualMarkControls id={activeSession.id} title={activeSession.title} plannedMinutes={activeSession.minutes} />
+            )}
+            <SessionNote sessionId={activeSession.id} itemId={activeSession.itemId} />
+          </SessionRow>
+        ) : activeExtra ? (
+          <ExtraTaskPanel key={activeExtra.id} task={activeExtra} />
+        ) : activeKey === NEW_TASK_KEY ? (
+          <NewTaskPanel date={date} onCreated={setSelected} />
+        ) : (
+          <p className="text-sm text-slate-600 dark:text-slate-400">
+            {rest?.title ?? "На этот день задач нет"}. Нажмите «+», чтобы добавить свою задачу.
+          </p>
+        )}
+      </div>
 
       {markable.length > 0 && (
         <button
@@ -85,8 +131,6 @@ export default function DayCard({ day, date, isToday }: Props) {
           markLightDisabled={unmarked.length === 0}
         />
       )}
-
-      <ExtraTasks date={date} />
     </section>
   );
 }

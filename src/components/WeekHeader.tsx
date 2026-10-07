@@ -8,6 +8,7 @@ import { formatDateRange, formatMinutes } from "../lib/format";
 import { useUserState } from "../state/UserStateProvider";
 import PhaseBadge from "./PhaseBadge";
 import PrizeBadge from "./PrizeBadge";
+import WeekNote from "./WeekNote";
 import WeekProgressBar from "./WeekProgressBar";
 
 export default function WeekHeader({ week }: { week: Week }) {
@@ -45,6 +46,9 @@ export default function WeekHeader({ week }: { week: Week }) {
       </div>
       <div className="mt-3">
         <PrizeBadge prize={week.prize} />
+      </div>
+      <div className="mt-3">
+        <WeekNote week={week.n} />
       </div>
       {cp && (
         <p className="mt-3 rounded-lg bg-slate-100 p-2 text-sm dark:bg-slate-800">

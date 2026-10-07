@@ -83,6 +83,8 @@ export interface UserState {
   dayNotes: Record<string, string>;
   /** Заметки к ручным сессиям (ключ: id сессии). Для сессий с задачей заметка хранится в items[id].note. */
   sessionNotes: Record<string, string>;
+  /** Заметки к неделям плана (ключ: номер недели). */
+  weekNotes: Record<number, string>;
   /** Свои дополнительные задачи. Заметка к задаче лежит в sessionNotes[id]. */
   extraTasks: ExtraTask[];
   prizesClaimed: Record<number, string>;
@@ -104,6 +106,7 @@ export function createInitialState(): UserState {
     sessions: {},
     dayNotes: {},
     sessionNotes: {},
+    weekNotes: {},
     extraTasks: [],
     prizesClaimed: {},
     mocks: [],
@@ -177,8 +180,10 @@ export function setItemText(state: UserState, itemId: string, field: ItemTextFie
   return { ...state, items: { ...state.items, [itemId]: next } };
 }
 
-export function addExtraTask(state: UserState, task: ExtraTask): UserState {
-  return { ...state, extraTasks: [...state.extraTasks, task] };
+/** Добавляет задачу; необязательная заметка сохраняется под id задачи. */
+export function addExtraTask(state: UserState, task: ExtraTask, note?: string): UserState {
+  const next = { ...state, extraTasks: [...state.extraTasks, task] };
+  return note ? setSessionNote(next, task.id, note) : next;
 }
 
 /** Меняет поля задачи. Поле minutes со значением undefined удаляется. */
@@ -215,6 +220,14 @@ export function setSessionNote(state: UserState, sessionId: string, text: string
   if (text) sessionNotes[sessionId] = text;
   else delete sessionNotes[sessionId];
   return { ...state, sessionNotes };
+}
+
+/** Заметка к неделе по её номеру. Пустой текст удаляет заметку. */
+export function setWeekNote(state: UserState, week: number, text: string): UserState {
+  const weekNotes = { ...state.weekNotes };
+  if (text) weekNotes[week] = text;
+  else delete weekNotes[week];
+  return { ...state, weekNotes };
 }
 
 /** Заметка дня по дате YYYY-MM-DD. Пустой текст удаляет заметку. */
@@ -376,6 +389,13 @@ export function parseUserState(raw: unknown): UserState {
   }
 
   // Поле добавлено позже: в старых сохранениях его нет.
+  const weekNotes = raw.weekNotes ?? {};
+  if (!isRecord(weekNotes)) fail("weekNotes: ожидался объект");
+  for (const [week, note] of Object.entries(weekNotes)) {
+    if (!/^[1-9]\d*$/.test(week) || typeof note !== "string") fail(`weekNotes.${week}: неверная заметка`);
+  }
+
+  // Поле добавлено позже: в старых сохранениях его нет.
   const extraTasks = raw.extraTasks ?? [];
   if (!Array.isArray(extraTasks)) fail("extraTasks: ожидался массив");
   const topicKeys = new Set<string>(TOPICS.map((t) => t.key));
@@ -415,6 +435,7 @@ export function parseUserState(raw: unknown): UserState {
     sessions: raw.sessions as Record<string, SessionMark>,
     dayNotes: raw.dayNotes as Record<string, string>,
     sessionNotes: sessionNotes as Record<string, string>,
+    weekNotes: weekNotes as Record<number, string>,
     extraTasks: extraTasks as ExtraTask[],
     prizesClaimed: raw.prizesClaimed as Record<number, string>,
     mocks: raw.mocks as MockEntry[],

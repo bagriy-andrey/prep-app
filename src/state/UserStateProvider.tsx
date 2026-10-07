@@ -23,6 +23,7 @@ import {
   setSessionNote,
   setSessionStatus,
   setStartDate,
+  setWeekNote,
   updateEntry,
   updateExtraTask,
   type ExtraTask,
@@ -48,7 +49,8 @@ type Action =
   | { type: "setItemText"; itemId: string; field: ItemTextField; text: string }
   | { type: "setDayNote"; date: string; text: string }
   | { type: "setSessionNote"; id: string; text: string }
-  | { type: "addExtraTask"; task: ExtraTask }
+  | { type: "setWeekNote"; week: number; text: string }
+  | { type: "addExtraTask"; task: ExtraTask; note?: string }
   | { type: "updateExtraTask"; id: string; patch: Partial<Omit<ExtraTask, "id">> }
   | { type: "removeExtraTask"; id: string }
   | { type: "setSession"; id: string; status: SessionStatus | null; date: string; minutes?: number }
@@ -79,8 +81,10 @@ function reducer(state: UserState, action: Action): UserState {
       return setDayNote(state, action.date, action.text);
     case "setSessionNote":
       return setSessionNote(state, action.id, action.text);
+    case "setWeekNote":
+      return setWeekNote(state, action.week, action.text);
     case "addExtraTask":
-      return addExtraTask(state, action.task);
+      return addExtraTask(state, action.task, action.note);
     case "updateExtraTask":
       return updateExtraTask(state, action.id, action.patch);
     case "removeExtraTask":
@@ -116,8 +120,9 @@ export interface UserStateActions {
   setItemText(itemId: string, field: ItemTextField, text: string): void;
   setDayNote(date: string, text: string): void;
   setSessionNote(id: string, text: string): void;
-  /** Добавляет свою дополнительную задачу на день и возвращает её id. */
-  addExtraTask(task: { date: string; title: string; topic: TopicKey; minutes?: number }): string;
+  setWeekNote(week: number, text: string): void;
+  /** Добавляет свою дополнительную задачу на день (с необязательной заметкой) и возвращает её id. */
+  addExtraTask(task: { date: string; title: string; topic: TopicKey; minutes?: number; note?: string }): string;
   updateExtraTask(id: string, patch: Partial<Omit<ExtraTask, "id">>): void;
   removeExtraTask(id: string): void;
   /** status = null снимает отметку. */
@@ -225,9 +230,10 @@ export default function UserStateProvider({
       setItemText: (itemId, field, text) => dispatch({ type: "setItemText", itemId, field, text }),
       setDayNote: (date, text) => dispatch({ type: "setDayNote", date, text }),
       setSessionNote: (id, text) => dispatch({ type: "setSessionNote", id, text }),
-      addExtraTask: (task) => {
+      setWeekNote: (week, text) => dispatch({ type: "setWeekNote", week, text }),
+      addExtraTask: ({ note, ...task }) => {
         const id = newId();
-        dispatch({ type: "addExtraTask", task: { ...task, id, done: false } });
+        dispatch({ type: "addExtraTask", task: { ...task, id, done: false }, note });
         return id;
       },
       updateExtraTask: (id, patch) => dispatch({ type: "updateExtraTask", id, patch }),

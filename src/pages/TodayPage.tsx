@@ -8,6 +8,7 @@ import PrizeBadge from "../components/PrizeBadge";
 import StreakStats from "../components/StreakStats";
 import TimeStats from "../components/TimeStats";
 import ReviewQueue from "../components/ReviewQueue";
+import WeekNote from "../components/WeekNote";
 import WeekProgressBar from "../components/WeekProgressBar";
 import { plan } from "../data/plan";
 import type { Day } from "../data/types";
@@ -50,7 +51,7 @@ export default function TodayPage() {
         <p className="mb-4 text-sm text-slate-600 dark:text-slate-400">{plan.maintenanceWeek.title}</p>
         <LoadWarning today={today} />
         {maintenanceDay ? (
-          <DayCard day={maintenanceDay} date={today} isToday />
+          <DayCard key={today} day={maintenanceDay} date={today} isToday />
         ) : (
           <p className="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
             Сегодня по плану отдых.
@@ -82,11 +83,15 @@ export default function TodayPage() {
 
       <LoadWarning today={today} />
 
-      <DayCard day={day} date={today} isToday />
+      <DayCard key={today} day={day} date={today} isToday />
 
       <ReviewQueue today={today} />
 
       <DayNote date={today} />
+
+      <div className="mt-4 rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+        <WeekNote week={week.n} />
+      </div>
 
       <section
         aria-label="Прогресс недели"

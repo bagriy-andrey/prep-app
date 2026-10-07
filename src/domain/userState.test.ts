@@ -12,6 +12,7 @@ import {
   setItemTitle,
   setSessionNote,
   setStartDate,
+  setWeekNote,
   StateParseError,
   updateEntry,
   updateExtraTask,
@@ -57,6 +58,12 @@ describe("parseUserState", () => {
     expect(parseUserState(old).extraTasks).toEqual([]);
   });
 
+  it("старое сохранение без weekNotes читается с пустыми заметками", () => {
+    const { weekNotes: _omit, ...old } = createInitialState();
+    void _omit;
+    expect(parseUserState(old).weekNotes).toEqual({});
+  });
+
   it("отклоняет повреждённые данные", () => {
     const bad: unknown[] = [
       null,
@@ -73,6 +80,10 @@ describe("parseUserState", () => {
       { ...createInitialState(), mocks: {} },
       { ...createInitialState(), sessionNotes: { s: 5 } },
       { ...createInitialState(), sessionNotes: [] },
+      { ...createInitialState(), weekNotes: [] },
+      { ...createInitialState(), weekNotes: { 0: "x" } },
+      { ...createInitialState(), weekNotes: { abc: "x" } },
+      { ...createInitialState(), weekNotes: { 1: 5 } },
       { ...createInitialState(), extraTasks: {} },
       { ...createInitialState(), extraTasks: [{ id: "a", date: "2026-10-12", title: "x", topic: "nope", done: false }] },
       { ...createInitialState(), extraTasks: [{ id: "a", date: "завтра", title: "x", topic: "js", done: false }] },
@@ -174,5 +185,31 @@ describe("свои задачи на день", () => {
   it("переживает JSON", () => {
     const s = addExtraTask(createInitialState(), { ...task, done: true, minutes: 30 });
     expect(parseUserState(JSON.parse(JSON.stringify(s))).extraTasks).toEqual(s.extraTasks);
+  });
+});
+
+describe("заметка недели", () => {
+  it("хранится по номеру недели, пустой текст удаляет", () => {
+    const s = setWeekNote(setWeekNote(createInitialState(), 3, "слабое место: графы"), 5, "ок");
+    expect(s.weekNotes).toEqual({ 3: "слабое место: графы", 5: "ок" });
+    expect(setWeekNote(s, 3, "").weekNotes).toEqual({ 5: "ок" });
+  });
+
+  it("переживает JSON", () => {
+    const s = setWeekNote(createInitialState(), 2, "итог недели");
+    expect(parseUserState(JSON.parse(JSON.stringify(s))).weekNotes).toEqual({ 2: "итог недели" });
+  });
+});
+
+describe("заметка при создании своей задачи", () => {
+  const task = { id: "t1", date: "2026-10-14", title: "LRU", topic: "algorithms" as const, done: false };
+
+  it("сохраняется под id задачи", () => {
+    expect(addExtraTask(createInitialState(), task, "идея").sessionNotes).toEqual({ t1: "идея" });
+  });
+
+  it("пустая заметка не создаёт записи", () => {
+    expect(addExtraTask(createInitialState(), task, "").sessionNotes).toEqual({});
+    expect(addExtraTask(createInitialState(), task).sessionNotes).toEqual({});
   });
 });

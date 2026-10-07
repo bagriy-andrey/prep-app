@@ -17,12 +17,12 @@ const links = [
 export default function AppShell() {
   const { saveError } = useUserState();
   return (
-    <div className="mx-auto flex min-h-dvh max-w-3xl flex-col">
+    <div className="mx-auto flex min-h-dvh max-w-6xl flex-col">
       <header className="sticky top-0 z-10 border-b border-slate-200 bg-slate-50/90 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90">
-        <div className="px-4 pt-2 pb-2 sm:pb-1">
+        <div className="px-4 pt-2 pb-2 sm:px-6 sm:pb-1 lg:px-8">
           <CourseProgress />
         </div>
-        <nav aria-label="Основная навигация" className="hidden gap-1 px-4 pb-2 sm:flex">
+        <nav aria-label="Основная навигация" className="hidden gap-1 px-4 pb-2 sm:flex sm:px-6 lg:px-8">
           {links.map((l) => (
             <NavLink key={l.to} to={l.to} end={l.end} className={navClass}>
               {l.label}
@@ -32,14 +32,14 @@ export default function AppShell() {
       </header>
 
       {saveError && (
-        <div role="alert" className="bg-red-600 px-4 py-2 text-sm text-white">
+        <div role="alert" className="bg-red-600 px-4 py-2 text-sm text-white sm:px-6 lg:px-8">
           Не удалось сохранить изменения: {saveError}. Скачайте резервную копию или освободите место в браузере.
         </div>
       )}
 
       <PrizeUnlockModal />
 
-      <main className="flex-1 px-4 pt-4 pb-24 sm:pb-8">
+      <main className="flex-1 px-4 pt-4 pb-24 sm:px-6 sm:pb-8 lg:px-8">
         <Outlet />
       </main>
 

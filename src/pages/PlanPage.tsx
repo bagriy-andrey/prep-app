@@ -38,7 +38,7 @@ export default function PlanPage() {
       />
       <div role="tabpanel" id={DAY_PANEL_ID} aria-labelledby={dayTabId(selected.date)} className="space-y-3">
         <DaySummary day={selected.day} date={selected.date} today={today} />
-        <DayCard day={selected.day} date={selected.date} isToday={selected.date === today} />
+        <DayCard key={selected.date} day={selected.day} date={selected.date} isToday={selected.date === today} />
       </div>
     </div>
   );

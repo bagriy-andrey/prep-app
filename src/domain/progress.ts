@@ -1,7 +1,7 @@
 // Отметка сессий и закрытие недели (разд. 6.2, 6.3).
 
 import type { Plan, Session, Week } from "../data/types";
-import type { UserState } from "./userState";
+import type { SessionStatus, UserState } from "./userState";
 
 /** В подсчёты не входят необязательные сессии и выходной. */
 export function countsTowardProgress(session: Session): boolean {
@@ -17,6 +17,15 @@ export function isSessionDone(session: Pick<Session, "id" | "itemId">, state: Us
   if (session.itemId) return (state.items[session.itemId]?.attempts.length ?? 0) > 0;
   const status = state.sessions[session.id]?.status;
   return status === "done" || status === "light";
+}
+
+/**
+ * Статус сессии для интерфейса: ручная сессия берёт отметку, сессия с задачей
+ * считается сделанной (done) после первой попытки. null, если сессия ещё открыта.
+ */
+export function sessionStatus(session: Pick<Session, "id" | "itemId">, state: UserState): SessionStatus | null {
+  if (isManualSession(session)) return state.sessions[session.id]?.status ?? null;
+  return isSessionDone(session, state) ? "done" : null;
 }
 
 export interface WeekProgress {
