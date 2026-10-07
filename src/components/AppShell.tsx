@@ -1,6 +1,7 @@
 import { NavLink, Outlet } from "react-router";
 import { useUserState } from "../state/UserStateProvider";
 import CourseProgress from "./CourseProgress";
+import PrizeUnlockModal from "./PrizeUnlockModal";
 
 const links = [
   { to: "/", label: "Сегодня", end: true },
@@ -35,6 +36,8 @@ export default function AppShell() {
           Не удалось сохранить изменения: {saveError}. Скачайте резервную копию или освободите место в браузере.
         </div>
       )}
+
+      <PrizeUnlockModal />
 
       <main className="flex-1 px-4 pt-4 pb-24 sm:pb-8">
         <Outlet />

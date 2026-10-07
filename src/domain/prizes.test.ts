@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { plan } from "../data/plan";
 import { weekProgress } from "./progress";
-import { blockWeeks, claimPrize, prizeInfo } from "./prizes";
+import { blockWeeks, claimPrize, newlyAvailablePrizes, prizeInfo } from "./prizes";
 import { completeWeek, DATE, emptyState } from "./testing";
 
 const week = (n: number) => plan.weeks[n - 1];
@@ -85,5 +85,46 @@ describe("призы (6.4)", () => {
   it("повторное получение не меняет дату", () => {
     const once = claimPrize(plan, completeWeek(emptyState(), 1), 1, "2026-10-18");
     expect(claimPrize(plan, once, 1, "2026-10-25")).toBe(once);
+  });
+});
+
+describe("newlyAvailablePrizes", () => {
+  const unlocked = (before: ReturnType<typeof emptyState>, after: ReturnType<typeof emptyState>) =>
+    newlyAvailablePrizes(plan, before, after);
+
+  it("закрытая неделя открывает свой малый приз", () => {
+    expect(unlocked(emptyState(), completeWeek(emptyState(), 1))).toEqual([1]);
+  });
+
+  it("пока неделя не закрыта, ничего нового нет", () => {
+    expect(unlocked(emptyState(), emptyState())).toEqual([]);
+    const almost = completeWeek(emptyState(), 1);
+    const reopened = { ...almost, sessions: { ...almost.sessions } };
+    delete reopened.sessions["w01-d1-s1"];
+    expect(unlocked(emptyState(), reopened)).toEqual([]);
+  });
+
+  it("последняя неделя блока открывает крупный приз", () => {
+    let before = emptyState();
+    for (const n of [1, 2, 3]) before = completeWeek(before, n);
+    // недели 1-3 уже открыли свои призы; неделя 4 открывает крупный
+    expect(unlocked(before, completeWeek(before, 4))).toEqual([4]);
+  });
+
+  it("одно действие может открыть малый и крупный призы", () => {
+    let before = emptyState();
+    for (const n of [1, 2, 4]) before = completeWeek(before, n);
+    expect(unlocked(before, completeWeek(before, 3))).toEqual([3, 4]);
+  });
+
+  it("получение приза и повторный расчёт ничего не открывают", () => {
+    const open = completeWeek(emptyState(), 1);
+    expect(unlocked(open, claimPrize(plan, open, 1, DATE))).toEqual([]);
+    expect(unlocked(open, open)).toEqual([]);
+  });
+
+  it("уже доступный приз повторно не считается новым", () => {
+    const one = completeWeek(emptyState(), 1);
+    expect(unlocked(one, completeWeek(one, 2))).toEqual([2]);
   });
 });

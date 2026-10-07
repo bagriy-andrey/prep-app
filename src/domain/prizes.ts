@@ -47,3 +47,17 @@ export function claimPrize(plan: Plan, state: UserState, weekNumber: number, dat
   if (!week || prizeInfo(plan, week, state).status !== "available") return state;
   return { ...state, prizesClaimed: { ...state.prizesClaimed, [weekNumber]: date } };
 }
+
+/**
+ * Недели, чей приз стал доступен при переходе от `before` к `after`.
+ * Одно действие может открыть несколько призов: закрытая неделя открывает свой малый приз
+ * и, если остальные недели блока уже закрыты, крупный.
+ */
+export function newlyAvailablePrizes(plan: Plan, before: UserState, after: UserState): number[] {
+  return plan.weeks
+    .filter(
+      (week) =>
+        prizeInfo(plan, week, after).status === "available" && prizeInfo(plan, week, before).status !== "available",
+    )
+    .map((week) => week.n);
+}

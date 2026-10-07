@@ -124,6 +124,11 @@ interface Ctx {
   actions: UserStateActions;
   /** Текст ошибки последнего сохранения; null, если всё сохранено. */
   saveError: string | null;
+  /**
+   * Растёт, когда состояние заменено целиком (загрузка, импорт, сброс).
+   * Отличает такую замену от действий пользователя: например, при ней не показывают уведомления.
+   */
+  epoch: number;
   startDate: string;
 }
 
@@ -148,6 +153,7 @@ export default function UserStateProvider({
   const [state, dispatch] = useReducer(reducer, undefined, createInitialState);
   const [phase, setPhase] = useState<Phase>({ kind: "loading" });
   const [saveError, setSaveError] = useState<string | null>(null);
+  const [epoch, setEpoch] = useState(0);
   // Последнее состояние, которое уже лежит в хранилище: его повторно не пишем.
   const persisted = useRef<UserState | null>(null);
   const latest = useRef(state);
@@ -165,6 +171,7 @@ export default function UserStateProvider({
       // Первый запуск: журналы заполняются заготовками плана.
       dispatch({ type: "replace", state: createSeededState(plan) });
     }
+    setEpoch((e) => e + 1);
     setPhase({ kind: "ready" });
   }, []);
 
@@ -221,8 +228,12 @@ export default function UserStateProvider({
         const imported = await adapter.import(json);
         persisted.current = imported;
         dispatch({ type: "replace", state: imported });
+        setEpoch((e) => e + 1);
       },
-      reset: () => dispatch({ type: "replace", state: createSeededState(plan) }),
+      reset: () => {
+        dispatch({ type: "replace", state: createSeededState(plan) });
+        setEpoch((e) => e + 1);
+      },
     }),
     [adapter],
   );
@@ -238,11 +249,13 @@ export default function UserStateProvider({
           const imported = await adapter.import(json);
           persisted.current = imported;
           dispatch({ type: "replace", state: imported });
+          setEpoch((e) => e + 1);
           setPhase({ kind: "ready" });
         }}
         onStartFresh={() => {
           persisted.current = null;
           dispatch({ type: "replace", state: createSeededState(plan) });
+          setEpoch((e) => e + 1);
           setPhase({ kind: "ready" });
         }}
       />
@@ -251,7 +264,7 @@ export default function UserStateProvider({
 
   return (
     <UserStateContext.Provider
-      value={{ state, actions, saveError, startDate: state.startDate ?? plan.meta.startDate }}
+      value={{ state, actions, saveError, epoch, startDate: state.startDate ?? plan.meta.startDate }}
     >
       {children}
     </UserStateContext.Provider>
