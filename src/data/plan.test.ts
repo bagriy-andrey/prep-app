@@ -10,6 +10,10 @@ describe("целостность plan.json", () => {
     for (const week of plan.weeks) expect(week.days).toHaveLength(7);
   });
 
+  it("недели идут по порядку 1..N (домен индексирует plan.weeks[n - 1])", () => {
+    plan.weeks.forEach((w, i) => expect(w.n).toBe(i + 1));
+  });
+
   it("стартует с понедельника", () => {
     expect(isMonday(plan.meta.startDate)).toBe(true);
   });

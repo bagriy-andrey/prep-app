@@ -1,18 +1,35 @@
 import type { Week } from "../data/types";
+import { weekProgress } from "../domain/progress";
+import { useUserState } from "../state/UserStateProvider";
 import PhaseBadge from "./PhaseBadge";
 import PrizeBadge from "./PrizeBadge";
+import WeekProgressBar from "./WeekProgressBar";
 
 export default function WeekHeader({ week }: { week: Week }) {
+  const { state } = useUserState();
+  const progress = weekProgress(week, state);
   const cp = week.checkpoint;
   return (
     <header className="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
       <div className="flex flex-wrap items-center gap-2">
         <h2 className="text-lg font-semibold">Неделя {week.n}</h2>
         <PhaseBadge phase={week.phase} />
+        <span
+          className={`rounded-full px-2.5 py-0.5 text-xs font-medium ${
+            progress.closed
+              ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200"
+              : "bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-300"
+          }`}
+        >
+          {progress.closed ? "Закрыта" : "Не закрыта"}
+        </span>
       </div>
       <p className="mt-1 font-medium">{week.title}</p>
       <p className="text-sm text-slate-600 dark:text-slate-400">Веб-основы: {week.webTopic}</p>
-      <div className="mt-2">
+      <div className="mt-3">
+        <WeekProgressBar progress={progress} label="Сессии недели" />
+      </div>
+      <div className="mt-3">
         <PrizeBadge prize={week.prize} />
       </div>
       {cp && (

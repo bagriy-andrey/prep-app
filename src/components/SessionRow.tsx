@@ -1,5 +1,7 @@
+import type { ReactNode } from "react";
 import { plan } from "../data/plan";
 import type { PlanLink } from "../data/types";
+import type { SessionStatus } from "../domain/userState";
 import { formatMinutes } from "../lib/format";
 import LinkButton from "./LinkButton";
 
@@ -9,10 +11,27 @@ interface Props {
   title: string;
   links?: PlanLink[];
   optional?: boolean;
+  /** Статус сессии; null, если она ещё не сделана. */
+  status?: SessionStatus | null;
+  /** Элементы управления (отметка или попытки). */
+  children?: ReactNode;
 }
 
-export default function SessionRow({ minutes, block, title, links, optional }: Props) {
+const STATUS_LABEL: Record<SessionStatus, string> = {
+  done: "Сделано",
+  light: "Сделано налегке",
+  moved: "Перенесено",
+};
+
+const STATUS_STYLE: Record<SessionStatus, string> = {
+  done: "bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-200",
+  light: "bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-200",
+  moved: "bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-300",
+};
+
+export default function SessionRow({ minutes, block, title, links, optional, status, children }: Props) {
   const isRest = block === "rest";
+  const finished = status === "done" || status === "light";
   return (
     <li className="py-3 first:pt-0 last:pb-0">
       <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-slate-500 dark:text-slate-400">
@@ -21,8 +40,15 @@ export default function SessionRow({ minutes, block, title, links, optional }: P
         </span>
         {!isRest && <span>{formatMinutes(minutes)}</span>}
         {optional && <span>необязательно</span>}
+        {status && (
+          <span className={`rounded px-1.5 py-0.5 font-medium ${STATUS_STYLE[status]}`}>{STATUS_LABEL[status]}</span>
+        )}
       </div>
-      <p className={`mt-1 ${isRest ? "text-slate-500 dark:text-slate-400" : ""}`}>{title}</p>
+      <p
+        className={`mt-1 ${isRest ? "text-slate-500 dark:text-slate-400" : ""} ${finished ? "text-slate-500 dark:text-slate-400" : ""}`}
+      >
+        {title}
+      </p>
       {links && links.length > 0 && (
         <div className="mt-2 flex flex-wrap gap-2">
           {links.map((link) => (
@@ -30,6 +56,7 @@ export default function SessionRow({ minutes, block, title, links, optional }: P
           ))}
         </div>
       )}
+      {children}
     </li>
   );
 }

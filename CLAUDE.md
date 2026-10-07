@@ -11,7 +11,8 @@ React, TypeScript, Vite, React Router, Tailwind CSS, Vitest. Статическ�
 ```
 src/data/      plan.json (только чтение), types.ts, plan.ts (типизированный экспорт и индексы)
 src/domain/    чистые функции: даты, расписание, правила из раздела 6. Без React
-src/storage/   StorageAdapter (load, save, export, import), реализация на localStorage
+src/storage/   StorageAdapter (load, save, export, import; методы асинхронные), реализация на localStorage
+src/state/     UserStateProvider (useReducer + контекст), экран повреждённых данных
 src/components/, src/pages/
 scripts/       check-links.ts
 ```
@@ -20,7 +21,7 @@ scripts/       check-links.ts
 
 - `npm run dev`: dev-сервер
 - `npm run build`: сборка (`tsc` и `vite build`)
-- `npm test`: Vitest
+- `npm test`: Vitest (только `src/**/*.test.ts`)
 - `npm run check-links`: проверка ссылок из `plan.json`. Задачи LeetCode проверяются через публичный GraphQL, потому что сайт отдаёт ботам 403. Ссылки поиска YouTube не проверяются
 
 ## Договорённости
@@ -29,7 +30,7 @@ scripts/       check-links.ts
 - `plan.json` только для чтения. Содержание плана в коде не дублируется. Числа правил повторения берутся из `plan.rules.review`.
 - Даты считаются в локальном часовом поясе, без времени, строкой `YYYY-MM-DD`. Дата дня: `startDate + (week.n - 1) * 7 + day.offset`.
 - Состояние пользователя лежит в одном объекте под ключом `prep-tracker-state` с полем `version`. Работа с хранилищем идёт только через `StorageAdapter`.
-- Отметки ручных сессий хранят дату: `sessions: Record<id, { status, date }>`. Это отступление от `SPEC.md` (разд. 4), нужное для стрика, календаря и предупреждения о нагрузке. При работе над этапом 2 обновить `SPEC.md`.
+- Отметки ручных сессий хранят дату: `sessions: Record<id, { status, date }>`, дата ставится в момент отметки. Нужна для стрика, календаря и предупреждения о нагрузке. Отражено в `SPEC.md` (разд. 4).
 - Сессии с `itemId` считаются сделанными по наличию попытки и вручную (`done`, `light`, `moved`) не отмечаются.
 - Сессии `maintenanceWeek` (недели 17+) не имеют `id`. Ключ отметки: `m-<YYYY-MM-DD>-s<номер>`.
 - `startDate` из настроек должна быть понедельником.

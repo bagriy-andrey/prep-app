@@ -1,11 +1,14 @@
 import { NavLink, Outlet } from "react-router";
+import { useUserState } from "../state/UserStateProvider";
 
 const links = [
   { to: "/", label: "Сегодня", end: true },
   { to: "/plan", label: "План", end: false },
+  { to: "/prizes", label: "Призы", end: false },
 ];
 
 export default function AppShell() {
+  const { saveError } = useUserState();
   return (
     <div className="mx-auto flex min-h-dvh max-w-3xl flex-col">
       <header className="sticky top-0 z-10 hidden border-b border-slate-200 bg-slate-50/90 backdrop-blur sm:block dark:border-slate-800 dark:bg-slate-950/90">
@@ -17,6 +20,12 @@ export default function AppShell() {
           ))}
         </nav>
       </header>
+
+      {saveError && (
+        <div role="alert" className="bg-red-600 px-4 py-2 text-sm text-white">
+          Не удалось сохранить изменения: {saveError}. Скачайте резервную копию или освободите место в браузере.
+        </div>
+      )}
 
       <main className="flex-1 px-4 pt-4 pb-24 sm:pb-8">
         <Outlet />

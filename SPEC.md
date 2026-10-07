@@ -75,7 +75,7 @@ interface UserState {
     keyIdea?: string;                    // ключевая идея одной строкой
     note?: string;
   }>;
-  sessions: Record<string, "done" | "light" | "moved">;
+  sessions: Record<string, { status: "done" | "light" | "moved"; date: string }>; // date: когда поставлена отметка
   dayNotes: Record<string, string>;      // ключ: дата YYYY-MM-DD
   prizesClaimed: Record<number, string>; // неделя → дата получения
   mocks: { week: number; type: string; date?: string; notes?: string }[];

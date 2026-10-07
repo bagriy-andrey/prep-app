@@ -6,16 +6,18 @@ import WeekSwitcher from "../components/WeekSwitcher";
 import { plan, weeksByNumber } from "../data/plan";
 import { defaultWeekNumber, locateDate, dayDate } from "../domain/schedule";
 import { useToday } from "../hooks/useToday";
+import { useUserState } from "../state/UserStateProvider";
 
 export default function PlanPage() {
   const today = useToday();
+  const { startDate } = useUserState();
   const params = useParams();
   const [search] = useSearchParams();
   const selectedDate = search.get("day");
   const selectedRef = useRef<HTMLElement>(null);
 
-  const todayLoc = locateDate(plan, today);
-  const weekNumber = params.week === undefined ? defaultWeekNumber(plan, today) : Number(params.week);
+  const todayLoc = locateDate(plan, today, startDate);
+  const weekNumber = params.week === undefined ? defaultWeekNumber(plan, today, startDate) : Number(params.week);
   const week = weeksByNumber.get(weekNumber);
 
   useEffect(() => {
@@ -31,7 +33,7 @@ export default function PlanPage() {
       <WeekHeader week={week} />
       <div className="space-y-3">
         {week.days.map((day) => {
-          const date = dayDate(plan.meta.startDate, week.n, day.offset);
+          const date = dayDate(startDate, week.n, day.offset);
           const isToday = date === today;
           const isSelected = date === selectedDate;
           return (
