@@ -1,6 +1,6 @@
 // Отметка сессий и закрытие недели (разд. 6.2, 6.3).
 
-import type { Session, Week } from "../data/types";
+import type { Plan, Session, Week } from "../data/types";
 import type { UserState } from "./userState";
 
 /** В подсчёты не входят необязательные сессии и выходной. */
@@ -46,4 +46,29 @@ export function markableSessionIds(sessions: Session[]): string[] {
 /** Доля выполненного в целых процентах; для пустого списка 0. */
 export function toPercent(done: number, total: number): number {
   return total === 0 ? 0 : Math.round((done / total) * 100);
+}
+
+export interface CourseProgress {
+  done: number;
+  total: number;
+  percent: number;
+  closedWeeks: number;
+  weeks: number;
+}
+
+/**
+ * Общий прогресс курса из прогресса недель: сумма сделанных обязательных сессий
+ * по всем неделям делится на сумму всех обязательных сессий.
+ */
+export function courseProgress(plan: Plan, state: UserState): CourseProgress {
+  const weeks = plan.weeks.map((w) => weekProgress(w, state));
+  const done = weeks.reduce((sum, w) => sum + w.done, 0);
+  const total = weeks.reduce((sum, w) => sum + w.total, 0);
+  return {
+    done,
+    total,
+    percent: toPercent(done, total),
+    closedWeeks: weeks.filter((w) => w.closed).length,
+    weeks: weeks.length,
+  };
 }

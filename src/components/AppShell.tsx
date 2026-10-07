@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from "react-router";
 import { useUserState } from "../state/UserStateProvider";
+import CourseProgress from "./CourseProgress";
 
 const links = [
   { to: "/", label: "Сегодня", end: true },
@@ -16,8 +17,11 @@ export default function AppShell() {
   const { saveError } = useUserState();
   return (
     <div className="mx-auto flex min-h-dvh max-w-3xl flex-col">
-      <header className="sticky top-0 z-10 hidden border-b border-slate-200 bg-slate-50/90 backdrop-blur sm:block dark:border-slate-800 dark:bg-slate-950/90">
-        <nav aria-label="Основная навигация" className="flex gap-1 px-4 py-2">
+      <header className="sticky top-0 z-10 border-b border-slate-200 bg-slate-50/90 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90">
+        <div className="px-4 pt-2 pb-2 sm:pb-1">
+          <CourseProgress />
+        </div>
+        <nav aria-label="Основная навигация" className="hidden gap-1 px-4 pb-2 sm:flex">
           {links.map((l) => (
             <NavLink key={l.to} to={l.to} end={l.end} className={navClass}>
               {l.label}

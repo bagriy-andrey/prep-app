@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { plan } from "../data/plan";
-import { countsTowardProgress, isManualSession, markableSessionIds, toPercent, isSessionDone, isWeekClosed, weekProgress, weekSessions } from "./progress";
+import { countsTowardProgress, courseProgress, isManualSession, markableSessionIds, toPercent, isSessionDone, isWeekClosed, weekProgress, weekSessions } from "./progress";
 import { completeWeek, DATE, emptyState } from "./testing";
 import { addAttempt, markUnmarked, setSessionStatus } from "./userState";
 
@@ -113,5 +113,33 @@ describe("toPercent", () => {
     expect(toPercent(1, 3)).toBe(33);
     expect(toPercent(2, 3)).toBe(67);
     expect(toPercent(5, 5)).toBe(100);
+  });
+});
+
+describe("courseProgress", () => {
+  const total = plan.weeks.reduce((sum, w) => sum + weekProgress(w, emptyState()).total, 0);
+
+  it("пустой курс: ноль процентов, ни одной закрытой недели", () => {
+    expect(courseProgress(plan, emptyState())).toEqual({ done: 0, total, percent: 0, closedWeeks: 0, weeks: 16 });
+  });
+
+  it("складывается из прогресса недель", () => {
+    const state = completeWeek(completeWeek(emptyState(), 1), 2);
+    const expected = weekProgress(plan.weeks[0], state).done + weekProgress(plan.weeks[1], state).done;
+    const progress = courseProgress(plan, state);
+    expect(progress).toMatchObject({ done: expected, total, closedWeeks: 2 });
+    expect(progress.percent).toBe(toPercent(expected, total));
+  });
+
+  it("частично закрытая неделя входит долей, а не целиком", () => {
+    const session = weekSessions(plan.weeks[0]).find((s) => isManualSession(s) && countsTowardProgress(s))!;
+    const state = setSessionStatus(emptyState(), session.id, "done", DATE);
+    expect(courseProgress(plan, state)).toMatchObject({ done: 1, closedWeeks: 0 });
+  });
+
+  it("все недели закрыты: сто процентов", () => {
+    let state = emptyState();
+    for (let n = 1; n <= 16; n++) state = completeWeek(state, n);
+    expect(courseProgress(plan, state)).toMatchObject({ done: total, percent: 100, closedWeeks: 16 });
   });
 });
