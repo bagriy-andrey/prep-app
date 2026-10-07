@@ -1,4 +1,3 @@
-import { forwardRef } from "react";
 import type { Day } from "../data/types";
 import { isManualSession, isSessionDone, markableSessionIds } from "../domain/progress";
 import type { SessionStatus } from "../domain/userState";
@@ -7,6 +6,7 @@ import { useUserState } from "../state/UserStateProvider";
 import AttemptControls from "./AttemptControls";
 import LightAlternative from "./LightAlternative";
 import ManualMarkControls from "./ManualMarkControls";
+import SessionNote from "./SessionNote";
 import SessionRow from "./SessionRow";
 import { subtleButton } from "./ui";
 
@@ -14,27 +14,22 @@ interface Props {
   day: Day;
   date: string;
   isToday: boolean;
-  isSelected: boolean;
 }
 
-const DayCard = forwardRef<HTMLElement, Props>(function DayCard({ day, date, isToday, isSelected }, ref) {
+export default function DayCard({ day, date, isToday }: Props) {
   const { state, actions } = useUserState();
   const total = day.sessions.filter((s) => !s.optional).reduce((sum, s) => sum + s.minutes, 0);
   const markable = markableSessionIds(day.sessions);
   const unmarked = markable.filter((id) => !state.sessions[id]);
-  const ring = isToday
-    ? "border-indigo-500 ring-2 ring-indigo-500/30"
-    : isSelected
-      ? "border-slate-500 ring-2 ring-slate-500/30"
-      : "border-slate-200 dark:border-slate-800";
   const headingId = `day-${date}`;
 
   return (
     <section
-      ref={ref}
       aria-labelledby={headingId}
       aria-current={isToday ? "date" : undefined}
-      className={`scroll-mt-16 rounded-xl border bg-white p-4 dark:bg-slate-900 ${ring}`}
+      className={`rounded-xl border bg-white p-4 dark:bg-slate-900 ${
+        isToday ? "border-indigo-500 ring-2 ring-indigo-500/30" : "border-slate-200 dark:border-slate-800"
+      }`}
     >
       <header className="mb-3 flex flex-wrap items-baseline justify-between gap-x-3">
         <h3 id={headingId} className="font-semibold">
@@ -51,12 +46,14 @@ const DayCard = forwardRef<HTMLElement, Props>(function DayCard({ day, date, isT
             : isSessionDone(s, state)
               ? "done"
               : null;
+          const isRest = s.block === "rest";
           return (
             <SessionRow key={s.id} {...s} status={status}>
-              {s.block === "rest" ? null : s.itemId ? (
-                <AttemptControls itemId={s.itemId} />
-              ) : (
-                <ManualMarkControls id={s.id} title={s.title} />
+              {isRest ? null : (
+                <>
+                  {s.itemId ? <AttemptControls itemId={s.itemId} /> : <ManualMarkControls id={s.id} title={s.title} />}
+                  <SessionNote sessionId={s.id} itemId={s.itemId} />
+                </>
               )}
             </SessionRow>
           );
@@ -83,6 +80,4 @@ const DayCard = forwardRef<HTMLElement, Props>(function DayCard({ day, date, isT
       )}
     </section>
   );
-});
-
-export default DayCard;
+}

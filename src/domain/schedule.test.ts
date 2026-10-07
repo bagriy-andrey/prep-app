@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { plan } from "../data/plan";
-import { dayDate, defaultWeekNumber, locateDate, resolveToday } from "./schedule";
+import { dayDate, defaultWeekNumber, locateDate, resolveToday, weekRange } from "./schedule";
 
 const start = plan.meta.startDate;
 
@@ -56,5 +56,12 @@ describe("schedule", () => {
     expect(locateDate(plan, dayDate(start, 3, 4))).toEqual({ week: 3, offset: 4 });
     expect(locateDate(plan, "2026-10-11")).toBeNull();
     expect(locateDate(plan, dayDate(start, 17, 0))).toBeNull();
+  });
+});
+
+describe("weekRange", () => {
+  it("возвращает понедельник и воскресенье недели", () => {
+    expect(weekRange(start, 1)).toEqual({ from: "2026-10-12", to: "2026-10-18" });
+    expect(weekRange(start, 3)).toEqual({ from: "2026-10-26", to: "2026-11-01" });
   });
 });

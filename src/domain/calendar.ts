@@ -126,3 +126,17 @@ export function hasLoadWarning(plan: Plan, state: UserState, today: string, star
   }
   return light * 2 > planned;
 }
+
+export interface DayProgress {
+  done: number;
+  total: number;
+  /** id обязательных сессий, которые ещё не сделаны. */
+  remainingIds: string[];
+}
+
+/** Прогресс дня по обязательным сессиям; light считается сделанным, moved нет. */
+export function dayProgress(day: PlannedDay, state: UserState): DayProgress {
+  const required = day.sessions.filter((s) => s.required);
+  const remaining = required.filter((s) => !isSessionDone(s, state));
+  return { done: required.length - remaining.length, total: required.length, remainingIds: remaining.map((s) => s.id) };
+}

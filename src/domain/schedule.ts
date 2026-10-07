@@ -10,6 +10,11 @@ export function weekStart(startDate: string, week: number): string {
   return dayDate(startDate, week, 0);
 }
 
+/** Первый и последний день недели плана. */
+export function weekRange(startDate: string, week: number): { from: string; to: string } {
+  return { from: dayDate(startDate, week, 0), to: dayDate(startDate, week, 6) };
+}
+
 export type TodayPosition =
   | { kind: "before"; daysLeft: number }
   | { kind: "in"; week: Week; day: Day; date: string }

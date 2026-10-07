@@ -42,3 +42,8 @@ export const isWeekClosed = (week: Week, state: UserState) => weekProgress(week,
 export function markableSessionIds(sessions: Session[]): string[] {
   return sessions.filter((s) => isManualSession(s) && s.block !== "rest").map((s) => s.id);
 }
+
+/** Доля выполненного в целых процентах; для пустого списка 0. */
+export function toPercent(done: number, total: number): number {
+  return total === 0 ? 0 : Math.round((done / total) * 100);
+}

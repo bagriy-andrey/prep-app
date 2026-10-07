@@ -49,7 +49,7 @@ export default function TodayPage() {
         <p className="mb-4 text-sm text-slate-600 dark:text-slate-400">{plan.maintenanceWeek.title}</p>
         <LoadWarning today={today} />
         {maintenanceDay ? (
-          <DayCard day={maintenanceDay} date={today} isToday isSelected={false} />
+          <DayCard day={maintenanceDay} date={today} isToday />
         ) : (
           <p className="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
             Сегодня по плану отдых.
@@ -81,7 +81,7 @@ export default function TodayPage() {
 
       <LoadWarning today={today} />
 
-      <DayCard day={day} date={today} isToday isSelected={false} />
+      <DayCard day={day} date={today} isToday />
 
       <ReviewQueue today={today} />
 

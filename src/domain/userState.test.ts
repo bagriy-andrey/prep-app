@@ -7,6 +7,7 @@ import {
   removeEntry,
   removeLastAttempt,
   setItemTitle,
+  setSessionNote,
   setStartDate,
   StateParseError,
   updateEntry,
@@ -40,6 +41,12 @@ describe("parseUserState", () => {
     expect(parseUserState(JSON.parse(JSON.stringify(s)))).toEqual({ ...s, startDate: undefined });
   });
 
+  it("старое сохранение без sessionNotes читается с пустыми заметками", () => {
+    const { sessionNotes: _omit, ...old } = createInitialState();
+    void _omit;
+    expect(parseUserState(old).sessionNotes).toEqual({});
+  });
+
   it("отклоняет повреждённые данные", () => {
     const bad: unknown[] = [
       null,
@@ -54,6 +61,8 @@ describe("parseUserState", () => {
       { ...createInitialState(), sessions: { s: "done" } },
       { ...createInitialState(), prizesClaimed: { abc: "2026-10-12" } },
       { ...createInitialState(), mocks: {} },
+      { ...createInitialState(), sessionNotes: { s: 5 } },
+      { ...createInitialState(), sessionNotes: [] },
     ];
     for (const value of bad) expect(() => parseUserState(value)).toThrow(StateParseError);
   });
@@ -99,5 +108,13 @@ describe("setStartDate", () => {
   it("отклоняет не понедельник и неверный формат", () => {
     expect(() => setStartDate(createInitialState(), "2026-11-03")).toThrow(StateParseError);
     expect(() => setStartDate(createInitialState(), "завтра")).toThrow(StateParseError);
+  });
+});
+
+describe("заметки к сессиям", () => {
+  it("хранит заметку по id сессии и удаляет пустой", () => {
+    const s = setSessionNote(createInitialState(), "w01-d3-s1", "прочитал, не понял this");
+    expect(s.sessionNotes).toEqual({ "w01-d3-s1": "прочитал, не понял this" });
+    expect(setSessionNote(s, "w01-d3-s1", "").sessionNotes).toEqual({});
   });
 });

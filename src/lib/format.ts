@@ -9,6 +9,16 @@ export const dayShort = (dow: number) => DAY_SHORT[dow - 1];
 const dateFormat = new Intl.DateTimeFormat("ru-RU", { day: "numeric", month: "long" });
 export const formatDateRu = (date: string) => dateFormat.format(parseDate(date));
 
+/** «12–18 октября» или «26 октября – 1 ноября». */
+export function formatDateRange(from: string, to: string): string {
+  const a = parseDate(from);
+  const b = parseDate(to);
+  if (a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth()) {
+    return `${a.getDate()}–${formatDateRu(to)}`;
+  }
+  return `${formatDateRu(from)} – ${formatDateRu(to)}`;
+}
+
 /** Склонение: plural(1, ["день","дня","дней"]) → "день". */
 export function plural(n: number, forms: [string, string, string]): string {
   const mod100 = Math.abs(n) % 100;

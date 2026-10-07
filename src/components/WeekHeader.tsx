@@ -1,18 +1,24 @@
 import type { Week } from "../data/types";
 import { weekProgress } from "../domain/progress";
+import { weekRange } from "../domain/schedule";
+import { formatDateRange } from "../lib/format";
 import { useUserState } from "../state/UserStateProvider";
 import PhaseBadge from "./PhaseBadge";
 import PrizeBadge from "./PrizeBadge";
 import WeekProgressBar from "./WeekProgressBar";
 
 export default function WeekHeader({ week }: { week: Week }) {
-  const { state } = useUserState();
+  const { state, startDate } = useUserState();
+  const range = weekRange(startDate, week.n);
   const progress = weekProgress(week, state);
   const cp = week.checkpoint;
   return (
     <header className="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
       <div className="flex flex-wrap items-center gap-2">
-        <h2 className="text-lg font-semibold">Неделя {week.n}</h2>
+        <h2 className="text-lg font-semibold">
+          Неделя {week.n}
+          <span className="font-normal text-slate-600 dark:text-slate-400"> · {formatDateRange(range.from, range.to)}</span>
+        </h2>
         <PhaseBadge phase={week.phase} />
         <span
           className={`rounded-full px-2.5 py-0.5 text-xs font-medium ${

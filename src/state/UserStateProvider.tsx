@@ -14,6 +14,7 @@ import {
   setDayNote,
   setItemText,
   setItemTitle,
+  setSessionNote,
   setSessionStatus,
   setStartDate,
   updateEntry,
@@ -36,6 +37,7 @@ type Action =
   | { type: "setItemTitle"; itemId: string; title: string }
   | { type: "setItemText"; itemId: string; field: ItemTextField; text: string }
   | { type: "setDayNote"; date: string; text: string }
+  | { type: "setSessionNote"; id: string; text: string }
   | { type: "setSession"; id: string; status: SessionStatus | null; date: string }
   | { type: "markUnmarked"; ids: string[]; status: SessionStatus; date: string }
   | { type: "claimPrize"; week: number; date: string }
@@ -58,6 +60,8 @@ function reducer(state: UserState, action: Action): UserState {
       return setItemText(state, action.itemId, action.field, action.text);
     case "setDayNote":
       return setDayNote(state, action.date, action.text);
+    case "setSessionNote":
+      return setSessionNote(state, action.id, action.text);
     case "setSession":
       return setSessionStatus(state, action.id, action.status, action.date);
     case "markUnmarked":
@@ -85,6 +89,7 @@ export interface UserStateActions {
   setItemTitle(itemId: string, title: string): void;
   setItemText(itemId: string, field: ItemTextField, text: string): void;
   setDayNote(date: string, text: string): void;
+  setSessionNote(id: string, text: string): void;
   /** status = null снимает отметку. */
   setSession(id: string, status: SessionStatus | null): void;
   markUnmarked(ids: string[], status: SessionStatus): void;
@@ -178,6 +183,7 @@ export default function UserStateProvider({
       setItemTitle: (itemId, title) => dispatch({ type: "setItemTitle", itemId, title }),
       setItemText: (itemId, field, text) => dispatch({ type: "setItemText", itemId, field, text }),
       setDayNote: (date, text) => dispatch({ type: "setDayNote", date, text }),
+      setSessionNote: (id, text) => dispatch({ type: "setSessionNote", id, text }),
       setSession: (id, status) => dispatch({ type: "setSession", id, status, date: todayString() }),
       markUnmarked: (ids, status) => dispatch({ type: "markUnmarked", ids, status, date: todayString() }),
       claimPrize: (week) => dispatch({ type: "claimPrize", week, date: todayString() }),

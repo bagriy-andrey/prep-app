@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { plan } from "../data/plan";
-import { countsTowardProgress, isManualSession, markableSessionIds, isSessionDone, isWeekClosed, weekProgress, weekSessions } from "./progress";
+import { countsTowardProgress, isManualSession, markableSessionIds, toPercent, isSessionDone, isWeekClosed, weekProgress, weekSessions } from "./progress";
 import { completeWeek, DATE, emptyState } from "./testing";
 import { addAttempt, markUnmarked, setSessionStatus } from "./userState";
 
@@ -103,5 +103,15 @@ describe("markableSessionIds", () => {
     const ids = markableSessionIds(day.sessions);
     expect(ids.length).toBeGreaterThan(0);
     for (const id of ids) expect(isManualSession(day.sessions.find((s) => s.id === id)!)).toBe(true);
+  });
+});
+
+describe("toPercent", () => {
+  it("округляет до целых и не делит на ноль", () => {
+    expect(toPercent(0, 0)).toBe(0);
+    expect(toPercent(0, 5)).toBe(0);
+    expect(toPercent(1, 3)).toBe(33);
+    expect(toPercent(2, 3)).toBe(67);
+    expect(toPercent(5, 5)).toBe(100);
   });
 });

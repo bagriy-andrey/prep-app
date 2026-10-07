@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { plan } from "../data/plan";
-import { dayStatus, hasLoadWarning, isLightDay, plannedDayAt, streak, type PlannedDay } from "./calendar";
+import { dayProgress, dayStatus, hasLoadWarning, isLightDay, plannedDayAt, streak, type PlannedDay } from "./calendar";
 import { dayDate } from "./schedule";
 import { addAttempt, createInitialState, setSessionStatus, type UserState } from "./userState";
 
@@ -175,5 +175,24 @@ describe("hasLoadWarning (6.6)", () => {
 
   it("старые лёгкие дни за окном не считаются", () => {
     expect(hasLoadWarning(plan, lightDays(10), "2026-11-20", start)).toBe(false);
+  });
+});
+
+describe("dayProgress", () => {
+  it("считает только обязательные сессии", () => {
+    const d = day("2026-10-17"); // три обязательные и одна необязательная
+    expect(dayProgress(d, empty)).toEqual({ done: 0, total: 3, remainingIds: ["w01-d6-s1", "w01-d6-s2", "w01-d6-s3"] });
+  });
+
+  it("сделанные и лёгкие сессии уменьшают остаток, перенесённые нет", () => {
+    const d = day("2026-10-12");
+    let state = setSessionStatus(empty, "w01-d1-s1", "light", "2026-10-12");
+    state = addAttempt(state, "dsa-contains-duplicate", "hint", "2026-10-12");
+    state = setSessionStatus(state, "w01-d1-s3", "moved", "2026-10-12");
+    expect(dayProgress(d, state)).toEqual({ done: 2, total: 3, remainingIds: ["w01-d1-s3"] });
+  });
+
+  it("у выходного нет обязательных сессий", () => {
+    expect(dayProgress(day("2026-10-16"), empty)).toEqual({ done: 0, total: 0, remainingIds: [] });
   });
 });

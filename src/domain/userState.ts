@@ -52,6 +52,8 @@ export interface UserState {
   items: Record<string, ItemState>;
   sessions: Record<string, SessionMark>;
   dayNotes: Record<string, string>;
+  /** Заметки к ручным сессиям (ключ: id сессии). Для сессий с задачей заметка хранится в items[id].note. */
+  sessionNotes: Record<string, string>;
   prizesClaimed: Record<number, string>;
   mocks: MockEntry[];
   stories: StoryEntry[];
@@ -70,6 +72,7 @@ export function createInitialState(): UserState {
     items: {},
     sessions: {},
     dayNotes: {},
+    sessionNotes: {},
     prizesClaimed: {},
     mocks: [],
     stories: [],
@@ -115,6 +118,14 @@ export function setItemText(state: UserState, itemId: string, field: ItemTextFie
   if (text) next[field] = text;
   else delete next[field];
   return { ...state, items: { ...state.items, [itemId]: next } };
+}
+
+/** Заметка к ручной сессии. Пустой текст удаляет заметку. */
+export function setSessionNote(state: UserState, sessionId: string, text: string): UserState {
+  const sessionNotes = { ...state.sessionNotes };
+  if (text) sessionNotes[sessionId] = text;
+  else delete sessionNotes[sessionId];
+  return { ...state, sessionNotes };
 }
 
 /** Заметка дня по дате YYYY-MM-DD. Пустой текст удаляет заметку. */
@@ -244,6 +255,13 @@ export function parseUserState(raw: unknown): UserState {
     if (!isDate(date) || typeof note !== "string") fail(`dayNotes.${date}: неверная заметка`);
   }
 
+  // Поле добавлено позже: в старых сохранениях его нет.
+  const sessionNotes = raw.sessionNotes ?? {};
+  if (!isRecord(sessionNotes)) fail("sessionNotes: ожидался объект");
+  for (const [id, note] of Object.entries(sessionNotes)) {
+    if (typeof note !== "string") fail(`sessionNotes.${id}: ожидалась строка`);
+  }
+
   if (!isRecord(raw.prizesClaimed)) fail("prizesClaimed: ожидался объект");
   for (const [week, date] of Object.entries(raw.prizesClaimed)) {
     if (!/^\d+$/.test(week) || !isDate(date)) fail(`prizesClaimed.${week}: неверная запись`);
@@ -260,6 +278,7 @@ export function parseUserState(raw: unknown): UserState {
     items,
     sessions: raw.sessions as Record<string, SessionMark>,
     dayNotes: raw.dayNotes as Record<string, string>,
+    sessionNotes: sessionNotes as Record<string, string>,
     prizesClaimed: raw.prizesClaimed as Record<number, string>,
     mocks: raw.mocks as MockEntry[],
     stories: raw.stories as StoryEntry[],
