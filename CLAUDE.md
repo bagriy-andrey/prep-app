@@ -18,12 +18,10 @@ scripts/       check-links.ts
 
 ## Команды
 
-Появятся вместе с каркасом проекта (этап 1):
-
 - `npm run dev`: dev-сервер
 - `npm run build`: сборка (`tsc` и `vite build`)
 - `npm test`: Vitest
-- `npm run check-links`: проверка ссылок из `plan.json`
+- `npm run check-links`: проверка ссылок из `plan.json`. Задачи LeetCode проверяются через публичный GraphQL, потому что сайт отдаёт ботам 403. Ссылки поиска YouTube не проверяются
 
 ## Договорённости
 
