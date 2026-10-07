@@ -74,7 +74,7 @@ function MocksTab() {
         <ul className="space-y-3">
           {state.mocks.map((m, i) => (
             <EntryCard key={i} title={m.type || `Мок ${i + 1}`} onDelete={() => actions.removeEntry("mocks", i)}>
-              <div>
+              <div className="sm:col-span-1">
                 <label htmlFor={`mock-week-${i}`} className="block text-sm font-medium">
                   Неделя
                 </label>
@@ -91,14 +91,16 @@ function MocksTab() {
                   ))}
                 </select>
               </div>
-              <NoteField label="Тип" singleLine value={m.type} onChange={(type) => actions.updateEntry("mocks", i, { type })} />
+              <NoteField className="sm:col-span-3" label="Тип" singleLine value={m.type} onChange={(type) => actions.updateEntry("mocks", i, { type })} />
               <NoteField
+                className="sm:col-span-2"
                 label="Дата"
                 type="date"
                 value={m.date ?? ""}
                 onChange={(date) => actions.updateEntry("mocks", i, { date: date || undefined })}
               />
               <NoteField
+                className="sm:col-span-6"
                 label="Оценка и три ошибки"
                 value={m.notes ?? ""}
                 onChange={(notes) => actions.updateEntry("mocks", i, { notes: notes || undefined })}
@@ -132,8 +134,8 @@ function StoriesTab() {
         <ul className="space-y-3">
           {state.stories.map((s, i) => (
             <EntryCard key={i} title={s.topic || `История ${i + 1}`} onDelete={() => actions.removeEntry("stories", i)}>
-              <NoteField label="Тема" singleLine value={s.topic} onChange={(topic) => actions.updateEntry("stories", i, { topic })} />
-              <label className="flex items-center gap-2 self-end pb-1.5 text-sm font-medium">
+              <NoteField className="sm:col-span-4" label="Тема" singleLine value={s.topic} onChange={(topic) => actions.updateEntry("stories", i, { topic })} />
+              <label className="flex items-center gap-2 self-end pb-1.5 text-sm font-medium sm:col-span-2">
                 <input
                   type="checkbox"
                   checked={s.ready}
@@ -143,11 +145,13 @@ function StoriesTab() {
                 История готова
               </label>
               <NoteField
+                className="sm:col-span-6"
                 label="Ситуация и действия"
                 value={s.situation ?? ""}
                 onChange={(situation) => actions.updateEntry("stories", i, { situation: situation || undefined })}
               />
               <NoteField
+                className="sm:col-span-6"
                 label="Результат в цифрах"
                 value={s.result ?? ""}
                 onChange={(result) => actions.updateEntry("stories", i, { result: result || undefined })}
@@ -176,8 +180,8 @@ function ApplicationsTab() {
         <ul className="space-y-3">
           {state.applications.map((a, i) => (
             <EntryCard key={i} title={a.company || `Подача ${i + 1}`} onDelete={() => actions.removeEntry("applications", i)}>
-              <NoteField label="Компания" singleLine value={a.company} onChange={(company) => actions.updateEntry("applications", i, { company })} />
-              <div>
+              <NoteField className="sm:col-span-3" label="Компания" singleLine value={a.company} onChange={(company) => actions.updateEntry("applications", i, { company })} />
+              <div className="sm:col-span-3">
                 <label htmlFor={`app-status-${i}`} className="block text-sm font-medium">
                   Статус
                 </label>
@@ -191,24 +195,28 @@ function ApplicationsTab() {
                 />
               </div>
               <NoteField
+                className="sm:col-span-2"
                 label="Реферал"
                 singleLine
                 value={a.referral ?? ""}
                 onChange={(referral) => actions.updateEntry("applications", i, { referral: referral || undefined })}
               />
               <NoteField
+                className="sm:col-span-2"
                 label="Дата подачи"
                 type="date"
                 value={a.appliedOn ?? ""}
                 onChange={(appliedOn) => actions.updateEntry("applications", i, { appliedOn: appliedOn || undefined })}
               />
               <NoteField
+                className="sm:col-span-2"
                 label="Следующий шаг"
                 singleLine
                 value={a.nextStep ?? ""}
                 onChange={(nextStep) => actions.updateEntry("applications", i, { nextStep: nextStep || undefined })}
               />
               <NoteField
+                className="sm:col-span-6"
                 label="Заметки"
                 value={a.notes ?? ""}
                 onChange={(notes) => actions.updateEntry("applications", i, { notes: notes || undefined })}

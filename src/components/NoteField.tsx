@@ -9,16 +9,18 @@ interface Props {
   /** Тип поля для однострочного ввода, по умолчанию text. */
   type?: "text" | "date" | "number";
   placeholder?: string;
+  /** Классы обёртки, например ширина в сетке карточки. */
+  className?: string;
 }
 
 const field =
   "mt-1 w-full rounded-md border border-slate-300 bg-white px-2 py-1.5 text-sm dark:border-slate-700 dark:bg-slate-900";
 
 /** Текстовое поле заметки: значение сохраняется при каждом изменении. */
-export default function NoteField({ label, value, onChange, singleLine, type = "text", placeholder }: Props) {
+export default function NoteField({ label, value, onChange, singleLine, type = "text", placeholder, className }: Props) {
   const id = useId();
   return (
-    <div>
+    <div className={className}>
       <label htmlFor={id} className="block text-sm font-medium">
         {label}
       </label>
@@ -34,7 +36,7 @@ export default function NoteField({ label, value, onChange, singleLine, type = "
       ) : (
         <textarea
           id={id}
-          rows={3}
+          rows={4}
           value={value}
           placeholder={placeholder}
           onChange={(e) => onChange(e.target.value)}
