@@ -715,17 +715,17 @@
        "id": "w03-d1-s3",
        "minutes": 30,
        "block": "dsa",
-       "title": "Новая задача: Find Minimum in Rotated Sorted Array (Medium)",
-       "itemId": "dsa-find-minimum-in-rotated-sorted-array",
+       "title": "Новая задача: Koko Eating Bananas (Medium)",
+       "itemId": "dsa-koko-eating-bananas",
        "links": [
         {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+         "url": "https://leetcode.com/problems/koko-eating-bananas/",
          "confidence": "pattern"
         },
         {
          "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Find+Minimum+in+Rotated+Sorted+Array",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Koko+Eating+Bananas",
          "confidence": "pattern"
         }
        ]
@@ -834,17 +834,17 @@
        "id": "w03-d4-s3",
        "minutes": 30,
        "block": "dsa",
-       "title": "Новая задача: Longest Repeating Character Replacement (Medium)",
-       "itemId": "dsa-longest-repeating-character-replacement",
+       "title": "Новая задача: Daily Temperatures (Medium)",
+       "itemId": "dsa-daily-temperatures",
        "links": [
         {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+         "url": "https://leetcode.com/problems/daily-temperatures/",
          "confidence": "pattern"
         },
         {
          "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Longest+Repeating+Character+Replacement",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Daily+Temperatures",
          "confidence": "pattern"
         }
        ]
@@ -994,7 +994,7 @@
    "n": 4,
    "phase": "topics",
    "title": "Связные списки",
-   "webTopic": "Рендеринг в браузере: critical rendering path, reflow, repaint",
+   "webTopic": "Рендеринг в браузере: critical rendering path, reflow, repaint; хранилища и cookies",
    "prize": {
     "title": "Пульт дрона",
     "tier": "big"
@@ -1107,12 +1107,12 @@
       {
        "id": "w04-d3-s2",
        "minutes": 30,
-       "block": "sd-theory",
-       "title": "Перечитать фреймворк RADIO и свои слабые места по прошлым задачам",
+       "block": "web",
+       "title": "Веб-основы, доп.: хранилища в браузере: cookies (HttpOnly, Secure, SameSite), localStorage, sessionStorage, IndexedDB",
        "links": [
         {
-         "label": "GFE: Front End System Design Playbook",
-         "url": "https://www.greatfrontend.com/front-end-system-design-playbook",
+         "label": "MDN: Cookies",
+         "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies",
          "confidence": "pattern"
         }
        ]
@@ -1313,7 +1313,7 @@
    "n": 5,
    "phase": "topics",
    "title": "Деревья, часть 1",
-   "webTopic": "CSS: каскад, специфичность, flexbox, grid",
+   "webTopic": "CSS: каскад, специфичность, flexbox, grid; TypeScript в React",
    "prize": {
     "title": "Туристический кейс для дрона",
     "tier": "small"
@@ -1426,12 +1426,12 @@
       {
        "id": "w05-d3-s2",
        "minutes": 30,
-       "block": "sd-theory",
-       "title": "Перечитать фреймворк RADIO и свои слабые места по прошлым задачам",
+       "block": "web",
+       "title": "Веб-основы, доп.: TypeScript в React: пропсы, события, хуки, дженерик-компоненты",
        "links": [
         {
-         "label": "GFE: Front End System Design Playbook",
-         "url": "https://www.greatfrontend.com/front-end-system-design-playbook",
+         "label": "React: Using TypeScript",
+         "url": "https://react.dev/learn/typescript",
          "confidence": "pattern"
         }
        ]
@@ -3316,17 +3316,17 @@
        "id": "w11-d6-s4",
        "minutes": 50,
        "block": "dsa",
-       "title": "Новая задача: Unique Paths (Medium)",
-       "itemId": "dsa-unique-paths",
+       "title": "Новая задача: Longest Common Subsequence (Medium)",
+       "itemId": "dsa-longest-common-subsequence",
        "links": [
         {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problems/unique-paths/",
+         "url": "https://leetcode.com/problems/longest-common-subsequence/",
          "confidence": "pattern"
         },
         {
          "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Unique+Paths",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Longest+Common+Subsequence",
          "confidence": "pattern"
         }
        ]
@@ -3342,17 +3342,17 @@
        "id": "w11-d7-s1",
        "minutes": 30,
        "block": "dsa",
-       "title": "Новая задача: Jump Game (Medium)",
-       "itemId": "dsa-jump-game",
+       "title": "Новая задача: Kth Largest Element in an Array (Medium)",
+       "itemId": "dsa-kth-largest-element-in-an-array",
        "links": [
         {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problems/jump-game/",
+         "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
          "confidence": "pattern"
         },
         {
          "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Jump+Game",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Kth+Largest+Element+in+an+Array",
          "confidence": "pattern"
         }
        ]
@@ -3391,7 +3391,7 @@
    "n": 12,
    "phase": "simulation",
    "title": "Симуляция интервью",
-   "webTopic": "Доступность: ARIA, клавиатура, управление фокусом",
+   "webTopic": "Доступность: ARIA, клавиатура, управление фокусом; React, часть 2",
    "prize": {
     "title": "Очки Ray-Ban",
     "tier": "big"
@@ -3412,7 +3412,7 @@
        "id": "w12-d1-s2",
        "minutes": 25,
        "block": "dsa",
-       "title": "Задача Google на время: впиши название",
+       "title": "Задача Google на время, префиксные суммы (пример: Subarray Sum Equals K): впиши название",
        "itemId": "dsa-own-01",
        "links": [
         {
@@ -3431,7 +3431,7 @@
        "id": "w12-d1-s3",
        "minutes": 30,
        "block": "dsa",
-       "title": "Задача Google на время: впиши название",
+       "title": "Задача Google на время, куча, Hard (пример: Find Median from Data Stream): впиши название",
        "itemId": "dsa-own-02",
        "links": [
         {
@@ -3457,7 +3457,7 @@
        "id": "w12-d2-s1",
        "minutes": 35,
        "block": "js",
-       "title": "Утилита JS на время из списка вопросов Google или Netflix: впиши название",
+       "title": "Утилита JS на время: LRU Cache на Map: get и put за O(1). Впиши название",
        "itemId": "js-own-01",
        "links": [
         {
@@ -3471,7 +3471,7 @@
        "id": "w12-d2-s2",
        "minutes": 40,
        "block": "ui",
-       "title": "UI-компонент на время из списка вопросов Google или Netflix: впиши название",
+       "title": "UI-компонент на время: Autocomplete: debounce, отмена устаревших запросов, клавиатура, роль combobox. Впиши название",
        "itemId": "ui-own-01",
        "links": [
         {
@@ -3504,13 +3504,18 @@
       {
        "id": "w12-d3-s2",
        "minutes": 30,
-       "block": "sd-theory",
-       "title": "Прочитать разбор без решения: Rate Limiter",
+       "block": "web",
+       "title": "Веб-основы, доп.: React, часть 2: эффекты и устаревшие замыкания, ключи, Suspense, конкурентный рендер",
        "links": [
         {
-         "label": "Hello Interview: Rate Limiter",
-         "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/distributed-rate-limiter",
-         "confidence": "checked"
+         "label": "React: You Might Not Need an Effect",
+         "url": "https://react.dev/learn/you-might-not-need-an-effect",
+         "confidence": "pattern"
+        },
+        {
+         "label": "React: Suspense",
+         "url": "https://react.dev/reference/react/Suspense",
+         "confidence": "pattern"
         }
        ]
       }
@@ -3531,7 +3536,7 @@
        "id": "w12-d4-s2",
        "minutes": 25,
        "block": "dsa",
-       "title": "Задача Google на время: впиши название",
+       "title": "Задача Google на время, матрицы (пример: Rotate Image или Spiral Matrix): впиши название",
        "itemId": "dsa-own-03",
        "links": [
         {
@@ -3550,7 +3555,7 @@
        "id": "w12-d4-s3",
        "minutes": 30,
        "block": "dsa",
-       "title": "Задача Google на время: впиши название",
+       "title": "Задача Google на время, монотонный стек, Hard (пример: Largest Rectangle in Histogram): впиши название",
        "itemId": "dsa-own-04",
        "links": [
         {
@@ -3717,7 +3722,7 @@
        "id": "w13-d1-s2",
        "minutes": 25,
        "block": "dsa",
-       "title": "Задача Google на время: впиши название",
+       "title": "Задача Google на время, топологическая сортировка (пример: Course Schedule II): впиши название",
        "itemId": "dsa-own-05",
        "links": [
         {
@@ -3736,7 +3741,7 @@
        "id": "w13-d1-s3",
        "minutes": 30,
        "block": "dsa",
-       "title": "Задача Google на время: впиши название",
+       "title": "Задача Google на время, union-find (пример: Redundant Connection или Number of Connected Components): впиши название",
        "itemId": "dsa-own-06",
        "links": [
         {
@@ -3762,7 +3767,7 @@
        "id": "w13-d2-s1",
        "minutes": 35,
        "block": "js",
-       "title": "Утилита JS на время из списка вопросов Google или Netflix: впиши название",
+       "title": "Утилита JS на время: Своя реализация Promise: then с цепочкой, catch, resolve с thenable. Впиши название",
        "itemId": "js-own-02",
        "links": [
         {
@@ -3776,7 +3781,7 @@
        "id": "w13-d2-s2",
        "minutes": 40,
        "block": "ui",
-       "title": "UI-компонент на время из списка вопросов Google или Netflix: впиши название",
+       "title": "UI-компонент на время: Бесконечная лента на IntersectionObserver, если успеешь, с виртуализацией. Впиши название",
        "itemId": "ui-own-02",
        "links": [
         {
@@ -3836,7 +3841,7 @@
        "id": "w13-d4-s2",
        "minutes": 25,
        "block": "dsa",
-       "title": "Задача Google на время: впиши название",
+       "title": "Задача Google на время, BFS по сетке (пример: Rotting Oranges): впиши название",
        "itemId": "dsa-own-07",
        "links": [
         {
@@ -3855,7 +3860,7 @@
        "id": "w13-d4-s3",
        "minutes": 30,
        "block": "dsa",
-       "title": "Задача Google на время: впиши название",
+       "title": "Задача Google на время, двумерное DP (пример: Edit Distance): впиши название",
        "itemId": "dsa-own-08",
        "links": [
         {
@@ -4022,7 +4027,7 @@
        "id": "w14-d1-s2",
        "minutes": 25,
        "block": "dsa",
-       "title": "Задача Google на время: впиши название",
+       "title": "Задача Google на время, куча (пример: K Closest Points to Origin или Task Scheduler): впиши название",
        "itemId": "dsa-own-09",
        "links": [
         {
@@ -4041,7 +4046,7 @@
        "id": "w14-d1-s3",
        "minutes": 30,
        "block": "dsa",
-       "title": "Задача Google на время: впиши название",
+       "title": "Задача Google на время, Дейкстра (пример: Network Delay Time): впиши название",
        "itemId": "dsa-own-10",
        "links": [
         {
@@ -4067,7 +4072,7 @@
        "id": "w14-d2-s1",
        "minutes": 35,
        "block": "js",
-       "title": "Утилита JS на время из списка вопросов Google или Netflix: впиши название",
+       "title": "Утилита JS на время: Retry с экспоненциальной задержкой и Promise.race с таймаутом. Впиши название",
        "itemId": "js-own-03",
        "links": [
         {
@@ -4081,7 +4086,7 @@
        "id": "w14-d2-s2",
        "minutes": 40,
        "block": "ui",
-       "title": "UI-компонент на время из списка вопросов Google или Netflix: впиши название",
+       "title": "UI-компонент на время: Progress Bars с ограничением параллельности. Впиши название",
        "itemId": "ui-own-03",
        "links": [
         {
@@ -4141,7 +4146,7 @@
        "id": "w14-d4-s2",
        "minutes": 25,
        "block": "dsa",
-       "title": "Задача Google на время: впиши название",
+       "title": "Задача Google на время, интервалы и куча (пример: Meeting Rooms II (бесплатно на NeetCode) или Car Pooling): впиши название",
        "itemId": "dsa-own-11",
        "links": [
         {
@@ -4160,7 +4165,7 @@
        "id": "w14-d4-s3",
        "minutes": 30,
        "block": "dsa",
-       "title": "Задача Google на время: впиши название",
+       "title": "Задача Google на время, графы, Hard (пример: Word Ladder): впиши название",
        "itemId": "dsa-own-12",
        "links": [
         {
@@ -4306,7 +4311,7 @@
    "n": 15,
    "phase": "simulation",
    "title": "Симуляция интервью",
-   "webTopic": "TypeScript: дженерики и utility types",
+   "webTopic": "TypeScript: дженерики и utility types; тестирование",
    "prize": {
     "title": "Фигурка Funko или Lego",
     "tier": "small"
@@ -4327,7 +4332,7 @@
        "id": "w15-d1-s2",
        "minutes": 25,
        "block": "dsa",
-       "title": "Задача Google на время: впиши название",
+       "title": "Задача Google на время, бэктрекинг (пример: Subsets или Permutations): впиши название",
        "itemId": "dsa-own-13",
        "links": [
         {
@@ -4346,7 +4351,7 @@
        "id": "w15-d1-s3",
        "minutes": 30,
        "block": "dsa",
-       "title": "Задача Google на время: впиши название",
+       "title": "Задача Google на время, DP (пример: Decode Ways или Partition Equal Subset Sum): впиши название",
        "itemId": "dsa-own-14",
        "links": [
         {
@@ -4372,7 +4377,7 @@
        "id": "w15-d2-s1",
        "minutes": 35,
        "block": "js",
-       "title": "Утилита JS на время из списка вопросов Google или Netflix: впиши название",
+       "title": "Утилита JS на время: get по пути (как lodash.get) и рендер JSON-дерева в DOM. Впиши название",
        "itemId": "js-own-04",
        "links": [
         {
@@ -4386,7 +4391,7 @@
        "id": "w15-d2-s2",
        "minutes": 40,
        "block": "ui",
-       "title": "UI-компонент на время из списка вопросов Google или Netflix: впиши название",
+       "title": "UI-компонент на время: Список с drag-and-drop или Stopwatch. Впиши название",
        "itemId": "ui-own-04",
        "links": [
         {
@@ -4419,13 +4424,13 @@
       {
        "id": "w15-d3-s2",
        "minutes": 30,
-       "block": "sd-theory",
-       "title": "Прочитать разбор без решения: Ticketmaster",
+       "block": "web",
+       "title": "Веб-основы, доп.: тестирование фронтенда: Jest и React Testing Library, что тестировать, асинхронность, моки",
        "links": [
         {
-         "label": "Hello Interview: Ticketmaster",
-         "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/ticketmaster",
-         "confidence": "checked"
+         "label": "React Testing Library",
+         "url": "https://testing-library.com/docs/react-testing-library/intro/",
+         "confidence": "pattern"
         }
        ]
       }
@@ -4446,7 +4451,7 @@
        "id": "w15-d4-s2",
        "minutes": 25,
        "block": "dsa",
-       "title": "Задача Google на время: впиши название",
+       "title": "Задача Google на время, свободный выбор (пример: любая задача из вопросов Google): впиши название",
        "itemId": "dsa-own-15",
        "links": [
         {
@@ -4465,7 +4470,7 @@
        "id": "w15-d4-s3",
        "minutes": 30,
        "block": "dsa",
-       "title": "Задача Google на время: впиши название",
+       "title": "Задача Google на время, два указателя, Hard (пример: Trapping Rain Water): впиши название",
        "itemId": "dsa-own-16",
        "links": [
         {
@@ -5056,21 +5061,21 @@
    ]
   },
   {
-   "id": "dsa-find-minimum-in-rotated-sorted-array",
+   "id": "dsa-koko-eating-bananas",
    "kind": "dsa",
-   "title": "Find Minimum in Rotated Sorted Array",
+   "title": "Koko Eating Bananas",
    "week": 3,
    "difficulty": "Medium",
    "topic": "Стек и бинарный поиск",
    "links": [
     {
      "label": "LeetCode",
-     "url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+     "url": "https://leetcode.com/problems/koko-eating-bananas/",
      "confidence": "pattern"
     },
     {
      "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Find+Minimum+in+Rotated+Sorted+Array",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Koko+Eating+Bananas",
      "confidence": "pattern"
     }
    ]
@@ -5096,21 +5101,21 @@
    ]
   },
   {
-   "id": "dsa-longest-repeating-character-replacement",
+   "id": "dsa-daily-temperatures",
    "kind": "dsa",
-   "title": "Longest Repeating Character Replacement",
+   "title": "Daily Temperatures",
    "week": 3,
    "difficulty": "Medium",
    "topic": "Стек и бинарный поиск",
    "links": [
     {
      "label": "LeetCode",
-     "url": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+     "url": "https://leetcode.com/problems/daily-temperatures/",
      "confidence": "pattern"
     },
     {
      "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Longest+Repeating+Character+Replacement",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Daily+Temperatures",
      "confidence": "pattern"
     }
    ]
@@ -5816,41 +5821,41 @@
    ]
   },
   {
-   "id": "dsa-jump-game",
+   "id": "dsa-kth-largest-element-in-an-array",
    "kind": "dsa",
-   "title": "Jump Game",
+   "title": "Kth Largest Element in an Array",
    "week": 11,
    "difficulty": "Medium",
-   "topic": "Жадные",
+   "topic": "Куча",
    "links": [
     {
      "label": "LeetCode",
-     "url": "https://leetcode.com/problems/jump-game/",
+     "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
      "confidence": "pattern"
     },
     {
      "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Jump+Game",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Kth+Largest+Element+in+an+Array",
      "confidence": "pattern"
     }
    ]
   },
   {
-   "id": "dsa-unique-paths",
+   "id": "dsa-longest-common-subsequence",
    "kind": "dsa",
-   "title": "Unique Paths",
+   "title": "Longest Common Subsequence",
    "week": 11,
    "difficulty": "Medium",
    "topic": "DP двумерное",
    "links": [
     {
      "label": "LeetCode",
-     "url": "https://leetcode.com/problems/unique-paths/",
+     "url": "https://leetcode.com/problems/longest-common-subsequence/",
      "confidence": "pattern"
     },
     {
      "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Unique+Paths",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Longest+Common+Subsequence",
      "confidence": "pattern"
     }
    ]
@@ -6590,7 +6595,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+   "hint": "Тема: префиксные суммы. Пример: Subarray Sum Equals K. На время, вслух, в документе без автодополнения"
   },
   {
    "id": "dsa-own-02",
@@ -6612,7 +6617,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+   "hint": "Тема: куча, Hard. Пример: Find Median from Data Stream. На время, вслух, в документе без автодополнения"
   },
   {
    "id": "dsa-own-03",
@@ -6634,7 +6639,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+   "hint": "Тема: матрицы. Пример: Rotate Image или Spiral Matrix. На время, вслух, в документе без автодополнения"
   },
   {
    "id": "dsa-own-04",
@@ -6656,7 +6661,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+   "hint": "Тема: монотонный стек, Hard. Пример: Largest Rectangle in Histogram. На время, вслух, в документе без автодополнения"
   },
   {
    "id": "js-own-01",
@@ -6673,7 +6678,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "Утилита JS на время из списка вопросов Google или Netflix"
+   "hint": "LRU Cache на Map: get и put за O(1). Или другая утилита из вопросов Google и Netflix"
   },
   {
    "id": "ui-own-01",
@@ -6690,7 +6695,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "UI-компонент на время из списка вопросов Google или Netflix"
+   "hint": "Autocomplete: debounce, отмена устаревших запросов, клавиатура, роль combobox. Или другой компонент из вопросов Google и Netflix"
   },
   {
    "id": "dsa-own-05",
@@ -6712,7 +6717,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+   "hint": "Тема: топологическая сортировка. Пример: Course Schedule II. На время, вслух, в документе без автодополнения"
   },
   {
    "id": "dsa-own-06",
@@ -6734,7 +6739,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+   "hint": "Тема: union-find. Пример: Redundant Connection или Number of Connected Components. На время, вслух, в документе без автодополнения"
   },
   {
    "id": "dsa-own-07",
@@ -6756,7 +6761,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+   "hint": "Тема: BFS по сетке. Пример: Rotting Oranges. На время, вслух, в документе без автодополнения"
   },
   {
    "id": "dsa-own-08",
@@ -6778,7 +6783,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+   "hint": "Тема: двумерное DP. Пример: Edit Distance. На время, вслух, в документе без автодополнения"
   },
   {
    "id": "js-own-02",
@@ -6795,7 +6800,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "Утилита JS на время из списка вопросов Google или Netflix"
+   "hint": "Своя реализация Promise: then с цепочкой, catch, resolve с thenable. Или другая утилита из вопросов Google и Netflix"
   },
   {
    "id": "ui-own-02",
@@ -6812,7 +6817,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "UI-компонент на время из списка вопросов Google или Netflix"
+   "hint": "Бесконечная лента на IntersectionObserver, если успеешь, с виртуализацией. Или другой компонент из вопросов Google и Netflix"
   },
   {
    "id": "dsa-own-09",
@@ -6834,7 +6839,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+   "hint": "Тема: куча. Пример: K Closest Points to Origin или Task Scheduler. На время, вслух, в документе без автодополнения"
   },
   {
    "id": "dsa-own-10",
@@ -6856,7 +6861,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+   "hint": "Тема: Дейкстра. Пример: Network Delay Time. На время, вслух, в документе без автодополнения"
   },
   {
    "id": "dsa-own-11",
@@ -6878,7 +6883,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+   "hint": "Тема: интервалы и куча. Пример: Meeting Rooms II (бесплатно на NeetCode) или Car Pooling. На время, вслух, в документе без автодополнения"
   },
   {
    "id": "dsa-own-12",
@@ -6900,7 +6905,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+   "hint": "Тема: графы, Hard. Пример: Word Ladder. На время, вслух, в документе без автодополнения"
   },
   {
    "id": "js-own-03",
@@ -6917,7 +6922,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "Утилита JS на время из списка вопросов Google или Netflix"
+   "hint": "Retry с экспоненциальной задержкой и Promise.race с таймаутом. Или другая утилита из вопросов Google и Netflix"
   },
   {
    "id": "ui-own-03",
@@ -6934,7 +6939,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "UI-компонент на время из списка вопросов Google или Netflix"
+   "hint": "Progress Bars с ограничением параллельности. Или другой компонент из вопросов Google и Netflix"
   },
   {
    "id": "dsa-own-13",
@@ -6956,7 +6961,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+   "hint": "Тема: бэктрекинг. Пример: Subsets или Permutations. На время, вслух, в документе без автодополнения"
   },
   {
    "id": "dsa-own-14",
@@ -6978,7 +6983,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+   "hint": "Тема: DP. Пример: Decode Ways или Partition Equal Subset Sum. На время, вслух, в документе без автодополнения"
   },
   {
    "id": "dsa-own-15",
@@ -7000,7 +7005,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+   "hint": "Тема: свободный выбор. Пример: любая задача из вопросов Google. На время, вслух, в документе без автодополнения"
   },
   {
    "id": "dsa-own-16",
@@ -7022,7 +7027,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+   "hint": "Тема: два указателя, Hard. Пример: Trapping Rain Water. На время, вслух, в документе без автодополнения"
   },
   {
    "id": "js-own-04",
@@ -7039,7 +7044,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "Утилита JS на время из списка вопросов Google или Netflix"
+   "hint": "get по пути (как lodash.get) и рендер JSON-дерева в DOM. Или другая утилита из вопросов Google и Netflix"
   },
   {
    "id": "ui-own-04",
@@ -7056,7 +7061,7 @@
     }
    ],
    "userNamed": true,
-   "hint": "UI-компонент на время из списка вопросов Google или Netflix"
+   "hint": "Список с drag-and-drop или Stopwatch. Или другой компонент из вопросов Google и Netflix"
   }
  ],
  "maintenanceWeek": {
