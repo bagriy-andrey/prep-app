@@ -13,7 +13,9 @@ import {
   removeLastAttempt,
   setDayNote,
   setItemText,
+  setAttemptMinutes,
   setItemTitle,
+  setSessionMinutes,
   setSessionNote,
   setSessionStatus,
   setStartDate,
@@ -32,14 +34,16 @@ import CorruptStateScreen from "./CorruptStateScreen";
 
 type Action =
   | { type: "replace"; state: UserState }
-  | { type: "addAttempt"; itemId: string; outcome: Outcome; date: string }
+  | { type: "addAttempt"; itemId: string; outcome: Outcome; date: string; minutes?: number }
+  | { type: "setAttemptMinutes"; itemId: string; index: number; minutes?: number }
+  | { type: "setSessionMinutes"; id: string; minutes?: number }
   | { type: "removeLastAttempt"; itemId: string }
   | { type: "setItemTitle"; itemId: string; title: string }
   | { type: "setItemText"; itemId: string; field: ItemTextField; text: string }
   | { type: "setDayNote"; date: string; text: string }
   | { type: "setSessionNote"; id: string; text: string }
-  | { type: "setSession"; id: string; status: SessionStatus | null; date: string }
-  | { type: "markUnmarked"; ids: string[]; status: SessionStatus; date: string }
+  | { type: "setSession"; id: string; status: SessionStatus | null; date: string; minutes?: number }
+  | { type: "markUnmarked"; ids: string[]; status: SessionStatus; date: string; minutesById?: Record<string, number> }
   | { type: "claimPrize"; week: number; date: string }
   | { type: "setStartDate"; date: string | null }
   | { type: "addEntry"; key: JournalKey; entry: JournalEntry }
@@ -51,7 +55,11 @@ function reducer(state: UserState, action: Action): UserState {
     case "replace":
       return action.state;
     case "addAttempt":
-      return addAttempt(state, action.itemId, action.outcome, action.date);
+      return addAttempt(state, action.itemId, action.outcome, action.date, action.minutes);
+    case "setAttemptMinutes":
+      return setAttemptMinutes(state, action.itemId, action.index, action.minutes);
+    case "setSessionMinutes":
+      return setSessionMinutes(state, action.id, action.minutes);
     case "removeLastAttempt":
       return removeLastAttempt(state, action.itemId);
     case "setItemTitle":
@@ -63,9 +71,9 @@ function reducer(state: UserState, action: Action): UserState {
     case "setSessionNote":
       return setSessionNote(state, action.id, action.text);
     case "setSession":
-      return setSessionStatus(state, action.id, action.status, action.date);
+      return setSessionStatus(state, action.id, action.status, action.date, action.minutes);
     case "markUnmarked":
-      return markUnmarked(state, action.ids, action.status, action.date);
+      return markUnmarked(state, action.ids, action.status, action.date, action.minutesById);
     case "claimPrize":
       return claimPrize(plan, state, action.week, action.date);
     case "setStartDate":
@@ -84,15 +92,19 @@ function reducer(state: UserState, action: Action): UserState {
 }
 
 export interface UserStateActions {
-  addAttempt(itemId: string, outcome: Outcome): void;
+  /** minutes: потраченное время; undefined, если не указано. */
+  addAttempt(itemId: string, outcome: Outcome, minutes?: number): void;
+  setAttemptMinutes(itemId: string, index: number, minutes: number | undefined): void;
+  setSessionMinutes(id: string, minutes: number | undefined): void;
   removeLastAttempt(itemId: string): void;
   setItemTitle(itemId: string, title: string): void;
   setItemText(itemId: string, field: ItemTextField, text: string): void;
   setDayNote(date: string, text: string): void;
   setSessionNote(id: string, text: string): void;
   /** status = null снимает отметку. */
-  setSession(id: string, status: SessionStatus | null): void;
-  markUnmarked(ids: string[], status: SessionStatus): void;
+  setSession(id: string, status: SessionStatus | null, minutes?: number): void;
+  /** minutesById: время по умолчанию для отмечаемых сессий. */
+  markUnmarked(ids: string[], status: SessionStatus, minutesById?: Record<string, number>): void;
   claimPrize(week: number): void;
   /** Дата старта (понедельник); null возвращает дату из плана. */
   setStartDate(date: string | null): void;
@@ -178,14 +190,18 @@ export default function UserStateProvider({
 
   const actions = useMemo<UserStateActions>(
     () => ({
-      addAttempt: (itemId, outcome) => dispatch({ type: "addAttempt", itemId, outcome, date: todayString() }),
+      addAttempt: (itemId, outcome, minutes) =>
+        dispatch({ type: "addAttempt", itemId, outcome, date: todayString(), minutes }),
+      setAttemptMinutes: (itemId, index, minutes) => dispatch({ type: "setAttemptMinutes", itemId, index, minutes }),
+      setSessionMinutes: (id, minutes) => dispatch({ type: "setSessionMinutes", id, minutes }),
       removeLastAttempt: (itemId) => dispatch({ type: "removeLastAttempt", itemId }),
       setItemTitle: (itemId, title) => dispatch({ type: "setItemTitle", itemId, title }),
       setItemText: (itemId, field, text) => dispatch({ type: "setItemText", itemId, field, text }),
       setDayNote: (date, text) => dispatch({ type: "setDayNote", date, text }),
       setSessionNote: (id, text) => dispatch({ type: "setSessionNote", id, text }),
-      setSession: (id, status) => dispatch({ type: "setSession", id, status, date: todayString() }),
-      markUnmarked: (ids, status) => dispatch({ type: "markUnmarked", ids, status, date: todayString() }),
+      setSession: (id, status, minutes) => dispatch({ type: "setSession", id, status, date: todayString(), minutes }),
+      markUnmarked: (ids, status, minutesById) =>
+        dispatch({ type: "markUnmarked", ids, status, date: todayString(), minutesById }),
       claimPrize: (week) => dispatch({ type: "claimPrize", week, date: todayString() }),
       setStartDate: (date) => dispatch({ type: "setStartDate", date }),
       addEntry: (key, entry) => dispatch({ type: "addEntry", key, entry }),

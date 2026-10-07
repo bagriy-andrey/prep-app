@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router";
 import { useState } from "react";
+import MinutesInput from "../components/MinutesInput";
 import ItemLinks from "../components/ItemLinks";
 import ItemStatusBadge from "../components/ItemStatusBadge";
 import NoteField from "../components/NoteField";
@@ -8,7 +9,7 @@ import { subtleButton } from "../components/ui";
 import { itemsById, plan } from "../data/plan";
 import { itemStatus, REVIEW_METHOD_LABEL, reviewInfo } from "../domain/review";
 import { itemState, itemTitle } from "../domain/tracker";
-import { OUTCOME_LABEL } from "../domain/userState";
+import { OUTCOME_LABEL, parseMinutes } from "../domain/userState";
 import { useToday } from "../hooks/useToday";
 import { formatDateRu } from "../lib/format";
 import { useUserState } from "../state/UserStateProvider";
@@ -70,9 +71,16 @@ function ItemCard({ itemId }: { itemId: string }) {
         ) : (
           <ol className="mt-2 divide-y divide-slate-200 text-sm dark:divide-slate-800">
             {own.attempts.map((a, i) => (
-              <li key={i} className="flex justify-between gap-3 py-1.5">
-                <span>{OUTCOME_LABEL[a.outcome]}</span>
-                <span className="text-slate-600 dark:text-slate-400">{formatDateRu(a.date)}</span>
+              <li key={i} className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 py-1.5">
+                <span>
+                  {OUTCOME_LABEL[a.outcome]}
+                  <span className="ml-2 text-slate-600 dark:text-slate-400">{formatDateRu(a.date)}</span>
+                </span>
+                <MinutesInput
+                  label={`Потрачено минут, попытка ${i + 1}`}
+                  value={a.minutes?.toString() ?? ""}
+                  onChange={(v) => actions.setAttemptMinutes(itemId, i, parseMinutes(v))}
+                />
               </li>
             ))}
           </ol>
@@ -80,6 +88,7 @@ function ItemCard({ itemId }: { itemId: string }) {
         <div className="mt-3 flex flex-wrap items-center gap-3">
           <span className="text-sm">Добавить:</span>
           <OutcomeButtons label="Добавить попытку" onPick={(o) => actions.addAttempt(itemId, o)} />
+          <span className="text-xs text-slate-500 dark:text-slate-400">Время попытки можно указать в списке выше.</span>
           {own.attempts.length > 0 && (
             <button type="button" onClick={() => actions.removeLastAttempt(itemId)} className={`${subtleButton} !px-2 !py-1 text-xs`}>
               Отменить последнюю

@@ -1,7 +1,10 @@
 import type { Week } from "../data/types";
 import { weekProgress } from "../domain/progress";
 import { weekRange } from "../domain/schedule";
-import { formatDateRange } from "../lib/format";
+import { entriesInRange, plannedMinutesForWeek, sumMinutes } from "../domain/time";
+import { useTimeEntries } from "../hooks/useTimeEntries";
+import { plan } from "../data/plan";
+import { formatDateRange, formatMinutes } from "../lib/format";
 import { useUserState } from "../state/UserStateProvider";
 import PhaseBadge from "./PhaseBadge";
 import PrizeBadge from "./PrizeBadge";
@@ -10,6 +13,7 @@ import WeekProgressBar from "./WeekProgressBar";
 export default function WeekHeader({ week }: { week: Week }) {
   const { state, startDate } = useUserState();
   const range = weekRange(startDate, week.n);
+  const spent = sumMinutes(entriesInRange(useTimeEntries(), range.from, range.to));
   const progress = weekProgress(week, state);
   const cp = week.checkpoint;
   return (
@@ -34,6 +38,10 @@ export default function WeekHeader({ week }: { week: Week }) {
       <p className="text-sm text-slate-600 dark:text-slate-400">Веб-основы: {week.webTopic}</p>
       <div className="mt-3">
         <WeekProgressBar progress={progress} label="Сессии недели" />
+        <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
+          Потрачено за неделю: <strong className="font-semibold text-slate-900 dark:text-slate-100">{formatMinutes(spent)}</strong>{" "}
+          из {formatMinutes(plannedMinutesForWeek(plan, week.n))} по плану
+        </p>
       </div>
       <div className="mt-3">
         <PrizeBadge prize={week.prize} />

@@ -2,6 +2,9 @@ import { plan } from "../data/plan";
 import type { Day } from "../data/types";
 import { dayProgress, DAY_STATUS_LABEL, dayStatus, plannedDayAt, type DayStatus } from "../domain/calendar";
 import { toPercent } from "../domain/progress";
+import { minutesOnDate, plannedMinutesForDay } from "../domain/time";
+import { useTimeEntries } from "../hooks/useTimeEntries";
+import { formatMinutes } from "../lib/format";
 import { useUserState } from "../state/UserStateProvider";
 
 const HEADLINE: Record<DayStatus, string> = {
@@ -16,6 +19,7 @@ const HEADLINE: Record<DayStatus, string> = {
 /** Итог дня над списком сессий: статус, прогресс и что не сделано. */
 export default function DaySummary({ day, date, today }: { day: Day; date: string; today: string }) {
   const { state, startDate } = useUserState();
+  const entries = useTimeEntries();
   const planned = plannedDayAt(plan, date, startDate)!;
   const status = dayStatus(planned, state, today);
   const { done, total, remainingIds } = dayProgress(planned, state);
@@ -39,6 +43,10 @@ export default function DaySummary({ day, date, today }: { day: Day; date: strin
           Сделано {done} из {total} ({toPercent(done, total)}%).
         </span>
         <span className="sr-only"> Статус: {DAY_STATUS_LABEL[status]}.</span>
+      </p>
+      <p className="mt-1 text-slate-600 dark:text-slate-400">
+        Потрачено: <strong className="font-semibold text-slate-900 dark:text-slate-100">{formatMinutes(minutesOnDate(entries, date))}</strong>
+        {" "}из {formatMinutes(plannedMinutesForDay(day))} по плану.
       </p>
       {isPast && skipped.length > 0 && (
         <div className="mt-2">

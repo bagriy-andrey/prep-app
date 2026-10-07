@@ -6,6 +6,7 @@ import PhaseBadge from "../components/PhaseBadge";
 import DayNote from "../components/DayNote";
 import PrizeBadge from "../components/PrizeBadge";
 import StreakStats from "../components/StreakStats";
+import TimeStats from "../components/TimeStats";
 import ReviewQueue from "../components/ReviewQueue";
 import WeekProgressBar from "../components/WeekProgressBar";
 import { plan } from "../data/plan";
@@ -93,6 +94,7 @@ export default function TodayPage() {
       >
         <WeekProgressBar progress={progress} label="Сессии недели" />
         <StreakStats today={today} />
+        <TimeStats today={today} />
         <div className="space-y-1">
           <PrizeBadge prize={week.prize} />
           <p className="text-sm text-slate-600 dark:text-slate-400">

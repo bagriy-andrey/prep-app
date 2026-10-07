@@ -7,6 +7,7 @@ import ItemPage from "./pages/ItemPage";
 import PlanPage from "./pages/PlanPage";
 import PrizesPage from "./pages/PrizesPage";
 import SettingsPage from "./pages/SettingsPage";
+import StatsPage from "./pages/StatsPage";
 import TodayPage from "./pages/TodayPage";
 import TrackerPage from "./pages/TrackerPage";
 
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="calendar" element={<CalendarPage />} />
         <Route path="tracker" element={<TrackerPage />} />
         <Route path="tracker/:itemId" element={<ItemPage />} />
+        <Route path="stats" element={<StatsPage />} />
         <Route path="prizes" element={<PrizesPage />} />
         <Route path="journals" element={<JournalsPage />} />
         <Route path="settings" element={<SettingsPage />} />

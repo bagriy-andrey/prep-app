@@ -6,6 +6,7 @@ const links = [
   { to: "/plan", label: "План", end: false },
   { to: "/calendar", label: "Календарь", end: false },
   { to: "/tracker", label: "Трекер", end: false },
+  { to: "/stats", label: "Статистика", end: false },
   { to: "/prizes", label: "Призы", end: false },
   { to: "/journals", label: "Журналы", end: false },
   { to: "/settings", label: "Настройки", end: false },

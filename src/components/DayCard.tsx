@@ -21,6 +21,8 @@ export default function DayCard({ day, date, isToday }: Props) {
   const total = day.sessions.filter((s) => !s.optional).reduce((sum, s) => sum + s.minutes, 0);
   const markable = markableSessionIds(day.sessions);
   const unmarked = markable.filter((id) => !state.sessions[id]);
+  // «Отметить день» записывает время по плану. Для «лёгким» время не пишется: по плану оно завышено.
+  const plannedById = Object.fromEntries(day.sessions.map((s) => [s.id, s.minutes]));
   const headingId = `day-${date}`;
 
   return (
@@ -51,7 +53,11 @@ export default function DayCard({ day, date, isToday }: Props) {
             <SessionRow key={s.id} {...s} status={status}>
               {isRest ? null : (
                 <>
-                  {s.itemId ? <AttemptControls itemId={s.itemId} /> : <ManualMarkControls id={s.id} title={s.title} />}
+                  {s.itemId ? (
+                    <AttemptControls itemId={s.itemId} plannedMinutes={s.minutes} />
+                  ) : (
+                    <ManualMarkControls id={s.id} title={s.title} plannedMinutes={s.minutes} />
+                  )}
                   <SessionNote sessionId={s.id} itemId={s.itemId} />
                 </>
               )}
@@ -63,7 +69,7 @@ export default function DayCard({ day, date, isToday }: Props) {
       {markable.length > 0 && (
         <button
           type="button"
-          onClick={() => actions.markUnmarked(unmarked, "done")}
+          onClick={() => actions.markUnmarked(unmarked, "done", plannedById)}
           disabled={unmarked.length === 0}
           className={`${subtleButton} mt-3`}
         >

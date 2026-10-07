@@ -15,3 +15,20 @@ body {
 :focus-visible {
   @apply outline-2 outline-offset-2 outline-indigo-600 dark:outline-indigo-400;
 }
+
+/* Графики статистики: один оттенок для величины, серый для остального. */
+:root {
+  --viz-bar: #2a78d6;
+  --viz-bar-dim: #c3c2b7;
+  --viz-grid: #e1e0d9;
+  --viz-plan: #52514e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --viz-bar: #3987e5;
+    --viz-bar-dim: #4a4a46;
+    --viz-grid: #2c2c2a;
+    --viz-plan: #c3c2b7;
+  }
+}

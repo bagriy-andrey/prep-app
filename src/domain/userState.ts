@@ -8,6 +8,18 @@ export type SessionStatus = "done" | "light" | "moved";
 export interface Attempt {
   date: string;
   outcome: Outcome;
+  /** Потраченное время в минутах; не задано, если не вводилось. */
+  minutes?: number;
+}
+
+export const MAX_MINUTES = 1440;
+
+/** Минуты из текста поля ввода; undefined для пустого и неверного значения. */
+export function parseMinutes(text: string): number | undefined {
+  const trimmed = text.trim();
+  if (!/^\d+$/.test(trimmed)) return undefined;
+  const n = Number(trimmed);
+  return n <= MAX_MINUTES ? n : undefined;
 }
 
 export interface ItemState {
@@ -21,6 +33,8 @@ export interface ItemState {
 export interface SessionMark {
   status: SessionStatus;
   date: string;
+  /** Потраченное время в минутах; учитывается только для done и light. */
+  minutes?: number;
 }
 
 export interface MockEntry {
@@ -82,12 +96,37 @@ export function createInitialState(): UserState {
 
 // ---------- изменения (всегда возвращают новый объект) ----------
 
-export function addAttempt(state: UserState, itemId: string, outcome: Outcome, date: string): UserState {
+export function addAttempt(
+  state: UserState,
+  itemId: string,
+  outcome: Outcome,
+  date: string,
+  minutes?: number,
+): UserState {
   const item = state.items[itemId] ?? { attempts: [] };
+  const attempt: Attempt = minutes === undefined ? { date, outcome } : { date, outcome, minutes };
   return {
     ...state,
-    items: { ...state.items, [itemId]: { ...item, attempts: [...item.attempts, { date, outcome }] } },
+    items: { ...state.items, [itemId]: { ...item, attempts: [...item.attempts, attempt] } },
   };
+}
+
+/** Меняет время попытки по номеру; undefined убирает время. */
+export function setAttemptMinutes(
+  state: UserState,
+  itemId: string,
+  index: number,
+  minutes: number | undefined,
+): UserState {
+  const item = state.items[itemId];
+  if (!item || index < 0 || index >= item.attempts.length) return state;
+  const attempts = item.attempts.map((a, i) => {
+    if (i !== index) return a;
+    const { minutes: _old, ...rest } = a;
+    void _old;
+    return minutes === undefined ? rest : { ...rest, minutes };
+  });
+  return { ...state, items: { ...state.items, [itemId]: { ...item, attempts } } };
 }
 
 /** Убирает последнюю попытку: исправление случайного нажатия. */
@@ -136,17 +175,34 @@ export function setDayNote(state: UserState, date: string, text: string): UserSt
   return { ...state, dayNotes };
 }
 
-/** status = null снимает отметку. */
+/**
+ * status = null снимает отметку. Время сохраняется вместе с отметкой;
+ * для moved его нет, потому что сессия не сделана.
+ */
 export function setSessionStatus(
   state: UserState,
   sessionId: string,
   status: SessionStatus | null,
   date: string,
+  minutes?: number,
 ): UserState {
   const sessions = { ...state.sessions };
   if (status === null) delete sessions[sessionId];
-  else sessions[sessionId] = { status, date };
+  else {
+    const mark: SessionMark = { status, date };
+    if (minutes !== undefined && status !== "moved") mark.minutes = minutes;
+    sessions[sessionId] = mark;
+  }
   return { ...state, sessions };
+}
+
+/** Меняет время уже отмеченной сессии; у неотмеченной ничего не делает. */
+export function setSessionMinutes(state: UserState, sessionId: string, minutes: number | undefined): UserState {
+  const mark = state.sessions[sessionId];
+  if (!mark || mark.status === "moved") return state;
+  const { minutes: _old, ...rest } = mark;
+  void _old;
+  return { ...state, sessions: { ...state.sessions, [sessionId]: minutes === undefined ? rest : { ...rest, minutes } } };
 }
 
 /** Ставит статус всем ещё не отмеченным сессиям из списка (разд. 6.2, «Отметить день»). */
@@ -155,11 +211,15 @@ export function markUnmarked(
   sessionIds: string[],
   status: SessionStatus,
   date: string,
+  minutesById: Record<string, number> = {},
 ): UserState {
   const todo = sessionIds.filter((id) => !state.sessions[id]);
   if (todo.length === 0) return state;
   const sessions = { ...state.sessions };
-  for (const id of todo) sessions[id] = { status, date };
+  for (const id of todo) {
+    const minutes = minutesById[id];
+    sessions[id] = minutes === undefined || status === "moved" ? { status, date } : { status, date, minutes };
+  }
   return { ...state, sessions };
 }
 
@@ -218,6 +278,7 @@ const isRecord = (v: unknown): v is Record<string, unknown> =>
 const isDate = (v: unknown): v is string => typeof v === "string" && /^\d{4}-\d{2}-\d{2}$/.test(v);
 const isOutcome = (v: unknown): v is Outcome => v === "clean" || v === "hint" || v === "failed";
 const isStatus = (v: unknown): v is SessionStatus => v === "done" || v === "light" || v === "moved";
+const isMinutes = (v: unknown): v is number => Number.isInteger(v) && (v as number) >= 0 && (v as number) <= MAX_MINUTES;
 
 function optionalString(obj: Record<string, unknown>, key: string, where: string) {
   if (obj[key] !== undefined && typeof obj[key] !== "string") fail(`${where}.${key}: ожидалась строка`);
@@ -240,6 +301,7 @@ export function parseUserState(raw: unknown): UserState {
     if (!Array.isArray(value.attempts)) fail(`items.${id}.attempts: ожидался массив`);
     for (const a of value.attempts) {
       if (!isRecord(a) || !isDate(a.date) || !isOutcome(a.outcome)) fail(`items.${id}.attempts: неверная попытка`);
+      if (a.minutes !== undefined && !isMinutes(a.minutes)) fail(`items.${id}.attempts: неверное время`);
     }
     for (const key of ["title", "keyIdea", "note"]) optionalString(value, key, `items.${id}`);
     items[id] = value as unknown as ItemState;
@@ -248,6 +310,7 @@ export function parseUserState(raw: unknown): UserState {
   if (!isRecord(raw.sessions)) fail("sessions: ожидался объект");
   for (const [id, mark] of Object.entries(raw.sessions)) {
     if (!isRecord(mark) || !isStatus(mark.status) || !isDate(mark.date)) fail(`sessions.${id}: неверная отметка`);
+    if (mark.minutes !== undefined && !isMinutes(mark.minutes)) fail(`sessions.${id}: неверное время`);
   }
 
   if (!isRecord(raw.dayNotes)) fail("dayNotes: ожидался объект");
