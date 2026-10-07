@@ -1,0 +1,7375 @@
+{
+ "meta": {
+  "title": "Подготовка к интервью UI-инженера: 16 недель",
+  "version": 1,
+  "startDate": "2026-10-12",
+  "weeksCount": 16,
+  "hoursPerWeek": 11,
+  "locale": "ru",
+  "linkConfidence": {
+   "checked": "адрес встречался на реальной странице сайта",
+   "pattern": "адрес собран по шаблону сайта и требует проверки скриптом"
+  }
+ },
+ "blocks": {
+  "dsa": "Алгоритмы",
+  "js": "JS-кодинг",
+  "ui": "UI-компонент",
+  "fe-sd": "Фронтенд system design",
+  "be-sd": "Бэкенд system design",
+  "sd-review": "Разбор дизайна",
+  "sd-theory": "Теория дизайна",
+  "web": "Веб-основы",
+  "review": "Повторения",
+  "warmup": "Разминка",
+  "theory": "Теория",
+  "behavioral": "Behavioral",
+  "mock": "Мок-интервью",
+  "simulation": "Симуляция",
+  "checkpoint": "Контрольная точка",
+  "week-review": "Разбор недели",
+  "spare": "Запас",
+  "rest": "Отдых"
+ },
+ "phases": {
+  "topics": "Темы",
+  "topics-mix": "Темы и микс",
+  "buffer": "Буфер",
+  "simulation": "Симуляция"
+ },
+ "rules": {
+  "review": {
+   "failed": 1,
+   "hint": 3,
+   "cleanFirst": 7,
+   "cleanSecond": 21,
+   "closeAfterCleanCount": 3,
+   "oralIfLastClean": true
+  },
+  "weekClosed": "все необязательные сессии исключены; остальные отмечены done или light; у каждой задачи недели есть хотя бы одна попытка",
+  "bigPrizeWeeks": [
+   4,
+   8,
+   12,
+   16
+  ],
+  "bigPrizeRequires": "закрыты все четыре недели блока",
+  "prizeWaits": true
+ },
+ "weeks": [
+  {
+   "n": 1,
+   "phase": "topics",
+   "title": "Массивы и хеши",
+   "webTopic": "Замыкания, this, прототипы",
+   "prize": {
+    "title": "Шкафчик",
+    "tier": "small"
+   },
+   "days": [
+    {
+     "dow": 1,
+     "offset": 0,
+     "lightAlternative": "Устал: 1-2 повторения из очереди и видеоразбор сегодняшней задачи, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w01-d1-s1",
+       "minutes": 20,
+       "block": "theory",
+       "title": "Теория: Массивы и хеши. Раздел курса NeetCode по теме, на скорости 1,5x",
+       "links": [
+        {
+         "label": "NeetCode: роадмап и курсы",
+         "url": "https://neetcode.io/roadmap",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w01-d1-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Новая задача: Contains Duplicate (Easy)",
+       "itemId": "dsa-contains-duplicate",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/contains-duplicate/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Contains+Duplicate",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w01-d1-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: Two Sum (Easy)",
+       "itemId": "dsa-two-sum",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/two-sum/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Two+Sum",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 2,
+     "offset": 1,
+     "lightAlternative": "Устал: прочитать решение одной утилиты и переписать его своими словами, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w01-d2-s1",
+       "minutes": 35,
+       "block": "js",
+       "title": "Реализовать с нуля: Debounce (Medium)",
+       "itemId": "js-debounce",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/javascript/debounce",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w01-d2-s2",
+       "minutes": 40,
+       "block": "js",
+       "title": "Реализовать с нуля: Throttle (Medium)",
+       "itemId": "js-throttle",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/javascript/throttle",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 3,
+     "offset": 2,
+     "lightAlternative": "Это и так лёгкий день: только чтение",
+     "sessions": [
+      {
+       "id": "w01-d3-s1",
+       "minutes": 30,
+       "block": "web",
+       "title": "Веб-основы: Замыкания, this, прототипы",
+       "links": [
+        {
+         "label": "MDN: Closures",
+         "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w01-d3-s2",
+       "minutes": 30,
+       "block": "sd-theory",
+       "title": "Что оценивают на фронтенд system design и фреймворк RADIO",
+       "links": [
+        {
+         "label": "GFE: Front End System Design Playbook",
+         "url": "https://www.greatfrontend.com/front-end-system-design-playbook",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 4,
+     "offset": 3,
+     "lightAlternative": "Устал: только очередь повторений, 20 минут",
+     "sessions": [
+      {
+       "id": "w01-d4-s1",
+       "minutes": 20,
+       "block": "warmup",
+       "title": "Разминка: по памяти написать на JavaScript бинарный поиск, BFS и DFS"
+      },
+      {
+       "id": "w01-d4-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Новая задача: Valid Anagram (Easy)",
+       "itemId": "dsa-valid-anagram",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/valid-anagram/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Valid+Anagram",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w01-d4-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: Group Anagrams (Medium)",
+       "itemId": "dsa-group-anagrams",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/group-anagrams/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Group+Anagrams",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 5,
+     "offset": 4,
+     "lightAlternative": null,
+     "sessions": [
+      {
+       "id": "w01-d5-s1",
+       "minutes": 0,
+       "block": "rest",
+       "title": "Выходной"
+      }
+     ]
+    },
+    {
+     "dow": 6,
+     "offset": 5,
+     "lightAlternative": "Устал: вместо решения с таймером прочитать разбор дизайна и сделать повторения",
+     "sessions": [
+      {
+       "id": "w01-d6-s1",
+       "minutes": 90,
+       "block": "sd-theory",
+       "title": "Прочитать Front End System Design Playbook и законспектировать фреймворк RADIO",
+       "links": [
+        {
+         "label": "GFE: Front End System Design Playbook",
+         "url": "https://www.greatfrontend.com/front-end-system-design-playbook",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w01-d6-s2",
+       "minutes": 60,
+       "block": "ui",
+       "title": "Собрать компонент без библиотек: Todo List (Medium)",
+       "itemId": "ui-todo-list",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/user-interface/todo-list",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w01-d6-s3",
+       "minutes": 45,
+       "block": "dsa",
+       "title": "Новая задача: Top K Frequent Elements (Medium)",
+       "itemId": "dsa-top-k-frequent-elements",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/top-k-frequent-elements/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Top+K+Frequent+Elements",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w01-d6-s4",
+       "minutes": 15,
+       "block": "spare",
+       "title": "Запас: дорешать то, что не успел за неделю",
+       "optional": true
+      }
+     ]
+    },
+    {
+     "dow": 7,
+     "offset": 6,
+     "lightAlternative": "Устал: истории вслух и повторения, мок перенести",
+     "sessions": [
+      {
+       "id": "w01-d7-s1",
+       "minutes": 90,
+       "block": "behavioral",
+       "title": "Выписать 10 проектов и ситуаций: что делал, масштаб, результат в цифрах",
+       "links": [
+        {
+         "label": "TIH: как готовить behavioral",
+         "url": "https://www.techinterviewhandbook.org/behavioral-interview/",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w01-d7-s2",
+       "minutes": 30,
+       "block": "theory",
+       "title": "Прочитать: как устроены фронтенд-интервью",
+       "links": [
+        {
+         "label": "GFE: Front End Interview Playbook",
+         "url": "https://www.greatfrontend.com/front-end-interview-playbook",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w01-d7-s3",
+       "minutes": 30,
+       "block": "theory",
+       "title": "Список GFE 75: посмотреть, какие вопросы впереди",
+       "links": [
+        {
+         "label": "GFE 75",
+         "url": "https://www.greatfrontend.com/interviews/study-plans/gfe75",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w01-d7-s4",
+       "minutes": 15,
+       "block": "week-review",
+       "title": "Разбор недели: проверить отметки, записать три ошибки, посмотреть план и приз следующей недели"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "phase": "topics",
+   "title": "Два указателя и скользящее окно",
+   "webTopic": "Event loop, промисы, async/await",
+   "prize": {
+    "title": "Бутылка Nike",
+    "tier": "small"
+   },
+   "days": [
+    {
+     "dow": 1,
+     "offset": 0,
+     "lightAlternative": "Устал: 1-2 повторения из очереди и видеоразбор сегодняшней задачи, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w02-d1-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w02-d1-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Новая задача: Valid Palindrome (Easy)",
+       "itemId": "dsa-valid-palindrome",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/valid-palindrome/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Valid+Palindrome",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w02-d1-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: 3Sum (Medium)",
+       "itemId": "dsa-3sum",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/3sum/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+3Sum",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 2,
+     "offset": 1,
+     "lightAlternative": "Устал: прочитать решение одной утилиты и переписать его своими словами, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w02-d2-s1",
+       "minutes": 35,
+       "block": "js",
+       "title": "Реализовать с нуля: Array.prototype.reduce (Easy)",
+       "itemId": "js-array-prototype-reduce",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/javascript/array-prototype-reduce",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w02-d2-s2",
+       "minutes": 40,
+       "block": "js",
+       "title": "Реализовать с нуля: Array.prototype.filter (Easy)",
+       "itemId": "js-array-prototype-filter",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/javascript/array-prototype-filter",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 3,
+     "offset": 2,
+     "lightAlternative": "Это и так лёгкий день: только чтение",
+     "sessions": [
+      {
+       "id": "w02-d3-s1",
+       "minutes": 30,
+       "block": "web",
+       "title": "Веб-основы: Event loop, промисы, async/await",
+       "links": [
+        {
+         "label": "MDN: Event loop",
+         "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Execution_model",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w02-d3-s2",
+       "minutes": 30,
+       "block": "sd-theory",
+       "title": "Типы вопросов: приложение и UI-компонент; оси оценки",
+       "links": [
+        {
+         "label": "GFE: Front End System Design Playbook",
+         "url": "https://www.greatfrontend.com/front-end-system-design-playbook",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 4,
+     "offset": 3,
+     "lightAlternative": "Устал: только очередь повторений, 20 минут",
+     "sessions": [
+      {
+       "id": "w02-d4-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w02-d4-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Новая задача: Best Time to Buy and Sell Stock (Easy)",
+       "itemId": "dsa-best-time-to-buy-and-sell-stock",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Best+Time+to+Buy+and+Sell+Stock",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w02-d4-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: Longest Substring Without Repeating Characters (Medium)",
+       "itemId": "dsa-longest-substring-without-repeating-characters",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Longest+Substring+Without+Repeating+Characters",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 5,
+     "offset": 4,
+     "lightAlternative": null,
+     "sessions": [
+      {
+       "id": "w02-d5-s1",
+       "minutes": 0,
+       "block": "rest",
+       "title": "Выходной"
+      }
+     ]
+    },
+    {
+     "dow": 6,
+     "offset": 5,
+     "lightAlternative": "Устал: вместо решения с таймером прочитать разбор дизайна и сделать повторения",
+     "sessions": [
+      {
+       "id": "w02-d6-s1",
+       "minutes": 90,
+       "block": "sd-theory",
+       "title": "Разобрать по Playbook один готовый пример дизайна и выписать, что оценивают на senior",
+       "links": [
+        {
+         "label": "GFE: Front End System Design Playbook",
+         "url": "https://www.greatfrontend.com/front-end-system-design-playbook",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w02-d6-s2",
+       "minutes": 60,
+       "block": "ui",
+       "title": "Собрать компонент без библиотек: Tabs (Medium)",
+       "itemId": "ui-tabs",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/user-interface/tabs",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w02-d6-s3",
+       "minutes": 45,
+       "block": "dsa",
+       "title": "Новая задача: Container With Most Water (Medium)",
+       "itemId": "dsa-container-with-most-water",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/container-with-most-water/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Container+With+Most+Water",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w02-d6-s4",
+       "minutes": 15,
+       "block": "spare",
+       "title": "Запас: дорешать то, что не успел за неделю",
+       "optional": true
+      }
+     ]
+    },
+    {
+     "dow": 7,
+     "offset": 6,
+     "lightAlternative": "Устал: истории вслух и повторения, мок перенести",
+     "sessions": [
+      {
+       "id": "w02-d7-s1",
+       "minutes": 90,
+       "block": "behavioral",
+       "title": "Обновить резюме: по одной строке с измеримым результатом на проект",
+       "links": [
+        {
+         "label": "TIH: резюме",
+         "url": "https://www.techinterviewhandbook.org/resume/",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w02-d7-s2",
+       "minutes": 30,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w02-d7-s3",
+       "minutes": 30,
+       "block": "theory",
+       "title": "Прочитать главу Front End Interview Playbook про формат этой недели",
+       "links": [
+        {
+         "label": "GFE: Front End Interview Playbook",
+         "url": "https://www.greatfrontend.com/front-end-interview-playbook",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w02-d7-s4",
+       "minutes": 15,
+       "block": "week-review",
+       "title": "Разбор недели: проверить отметки, записать три ошибки, посмотреть план и приз следующей недели"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "phase": "topics",
+   "title": "Стек и бинарный поиск",
+   "webTopic": "DOM и события: всплытие, делегирование",
+   "prize": {
+    "title": "Ремешок на часы",
+    "tier": "small"
+   },
+   "days": [
+    {
+     "dow": 1,
+     "offset": 0,
+     "lightAlternative": "Устал: 1-2 повторения из очереди и видеоразбор сегодняшней задачи, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w03-d1-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w03-d1-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Новая задача: Valid Parentheses (Easy)",
+       "itemId": "dsa-valid-parentheses",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/valid-parentheses/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Valid+Parentheses",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w03-d1-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: Find Minimum in Rotated Sorted Array (Medium)",
+       "itemId": "dsa-find-minimum-in-rotated-sorted-array",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Find+Minimum+in+Rotated+Sorted+Array",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 2,
+     "offset": 1,
+     "lightAlternative": "Устал: прочитать решение одной утилиты и переписать его своими словами, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w03-d2-s1",
+       "minutes": 35,
+       "block": "js",
+       "title": "Реализовать с нуля: Flatten (Medium)",
+       "itemId": "js-flatten",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/javascript/flatten",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w03-d2-s2",
+       "minutes": 40,
+       "block": "js",
+       "title": "Реализовать с нуля: Deep Clone (Medium)",
+       "itemId": "js-deep-clone",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/javascript/deep-clone",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 3,
+     "offset": 2,
+     "lightAlternative": "Это и так лёгкий день: только чтение",
+     "sessions": [
+      {
+       "id": "w03-d3-s1",
+       "minutes": 30,
+       "block": "web",
+       "title": "Веб-основы: DOM и события: всплытие, делегирование",
+       "links": [
+        {
+         "label": "MDN: Event bubbling",
+         "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w03-d3-s2",
+       "minutes": 30,
+       "block": "sd-theory",
+       "title": "Перечитать фреймворк RADIO и свои слабые места по прошлым задачам",
+       "links": [
+        {
+         "label": "GFE: Front End System Design Playbook",
+         "url": "https://www.greatfrontend.com/front-end-system-design-playbook",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 4,
+     "offset": 3,
+     "lightAlternative": "Устал: только очередь повторений, 20 минут",
+     "sessions": [
+      {
+       "id": "w03-d4-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w03-d4-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Новая задача: Search in Rotated Sorted Array (Medium)",
+       "itemId": "dsa-search-in-rotated-sorted-array",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Search+in+Rotated+Sorted+Array",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w03-d4-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: Longest Repeating Character Replacement (Medium)",
+       "itemId": "dsa-longest-repeating-character-replacement",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Longest+Repeating+Character+Replacement",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 5,
+     "offset": 4,
+     "lightAlternative": null,
+     "sessions": [
+      {
+       "id": "w03-d5-s1",
+       "minutes": 0,
+       "block": "rest",
+       "title": "Выходной"
+      }
+     ]
+    },
+    {
+     "dow": 6,
+     "offset": 5,
+     "lightAlternative": "Устал: вместо решения с таймером прочитать разбор дизайна и сделать повторения",
+     "sessions": [
+      {
+       "id": "w03-d6-s1",
+       "minutes": 45,
+       "block": "fe-sd",
+       "title": "Решить самому с таймером на 45 минут: News Feed (Facebook) (Medium)",
+       "itemId": "fesd-news-feed-facebook",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/interviews/study/gfe75/questions/system-design/news-feed-facebook",
+         "confidence": "checked"
+        },
+        {
+         "label": "Excalidraw",
+         "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w03-d6-s2",
+       "minutes": 45,
+       "block": "sd-review",
+       "title": "Сверить своё решение с разбором, записать три слабых места",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/interviews/study/gfe75/questions/system-design/news-feed-facebook",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w03-d6-s3",
+       "minutes": 60,
+       "block": "ui",
+       "title": "Собрать компонент без библиотек: Accordion (Medium)",
+       "itemId": "ui-accordion",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/user-interface/accordion",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w03-d6-s4",
+       "minutes": 50,
+       "block": "dsa",
+       "title": "Новая задача: Minimum Window Substring (Hard)",
+       "itemId": "dsa-minimum-window-substring",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/minimum-window-substring/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Minimum+Window+Substring",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w03-d6-s5",
+       "minutes": 10,
+       "block": "spare",
+       "title": "Запас: дорешать то, что не успел за неделю",
+       "optional": true
+      }
+     ]
+    },
+    {
+     "dow": 7,
+     "offset": 6,
+     "lightAlternative": "Устал: истории вслух и повторения, мок перенести",
+     "sessions": [
+      {
+       "id": "w03-d7-s1",
+       "minutes": 90,
+       "block": "behavioral",
+       "title": "Записать 3 истории в STAR: сложный проект, конфликт, провал",
+       "links": [
+        {
+         "label": "TIH: вопросы behavioral",
+         "url": "https://www.techinterviewhandbook.org/behavioral-interview-questions/",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w03-d7-s2",
+       "minutes": 30,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w03-d7-s3",
+       "minutes": 30,
+       "block": "theory",
+       "title": "Прочитать главу Front End Interview Playbook про формат этой недели",
+       "links": [
+        {
+         "label": "GFE: Front End Interview Playbook",
+         "url": "https://www.greatfrontend.com/front-end-interview-playbook",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w03-d7-s4",
+       "minutes": 15,
+       "block": "week-review",
+       "title": "Разбор недели: проверить отметки, записать три ошибки, посмотреть план и приз следующей недели"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "phase": "topics",
+   "title": "Связные списки",
+   "webTopic": "Рендеринг в браузере: critical rendering path, reflow, repaint",
+   "prize": {
+    "title": "Пульт дрона",
+    "tier": "big"
+   },
+   "days": [
+    {
+     "dow": 1,
+     "offset": 0,
+     "lightAlternative": "Устал: 1-2 повторения из очереди и видеоразбор сегодняшней задачи, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w04-d1-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w04-d1-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Новая задача: Reverse Linked List (Easy)",
+       "itemId": "dsa-reverse-linked-list",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/reverse-linked-list/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Reverse+Linked+List",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w04-d1-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: Merge Two Sorted Lists (Easy)",
+       "itemId": "dsa-merge-two-sorted-lists",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/merge-two-sorted-lists/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Merge+Two+Sorted+Lists",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 2,
+     "offset": 1,
+     "lightAlternative": "Устал: прочитать решение одной утилиты и переписать его своими словами, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w04-d2-s1",
+       "minutes": 35,
+       "block": "js",
+       "title": "Реализовать с нуля: Curry (Medium)",
+       "itemId": "js-curry",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/javascript/curry",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w04-d2-s2",
+       "minutes": 40,
+       "block": "js",
+       "title": "Реализовать с нуля: Memoize (Medium)",
+       "itemId": "js-memoize",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/javascript/memoize",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 3,
+     "offset": 2,
+     "lightAlternative": "Это и так лёгкий день: только чтение",
+     "sessions": [
+      {
+       "id": "w04-d3-s1",
+       "minutes": 30,
+       "block": "web",
+       "title": "Веб-основы: Рендеринг в браузере: critical rendering path, reflow, repaint",
+       "links": [
+        {
+         "label": "web.dev: Critical rendering path",
+         "url": "https://web.dev/articles/critical-rendering-path",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w04-d3-s2",
+       "minutes": 30,
+       "block": "sd-theory",
+       "title": "Перечитать фреймворк RADIO и свои слабые места по прошлым задачам",
+       "links": [
+        {
+         "label": "GFE: Front End System Design Playbook",
+         "url": "https://www.greatfrontend.com/front-end-system-design-playbook",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 4,
+     "offset": 3,
+     "lightAlternative": "Устал: только очередь повторений, 20 минут",
+     "sessions": [
+      {
+       "id": "w04-d4-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w04-d4-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Новая задача: Linked List Cycle (Easy)",
+       "itemId": "dsa-linked-list-cycle",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/linked-list-cycle/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Linked+List+Cycle",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w04-d4-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: Remove Nth Node From End of List (Medium)",
+       "itemId": "dsa-remove-nth-node-from-end-of-list",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Remove+Nth+Node+From+End+of+List",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 5,
+     "offset": 4,
+     "lightAlternative": null,
+     "sessions": [
+      {
+       "id": "w04-d5-s1",
+       "minutes": 0,
+       "block": "rest",
+       "title": "Выходной"
+      }
+     ]
+    },
+    {
+     "dow": 6,
+     "offset": 5,
+     "lightAlternative": "Устал: вместо решения с таймером прочитать разбор дизайна и сделать повторения",
+     "sessions": [
+      {
+       "id": "w04-d6-s1",
+       "minutes": 45,
+       "block": "fe-sd",
+       "title": "Решить самому с таймером на 45 минут: Autocomplete (Medium)",
+       "itemId": "fesd-autocomplete",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/system-design/autocomplete",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Excalidraw",
+         "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w04-d6-s2",
+       "minutes": 45,
+       "block": "sd-review",
+       "title": "Сверить своё решение с разбором, записать три слабых места",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/system-design/autocomplete",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w04-d6-s3",
+       "minutes": 60,
+       "block": "ui",
+       "title": "Собрать компонент без библиотек: Star Rating (Medium)",
+       "itemId": "ui-star-rating",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/user-interface/star-rating",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w04-d6-s4",
+       "minutes": 45,
+       "block": "dsa",
+       "title": "Новая задача: Reorder List (Medium)",
+       "itemId": "dsa-reorder-list",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/reorder-list/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Reorder+List",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w04-d6-s5",
+       "minutes": 15,
+       "block": "spare",
+       "title": "Запас: дорешать то, что не успел за неделю",
+       "optional": true
+      }
+     ]
+    },
+    {
+     "dow": 7,
+     "offset": 6,
+     "lightAlternative": "Устал: истории вслух и повторения, мок перенести",
+     "sessions": [
+      {
+       "id": "w04-d7-s1",
+       "minutes": 75,
+       "block": "mock",
+       "title": "Peer-мок: алгоритмы. После мока записать оценку и три ошибки",
+       "links": [
+        {
+         "label": "Aced: моки с людьми",
+         "url": "https://www.aced.io/practice",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w04-d7-s2",
+       "minutes": 45,
+       "block": "behavioral",
+       "title": "Ещё 2 истории в STAR и самопрезентация на 2 минуты",
+       "links": [
+        {
+         "label": "TIH: самопрезентация",
+         "url": "https://www.techinterviewhandbook.org/self-introduction/",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w04-d7-s3",
+       "minutes": 30,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново. Одну утилиту JS переписать по памяти"
+      },
+      {
+       "id": "w04-d7-s4",
+       "minutes": 15,
+       "block": "week-review",
+       "title": "Разбор недели: проверить отметки, записать три ошибки, посмотреть план и приз следующей недели"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "phase": "topics",
+   "title": "Деревья, часть 1",
+   "webTopic": "CSS: каскад, специфичность, flexbox, grid",
+   "prize": {
+    "title": "Туристический кейс для дрона",
+    "tier": "small"
+   },
+   "days": [
+    {
+     "dow": 1,
+     "offset": 0,
+     "lightAlternative": "Устал: 1-2 повторения из очереди и видеоразбор сегодняшней задачи, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w05-d1-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w05-d1-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Новая задача: Invert Binary Tree (Easy)",
+       "itemId": "dsa-invert-binary-tree",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/invert-binary-tree/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Invert+Binary+Tree",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w05-d1-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: Maximum Depth of Binary Tree (Easy)",
+       "itemId": "dsa-maximum-depth-of-binary-tree",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Maximum+Depth+of+Binary+Tree",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 2,
+     "offset": 1,
+     "lightAlternative": "Устал: прочитать решение одной утилиты и переписать его своими словами, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w05-d2-s1",
+       "minutes": 35,
+       "block": "js",
+       "title": "Реализовать с нуля: Promise.all (Medium)",
+       "itemId": "js-promise-all",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/javascript/promise-all",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w05-d2-s2",
+       "minutes": 40,
+       "block": "js",
+       "title": "Реализовать с нуля: Promise.allSettled (Medium)",
+       "itemId": "js-promise-all-settled",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/javascript/promise-all-settled",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 3,
+     "offset": 2,
+     "lightAlternative": "Это и так лёгкий день: только чтение",
+     "sessions": [
+      {
+       "id": "w05-d3-s1",
+       "minutes": 30,
+       "block": "web",
+       "title": "Веб-основы: CSS: каскад, специфичность, flexbox, grid",
+       "links": [
+        {
+         "label": "web.dev: Learn CSS",
+         "url": "https://web.dev/learn/css",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w05-d3-s2",
+       "minutes": 30,
+       "block": "sd-theory",
+       "title": "Перечитать фреймворк RADIO и свои слабые места по прошлым задачам",
+       "links": [
+        {
+         "label": "GFE: Front End System Design Playbook",
+         "url": "https://www.greatfrontend.com/front-end-system-design-playbook",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 4,
+     "offset": 3,
+     "lightAlternative": "Устал: только очередь повторений, 20 минут",
+     "sessions": [
+      {
+       "id": "w05-d4-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w05-d4-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Новая задача: Same Tree (Easy)",
+       "itemId": "dsa-same-tree",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/same-tree/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Same+Tree",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w05-d4-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: Subtree of Another Tree (Easy)",
+       "itemId": "dsa-subtree-of-another-tree",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/subtree-of-another-tree/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Subtree+of+Another+Tree",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 5,
+     "offset": 4,
+     "lightAlternative": null,
+     "sessions": [
+      {
+       "id": "w05-d5-s1",
+       "minutes": 0,
+       "block": "rest",
+       "title": "Выходной"
+      }
+     ]
+    },
+    {
+     "dow": 6,
+     "offset": 5,
+     "lightAlternative": "Устал: вместо решения с таймером прочитать разбор дизайна и сделать повторения",
+     "sessions": [
+      {
+       "id": "w05-d6-s1",
+       "minutes": 45,
+       "block": "fe-sd",
+       "title": "Решить самому с таймером на 45 минут: Image Carousel (Medium)",
+       "itemId": "fesd-image-carousel",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/system-design/image-carousel",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Excalidraw",
+         "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w05-d6-s2",
+       "minutes": 45,
+       "block": "sd-review",
+       "title": "Сверить своё решение с разбором, записать три слабых места",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/system-design/image-carousel",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w05-d6-s3",
+       "minutes": 60,
+       "block": "ui",
+       "title": "Собрать компонент без библиотек: Modal Dialog (Medium)",
+       "itemId": "ui-modal-dialog",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/user-interface/modal-dialog",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w05-d6-s4",
+       "minutes": 45,
+       "block": "dsa",
+       "title": "Новая задача: Binary Tree Level Order Traversal (Medium)",
+       "itemId": "dsa-binary-tree-level-order-traversal",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Binary+Tree+Level+Order+Traversal",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w05-d6-s5",
+       "minutes": 15,
+       "block": "spare",
+       "title": "Запас: дорешать то, что не успел за неделю",
+       "optional": true
+      }
+     ]
+    },
+    {
+     "dow": 7,
+     "offset": 6,
+     "lightAlternative": "Устал: истории вслух и повторения, мок перенести",
+     "sessions": [
+      {
+       "id": "w05-d7-s1",
+       "minutes": 75,
+       "block": "mock",
+       "title": "Peer-мок: JS и UI-кодинг. После мока записать оценку и три ошибки",
+       "links": [
+        {
+         "label": "Aced: моки с людьми",
+         "url": "https://www.aced.io/practice",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w05-d7-s2",
+       "minutes": 45,
+       "block": "behavioral",
+       "title": "История «Лидерство без полномочий»; переписать истории под уровень senior",
+       "links": [
+        {
+         "label": "TIH: behavioral для senior",
+         "url": "https://www.techinterviewhandbook.org/behavioral-interview-senior-candidates/",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w05-d7-s3",
+       "minutes": 30,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново. Одну утилиту JS переписать по памяти"
+      },
+      {
+       "id": "w05-d7-s4",
+       "minutes": 15,
+       "block": "week-review",
+       "title": "Разбор недели: проверить отметки, записать три ошибки, посмотреть план и приз следующей недели"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "phase": "buffer",
+   "title": "Буфер: долги, повтор, отдых",
+   "webTopic": "Квиз по пройденному: JavaScript, DOM, CSS",
+   "prize": {
+    "title": "Фильтры на дрон",
+    "tier": "small"
+   },
+   "days": [
+    {
+     "dow": 1,
+     "offset": 0,
+     "lightAlternative": "Устал: 1-2 повторения из очереди и видеоразбор сегодняшней задачи, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w06-d1-s1",
+       "minutes": 30,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w06-d1-s2",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: Product of Array Except Self (Medium)",
+       "itemId": "dsa-product-of-array-except-self",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/product-of-array-except-self/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Product+of+Array+Except+Self",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w06-d1-s3",
+       "minutes": 15,
+       "block": "spare",
+       "title": "Долги прошлых недель",
+       "optional": true
+      }
+     ]
+    },
+    {
+     "dow": 2,
+     "offset": 1,
+     "lightAlternative": "Устал: прочитать решение одной утилиты и переписать его своими словами, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w06-d2-s1",
+       "minutes": 30,
+       "block": "js",
+       "title": "Реализовать с нуля: Classnames (Medium)",
+       "itemId": "js-classnames",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/javascript/classnames",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w06-d2-s2",
+       "minutes": 30,
+       "block": "js",
+       "title": "Реализовать с нуля: Deep Equal (Medium)",
+       "itemId": "js-deep-equal",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/javascript/deep-equal",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 3,
+     "offset": 2,
+     "lightAlternative": "Это и так лёгкий день: только чтение",
+     "sessions": [
+      {
+       "id": "w06-d3-s1",
+       "minutes": 45,
+       "block": "web",
+       "title": "Веб-основы: Квиз по пройденному: JavaScript, DOM, CSS",
+       "links": [
+        {
+         "label": "GreatFrontEnd: Quiz",
+         "url": "https://www.greatfrontend.com/questions/quiz",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 4,
+     "offset": 3,
+     "lightAlternative": "Устал: только очередь повторений, 20 минут",
+     "sessions": [
+      {
+       "id": "w06-d4-s1",
+       "minutes": 45,
+       "block": "review",
+       "title": "Лёгкий день: только очередь повторений"
+      }
+     ]
+    },
+    {
+     "dow": 5,
+     "offset": 4,
+     "lightAlternative": null,
+     "sessions": [
+      {
+       "id": "w06-d5-s1",
+       "minutes": 0,
+       "block": "rest",
+       "title": "Выходной"
+      }
+     ]
+    },
+    {
+     "dow": 6,
+     "offset": 5,
+     "lightAlternative": "Устал: вместо решения с таймером прочитать разбор дизайна и сделать повторения",
+     "sessions": [
+      {
+       "id": "w06-d6-s1",
+       "minutes": 45,
+       "block": "fe-sd",
+       "title": "С чистого листа за 45 минут: News Feed (Facebook)",
+       "links": [
+        {
+         "label": "Excalidraw",
+         "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w06-d6-s2",
+       "minutes": 30,
+       "block": "sd-review",
+       "title": "Сверить с разбором: что забыл с прошлого раза",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/interviews/study/gfe75/questions/system-design/news-feed-facebook",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w06-d6-s3",
+       "minutes": 60,
+       "block": "ui",
+       "title": "Tabs заново с полной доступностью: роли ARIA и управление с клавиатуры",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/user-interface/tabs",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w06-d6-s4",
+       "minutes": 50,
+       "block": "dsa",
+       "title": "Новая задача: Merge k Sorted Lists (Hard)",
+       "itemId": "dsa-merge-k-sorted-lists",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/merge-k-sorted-lists/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Merge+k+Sorted+Lists",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 7,
+     "offset": 6,
+     "lightAlternative": "Устал: истории вслух и повторения, мок перенести",
+     "sessions": [
+      {
+       "id": "w06-d7-s1",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: Longest Consecutive Sequence (Medium)",
+       "itemId": "dsa-longest-consecutive-sequence",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/longest-consecutive-sequence/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Longest+Consecutive+Sequence",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w06-d7-s2",
+       "minutes": 45,
+       "block": "behavioral",
+       "title": "Проговорить вслух все готовые истории, каждая за 2-3 минуты"
+      },
+      {
+       "id": "w06-d7-s3",
+       "minutes": 30,
+       "block": "checkpoint",
+       "title": "Контрольная точка: сверить счётчики с целями этапа"
+      },
+      {
+       "id": "w06-d7-s4",
+       "minutes": 15,
+       "block": "week-review",
+       "title": "Разбор недели: проверить отметки, записать три ошибки, посмотреть план и приз следующей недели"
+      }
+     ]
+    }
+   ],
+   "checkpoint": {
+    "dsa": 28,
+    "js": 12,
+    "ui": 5,
+    "sd": 3,
+    "stories": 6,
+    "mocks": 2
+   }
+  },
+  {
+   "n": 7,
+   "phase": "topics-mix",
+   "title": "Деревья, часть 2",
+   "webTopic": "React: рендер и коммит, reconciliation, хуки, мемоизация",
+   "prize": {
+    "title": "Шорты в зал",
+    "tier": "small"
+   },
+   "days": [
+    {
+     "dow": 1,
+     "offset": 0,
+     "lightAlternative": "Устал: 1-2 повторения из очереди и видеоразбор сегодняшней задачи, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w07-d1-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w07-d1-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Новая задача: Validate Binary Search Tree (Medium)",
+       "itemId": "dsa-validate-binary-search-tree",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/validate-binary-search-tree/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Validate+Binary+Search+Tree",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w07-d1-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: Lowest Common Ancestor of a Binary Search Tree (Medium)",
+       "itemId": "dsa-lowest-common-ancestor-of-a-binary-search-tree",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Lowest+Common+Ancestor+of+a+Binary+Search+Tree",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 2,
+     "offset": 1,
+     "lightAlternative": "Устал: прочитать решение одной утилиты и переписать его своими словами, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w07-d2-s1",
+       "minutes": 35,
+       "block": "js",
+       "title": "Реализовать с нуля: Event Emitter (Medium)",
+       "itemId": "js-event-emitter",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/javascript/event-emitter",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w07-d2-s2",
+       "minutes": 40,
+       "block": "js",
+       "title": "Реализовать с нуля: Function.prototype.bind (Medium)",
+       "itemId": "js-function-bind",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/javascript/function-bind",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 3,
+     "offset": 2,
+     "lightAlternative": "Это и так лёгкий день: только чтение",
+     "sessions": [
+      {
+       "id": "w07-d3-s1",
+       "minutes": 30,
+       "block": "web",
+       "title": "Веб-основы: React: рендер и коммит, reconciliation, хуки, мемоизация",
+       "links": [
+        {
+         "label": "react.dev: Render and Commit",
+         "url": "https://react.dev/learn/render-and-commit",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w07-d3-s2",
+       "minutes": 30,
+       "block": "fe-sd",
+       "title": "Повтор с чистого листа за 30 минут: Autocomplete",
+       "links": [
+        {
+         "label": "Excalidraw",
+         "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 4,
+     "offset": 3,
+     "lightAlternative": "Устал: только очередь повторений, 20 минут",
+     "sessions": [
+      {
+       "id": "w07-d4-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w07-d4-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Новая задача: Kth Smallest Element in a BST (Medium)",
+       "itemId": "dsa-kth-smallest-element-in-a-bst",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Kth+Smallest+Element+in+a+BST",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w07-d4-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: Construct Binary Tree from Preorder and Inorder Traversal (Medium)",
+       "itemId": "dsa-construct-binary-tree-from-preorder-and-inorder-traversal",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Construct+Binary+Tree+from+Preorder+and+Inorder+Traversal",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 5,
+     "offset": 4,
+     "lightAlternative": null,
+     "sessions": [
+      {
+       "id": "w07-d5-s1",
+       "minutes": 0,
+       "block": "rest",
+       "title": "Выходной"
+      }
+     ]
+    },
+    {
+     "dow": 6,
+     "offset": 5,
+     "lightAlternative": "Устал: вместо решения с таймером прочитать разбор дизайна и сделать повторения",
+     "sessions": [
+      {
+       "id": "w07-d6-s1",
+       "minutes": 45,
+       "block": "fe-sd",
+       "title": "Решить самому с таймером на 45 минут: Chat App (Messenger) (Medium)",
+       "itemId": "fesd-chat-application-messenger",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/system-design/chat-application-messenger",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Excalidraw",
+         "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w07-d6-s2",
+       "minutes": 45,
+       "block": "sd-review",
+       "title": "Сверить своё решение с разбором, записать три слабых места",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/system-design/chat-application-messenger",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w07-d6-s3",
+       "minutes": 60,
+       "block": "ui",
+       "title": "Собрать компонент без библиотек: Data Table (Medium)",
+       "itemId": "ui-data-table",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/user-interface/data-table",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w07-d6-s4",
+       "minutes": 50,
+       "block": "dsa",
+       "title": "Новая задача: Binary Tree Maximum Path Sum (Hard)",
+       "itemId": "dsa-binary-tree-maximum-path-sum",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Binary+Tree+Maximum+Path+Sum",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w07-d6-s5",
+       "minutes": 10,
+       "block": "spare",
+       "title": "Запас: дорешать то, что не успел за неделю",
+       "optional": true
+      }
+     ]
+    },
+    {
+     "dow": 7,
+     "offset": 6,
+     "lightAlternative": "Устал: истории вслух и повторения, мок перенести",
+     "sessions": [
+      {
+       "id": "w07-d7-s1",
+       "minutes": 75,
+       "block": "mock",
+       "title": "Peer-мок: фронтенд system design. После мока записать оценку и три ошибки",
+       "links": [
+        {
+         "label": "Aced: моки с людьми",
+         "url": "https://www.aced.io/practice",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w07-d7-s2",
+       "minutes": 45,
+       "block": "behavioral",
+       "title": "История «Неоднозначная задача». Найти рефералов и подать в компании для разогрева",
+       "links": [
+        {
+         "label": "TIH: вопросы behavioral",
+         "url": "https://www.techinterviewhandbook.org/behavioral-interview-questions/",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w07-d7-s3",
+       "minutes": 30,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново. Одну утилиту JS переписать по памяти"
+      },
+      {
+       "id": "w07-d7-s4",
+       "minutes": 15,
+       "block": "week-review",
+       "title": "Разбор недели: проверить отметки, записать три ошибки, посмотреть план и приз следующей недели"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "phase": "topics-mix",
+   "title": "Графы и бэктрекинг",
+   "webTopic": "Состояние на клиенте: где хранить, нормализация, кеш запросов",
+   "prize": {
+    "title": "HomePod mini",
+    "tier": "big"
+   },
+   "days": [
+    {
+     "dow": 1,
+     "offset": 0,
+     "lightAlternative": "Устал: 1-2 повторения из очереди и видеоразбор сегодняшней задачи, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w08-d1-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w08-d1-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Новая задача: Number of Islands (Medium)",
+       "itemId": "dsa-number-of-islands",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/number-of-islands/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Number+of+Islands",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w08-d1-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: Clone Graph (Medium)",
+       "itemId": "dsa-clone-graph",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/clone-graph/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Clone+Graph",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 2,
+     "offset": 1,
+     "lightAlternative": "Устал: прочитать решение одной утилиты и переписать его своими словами, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w08-d2-s1",
+       "minutes": 35,
+       "block": "js",
+       "title": "Реализовать с нуля: Promise.any (Medium)",
+       "itemId": "js-promise-any",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/javascript/promise-any",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w08-d2-s2",
+       "minutes": 40,
+       "block": "js",
+       "title": "Реализовать с нуля: Map Async Limit (Hard)",
+       "itemId": "js-map-async-limit",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/javascript/map-async-limit",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 3,
+     "offset": 2,
+     "lightAlternative": "Это и так лёгкий день: только чтение",
+     "sessions": [
+      {
+       "id": "w08-d3-s1",
+       "minutes": 30,
+       "block": "web",
+       "title": "Веб-основы: Состояние на клиенте: где хранить, нормализация, кеш запросов",
+       "links": [
+        {
+         "label": "react.dev: Managing State",
+         "url": "https://react.dev/learn/managing-state",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w08-d3-s2",
+       "minutes": 30,
+       "block": "sd-theory",
+       "title": "Фреймворк ответа для бэкенд-дизайна, к задаче Bitly через неделю",
+       "links": [
+        {
+         "label": "Hello Interview: Delivery Framework",
+         "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/delivery",
+         "confidence": "checked"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 4,
+     "offset": 3,
+     "lightAlternative": "Устал: только очередь повторений, 20 минут",
+     "sessions": [
+      {
+       "id": "w08-d4-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w08-d4-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Новая задача: Course Schedule (Medium)",
+       "itemId": "dsa-course-schedule",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/course-schedule/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Course+Schedule",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w08-d4-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: Pacific Atlantic Water Flow (Medium)",
+       "itemId": "dsa-pacific-atlantic-water-flow",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/pacific-atlantic-water-flow/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Pacific+Atlantic+Water+Flow",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 5,
+     "offset": 4,
+     "lightAlternative": null,
+     "sessions": [
+      {
+       "id": "w08-d5-s1",
+       "minutes": 0,
+       "block": "rest",
+       "title": "Выходной"
+      }
+     ]
+    },
+    {
+     "dow": 6,
+     "offset": 5,
+     "lightAlternative": "Устал: вместо решения с таймером прочитать разбор дизайна и сделать повторения",
+     "sessions": [
+      {
+       "id": "w08-d6-s1",
+       "minutes": 45,
+       "block": "fe-sd",
+       "title": "Решить самому с таймером на 45 минут: E-commerce (Amazon) (Medium)",
+       "itemId": "fesd-e-commerce-amazon",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/system-design/e-commerce-amazon",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Excalidraw",
+         "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w08-d6-s2",
+       "minutes": 45,
+       "block": "sd-review",
+       "title": "Сверить своё решение с разбором, записать три слабых места",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/system-design/e-commerce-amazon",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w08-d6-s3",
+       "minutes": 60,
+       "block": "ui",
+       "title": "Собрать компонент без библиотек: Image Carousel (Medium)",
+       "itemId": "ui-image-carousel",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/user-interface/image-carousel",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w08-d6-s4",
+       "minutes": 45,
+       "block": "dsa",
+       "title": "Новая задача: Word Search (Medium)",
+       "itemId": "dsa-word-search",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/word-search/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Word+Search",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w08-d6-s5",
+       "minutes": 15,
+       "block": "spare",
+       "title": "Запас: дорешать то, что не успел за неделю",
+       "optional": true
+      }
+     ]
+    },
+    {
+     "dow": 7,
+     "offset": 6,
+     "lightAlternative": "Устал: истории вслух и повторения, мок перенести",
+     "sessions": [
+      {
+       "id": "w08-d7-s1",
+       "minutes": 75,
+       "block": "mock",
+       "title": "Peer-мок: алгоритмы. После мока записать оценку и три ошибки",
+       "links": [
+        {
+         "label": "Aced: моки с людьми",
+         "url": "https://www.aced.io/practice",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w08-d7-s2",
+       "minutes": 45,
+       "block": "behavioral",
+       "title": "История «Менторство»; всего 8, каждая за 2-3 минуты вслух",
+       "links": [
+        {
+         "label": "TIH: вопросы behavioral",
+         "url": "https://www.techinterviewhandbook.org/behavioral-interview-questions/",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w08-d7-s3",
+       "minutes": 30,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново. Одну утилиту JS переписать по памяти"
+      },
+      {
+       "id": "w08-d7-s4",
+       "minutes": 15,
+       "block": "week-review",
+       "title": "Разбор недели: проверить отметки, записать три ошибки, посмотреть план и приз следующей недели"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "phase": "topics-mix",
+   "title": "Интервалы, комбинации, trie",
+   "webTopic": "Производительность: Core Web Vitals, code splitting, lazy loading",
+   "prize": {
+    "title": "Майка в зал",
+    "tier": "small"
+   },
+   "days": [
+    {
+     "dow": 1,
+     "offset": 0,
+     "lightAlternative": "Устал: 1-2 повторения из очереди и видеоразбор сегодняшней задачи, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w09-d1-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w09-d1-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Новая задача: Merge Intervals (Medium)",
+       "itemId": "dsa-merge-intervals",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/merge-intervals/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Merge+Intervals",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w09-d1-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: Insert Interval (Medium)",
+       "itemId": "dsa-insert-interval",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/insert-interval/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Insert+Interval",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 2,
+     "offset": 1,
+     "lightAlternative": "Устал: прочитать решение одной утилиты и переписать его своими словами, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w09-d2-s1",
+       "minutes": 35,
+       "block": "js",
+       "title": "Реализовать с нуля: getElementsByClassName (Medium)",
+       "itemId": "js-get-elements-by-class-name",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/javascript/get-elements-by-class-name",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w09-d2-s2",
+       "minutes": 40,
+       "block": "js",
+       "title": "Реализовать с нуля: Text Search (Medium)",
+       "itemId": "js-text-search",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/javascript/text-search",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 3,
+     "offset": 2,
+     "lightAlternative": "Это и так лёгкий день: только чтение",
+     "sessions": [
+      {
+       "id": "w09-d3-s1",
+       "minutes": 30,
+       "block": "web",
+       "title": "Веб-основы: Производительность: Core Web Vitals, code splitting, lazy loading",
+       "links": [
+        {
+         "label": "web.dev: Web Vitals",
+         "url": "https://web.dev/articles/vitals",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w09-d3-s2",
+       "minutes": 30,
+       "block": "fe-sd",
+       "title": "Повтор с чистого листа за 30 минут: Chat App (Messenger)",
+       "links": [
+        {
+         "label": "Excalidraw",
+         "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 4,
+     "offset": 3,
+     "lightAlternative": "Устал: только очередь повторений, 20 минут",
+     "sessions": [
+      {
+       "id": "w09-d4-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w09-d4-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Новая задача: Non-overlapping Intervals (Medium)",
+       "itemId": "dsa-non-overlapping-intervals",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/non-overlapping-intervals/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Non-overlapping+Intervals",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w09-d4-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: Combination Sum (Medium)",
+       "itemId": "dsa-combination-sum",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/combination-sum/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Combination+Sum",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 5,
+     "offset": 4,
+     "lightAlternative": null,
+     "sessions": [
+      {
+       "id": "w09-d5-s1",
+       "minutes": 0,
+       "block": "rest",
+       "title": "Выходной"
+      }
+     ]
+    },
+    {
+     "dow": 6,
+     "offset": 5,
+     "lightAlternative": "Устал: вместо решения с таймером прочитать разбор дизайна и сделать повторения",
+     "sessions": [
+      {
+       "id": "w09-d6-s1",
+       "minutes": 45,
+       "block": "be-sd",
+       "title": "Решить самому с таймером на 45 минут: Bitly (URL shortener) (Easy)",
+       "itemId": "besd-bitly",
+       "links": [
+        {
+         "label": "Hello Interview",
+         "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/bitly",
+         "confidence": "checked"
+        },
+        {
+         "label": "Excalidraw",
+         "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w09-d6-s2",
+       "minutes": 45,
+       "block": "sd-review",
+       "title": "Сверить своё решение с разбором, записать три слабых места",
+       "links": [
+        {
+         "label": "Hello Interview",
+         "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/bitly",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w09-d6-s3",
+       "minutes": 60,
+       "block": "ui",
+       "title": "Собрать компонент без библиотек: File Explorer (Medium)",
+       "itemId": "ui-file-explorer",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/user-interface/file-explorer",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w09-d6-s4",
+       "minutes": 45,
+       "block": "dsa",
+       "title": "Новая задача: Implement Trie (Prefix Tree) (Medium)",
+       "itemId": "dsa-implement-trie-prefix-tree",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Implement+Trie+%28Prefix+Tree%29",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w09-d6-s5",
+       "minutes": 15,
+       "block": "spare",
+       "title": "Запас: дорешать то, что не успел за неделю",
+       "optional": true
+      }
+     ]
+    },
+    {
+     "dow": 7,
+     "offset": 6,
+     "lightAlternative": "Устал: истории вслух и повторения, мок перенести",
+     "sessions": [
+      {
+       "id": "w09-d7-s1",
+       "minutes": 75,
+       "block": "mock",
+       "title": "Peer-мок: UI-кодинг. После мока записать оценку и три ошибки Если на этой неделе реальное интервью, оно заменяет мок.",
+       "links": [
+        {
+         "label": "Aced: моки с людьми",
+         "url": "https://www.aced.io/practice",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w09-d7-s2",
+       "minutes": 45,
+       "block": "behavioral",
+       "title": "Истории вслух. Подать в компании для репетиции",
+       "links": [
+        {
+         "label": "TIH: вопросы behavioral",
+         "url": "https://www.techinterviewhandbook.org/behavioral-interview-questions/",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w09-d7-s3",
+       "minutes": 30,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново. Одну утилиту JS переписать по памяти"
+      },
+      {
+       "id": "w09-d7-s4",
+       "minutes": 15,
+       "block": "week-review",
+       "title": "Разбор недели: проверить отметки, записать три ошибки, посмотреть план и приз следующей недели"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "phase": "topics-mix",
+   "title": "Динамическое программирование",
+   "webTopic": "Сеть: HTTP-кеширование, REST и GraphQL, WebSocket и SSE",
+   "prize": {
+    "title": "Неоновая лампа",
+    "tier": "small"
+   },
+   "days": [
+    {
+     "dow": 1,
+     "offset": 0,
+     "lightAlternative": "Устал: 1-2 повторения из очереди и видеоразбор сегодняшней задачи, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w10-d1-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w10-d1-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Новая задача: Climbing Stairs (Easy)",
+       "itemId": "dsa-climbing-stairs",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/climbing-stairs/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Climbing+Stairs",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w10-d1-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: House Robber (Medium)",
+       "itemId": "dsa-house-robber",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/house-robber/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+House+Robber",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 2,
+     "offset": 1,
+     "lightAlternative": "Устал: прочитать решение одной утилиты и переписать его своими словами, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w10-d2-s1",
+       "minutes": 35,
+       "block": "js",
+       "title": "Реализовать с нуля: JSON.stringify (Medium)",
+       "itemId": "js-json-stringify",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/javascript/json-stringify",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w10-d2-s2",
+       "minutes": 40,
+       "block": "js",
+       "title": "Реализовать с нуля: Squash Object (Medium)",
+       "itemId": "js-squash-object",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/javascript/squash-object",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 3,
+     "offset": 2,
+     "lightAlternative": "Это и так лёгкий день: только чтение",
+     "sessions": [
+      {
+       "id": "w10-d3-s1",
+       "minutes": 30,
+       "block": "web",
+       "title": "Веб-основы: Сеть: HTTP-кеширование, REST и GraphQL, WebSocket и SSE",
+       "links": [
+        {
+         "label": "MDN: HTTP caching",
+         "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w10-d3-s2",
+       "minutes": 30,
+       "block": "fe-sd",
+       "title": "Повтор с чистого листа за 30 минут: E-commerce (Amazon)",
+       "links": [
+        {
+         "label": "Excalidraw",
+         "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 4,
+     "offset": 3,
+     "lightAlternative": "Устал: только очередь повторений, 20 минут",
+     "sessions": [
+      {
+       "id": "w10-d4-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w10-d4-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Новая задача: Coin Change (Medium)",
+       "itemId": "dsa-coin-change",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/coin-change/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Coin+Change",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w10-d4-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: Longest Increasing Subsequence (Medium)",
+       "itemId": "dsa-longest-increasing-subsequence",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/longest-increasing-subsequence/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Longest+Increasing+Subsequence",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 5,
+     "offset": 4,
+     "lightAlternative": null,
+     "sessions": [
+      {
+       "id": "w10-d5-s1",
+       "minutes": 0,
+       "block": "rest",
+       "title": "Выходной"
+      }
+     ]
+    },
+    {
+     "dow": 6,
+     "offset": 5,
+     "lightAlternative": "Устал: вместо решения с таймером прочитать разбор дизайна и сделать повторения",
+     "sessions": [
+      {
+       "id": "w10-d6-s1",
+       "minutes": 45,
+       "block": "fe-sd",
+       "title": "Решить самому с таймером на 45 минут: Collaborative Editor (Google Docs) (Medium)",
+       "itemId": "fesd-collaborative-editor-google-docs",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/system-design/collaborative-editor-google-docs",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Excalidraw",
+         "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w10-d6-s2",
+       "minutes": 45,
+       "block": "sd-review",
+       "title": "Сверить своё решение с разбором, записать три слабых места",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/system-design/collaborative-editor-google-docs",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w10-d6-s3",
+       "minutes": 60,
+       "block": "ui",
+       "title": "Собрать компонент без библиотек: Job Board (Medium)",
+       "itemId": "ui-job-board",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/user-interface/job-board",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w10-d6-s4",
+       "minutes": 45,
+       "block": "dsa",
+       "title": "Новая задача: Word Break (Medium)",
+       "itemId": "dsa-word-break",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/word-break/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Word+Break",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w10-d6-s5",
+       "minutes": 15,
+       "block": "spare",
+       "title": "Запас: дорешать то, что не успел за неделю",
+       "optional": true
+      }
+     ]
+    },
+    {
+     "dow": 7,
+     "offset": 6,
+     "lightAlternative": "Устал: истории вслух и повторения, мок перенести",
+     "sessions": [
+      {
+       "id": "w10-d7-s1",
+       "minutes": 75,
+       "block": "mock",
+       "title": "Peer-мок: фронтенд system design. После мока записать оценку и три ошибки Если на этой неделе реальное интервью, оно заменяет мок.",
+       "links": [
+        {
+         "label": "Aced: моки с людьми",
+         "url": "https://www.aced.io/practice",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w10-d7-s2",
+       "minutes": 45,
+       "block": "behavioral",
+       "title": "Истории «Инцидент в продакшене» и «Решение, которое я отстоял»; прочитать Netflix Culture Memo",
+       "links": [
+        {
+         "label": "Netflix: культура",
+         "url": "https://jobs.netflix.com/culture",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w10-d7-s3",
+       "minutes": 30,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново. Одну утилиту JS переписать по памяти"
+      },
+      {
+       "id": "w10-d7-s4",
+       "minutes": 15,
+       "block": "week-review",
+       "title": "Разбор недели: проверить отметки, записать три ошибки, посмотреть план и приз следующей недели"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "phase": "buffer",
+   "title": "Буфер: долги, повтор, отдых",
+   "webTopic": "Квиз по пройденному: React, производительность, сеть",
+   "prize": {
+    "title": "Чемодан S",
+    "tier": "small"
+   },
+   "days": [
+    {
+     "dow": 1,
+     "offset": 0,
+     "lightAlternative": "Устал: 1-2 повторения из очереди и видеоразбор сегодняшней задачи, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w11-d1-s1",
+       "minutes": 30,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w11-d1-s2",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: Maximum Subarray (Medium)",
+       "itemId": "dsa-maximum-subarray",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/maximum-subarray/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Maximum+Subarray",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w11-d1-s3",
+       "minutes": 15,
+       "block": "spare",
+       "title": "Долги прошлых недель",
+       "optional": true
+      }
+     ]
+    },
+    {
+     "dow": 2,
+     "offset": 1,
+     "lightAlternative": "Устал: прочитать решение одной утилиты и переписать его своими словами, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w11-d2-s1",
+       "minutes": 60,
+       "block": "js",
+       "title": "Две самые слабые утилиты JS переписать по памяти, без подсказок",
+       "links": [
+        {
+         "label": "GFE 75",
+         "url": "https://www.greatfrontend.com/interviews/study-plans/gfe75",
+         "confidence": "checked"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 3,
+     "offset": 2,
+     "lightAlternative": "Это и так лёгкий день: только чтение",
+     "sessions": [
+      {
+       "id": "w11-d3-s1",
+       "minutes": 45,
+       "block": "web",
+       "title": "Веб-основы: Квиз по пройденному: React, производительность, сеть",
+       "links": [
+        {
+         "label": "GreatFrontEnd: Quiz",
+         "url": "https://www.greatfrontend.com/questions/quiz",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 4,
+     "offset": 3,
+     "lightAlternative": "Устал: только очередь повторений, 20 минут",
+     "sessions": [
+      {
+       "id": "w11-d4-s1",
+       "minutes": 45,
+       "block": "review",
+       "title": "Лёгкий день: только очередь повторений"
+      }
+     ]
+    },
+    {
+     "dow": 5,
+     "offset": 4,
+     "lightAlternative": null,
+     "sessions": [
+      {
+       "id": "w11-d5-s1",
+       "minutes": 0,
+       "block": "rest",
+       "title": "Выходной"
+      }
+     ]
+    },
+    {
+     "dow": 6,
+     "offset": 5,
+     "lightAlternative": "Устал: вместо решения с таймером прочитать разбор дизайна и сделать повторения",
+     "sessions": [
+      {
+       "id": "w11-d6-s1",
+       "minutes": 45,
+       "block": "fe-sd",
+       "title": "С чистого листа за 45 минут: Collaborative Editor (Google Docs)",
+       "links": [
+        {
+         "label": "Excalidraw",
+         "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w11-d6-s2",
+       "minutes": 30,
+       "block": "sd-review",
+       "title": "Сверить с разбором: что забыл с прошлого раза",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/system-design/collaborative-editor-google-docs",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w11-d6-s3",
+       "minutes": 60,
+       "block": "ui",
+       "title": "Modal Dialog заново с доступностью: ловушка фокуса, Escape, возврат фокуса",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/user-interface/modal-dialog",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w11-d6-s4",
+       "minutes": 50,
+       "block": "dsa",
+       "title": "Новая задача: Unique Paths (Medium)",
+       "itemId": "dsa-unique-paths",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/unique-paths/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Unique+Paths",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 7,
+     "offset": 6,
+     "lightAlternative": "Устал: истории вслух и повторения, мок перенести",
+     "sessions": [
+      {
+       "id": "w11-d7-s1",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: Jump Game (Medium)",
+       "itemId": "dsa-jump-game",
+       "links": [
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/jump-game/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор (поиск)",
+         "url": "https://www.youtube.com/results?search_query=neetcode+Jump+Game",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w11-d7-s2",
+       "minutes": 45,
+       "block": "behavioral",
+       "title": "Проговорить вслух все готовые истории, каждая за 2-3 минуты"
+      },
+      {
+       "id": "w11-d7-s3",
+       "minutes": 30,
+       "block": "checkpoint",
+       "title": "Контрольная точка: сверить счётчики с целями этапа"
+      },
+      {
+       "id": "w11-d7-s4",
+       "minutes": 15,
+       "block": "week-review",
+       "title": "Разбор недели: проверить отметки, записать три ошибки, посмотреть план и приз следующей недели"
+      }
+     ]
+    }
+   ],
+   "checkpoint": {
+    "dsa": 51,
+    "js": 20,
+    "ui": 9,
+    "sd": 7,
+    "stories": 10,
+    "mocks": 6
+   }
+  },
+  {
+   "n": 12,
+   "phase": "simulation",
+   "title": "Симуляция интервью",
+   "webTopic": "Доступность: ARIA, клавиатура, управление фокусом",
+   "prize": {
+    "title": "Очки Ray-Ban",
+    "tier": "big"
+   },
+   "days": [
+    {
+     "dow": 1,
+     "offset": 0,
+     "lightAlternative": "Устал: 1-2 повторения из очереди и видеоразбор сегодняшней задачи, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w12-d1-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w12-d1-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Задача Google на время: впиши название",
+       "itemId": "dsa-own-01",
+       "links": [
+        {
+         "label": "Вопросы Google (Hello Interview)",
+         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "confidence": "checked"
+        },
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problemset/",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w12-d1-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Задача Google на время: впиши название",
+       "itemId": "dsa-own-02",
+       "links": [
+        {
+         "label": "Вопросы Google (Hello Interview)",
+         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "confidence": "checked"
+        },
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problemset/",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 2,
+     "offset": 1,
+     "lightAlternative": "Устал: прочитать решение одной утилиты и переписать его своими словами, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w12-d2-s1",
+       "minutes": 35,
+       "block": "js",
+       "title": "Утилита JS на время из списка вопросов Google или Netflix: впиши название",
+       "itemId": "js-own-01",
+       "links": [
+        {
+         "label": "GreatFrontEnd: все вопросы",
+         "url": "https://www.greatfrontend.com/questions",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w12-d2-s2",
+       "minutes": 40,
+       "block": "ui",
+       "title": "UI-компонент на время из списка вопросов Google или Netflix: впиши название",
+       "itemId": "ui-own-01",
+       "links": [
+        {
+         "label": "GreatFrontEnd: все вопросы",
+         "url": "https://www.greatfrontend.com/questions",
+         "confidence": "checked"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 3,
+     "offset": 2,
+     "lightAlternative": "Это и так лёгкий день: только чтение",
+     "sessions": [
+      {
+       "id": "w12-d3-s1",
+       "minutes": 30,
+       "block": "web",
+       "title": "Веб-основы: Доступность: ARIA, клавиатура, управление фокусом",
+       "links": [
+        {
+         "label": "web.dev: Learn Accessibility",
+         "url": "https://web.dev/learn/accessibility",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w12-d3-s2",
+       "minutes": 30,
+       "block": "sd-theory",
+       "title": "Прочитать разбор без решения: Rate Limiter",
+       "links": [
+        {
+         "label": "Hello Interview: Rate Limiter",
+         "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/distributed-rate-limiter",
+         "confidence": "checked"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 4,
+     "offset": 3,
+     "lightAlternative": "Устал: только очередь повторений, 20 минут",
+     "sessions": [
+      {
+       "id": "w12-d4-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w12-d4-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Задача Google на время: впиши название",
+       "itemId": "dsa-own-03",
+       "links": [
+        {
+         "label": "Вопросы Google (Hello Interview)",
+         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "confidence": "checked"
+        },
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problemset/",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w12-d4-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Задача Google на время: впиши название",
+       "itemId": "dsa-own-04",
+       "links": [
+        {
+         "label": "Вопросы Google (Hello Interview)",
+         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "confidence": "checked"
+        },
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problemset/",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 5,
+     "offset": 4,
+     "lightAlternative": null,
+     "sessions": [
+      {
+       "id": "w12-d5-s1",
+       "minutes": 0,
+       "block": "rest",
+       "title": "Выходной"
+      }
+     ]
+    },
+    {
+     "dow": 6,
+     "offset": 5,
+     "lightAlternative": "Устал: вместо решения с таймером прочитать разбор дизайна и сделать повторения",
+     "sessions": [
+      {
+       "id": "w12-d6-s1",
+       "minutes": 45,
+       "block": "fe-sd",
+       "title": "Решить самому с таймером на 45 минут: Video Streaming (Netflix) (Medium)",
+       "itemId": "fesd-video-streaming-netflix",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/system-design/video-streaming-netflix",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Excalidraw",
+         "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w12-d6-s2",
+       "minutes": 45,
+       "block": "sd-review",
+       "title": "Сверить с разбором, записать три слабых места",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/system-design/video-streaming-netflix",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w12-d6-s3",
+       "minutes": 45,
+       "block": "ui",
+       "title": "Собрать компонент на время, 45 минут: Like Button (Medium)",
+       "itemId": "ui-like-button",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/user-interface/like-button",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w12-d6-s4",
+       "minutes": 15,
+       "block": "ui",
+       "title": "Разбор компонента: доступность, краевые случаи, что не успел"
+      },
+      {
+       "id": "w12-d6-s5",
+       "minutes": 45,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w12-d6-s6",
+       "minutes": 15,
+       "block": "spare",
+       "title": "Запас: дорешать то, что не успел за неделю",
+       "optional": true
+      }
+     ]
+    },
+    {
+     "dow": 7,
+     "offset": 6,
+     "lightAlternative": "Устал: истории вслух и повторения, мок перенести",
+     "sessions": [
+      {
+       "id": "w12-d7-s1",
+       "minutes": 75,
+       "block": "mock",
+       "title": "Праздничная неделя: peer-мок по алгоритмам, если найдётся напарник. Иначе решить 2 задачи вслух с записью экрана",
+       "links": [
+        {
+         "label": "Aced: моки с людьми",
+         "url": "https://www.aced.io/practice",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w12-d7-s2",
+       "minutes": 45,
+       "block": "behavioral",
+       "title": "Истории вслух; подготовить заявки в основные компании: резюме, рефералы"
+      },
+      {
+       "id": "w12-d7-s3",
+       "minutes": 30,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w12-d7-s4",
+       "minutes": 15,
+       "block": "week-review",
+       "title": "Разбор недели: проверить отметки, записать три ошибки, посмотреть план и приз следующей недели"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "phase": "simulation",
+   "title": "Симуляция интервью",
+   "webTopic": "Безопасность: XSS, CSRF, CSP, CORS",
+   "prize": {
+    "title": "Массажный пистолет",
+    "tier": "small"
+   },
+   "days": [
+    {
+     "dow": 1,
+     "offset": 0,
+     "lightAlternative": "Устал: 1-2 повторения из очереди и видеоразбор сегодняшней задачи, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w13-d1-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w13-d1-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Задача Google на время: впиши название",
+       "itemId": "dsa-own-05",
+       "links": [
+        {
+         "label": "Вопросы Google (Hello Interview)",
+         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "confidence": "checked"
+        },
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problemset/",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w13-d1-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Задача Google на время: впиши название",
+       "itemId": "dsa-own-06",
+       "links": [
+        {
+         "label": "Вопросы Google (Hello Interview)",
+         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "confidence": "checked"
+        },
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problemset/",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 2,
+     "offset": 1,
+     "lightAlternative": "Устал: прочитать решение одной утилиты и переписать его своими словами, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w13-d2-s1",
+       "minutes": 35,
+       "block": "js",
+       "title": "Утилита JS на время из списка вопросов Google или Netflix: впиши название",
+       "itemId": "js-own-02",
+       "links": [
+        {
+         "label": "GreatFrontEnd: все вопросы",
+         "url": "https://www.greatfrontend.com/questions",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w13-d2-s2",
+       "minutes": 40,
+       "block": "ui",
+       "title": "UI-компонент на время из списка вопросов Google или Netflix: впиши название",
+       "itemId": "ui-own-02",
+       "links": [
+        {
+         "label": "GreatFrontEnd: все вопросы",
+         "url": "https://www.greatfrontend.com/questions",
+         "confidence": "checked"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 3,
+     "offset": 2,
+     "lightAlternative": "Это и так лёгкий день: только чтение",
+     "sessions": [
+      {
+       "id": "w13-d3-s1",
+       "minutes": 30,
+       "block": "web",
+       "title": "Веб-основы: Безопасность: XSS, CSRF, CSP, CORS",
+       "links": [
+        {
+         "label": "MDN: Web security",
+         "url": "https://developer.mozilla.org/en-US/docs/Web/Security",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w13-d3-s2",
+       "minutes": 30,
+       "block": "sd-theory",
+       "title": "Core Concepts бэкенд-дизайна: кеш, шардинг, очереди",
+       "links": [
+        {
+         "label": "Hello Interview: Core Concepts",
+         "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/core-concepts",
+         "confidence": "checked"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 4,
+     "offset": 3,
+     "lightAlternative": "Устал: только очередь повторений, 20 минут",
+     "sessions": [
+      {
+       "id": "w13-d4-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w13-d4-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Задача Google на время: впиши название",
+       "itemId": "dsa-own-07",
+       "links": [
+        {
+         "label": "Вопросы Google (Hello Interview)",
+         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "confidence": "checked"
+        },
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problemset/",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w13-d4-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Задача Google на время: впиши название",
+       "itemId": "dsa-own-08",
+       "links": [
+        {
+         "label": "Вопросы Google (Hello Interview)",
+         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "confidence": "checked"
+        },
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problemset/",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 5,
+     "offset": 4,
+     "lightAlternative": null,
+     "sessions": [
+      {
+       "id": "w13-d5-s1",
+       "minutes": 0,
+       "block": "rest",
+       "title": "Выходной"
+      }
+     ]
+    },
+    {
+     "dow": 6,
+     "offset": 5,
+     "lightAlternative": "Устал: вместо решения с таймером прочитать разбор дизайна и сделать повторения",
+     "sessions": [
+      {
+       "id": "w13-d6-s1",
+       "minutes": 45,
+       "block": "be-sd",
+       "title": "Решить самому с таймером на 45 минут: FB News Feed, взгляд с бэкенда (Medium)",
+       "itemId": "besd-fb-news-feed",
+       "links": [
+        {
+         "label": "Hello Interview",
+         "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/fb-news-feed",
+         "confidence": "checked"
+        },
+        {
+         "label": "Excalidraw",
+         "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w13-d6-s2",
+       "minutes": 45,
+       "block": "sd-review",
+       "title": "Сверить с разбором, записать три слабых места",
+       "links": [
+        {
+         "label": "Hello Interview",
+         "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/fb-news-feed",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w13-d6-s3",
+       "minutes": 45,
+       "block": "ui",
+       "title": "Собрать компонент на время, 45 минут: Nested Checkboxes (Medium)",
+       "itemId": "ui-nested-checkboxes",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/user-interface/nested-checkboxes",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w13-d6-s4",
+       "minutes": 15,
+       "block": "ui",
+       "title": "Разбор компонента: доступность, краевые случаи, что не успел"
+      },
+      {
+       "id": "w13-d6-s5",
+       "minutes": 60,
+       "block": "mock",
+       "title": "Платный мок по фронтенд system design или UI-кодингу. Попросить оценку по уровню. Если на этой неделе реальное интервью, оно заменяет мок.",
+       "links": [
+        {
+         "label": "interviewing.io",
+         "url": "https://interviewing.io",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 7,
+     "offset": 6,
+     "lightAlternative": "Устал: истории вслух и повторения, мок перенести",
+     "sessions": [
+      {
+       "id": "w13-d7-s1",
+       "minutes": 75,
+       "block": "mock",
+       "title": "Peer-мок: алгоритмы.",
+       "links": [
+        {
+         "label": "Aced: моки с людьми",
+         "url": "https://www.aced.io/practice",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w13-d7-s2",
+       "minutes": 45,
+       "block": "behavioral",
+       "title": "Подать в Google, Netflix и Revolut через рефералов"
+      },
+      {
+       "id": "w13-d7-s3",
+       "minutes": 30,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w13-d7-s4",
+       "minutes": 15,
+       "block": "week-review",
+       "title": "Разбор недели: проверить отметки, записать три ошибки, посмотреть план и приз следующей недели"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "phase": "simulation",
+   "title": "Симуляция интервью",
+   "webTopic": "Стратегии рендеринга: CSR, SSR, SSG, стриминг",
+   "prize": {
+    "title": "Катана",
+    "tier": "small"
+   },
+   "days": [
+    {
+     "dow": 1,
+     "offset": 0,
+     "lightAlternative": "Устал: 1-2 повторения из очереди и видеоразбор сегодняшней задачи, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w14-d1-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w14-d1-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Задача Google на время: впиши название",
+       "itemId": "dsa-own-09",
+       "links": [
+        {
+         "label": "Вопросы Google (Hello Interview)",
+         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "confidence": "checked"
+        },
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problemset/",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w14-d1-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Задача Google на время: впиши название",
+       "itemId": "dsa-own-10",
+       "links": [
+        {
+         "label": "Вопросы Google (Hello Interview)",
+         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "confidence": "checked"
+        },
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problemset/",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 2,
+     "offset": 1,
+     "lightAlternative": "Устал: прочитать решение одной утилиты и переписать его своими словами, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w14-d2-s1",
+       "minutes": 35,
+       "block": "js",
+       "title": "Утилита JS на время из списка вопросов Google или Netflix: впиши название",
+       "itemId": "js-own-03",
+       "links": [
+        {
+         "label": "GreatFrontEnd: все вопросы",
+         "url": "https://www.greatfrontend.com/questions",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w14-d2-s2",
+       "minutes": 40,
+       "block": "ui",
+       "title": "UI-компонент на время из списка вопросов Google или Netflix: впиши название",
+       "itemId": "ui-own-03",
+       "links": [
+        {
+         "label": "GreatFrontEnd: все вопросы",
+         "url": "https://www.greatfrontend.com/questions",
+         "confidence": "checked"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 3,
+     "offset": 2,
+     "lightAlternative": "Это и так лёгкий день: только чтение",
+     "sessions": [
+      {
+       "id": "w14-d3-s1",
+       "minutes": 30,
+       "block": "web",
+       "title": "Веб-основы: Стратегии рендеринга: CSR, SSR, SSG, стриминг",
+       "links": [
+        {
+         "label": "web.dev: Rendering on the Web",
+         "url": "https://web.dev/articles/rendering-on-the-web",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w14-d3-s2",
+       "minutes": 30,
+       "block": "fe-sd",
+       "title": "Повтор с чистого листа за 30 минут: Video Streaming (Netflix)",
+       "links": [
+        {
+         "label": "Excalidraw",
+         "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 4,
+     "offset": 3,
+     "lightAlternative": "Устал: только очередь повторений, 20 минут",
+     "sessions": [
+      {
+       "id": "w14-d4-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w14-d4-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Задача Google на время: впиши название",
+       "itemId": "dsa-own-11",
+       "links": [
+        {
+         "label": "Вопросы Google (Hello Interview)",
+         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "confidence": "checked"
+        },
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problemset/",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w14-d4-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Задача Google на время: впиши название",
+       "itemId": "dsa-own-12",
+       "links": [
+        {
+         "label": "Вопросы Google (Hello Interview)",
+         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "confidence": "checked"
+        },
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problemset/",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 5,
+     "offset": 4,
+     "lightAlternative": null,
+     "sessions": [
+      {
+       "id": "w14-d5-s1",
+       "minutes": 0,
+       "block": "rest",
+       "title": "Выходной"
+      }
+     ]
+    },
+    {
+     "dow": 6,
+     "offset": 5,
+     "lightAlternative": "Устал: вместо решения с таймером прочитать разбор дизайна и сделать повторения",
+     "sessions": [
+      {
+       "id": "w14-d6-s1",
+       "minutes": 45,
+       "block": "fe-sd",
+       "title": "Решить самому с таймером на 45 минут: Photo Sharing (Instagram) (Medium)",
+       "itemId": "fesd-photo-sharing-instagram",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/system-design/photo-sharing-instagram",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Excalidraw",
+         "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w14-d6-s2",
+       "minutes": 45,
+       "block": "sd-review",
+       "title": "Сверить с разбором, записать три слабых места",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/system-design/photo-sharing-instagram",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w14-d6-s3",
+       "minutes": 45,
+       "block": "ui",
+       "title": "Собрать компонент на время, 45 минут: Transfer List (Medium)",
+       "itemId": "ui-transfer-list",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/user-interface/transfer-list",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w14-d6-s4",
+       "minutes": 15,
+       "block": "ui",
+       "title": "Разбор компонента: доступность, краевые случаи, что не успел"
+      },
+      {
+       "id": "w14-d6-s5",
+       "minutes": 45,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w14-d6-s6",
+       "minutes": 15,
+       "block": "spare",
+       "title": "Запас: дорешать то, что не успел за неделю",
+       "optional": true
+      }
+     ]
+    },
+    {
+     "dow": 7,
+     "offset": 6,
+     "lightAlternative": "Устал: истории вслух и повторения, мок перенести",
+     "sessions": [
+      {
+       "id": "w14-d7-s1",
+       "minutes": 75,
+       "block": "mock",
+       "title": "Платный мок по behavioral. Попросить оценку уровня: L4 или L5.",
+       "links": [
+        {
+         "label": "interviewing.io",
+         "url": "https://interviewing.io",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w14-d7-s2",
+       "minutes": 45,
+       "block": "behavioral",
+       "title": "Поправить истории по итогам мока"
+      },
+      {
+       "id": "w14-d7-s3",
+       "minutes": 30,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w14-d7-s4",
+       "minutes": 15,
+       "block": "week-review",
+       "title": "Разбор недели: проверить отметки, записать три ошибки, посмотреть план и приз следующей недели"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "phase": "simulation",
+   "title": "Симуляция интервью",
+   "webTopic": "TypeScript: дженерики и utility types",
+   "prize": {
+    "title": "Фигурка Funko или Lego",
+    "tier": "small"
+   },
+   "days": [
+    {
+     "dow": 1,
+     "offset": 0,
+     "lightAlternative": "Устал: 1-2 повторения из очереди и видеоразбор сегодняшней задачи, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w15-d1-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w15-d1-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Задача Google на время: впиши название",
+       "itemId": "dsa-own-13",
+       "links": [
+        {
+         "label": "Вопросы Google (Hello Interview)",
+         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "confidence": "checked"
+        },
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problemset/",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w15-d1-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Задача Google на время: впиши название",
+       "itemId": "dsa-own-14",
+       "links": [
+        {
+         "label": "Вопросы Google (Hello Interview)",
+         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "confidence": "checked"
+        },
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problemset/",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 2,
+     "offset": 1,
+     "lightAlternative": "Устал: прочитать решение одной утилиты и переписать его своими словами, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w15-d2-s1",
+       "minutes": 35,
+       "block": "js",
+       "title": "Утилита JS на время из списка вопросов Google или Netflix: впиши название",
+       "itemId": "js-own-04",
+       "links": [
+        {
+         "label": "GreatFrontEnd: все вопросы",
+         "url": "https://www.greatfrontend.com/questions",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w15-d2-s2",
+       "minutes": 40,
+       "block": "ui",
+       "title": "UI-компонент на время из списка вопросов Google или Netflix: впиши название",
+       "itemId": "ui-own-04",
+       "links": [
+        {
+         "label": "GreatFrontEnd: все вопросы",
+         "url": "https://www.greatfrontend.com/questions",
+         "confidence": "checked"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 3,
+     "offset": 2,
+     "lightAlternative": "Это и так лёгкий день: только чтение",
+     "sessions": [
+      {
+       "id": "w15-d3-s1",
+       "minutes": 30,
+       "block": "web",
+       "title": "Веб-основы: TypeScript: дженерики и utility types",
+       "links": [
+        {
+         "label": "TypeScript Handbook: Generics",
+         "url": "https://www.typescriptlang.org/docs/handbook/2/generics.html",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w15-d3-s2",
+       "minutes": 30,
+       "block": "sd-theory",
+       "title": "Прочитать разбор без решения: Ticketmaster",
+       "links": [
+        {
+         "label": "Hello Interview: Ticketmaster",
+         "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/ticketmaster",
+         "confidence": "checked"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 4,
+     "offset": 3,
+     "lightAlternative": "Устал: только очередь повторений, 20 минут",
+     "sessions": [
+      {
+       "id": "w15-d4-s1",
+       "minutes": 20,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w15-d4-s2",
+       "minutes": 25,
+       "block": "dsa",
+       "title": "Задача Google на время: впиши название",
+       "itemId": "dsa-own-15",
+       "links": [
+        {
+         "label": "Вопросы Google (Hello Interview)",
+         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "confidence": "checked"
+        },
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problemset/",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w15-d4-s3",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Задача Google на время: впиши название",
+       "itemId": "dsa-own-16",
+       "links": [
+        {
+         "label": "Вопросы Google (Hello Interview)",
+         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "confidence": "checked"
+        },
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problemset/",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 5,
+     "offset": 4,
+     "lightAlternative": null,
+     "sessions": [
+      {
+       "id": "w15-d5-s1",
+       "minutes": 0,
+       "block": "rest",
+       "title": "Выходной"
+      }
+     ]
+    },
+    {
+     "dow": 6,
+     "offset": 5,
+     "lightAlternative": "Устал: вместо решения с таймером прочитать разбор дизайна и сделать повторения",
+     "sessions": [
+      {
+       "id": "w15-d6-s1",
+       "minutes": 45,
+       "block": "be-sd",
+       "title": "Решить самому с таймером на 45 минут: WhatsApp (Medium)",
+       "itemId": "besd-whatsapp",
+       "links": [
+        {
+         "label": "Hello Interview",
+         "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/whatsapp",
+         "confidence": "checked"
+        },
+        {
+         "label": "Excalidraw",
+         "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w15-d6-s2",
+       "minutes": 45,
+       "block": "sd-review",
+       "title": "Сверить с разбором, записать три слабых места",
+       "links": [
+        {
+         "label": "Hello Interview",
+         "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/whatsapp",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w15-d6-s3",
+       "minutes": 45,
+       "block": "ui",
+       "title": "Собрать компонент на время, 45 минут: Tic-tac-toe (Medium)",
+       "itemId": "ui-tic-tac-toe",
+       "links": [
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/user-interface/tic-tac-toe",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w15-d6-s4",
+       "minutes": 15,
+       "block": "ui",
+       "title": "Разбор компонента: доступность, краевые случаи, что не успел"
+      },
+      {
+       "id": "w15-d6-s5",
+       "minutes": 60,
+       "block": "mock",
+       "title": "Peer-мок: UI-кодинг. Если на этой неделе реальное интервью, оно заменяет мок.",
+       "links": [
+        {
+         "label": "Aced: моки с людьми",
+         "url": "https://www.aced.io/practice",
+         "confidence": "checked"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 7,
+     "offset": 6,
+     "lightAlternative": "Устал: истории вслух и повторения, мок перенести",
+     "sessions": [
+      {
+       "id": "w15-d7-s1",
+       "minutes": 75,
+       "block": "mock",
+       "title": "Peer-мок: алгоритмы.",
+       "links": [
+        {
+         "label": "Aced: моки с людьми",
+         "url": "https://www.aced.io/practice",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w15-d7-s2",
+       "minutes": 45,
+       "block": "behavioral",
+       "title": "Все 10 историй вслух, каждая за 2-3 минуты"
+      },
+      {
+       "id": "w15-d7-s3",
+       "minutes": 30,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w15-d7-s4",
+       "minutes": 15,
+       "block": "week-review",
+       "title": "Разбор недели: проверить отметки, записать три ошибки, посмотреть план и приз следующей недели"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "phase": "simulation",
+   "title": "Симуляция интервью",
+   "webTopic": "Повтор слабых мест по своим заметкам",
+   "prize": {
+    "title": "Новый удобный стул",
+    "tier": "final"
+   },
+   "days": [
+    {
+     "dow": 1,
+     "offset": 0,
+     "lightAlternative": "Устал: 1-2 повторения из очереди и видеоразбор сегодняшней задачи, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w16-d1-s1",
+       "minutes": 45,
+       "block": "dsa",
+       "title": "Симуляция: 2 задачи за 45 минут, вслух",
+       "links": [
+        {
+         "label": "Вопросы Google (Hello Interview)",
+         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w16-d1-s2",
+       "minutes": 30,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      }
+     ]
+    },
+    {
+     "dow": 2,
+     "offset": 1,
+     "lightAlternative": "Устал: прочитать решение одной утилиты и переписать его своими словами, 20-30 минут",
+     "sessions": [
+      {
+       "id": "w16-d2-s1",
+       "minutes": 45,
+       "block": "ui",
+       "title": "Симуляция: UI-компонент за 45 минут",
+       "links": [
+        {
+         "label": "GreatFrontEnd: все вопросы",
+         "url": "https://www.greatfrontend.com/questions",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w16-d2-s2",
+       "minutes": 30,
+       "block": "js",
+       "title": "Утилита JS на время",
+       "links": [
+        {
+         "label": "GreatFrontEnd: все вопросы",
+         "url": "https://www.greatfrontend.com/questions",
+         "confidence": "checked"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 3,
+     "offset": 2,
+     "lightAlternative": "Это и так лёгкий день: только чтение",
+     "sessions": [
+      {
+       "id": "w16-d3-s1",
+       "minutes": 30,
+       "block": "web",
+       "title": "Веб-основы: Повтор слабых мест по своим заметкам",
+       "links": [
+        {
+         "label": "GreatFrontEnd: все вопросы",
+         "url": "https://www.greatfrontend.com/questions",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w16-d3-s2",
+       "minutes": 30,
+       "block": "fe-sd",
+       "title": "Повтор с чистого листа за 30 минут: Photo Sharing (Instagram)",
+       "links": [
+        {
+         "label": "Excalidraw",
+         "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "dow": 4,
+     "offset": 3,
+     "lightAlternative": "Устал: только очередь повторений, 20 минут",
+     "sessions": [
+      {
+       "id": "w16-d4-s1",
+       "minutes": 45,
+       "block": "behavioral",
+       "title": "Все 10 историй вслух"
+      },
+      {
+       "id": "w16-d4-s2",
+       "minutes": 30,
+       "block": "review",
+       "title": "Лёгкий день: только очередь повторений"
+      }
+     ]
+    },
+    {
+     "dow": 5,
+     "offset": 4,
+     "lightAlternative": null,
+     "sessions": [
+      {
+       "id": "w16-d5-s1",
+       "minutes": 0,
+       "block": "rest",
+       "title": "Выходной перед симуляцией"
+      }
+     ]
+    },
+    {
+     "dow": 6,
+     "offset": 5,
+     "lightAlternative": "Устал: вместо решения с таймером прочитать разбор дизайна и сделать повторения",
+     "sessions": [
+      {
+       "id": "w16-d6-s1",
+       "minutes": 90,
+       "block": "simulation",
+       "title": "Онсайт, раунды 1 и 2: алгоритмы, по 45 минут",
+       "links": [
+        {
+         "label": "Вопросы Google (Hello Interview)",
+         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w16-d6-s2",
+       "minutes": 45,
+       "block": "simulation",
+       "title": "Онсайт, раунд 3: UI-кодинг, 45 минут",
+       "links": [
+        {
+         "label": "GreatFrontEnd: все вопросы",
+         "url": "https://www.greatfrontend.com/questions",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w16-d6-s3",
+       "minutes": 45,
+       "block": "simulation",
+       "title": "Онсайт, раунд 4: фронтенд system design, 45 минут",
+       "links": [
+        {
+         "label": "Excalidraw",
+         "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w16-d6-s4",
+       "minutes": 30,
+       "block": "simulation",
+       "title": "Разбор симуляции: оценка по каждому раунду"
+      }
+     ]
+    },
+    {
+     "dow": 7,
+     "offset": 6,
+     "lightAlternative": "Устал: истории вслух и повторения, мок перенести",
+     "sessions": [
+      {
+       "id": "w16-d7-s1",
+       "minutes": 45,
+       "block": "simulation",
+       "title": "Онсайт, раунд 5: behavioral, 45 минут"
+      },
+      {
+       "id": "w16-d7-s2",
+       "minutes": 45,
+       "block": "fe-sd",
+       "title": "Случайная задача из пройденных с чистого листа",
+       "links": [
+        {
+         "label": "Excalidraw",
+         "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w16-d7-s3",
+       "minutes": 45,
+       "block": "review",
+       "title": "Очередь повторений: чистые в прошлый раз проговорить устно за 3-5 минут, остальные решить заново"
+      },
+      {
+       "id": "w16-d7-s4",
+       "minutes": 30,
+       "block": "checkpoint",
+       "title": "Контрольная точка: симуляция пройдена, блок недель 13-16 закрыт, финальный приз твой"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "dsa-contains-duplicate",
+   "kind": "dsa",
+   "title": "Contains Duplicate",
+   "week": 1,
+   "difficulty": "Easy",
+   "topic": "Массивы и хеши",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/contains-duplicate/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Contains+Duplicate",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-two-sum",
+   "kind": "dsa",
+   "title": "Two Sum",
+   "week": 1,
+   "difficulty": "Easy",
+   "topic": "Массивы и хеши",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/two-sum/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Two+Sum",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-valid-anagram",
+   "kind": "dsa",
+   "title": "Valid Anagram",
+   "week": 1,
+   "difficulty": "Easy",
+   "topic": "Массивы и хеши",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/valid-anagram/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Valid+Anagram",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-group-anagrams",
+   "kind": "dsa",
+   "title": "Group Anagrams",
+   "week": 1,
+   "difficulty": "Medium",
+   "topic": "Массивы и хеши",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/group-anagrams/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Group+Anagrams",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-top-k-frequent-elements",
+   "kind": "dsa",
+   "title": "Top K Frequent Elements",
+   "week": 1,
+   "difficulty": "Medium",
+   "topic": "Массивы и хеши",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/top-k-frequent-elements/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Top+K+Frequent+Elements",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-valid-palindrome",
+   "kind": "dsa",
+   "title": "Valid Palindrome",
+   "week": 2,
+   "difficulty": "Easy",
+   "topic": "Два указателя и скользящее окно",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/valid-palindrome/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Valid+Palindrome",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-3sum",
+   "kind": "dsa",
+   "title": "3Sum",
+   "week": 2,
+   "difficulty": "Medium",
+   "topic": "Два указателя и скользящее окно",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/3sum/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+3Sum",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-best-time-to-buy-and-sell-stock",
+   "kind": "dsa",
+   "title": "Best Time to Buy and Sell Stock",
+   "week": 2,
+   "difficulty": "Easy",
+   "topic": "Два указателя и скользящее окно",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Best+Time+to+Buy+and+Sell+Stock",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-longest-substring-without-repeating-characters",
+   "kind": "dsa",
+   "title": "Longest Substring Without Repeating Characters",
+   "week": 2,
+   "difficulty": "Medium",
+   "topic": "Два указателя и скользящее окно",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Longest+Substring+Without+Repeating+Characters",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-container-with-most-water",
+   "kind": "dsa",
+   "title": "Container With Most Water",
+   "week": 2,
+   "difficulty": "Medium",
+   "topic": "Два указателя и скользящее окно",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/container-with-most-water/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Container+With+Most+Water",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-valid-parentheses",
+   "kind": "dsa",
+   "title": "Valid Parentheses",
+   "week": 3,
+   "difficulty": "Easy",
+   "topic": "Стек и бинарный поиск",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/valid-parentheses/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Valid+Parentheses",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-find-minimum-in-rotated-sorted-array",
+   "kind": "dsa",
+   "title": "Find Minimum in Rotated Sorted Array",
+   "week": 3,
+   "difficulty": "Medium",
+   "topic": "Стек и бинарный поиск",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Find+Minimum+in+Rotated+Sorted+Array",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-search-in-rotated-sorted-array",
+   "kind": "dsa",
+   "title": "Search in Rotated Sorted Array",
+   "week": 3,
+   "difficulty": "Medium",
+   "topic": "Стек и бинарный поиск",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Search+in+Rotated+Sorted+Array",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-longest-repeating-character-replacement",
+   "kind": "dsa",
+   "title": "Longest Repeating Character Replacement",
+   "week": 3,
+   "difficulty": "Medium",
+   "topic": "Стек и бинарный поиск",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Longest+Repeating+Character+Replacement",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-minimum-window-substring",
+   "kind": "dsa",
+   "title": "Minimum Window Substring",
+   "week": 3,
+   "difficulty": "Hard",
+   "topic": "Стек и бинарный поиск",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/minimum-window-substring/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Minimum+Window+Substring",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-reverse-linked-list",
+   "kind": "dsa",
+   "title": "Reverse Linked List",
+   "week": 4,
+   "difficulty": "Easy",
+   "topic": "Связные списки",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/reverse-linked-list/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Reverse+Linked+List",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-merge-two-sorted-lists",
+   "kind": "dsa",
+   "title": "Merge Two Sorted Lists",
+   "week": 4,
+   "difficulty": "Easy",
+   "topic": "Связные списки",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/merge-two-sorted-lists/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Merge+Two+Sorted+Lists",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-linked-list-cycle",
+   "kind": "dsa",
+   "title": "Linked List Cycle",
+   "week": 4,
+   "difficulty": "Easy",
+   "topic": "Связные списки",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/linked-list-cycle/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Linked+List+Cycle",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-remove-nth-node-from-end-of-list",
+   "kind": "dsa",
+   "title": "Remove Nth Node From End of List",
+   "week": 4,
+   "difficulty": "Medium",
+   "topic": "Связные списки",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Remove+Nth+Node+From+End+of+List",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-reorder-list",
+   "kind": "dsa",
+   "title": "Reorder List",
+   "week": 4,
+   "difficulty": "Medium",
+   "topic": "Связные списки",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/reorder-list/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Reorder+List",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-invert-binary-tree",
+   "kind": "dsa",
+   "title": "Invert Binary Tree",
+   "week": 5,
+   "difficulty": "Easy",
+   "topic": "Деревья, часть 1",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/invert-binary-tree/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Invert+Binary+Tree",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-maximum-depth-of-binary-tree",
+   "kind": "dsa",
+   "title": "Maximum Depth of Binary Tree",
+   "week": 5,
+   "difficulty": "Easy",
+   "topic": "Деревья, часть 1",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Maximum+Depth+of+Binary+Tree",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-same-tree",
+   "kind": "dsa",
+   "title": "Same Tree",
+   "week": 5,
+   "difficulty": "Easy",
+   "topic": "Деревья, часть 1",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/same-tree/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Same+Tree",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-subtree-of-another-tree",
+   "kind": "dsa",
+   "title": "Subtree of Another Tree",
+   "week": 5,
+   "difficulty": "Easy",
+   "topic": "Деревья, часть 1",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/subtree-of-another-tree/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Subtree+of+Another+Tree",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-binary-tree-level-order-traversal",
+   "kind": "dsa",
+   "title": "Binary Tree Level Order Traversal",
+   "week": 5,
+   "difficulty": "Medium",
+   "topic": "Деревья, часть 1",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Binary+Tree+Level+Order+Traversal",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-validate-binary-search-tree",
+   "kind": "dsa",
+   "title": "Validate Binary Search Tree",
+   "week": 7,
+   "difficulty": "Medium",
+   "topic": "Деревья, часть 2",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/validate-binary-search-tree/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Validate+Binary+Search+Tree",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-lowest-common-ancestor-of-a-binary-search-tree",
+   "kind": "dsa",
+   "title": "Lowest Common Ancestor of a Binary Search Tree",
+   "week": 7,
+   "difficulty": "Medium",
+   "topic": "Деревья, часть 2",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Lowest+Common+Ancestor+of+a+Binary+Search+Tree",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-kth-smallest-element-in-a-bst",
+   "kind": "dsa",
+   "title": "Kth Smallest Element in a BST",
+   "week": 7,
+   "difficulty": "Medium",
+   "topic": "Деревья, часть 2",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Kth+Smallest+Element+in+a+BST",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-construct-binary-tree-from-preorder-and-inorder-traversal",
+   "kind": "dsa",
+   "title": "Construct Binary Tree from Preorder and Inorder Traversal",
+   "week": 7,
+   "difficulty": "Medium",
+   "topic": "Деревья, часть 2",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Construct+Binary+Tree+from+Preorder+and+Inorder+Traversal",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-binary-tree-maximum-path-sum",
+   "kind": "dsa",
+   "title": "Binary Tree Maximum Path Sum",
+   "week": 7,
+   "difficulty": "Hard",
+   "topic": "Деревья, часть 2",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Binary+Tree+Maximum+Path+Sum",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-number-of-islands",
+   "kind": "dsa",
+   "title": "Number of Islands",
+   "week": 8,
+   "difficulty": "Medium",
+   "topic": "Графы и бэктрекинг",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/number-of-islands/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Number+of+Islands",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-clone-graph",
+   "kind": "dsa",
+   "title": "Clone Graph",
+   "week": 8,
+   "difficulty": "Medium",
+   "topic": "Графы и бэктрекинг",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/clone-graph/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Clone+Graph",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-course-schedule",
+   "kind": "dsa",
+   "title": "Course Schedule",
+   "week": 8,
+   "difficulty": "Medium",
+   "topic": "Графы и бэктрекинг",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/course-schedule/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Course+Schedule",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-pacific-atlantic-water-flow",
+   "kind": "dsa",
+   "title": "Pacific Atlantic Water Flow",
+   "week": 8,
+   "difficulty": "Medium",
+   "topic": "Графы и бэктрекинг",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/pacific-atlantic-water-flow/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Pacific+Atlantic+Water+Flow",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-word-search",
+   "kind": "dsa",
+   "title": "Word Search",
+   "week": 8,
+   "difficulty": "Medium",
+   "topic": "Графы и бэктрекинг",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/word-search/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Word+Search",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-merge-intervals",
+   "kind": "dsa",
+   "title": "Merge Intervals",
+   "week": 9,
+   "difficulty": "Medium",
+   "topic": "Интервалы, комбинации, trie",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/merge-intervals/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Merge+Intervals",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-insert-interval",
+   "kind": "dsa",
+   "title": "Insert Interval",
+   "week": 9,
+   "difficulty": "Medium",
+   "topic": "Интервалы, комбинации, trie",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/insert-interval/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Insert+Interval",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-non-overlapping-intervals",
+   "kind": "dsa",
+   "title": "Non-overlapping Intervals",
+   "week": 9,
+   "difficulty": "Medium",
+   "topic": "Интервалы, комбинации, trie",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/non-overlapping-intervals/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Non-overlapping+Intervals",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-combination-sum",
+   "kind": "dsa",
+   "title": "Combination Sum",
+   "week": 9,
+   "difficulty": "Medium",
+   "topic": "Интервалы, комбинации, trie",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/combination-sum/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Combination+Sum",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-implement-trie-prefix-tree",
+   "kind": "dsa",
+   "title": "Implement Trie (Prefix Tree)",
+   "week": 9,
+   "difficulty": "Medium",
+   "topic": "Интервалы, комбинации, trie",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Implement+Trie+%28Prefix+Tree%29",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-climbing-stairs",
+   "kind": "dsa",
+   "title": "Climbing Stairs",
+   "week": 10,
+   "difficulty": "Easy",
+   "topic": "Динамическое программирование",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/climbing-stairs/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Climbing+Stairs",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-house-robber",
+   "kind": "dsa",
+   "title": "House Robber",
+   "week": 10,
+   "difficulty": "Medium",
+   "topic": "Динамическое программирование",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/house-robber/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+House+Robber",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-coin-change",
+   "kind": "dsa",
+   "title": "Coin Change",
+   "week": 10,
+   "difficulty": "Medium",
+   "topic": "Динамическое программирование",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/coin-change/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Coin+Change",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-longest-increasing-subsequence",
+   "kind": "dsa",
+   "title": "Longest Increasing Subsequence",
+   "week": 10,
+   "difficulty": "Medium",
+   "topic": "Динамическое программирование",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/longest-increasing-subsequence/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Longest+Increasing+Subsequence",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-word-break",
+   "kind": "dsa",
+   "title": "Word Break",
+   "week": 10,
+   "difficulty": "Medium",
+   "topic": "Динамическое программирование",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/word-break/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Word+Break",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-product-of-array-except-self",
+   "kind": "dsa",
+   "title": "Product of Array Except Self",
+   "week": 6,
+   "difficulty": "Medium",
+   "topic": "Массивы и хеши",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/product-of-array-except-self/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Product+of+Array+Except+Self",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-longest-consecutive-sequence",
+   "kind": "dsa",
+   "title": "Longest Consecutive Sequence",
+   "week": 6,
+   "difficulty": "Medium",
+   "topic": "Массивы и хеши",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/longest-consecutive-sequence/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Longest+Consecutive+Sequence",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-merge-k-sorted-lists",
+   "kind": "dsa",
+   "title": "Merge k Sorted Lists",
+   "week": 6,
+   "difficulty": "Hard",
+   "topic": "Связные списки",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/merge-k-sorted-lists/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Merge+k+Sorted+Lists",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-maximum-subarray",
+   "kind": "dsa",
+   "title": "Maximum Subarray",
+   "week": 11,
+   "difficulty": "Medium",
+   "topic": "Жадные",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/maximum-subarray/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Maximum+Subarray",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-jump-game",
+   "kind": "dsa",
+   "title": "Jump Game",
+   "week": 11,
+   "difficulty": "Medium",
+   "topic": "Жадные",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/jump-game/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Jump+Game",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-unique-paths",
+   "kind": "dsa",
+   "title": "Unique Paths",
+   "week": 11,
+   "difficulty": "Medium",
+   "topic": "DP двумерное",
+   "links": [
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/unique-paths/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор (поиск)",
+     "url": "https://www.youtube.com/results?search_query=neetcode+Unique+Paths",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "js-debounce",
+   "kind": "js",
+   "title": "Debounce",
+   "week": 1,
+   "difficulty": "Medium",
+   "topic": "JavaScript",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/javascript/debounce",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "js-throttle",
+   "kind": "js",
+   "title": "Throttle",
+   "week": 1,
+   "difficulty": "Medium",
+   "topic": "JavaScript",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/javascript/throttle",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "js-array-prototype-reduce",
+   "kind": "js",
+   "title": "Array.prototype.reduce",
+   "week": 2,
+   "difficulty": "Easy",
+   "topic": "JavaScript",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/javascript/array-prototype-reduce",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "js-array-prototype-filter",
+   "kind": "js",
+   "title": "Array.prototype.filter",
+   "week": 2,
+   "difficulty": "Easy",
+   "topic": "JavaScript",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/javascript/array-prototype-filter",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "js-flatten",
+   "kind": "js",
+   "title": "Flatten",
+   "week": 3,
+   "difficulty": "Medium",
+   "topic": "JavaScript",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/javascript/flatten",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "js-deep-clone",
+   "kind": "js",
+   "title": "Deep Clone",
+   "week": 3,
+   "difficulty": "Medium",
+   "topic": "JavaScript",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/javascript/deep-clone",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "js-curry",
+   "kind": "js",
+   "title": "Curry",
+   "week": 4,
+   "difficulty": "Medium",
+   "topic": "JavaScript",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/javascript/curry",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "js-memoize",
+   "kind": "js",
+   "title": "Memoize",
+   "week": 4,
+   "difficulty": "Medium",
+   "topic": "JavaScript",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/javascript/memoize",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "js-promise-all",
+   "kind": "js",
+   "title": "Promise.all",
+   "week": 5,
+   "difficulty": "Medium",
+   "topic": "JavaScript",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/javascript/promise-all",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "js-promise-all-settled",
+   "kind": "js",
+   "title": "Promise.allSettled",
+   "week": 5,
+   "difficulty": "Medium",
+   "topic": "JavaScript",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/javascript/promise-all-settled",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "js-classnames",
+   "kind": "js",
+   "title": "Classnames",
+   "week": 6,
+   "difficulty": "Medium",
+   "topic": "JavaScript",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/javascript/classnames",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "js-deep-equal",
+   "kind": "js",
+   "title": "Deep Equal",
+   "week": 6,
+   "difficulty": "Medium",
+   "topic": "JavaScript",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/javascript/deep-equal",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "js-event-emitter",
+   "kind": "js",
+   "title": "Event Emitter",
+   "week": 7,
+   "difficulty": "Medium",
+   "topic": "JavaScript",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/javascript/event-emitter",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "js-function-bind",
+   "kind": "js",
+   "title": "Function.prototype.bind",
+   "week": 7,
+   "difficulty": "Medium",
+   "topic": "JavaScript",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/javascript/function-bind",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "js-promise-any",
+   "kind": "js",
+   "title": "Promise.any",
+   "week": 8,
+   "difficulty": "Medium",
+   "topic": "JavaScript",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/javascript/promise-any",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "js-map-async-limit",
+   "kind": "js",
+   "title": "Map Async Limit",
+   "week": 8,
+   "difficulty": "Hard",
+   "topic": "JavaScript",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/javascript/map-async-limit",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "js-get-elements-by-class-name",
+   "kind": "js",
+   "title": "getElementsByClassName",
+   "week": 9,
+   "difficulty": "Medium",
+   "topic": "JavaScript",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/javascript/get-elements-by-class-name",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "js-text-search",
+   "kind": "js",
+   "title": "Text Search",
+   "week": 9,
+   "difficulty": "Medium",
+   "topic": "JavaScript",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/javascript/text-search",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "js-json-stringify",
+   "kind": "js",
+   "title": "JSON.stringify",
+   "week": 10,
+   "difficulty": "Medium",
+   "topic": "JavaScript",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/javascript/json-stringify",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "js-squash-object",
+   "kind": "js",
+   "title": "Squash Object",
+   "week": 10,
+   "difficulty": "Medium",
+   "topic": "JavaScript",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/javascript/squash-object",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "ui-todo-list",
+   "kind": "ui",
+   "title": "Todo List",
+   "week": 1,
+   "difficulty": "Medium",
+   "topic": "UI-компонент",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/user-interface/todo-list",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "ui-tabs",
+   "kind": "ui",
+   "title": "Tabs",
+   "week": 2,
+   "difficulty": "Medium",
+   "topic": "UI-компонент",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/user-interface/tabs",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "ui-accordion",
+   "kind": "ui",
+   "title": "Accordion",
+   "week": 3,
+   "difficulty": "Medium",
+   "topic": "UI-компонент",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/user-interface/accordion",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "ui-star-rating",
+   "kind": "ui",
+   "title": "Star Rating",
+   "week": 4,
+   "difficulty": "Medium",
+   "topic": "UI-компонент",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/user-interface/star-rating",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "ui-modal-dialog",
+   "kind": "ui",
+   "title": "Modal Dialog",
+   "week": 5,
+   "difficulty": "Medium",
+   "topic": "UI-компонент",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/user-interface/modal-dialog",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "ui-data-table",
+   "kind": "ui",
+   "title": "Data Table",
+   "week": 7,
+   "difficulty": "Medium",
+   "topic": "UI-компонент",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/user-interface/data-table",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "ui-image-carousel",
+   "kind": "ui",
+   "title": "Image Carousel",
+   "week": 8,
+   "difficulty": "Medium",
+   "topic": "UI-компонент",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/user-interface/image-carousel",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "ui-file-explorer",
+   "kind": "ui",
+   "title": "File Explorer",
+   "week": 9,
+   "difficulty": "Medium",
+   "topic": "UI-компонент",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/user-interface/file-explorer",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "ui-job-board",
+   "kind": "ui",
+   "title": "Job Board",
+   "week": 10,
+   "difficulty": "Medium",
+   "topic": "UI-компонент",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/user-interface/job-board",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "ui-like-button",
+   "kind": "ui",
+   "title": "Like Button",
+   "week": 12,
+   "difficulty": "Medium",
+   "topic": "UI-компонент",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/user-interface/like-button",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "ui-nested-checkboxes",
+   "kind": "ui",
+   "title": "Nested Checkboxes",
+   "week": 13,
+   "difficulty": "Medium",
+   "topic": "UI-компонент",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/user-interface/nested-checkboxes",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "ui-transfer-list",
+   "kind": "ui",
+   "title": "Transfer List",
+   "week": 14,
+   "difficulty": "Medium",
+   "topic": "UI-компонент",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/user-interface/transfer-list",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "ui-tic-tac-toe",
+   "kind": "ui",
+   "title": "Tic-tac-toe",
+   "week": 15,
+   "difficulty": "Medium",
+   "topic": "UI-компонент",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/user-interface/tic-tac-toe",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "fesd-news-feed-facebook",
+   "kind": "fe-sd",
+   "title": "News Feed (Facebook)",
+   "week": 3,
+   "difficulty": "Medium",
+   "topic": "Фронтенд system design",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/interviews/study/gfe75/questions/system-design/news-feed-facebook",
+     "confidence": "checked"
+    },
+    {
+     "label": "Excalidraw",
+     "url": "https://excalidraw.com",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "fesd-autocomplete",
+   "kind": "fe-sd",
+   "title": "Autocomplete",
+   "week": 4,
+   "difficulty": "Medium",
+   "topic": "Фронтенд system design",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/system-design/autocomplete",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Excalidraw",
+     "url": "https://excalidraw.com",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "fesd-image-carousel",
+   "kind": "fe-sd",
+   "title": "Image Carousel",
+   "week": 5,
+   "difficulty": "Medium",
+   "topic": "Фронтенд system design",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/system-design/image-carousel",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Excalidraw",
+     "url": "https://excalidraw.com",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "fesd-chat-application-messenger",
+   "kind": "fe-sd",
+   "title": "Chat App (Messenger)",
+   "week": 7,
+   "difficulty": "Medium",
+   "topic": "Фронтенд system design",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/system-design/chat-application-messenger",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Excalidraw",
+     "url": "https://excalidraw.com",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "fesd-e-commerce-amazon",
+   "kind": "fe-sd",
+   "title": "E-commerce (Amazon)",
+   "week": 8,
+   "difficulty": "Medium",
+   "topic": "Фронтенд system design",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/system-design/e-commerce-amazon",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Excalidraw",
+     "url": "https://excalidraw.com",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "besd-bitly",
+   "kind": "be-sd",
+   "title": "Bitly (URL shortener)",
+   "week": 9,
+   "difficulty": "Easy",
+   "topic": "Бэкенд system design",
+   "links": [
+    {
+     "label": "Hello Interview",
+     "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/bitly",
+     "confidence": "checked"
+    },
+    {
+     "label": "Excalidraw",
+     "url": "https://excalidraw.com",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "fesd-collaborative-editor-google-docs",
+   "kind": "fe-sd",
+   "title": "Collaborative Editor (Google Docs)",
+   "week": 10,
+   "difficulty": "Medium",
+   "topic": "Фронтенд system design",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/system-design/collaborative-editor-google-docs",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Excalidraw",
+     "url": "https://excalidraw.com",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "fesd-video-streaming-netflix",
+   "kind": "fe-sd",
+   "title": "Video Streaming (Netflix)",
+   "week": 12,
+   "difficulty": "Medium",
+   "topic": "Фронтенд system design",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/system-design/video-streaming-netflix",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Excalidraw",
+     "url": "https://excalidraw.com",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "besd-fb-news-feed",
+   "kind": "be-sd",
+   "title": "FB News Feed, взгляд с бэкенда",
+   "week": 13,
+   "difficulty": "Medium",
+   "topic": "Бэкенд system design",
+   "links": [
+    {
+     "label": "Hello Interview",
+     "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/fb-news-feed",
+     "confidence": "checked"
+    },
+    {
+     "label": "Excalidraw",
+     "url": "https://excalidraw.com",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "fesd-photo-sharing-instagram",
+   "kind": "fe-sd",
+   "title": "Photo Sharing (Instagram)",
+   "week": 14,
+   "difficulty": "Medium",
+   "topic": "Фронтенд system design",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/system-design/photo-sharing-instagram",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Excalidraw",
+     "url": "https://excalidraw.com",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "besd-whatsapp",
+   "kind": "be-sd",
+   "title": "WhatsApp",
+   "week": 15,
+   "difficulty": "Medium",
+   "topic": "Бэкенд system design",
+   "links": [
+    {
+     "label": "Hello Interview",
+     "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/whatsapp",
+     "confidence": "checked"
+    },
+    {
+     "label": "Excalidraw",
+     "url": "https://excalidraw.com",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "dsa-own-01",
+   "kind": "dsa",
+   "title": null,
+   "week": 12,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "Вопросы Google (Hello Interview)",
+     "url": "https://www.hellointerview.com/community/questions/company/Google",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problemset/",
+     "confidence": "pattern"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+  },
+  {
+   "id": "dsa-own-02",
+   "kind": "dsa",
+   "title": null,
+   "week": 12,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "Вопросы Google (Hello Interview)",
+     "url": "https://www.hellointerview.com/community/questions/company/Google",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problemset/",
+     "confidence": "pattern"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+  },
+  {
+   "id": "dsa-own-03",
+   "kind": "dsa",
+   "title": null,
+   "week": 12,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "Вопросы Google (Hello Interview)",
+     "url": "https://www.hellointerview.com/community/questions/company/Google",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problemset/",
+     "confidence": "pattern"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+  },
+  {
+   "id": "dsa-own-04",
+   "kind": "dsa",
+   "title": null,
+   "week": 12,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "Вопросы Google (Hello Interview)",
+     "url": "https://www.hellointerview.com/community/questions/company/Google",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problemset/",
+     "confidence": "pattern"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+  },
+  {
+   "id": "js-own-01",
+   "kind": "js",
+   "title": null,
+   "week": 12,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "GreatFrontEnd: все вопросы",
+     "url": "https://www.greatfrontend.com/questions",
+     "confidence": "checked"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Утилита JS на время из списка вопросов Google или Netflix"
+  },
+  {
+   "id": "ui-own-01",
+   "kind": "ui",
+   "title": null,
+   "week": 12,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "GreatFrontEnd: все вопросы",
+     "url": "https://www.greatfrontend.com/questions",
+     "confidence": "checked"
+    }
+   ],
+   "userNamed": true,
+   "hint": "UI-компонент на время из списка вопросов Google или Netflix"
+  },
+  {
+   "id": "dsa-own-05",
+   "kind": "dsa",
+   "title": null,
+   "week": 13,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "Вопросы Google (Hello Interview)",
+     "url": "https://www.hellointerview.com/community/questions/company/Google",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problemset/",
+     "confidence": "pattern"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+  },
+  {
+   "id": "dsa-own-06",
+   "kind": "dsa",
+   "title": null,
+   "week": 13,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "Вопросы Google (Hello Interview)",
+     "url": "https://www.hellointerview.com/community/questions/company/Google",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problemset/",
+     "confidence": "pattern"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+  },
+  {
+   "id": "dsa-own-07",
+   "kind": "dsa",
+   "title": null,
+   "week": 13,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "Вопросы Google (Hello Interview)",
+     "url": "https://www.hellointerview.com/community/questions/company/Google",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problemset/",
+     "confidence": "pattern"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+  },
+  {
+   "id": "dsa-own-08",
+   "kind": "dsa",
+   "title": null,
+   "week": 13,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "Вопросы Google (Hello Interview)",
+     "url": "https://www.hellointerview.com/community/questions/company/Google",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problemset/",
+     "confidence": "pattern"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+  },
+  {
+   "id": "js-own-02",
+   "kind": "js",
+   "title": null,
+   "week": 13,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "GreatFrontEnd: все вопросы",
+     "url": "https://www.greatfrontend.com/questions",
+     "confidence": "checked"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Утилита JS на время из списка вопросов Google или Netflix"
+  },
+  {
+   "id": "ui-own-02",
+   "kind": "ui",
+   "title": null,
+   "week": 13,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "GreatFrontEnd: все вопросы",
+     "url": "https://www.greatfrontend.com/questions",
+     "confidence": "checked"
+    }
+   ],
+   "userNamed": true,
+   "hint": "UI-компонент на время из списка вопросов Google или Netflix"
+  },
+  {
+   "id": "dsa-own-09",
+   "kind": "dsa",
+   "title": null,
+   "week": 14,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "Вопросы Google (Hello Interview)",
+     "url": "https://www.hellointerview.com/community/questions/company/Google",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problemset/",
+     "confidence": "pattern"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+  },
+  {
+   "id": "dsa-own-10",
+   "kind": "dsa",
+   "title": null,
+   "week": 14,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "Вопросы Google (Hello Interview)",
+     "url": "https://www.hellointerview.com/community/questions/company/Google",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problemset/",
+     "confidence": "pattern"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+  },
+  {
+   "id": "dsa-own-11",
+   "kind": "dsa",
+   "title": null,
+   "week": 14,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "Вопросы Google (Hello Interview)",
+     "url": "https://www.hellointerview.com/community/questions/company/Google",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problemset/",
+     "confidence": "pattern"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+  },
+  {
+   "id": "dsa-own-12",
+   "kind": "dsa",
+   "title": null,
+   "week": 14,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "Вопросы Google (Hello Interview)",
+     "url": "https://www.hellointerview.com/community/questions/company/Google",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problemset/",
+     "confidence": "pattern"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+  },
+  {
+   "id": "js-own-03",
+   "kind": "js",
+   "title": null,
+   "week": 14,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "GreatFrontEnd: все вопросы",
+     "url": "https://www.greatfrontend.com/questions",
+     "confidence": "checked"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Утилита JS на время из списка вопросов Google или Netflix"
+  },
+  {
+   "id": "ui-own-03",
+   "kind": "ui",
+   "title": null,
+   "week": 14,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "GreatFrontEnd: все вопросы",
+     "url": "https://www.greatfrontend.com/questions",
+     "confidence": "checked"
+    }
+   ],
+   "userNamed": true,
+   "hint": "UI-компонент на время из списка вопросов Google или Netflix"
+  },
+  {
+   "id": "dsa-own-13",
+   "kind": "dsa",
+   "title": null,
+   "week": 15,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "Вопросы Google (Hello Interview)",
+     "url": "https://www.hellointerview.com/community/questions/company/Google",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problemset/",
+     "confidence": "pattern"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+  },
+  {
+   "id": "dsa-own-14",
+   "kind": "dsa",
+   "title": null,
+   "week": 15,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "Вопросы Google (Hello Interview)",
+     "url": "https://www.hellointerview.com/community/questions/company/Google",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problemset/",
+     "confidence": "pattern"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+  },
+  {
+   "id": "dsa-own-15",
+   "kind": "dsa",
+   "title": null,
+   "week": 15,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "Вопросы Google (Hello Interview)",
+     "url": "https://www.hellointerview.com/community/questions/company/Google",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problemset/",
+     "confidence": "pattern"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+  },
+  {
+   "id": "dsa-own-16",
+   "kind": "dsa",
+   "title": null,
+   "week": 15,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "Вопросы Google (Hello Interview)",
+     "url": "https://www.hellointerview.com/community/questions/company/Google",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problemset/",
+     "confidence": "pattern"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Задача уровня Google на время, вслух, в документе без автодополнения"
+  },
+  {
+   "id": "js-own-04",
+   "kind": "js",
+   "title": null,
+   "week": 15,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "GreatFrontEnd: все вопросы",
+     "url": "https://www.greatfrontend.com/questions",
+     "confidence": "checked"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Утилита JS на время из списка вопросов Google или Netflix"
+  },
+  {
+   "id": "ui-own-04",
+   "kind": "ui",
+   "title": null,
+   "week": 15,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "GreatFrontEnd: все вопросы",
+     "url": "https://www.greatfrontend.com/questions",
+     "confidence": "checked"
+    }
+   ],
+   "userNamed": true,
+   "hint": "UI-компонент на время из списка вопросов Google или Netflix"
+  }
+ ],
+ "maintenanceWeek": {
+  "title": "Неделя 17+: режим поддержания до онсайта, повторять",
+  "days": [
+   {
+    "dow": 1,
+    "sessions": [
+     {
+      "minutes": 45,
+      "block": "dsa",
+      "title": "1 задача на время и очередь повторений",
+      "links": [
+       {
+        "label": "Вопросы Google (Hello Interview)",
+        "url": "https://www.hellointerview.com/community/questions/company/Google",
+        "confidence": "checked"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "dow": 3,
+    "sessions": [
+     {
+      "minutes": 45,
+      "block": "fe-sd",
+      "title": "Одна задача дизайна с чистого листа",
+      "links": [
+       {
+        "label": "Excalidraw",
+        "url": "https://excalidraw.com",
+        "confidence": "pattern"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "dow": 4,
+    "sessions": [
+     {
+      "minutes": 45,
+      "block": "ui",
+      "title": "1 UI-компонент или утилита JS на время",
+      "links": [
+       {
+        "label": "GreatFrontEnd: все вопросы",
+        "url": "https://www.greatfrontend.com/questions",
+        "confidence": "checked"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "dow": 6,
+    "sessions": [
+     {
+      "minutes": 120,
+      "block": "mock",
+      "title": "Мок или реальное интервью, затем разбор. Перед интервью: 2 часа на формат компании",
+      "links": [
+       {
+        "label": "Aced: моки с людьми",
+        "url": "https://www.aced.io/practice",
+        "confidence": "checked"
+       },
+       {
+        "label": "interviewing.io",
+        "url": "https://interviewing.io",
+        "confidence": "pattern"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "dow": 7,
+    "sessions": [
+     {
+      "minutes": 60,
+      "block": "behavioral",
+      "title": "Все истории вслух и очередь повторений"
+     }
+    ]
+   }
+  ]
+ },
+ "mocks": [
+  {
+   "week": 4,
+   "type": "Алгоритмы, peer"
+  },
+  {
+   "week": 5,
+   "type": "JS и UI-кодинг, peer"
+  },
+  {
+   "week": 7,
+   "type": "Фронтенд system design, peer"
+  },
+  {
+   "week": 8,
+   "type": "Алгоритмы, peer"
+  },
+  {
+   "week": 9,
+   "type": "UI-кодинг, peer"
+  },
+  {
+   "week": 10,
+   "type": "Фронтенд system design, peer"
+  },
+  {
+   "week": 12,
+   "type": "Алгоритмы, по возможности"
+  },
+  {
+   "week": 13,
+   "type": "Фронтенд system design или UI, платный"
+  },
+  {
+   "week": 13,
+   "type": "Алгоритмы, peer"
+  },
+  {
+   "week": 14,
+   "type": "Behavioral, платный"
+  },
+  {
+   "week": 15,
+   "type": "UI-кодинг, peer"
+  },
+  {
+   "week": 15,
+   "type": "Алгоритмы, peer"
+  },
+  {
+   "week": 16,
+   "type": "Полная симуляция: 5 раундов"
+  }
+ ],
+ "stories": [
+  {
+   "topic": "Самый сложный проект",
+   "week": 3
+  },
+  {
+   "topic": "Конфликт с коллегой",
+   "week": 3
+  },
+  {
+   "topic": "Провал и чему он научил",
+   "week": 3
+  },
+  {
+   "topic": "Несогласие с руководителем",
+   "week": 4
+  },
+  {
+   "topic": "Сжатые сроки",
+   "week": 4
+  },
+  {
+   "topic": "Лидерство без формальных полномочий",
+   "week": 5
+  },
+  {
+   "topic": "Неоднозначная задача",
+   "week": 7
+  },
+  {
+   "topic": "Менторство",
+   "week": 8
+  },
+  {
+   "topic": "Инцидент в продакшене",
+   "week": 10
+  },
+  {
+   "topic": "Решение, которое я отстоял",
+   "week": 10
+  }
+ ],
+ "applications": [
+  {
+   "company": "monday.com",
+   "role": "Разогрев",
+   "applyWeek": 7,
+   "interviewsExpected": "Недели 9-10"
+  },
+  {
+   "company": "Bolt",
+   "role": "Разогрев",
+   "applyWeek": 7,
+   "interviewsExpected": "Недели 9-10"
+  },
+  {
+   "company": "Allegro",
+   "role": "Разогрев",
+   "applyWeek": 7,
+   "interviewsExpected": "Недели 9-10"
+  },
+  {
+   "company": "Snowflake",
+   "role": "Репетиция",
+   "applyWeek": 9,
+   "interviewsExpected": "Недели 13-14"
+  },
+  {
+   "company": "Amazon",
+   "role": "Репетиция",
+   "applyWeek": 9,
+   "interviewsExpected": "Недели 13-14"
+  },
+  {
+   "company": "Google",
+   "role": "Основная цель",
+   "applyWeek": 13,
+   "interviewsExpected": "Февраль"
+  },
+  {
+   "company": "Netflix",
+   "role": "Основная цель",
+   "applyWeek": 13,
+   "interviewsExpected": "Февраль"
+  },
+  {
+   "company": "Revolut",
+   "role": "Основная цель",
+   "applyWeek": 13,
+   "interviewsExpected": "Февраль"
+  }
+ ],
+ "resources": [
+  {
+   "track": "Алгоритмы",
+   "name": "NeetCode",
+   "role": "Список задач, курсы как теория по теме, видеоразборы",
+   "url": "https://neetcode.io/roadmap",
+   "primary": true
+  },
+  {
+   "track": "Алгоритмы",
+   "name": "LeetCode",
+   "role": "Решение задач, на JavaScript или TypeScript",
+   "url": "https://leetcode.com/problemset/",
+   "primary": true
+  },
+  {
+   "track": "Фронтенд",
+   "name": "GreatFrontEnd",
+   "role": "Утилиты JS, UI-компоненты, фронтенд system design, квизы, списки вопросов по компаниям",
+   "url": "https://www.greatfrontend.com/questions",
+   "primary": true
+  },
+  {
+   "track": "Фронтенд",
+   "name": "GFE 75",
+   "role": "Главный список фронтенд-вопросов",
+   "url": "https://www.greatfrontend.com/interviews/study-plans/gfe75",
+   "primary": true
+  },
+  {
+   "track": "System design",
+   "name": "Hello Interview",
+   "role": "Бэкенд-дизайн в сокращённом объёме",
+   "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+   "primary": false
+  },
+  {
+   "track": "Моки",
+   "name": "Aced (бывший Exponent)",
+   "role": "Бесплатные моки с людьми",
+   "url": "https://www.aced.io/practice",
+   "primary": true
+  },
+  {
+   "track": "Моки",
+   "name": "interviewing.io",
+   "role": "Платные моки с инженерами",
+   "url": "https://interviewing.io",
+   "primary": false
+  },
+  {
+   "track": "Behavioral",
+   "name": "Tech Interview Handbook",
+   "role": "Истории, вопросы, требования к senior",
+   "url": "https://www.techinterviewhandbook.org/behavioral-interview/",
+   "primary": true
+  },
+  {
+   "track": "Справочник",
+   "name": "ByteByteGo: system-design-101",
+   "role": "Картинки по концепциям, открывать по запросу",
+   "url": "https://github.com/ByteByteGoHq/system-design-101",
+   "primary": false
+  },
+  {
+   "track": "Справочник",
+   "name": "AlgoMaster",
+   "role": "Альтернативные объяснения, low-level design",
+   "url": "https://algomaster.io/",
+   "primary": false
+  },
+  {
+   "track": "Инструмент",
+   "name": "Excalidraw",
+   "role": "Доска для схем",
+   "url": "https://excalidraw.com",
+   "primary": false
+  }
+ ]
+}
