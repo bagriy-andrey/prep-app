@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { Link } from "react-router";
-import { plan } from "../data/plan";
 import { toPercent, weekProgress } from "../domain/progress";
 import { useCenterActive } from "../hooks/useCenterActive";
 import { useUserState } from "../state/UserStateProvider";
@@ -8,9 +7,11 @@ import { useUserState } from "../state/UserStateProvider";
 const arrow =
   "flex h-12 w-9 shrink-0 items-center justify-center rounded-md border border-slate-300 bg-white text-lg hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900 dark:hover:bg-slate-800";
 
+const arrowOff = "cursor-not-allowed opacity-40 hover:bg-white dark:hover:bg-slate-900";
+
 /** Слайдер недель: активная неделя по центру (кроме начала и конца курса), на кнопке процент выполненного. */
 export default function WeekSwitcher({ current, today }: { current: number; today: number | null }) {
-  const { state } = useUserState();
+  const { state, plan } = useUserState();
   const track = useRef<HTMLUListElement>(null);
   useCenterActive(track, current);
 
@@ -21,7 +22,9 @@ export default function WeekSwitcher({ current, today }: { current: number; toda
           <span aria-hidden="true">‹</span>
         </Link>
       ) : (
-        <span aria-hidden="true" className={`${arrow} invisible`} />
+        <span role="link" aria-disabled="true" aria-label="Предыдущая неделя" className={`${arrow} ${arrowOff}`}>
+          <span aria-hidden="true">‹</span>
+        </span>
       )}
 
       <ul
@@ -37,7 +40,7 @@ export default function WeekSwitcher({ current, today }: { current: number; toda
               <Link
                 to={`/plan/${w.n}`}
                 aria-current={active ? "page" : undefined}
-                aria-label={`Неделя ${w.n}, выполнено ${percent}%${progress.closed ? ", закрыта" : ""}${w.n === today ? ", текущая" : ""}`}
+                aria-label={`Неделя ${w.n}, выполнено ${percent}%${progress.closed ? ", завершена" : ""}${w.n === today ? ", текущая" : ""}`}
                 className={[
                   "relative flex h-12 w-16 flex-col items-center justify-center rounded-md border leading-tight tabular-nums",
                   active
@@ -65,7 +68,9 @@ export default function WeekSwitcher({ current, today }: { current: number; toda
           <span aria-hidden="true">›</span>
         </Link>
       ) : (
-        <span aria-hidden="true" className={`${arrow} invisible`} />
+        <span role="link" aria-disabled="true" aria-label="Следующая неделя" className={`${arrow} ${arrowOff}`}>
+          <span aria-hidden="true">›</span>
+        </span>
       )}
     </nav>
   );

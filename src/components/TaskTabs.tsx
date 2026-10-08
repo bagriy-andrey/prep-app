@@ -15,10 +15,10 @@ export interface TaskTab {
 
 const ICON: Record<SessionStatus | "open", string> = { done: "✓", light: "◐", moved: "➜", open: "○" };
 const STATUS_TEXT: Record<SessionStatus | "open", string> = {
-  done: "сделано",
-  light: "сделано налегке",
-  moved: "перенесено",
-  open: "не сделано",
+  done: "выполнено",
+  light: "коротко",
+  moved: "отложено",
+  open: "не выполнено",
 };
 const TINT: Record<SessionStatus | "open", string> = {
   done: "border-emerald-400 bg-emerald-50 text-emerald-900 dark:border-emerald-800 dark:bg-emerald-950 dark:text-emerald-100",

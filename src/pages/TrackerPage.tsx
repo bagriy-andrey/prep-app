@@ -5,9 +5,11 @@ import { plan } from "../data/plan";
 import { diffDays } from "../domain/dates";
 import { itemStatus, reviewInfo, type ItemStatus } from "../domain/review";
 import { filterItems, ITEM_KINDS, itemState, itemTitle, kindCounts } from "../domain/tracker";
-import { OUTCOME_LABEL } from "../domain/userState";
+import { locateDate } from "../domain/schedule";
+import { TOPICS } from "../domain/topics";
+import { extraTasksSorted, OUTCOME_LABEL } from "../domain/userState";
 import { useToday } from "../hooks/useToday";
-import { formatDateRu } from "../lib/format";
+import { formatDateRu, formatMinutes } from "../lib/format";
 import { useUserState } from "../state/UserStateProvider";
 
 const STATUSES = Object.keys(STATUS_LABEL) as ItemStatus[];
@@ -17,7 +19,8 @@ const select =
 
 export default function TrackerPage() {
   const today = useToday();
-  const { state } = useUserState();
+  const { state, startDate } = useUserState();
+  const extras = extraTasksSorted(state);
   const [params, setParams] = useSearchParams();
 
   const kindParam = params.get("kind");
@@ -170,6 +173,46 @@ export default function TrackerPage() {
           </tbody>
         </table>
       )}
+
+      <section aria-labelledby="extra-tasks" className="mt-8">
+        <h2 id="extra-tasks" className="font-semibold">
+          Свои задачи
+          {extras.length > 0 && <span className="ml-2 text-sm font-normal text-slate-500">{extras.length}</span>}
+        </h2>
+        <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
+          Сверх плана: в прогресс недель, призы и счётчики выше не входят. Добавляются кнопкой «+» в дне.
+        </p>
+        {extras.length === 0 ? (
+          <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">Своих задач пока нет.</p>
+        ) : (
+          <ul className="mt-3 divide-y divide-slate-200 rounded-xl border border-slate-200 bg-white dark:divide-slate-800 dark:border-slate-800 dark:bg-slate-900">
+            {extras.map((t) => {
+              const loc = locateDate(plan, t.date, startDate);
+              const when = formatDateRu(t.date);
+              return (
+                <li key={t.id} className="px-4 py-3 text-sm">
+                  <p className="font-medium">{t.title}</p>
+                  <p className="text-slate-600 dark:text-slate-400">
+                    {loc ? (
+                      <Link
+                        to={`/plan/${loc.week}?day=${t.date}`}
+                        className="text-indigo-700 underline dark:text-indigo-300"
+                      >
+                        {when}
+                      </Link>
+                    ) : (
+                      when
+                    )}{" "}
+                    · {TOPICS.find((x) => x.key === t.topic)?.label ?? t.topic}
+                    {t.minutes !== undefined ? ` · ${formatMinutes(t.minutes)}` : ""} ·{" "}
+                    {t.done ? "выполнена" : "не выполнена"}
+                  </p>
+                </li>
+              );
+            })}
+          </ul>
+        )}
+      </section>
     </>
   );
 }

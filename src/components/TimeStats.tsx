@@ -1,4 +1,3 @@
-import { plan } from "../data/plan";
 import { entriesInRange, minutesOnDate, sumMinutes } from "../domain/time";
 import { locateDate, weekRange } from "../domain/schedule";
 import { useTimeEntries } from "../hooks/useTimeEntries";
@@ -7,7 +6,7 @@ import { useUserState } from "../state/UserStateProvider";
 
 /** Потраченное время: сегодня, эта неделя, весь курс. */
 export default function TimeStats({ today }: { today: string }) {
-  const { startDate } = useUserState();
+  const { startDate, plan } = useUserState();
   const entries = useTimeEntries();
   const loc = locateDate(plan, today, startDate);
   const week = loc ? weekRange(startDate, loc.week) : null;

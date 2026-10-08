@@ -5,9 +5,8 @@ import MinutesInput from "./MinutesInput";
 import { chipActive, chipButton, chipIdle } from "./ui";
 
 const OPTIONS: { status: SessionStatus; label: string; hint: string }[] = [
-  { status: "done", label: "Сделал", hint: "Отметить сделанной" },
-  { status: "light", label: "Налегке", hint: "Отметить лёгкой" },
-  { status: "moved", label: "Перенёс", hint: "Отметить перенесённой" },
+  { status: "done", label: "Выполнено", hint: "Отметить выполненной" },
+  { status: "light", label: "Коротко", hint: "Сделана в сокращённом виде: время не учитывается, день считается коротким" },
 ];
 
 interface Props {
@@ -28,6 +27,7 @@ export default function ManualMarkControls({ id, title, plannedMinutes }: Props)
   const current = mark?.status ?? null;
   const [draft, setDraft] = useState(String(plannedMinutes));
 
+  // Статус «moved» («Отложено») остался только в старых сохранениях: кнопки для него нет.
   const showTime = current !== "moved";
   const value = mark ? (mark.minutes?.toString() ?? "") : draft;
 
@@ -41,7 +41,7 @@ export default function ManualMarkControls({ id, title, plannedMinutes }: Props)
       actions.setSession(id, null);
       return;
     }
-    // Время из поля переносится на новый статус, для «Перенёс» оно не сохраняется.
+    // Время из поля переносится на новый статус.
     actions.setSession(id, status, parseMinutes(value));
   }
 

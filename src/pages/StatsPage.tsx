@@ -1,6 +1,5 @@
 import { useSearchParams } from "react-router";
 import BarChart, { type Bar } from "../components/BarChart";
-import { plan } from "../data/plan";
 import { parseDate } from "../domain/dates";
 import { locateDate, weekRange } from "../domain/schedule";
 import {
@@ -20,7 +19,7 @@ const card = "rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-
 
 export default function StatsPage() {
   const today = useToday();
-  const { startDate } = useUserState();
+  const { startDate, plan } = useUserState();
   const entries = useTimeEntries();
   const [params, setParams] = useSearchParams();
 

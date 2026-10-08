@@ -2,7 +2,7 @@ import { subtleButton } from "./ui";
 
 interface Props {
   text: string;
-  /** Если задано, показывается кнопка «Отметить день лёгким». */
+  /** Если задано, показывается кнопка «Всё коротко». */
   onMarkLight?: () => void;
   markLightDisabled?: boolean;
 }
@@ -18,9 +18,10 @@ export default function LightAlternative({ text, onMarkLight, markLightDisabled 
           type="button"
           onClick={onMarkLight}
           disabled={markLightDisabled}
+          title="Отметить все оставшиеся сессии дня короткими: время не учитывается, день считается коротким"
           className={`${subtleButton} mt-2 border-amber-400 bg-white/60 dark:border-amber-700 dark:bg-transparent`}
         >
-          Отметить день лёгким
+          Всё коротко
         </button>
       )}
     </aside>

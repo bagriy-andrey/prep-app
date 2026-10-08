@@ -1,7 +1,8 @@
 import PrizeCard from "../components/PrizeCard";
-import { plan } from "../data/plan";
+import { useUserState } from "../state/UserStateProvider";
 
 export default function PrizesPage() {
+  const { plan } = useUserState();
   return (
     <>
       <h1 className="mb-4 text-xl font-semibold">Призы</h1>

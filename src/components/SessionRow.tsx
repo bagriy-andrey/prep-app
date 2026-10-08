@@ -18,9 +18,9 @@ interface Props {
 }
 
 export const STATUS_LABEL: Record<SessionStatus, string> = {
-  done: "Сделано",
-  light: "Сделано налегке",
-  moved: "Перенесено",
+  done: "Выполнено",
+  light: "Коротко",
+  moved: "Отложено",
 };
 
 const STATUS_STYLE: Record<SessionStatus, string> = {

@@ -10,7 +10,6 @@ import TimeStats from "../components/TimeStats";
 import ReviewQueue from "../components/ReviewQueue";
 import WeekNote from "../components/WeekNote";
 import WeekProgressBar from "../components/WeekProgressBar";
-import { plan } from "../data/plan";
 import type { Day } from "../data/types";
 import { prizeInfo } from "../domain/prizes";
 import { weekProgress } from "../domain/progress";
@@ -21,7 +20,7 @@ import { useUserState } from "../state/UserStateProvider";
 
 export default function TodayPage() {
   const today = useToday();
-  const { state, startDate } = useUserState();
+  const { state, startDate, plan } = useUserState();
   const pos = resolveToday(plan, today, startDate);
 
   if (pos.kind === "before") {

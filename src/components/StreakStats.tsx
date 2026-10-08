@@ -1,4 +1,3 @@
-import { plan } from "../data/plan";
 import { streak } from "../domain/calendar";
 import { plural } from "../lib/format";
 import { useUserState } from "../state/UserStateProvider";
@@ -6,7 +5,7 @@ import { useUserState } from "../state/UserStateProvider";
 const days = (n: number) => `${n} ${plural(n, ["день", "дня", "дней"])}`;
 
 export default function StreakStats({ today }: { today: string }) {
-  const { state, startDate } = useUserState();
+  const { state, startDate, plan } = useUserState();
   const { current, record } = streak(plan, state, today, startDate);
   return (
     <p className="text-sm">

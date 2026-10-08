@@ -20,7 +20,7 @@ export default function ReviewQueue({ today }: { today: string }) {
       className="mt-4 rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900"
     >
       <h2 id="review-queue" className="font-semibold">
-        Очередь повторений
+        Что повторить сегодня
         {queue.length > 0 && <span className="ml-2 text-sm font-normal text-slate-500">{queue.length}</span>}
       </h2>
 
@@ -41,7 +41,7 @@ function QueueRow({ entry }: { entry: QueueEntry }) {
   const { state, actions } = useUserState();
   const { item, method, overdueDays, dueDate } = entry;
   const title = itemTitle(item, state) ?? "Своя задача без названия";
-  // Время повторения по умолчанию пустое: оно уже входит в сессию «Очередь повторений».
+  // Время повторения по умолчанию пустое: оно уже входит в сессию «Что повторить сегодня».
   const [minutes, setMinutes] = useState("");
   return (
     <li className="space-y-2 py-3 first:pt-0 last:pb-0">

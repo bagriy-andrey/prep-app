@@ -10,11 +10,11 @@ export default function WeekNote({ week }: { week: number }) {
   return (
     <details open={open} onToggle={(e) => setOpen(e.currentTarget.open)} className="text-sm">
       <summary className="cursor-pointer font-medium select-none">
-        Заметка недели {week}
+        Заметка
         {value !== "" && <span className="ml-1 font-normal text-indigo-600 dark:text-indigo-400">· есть</span>}
       </summary>
       <label htmlFor={id} className="sr-only">
-        Заметка недели {week}
+        Заметка
       </label>
       <textarea
         id={id}

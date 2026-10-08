@@ -1,5 +1,4 @@
 import type { Week } from "../data/types";
-import { plan } from "../data/plan";
 import { prizeInfo, type PrizeStatus } from "../domain/prizes";
 import { formatDateRu, plural, TIER_LABEL } from "../lib/format";
 import { useUserState } from "../state/UserStateProvider";
@@ -18,7 +17,7 @@ const STATUS_STYLE: Record<PrizeStatus, string> = {
 };
 
 export default function PrizeCard({ week }: { week: Week }) {
-  const { state, actions } = useUserState();
+  const { state, actions, plan } = useUserState();
   const info = prizeInfo(plan, week, state);
   const isBlockPrize = week.prize.tier !== "small";
   const claimedOn = state.prizesClaimed[week.n];
@@ -42,7 +41,7 @@ export default function PrizeCard({ week }: { week: Week }) {
 
       {isBlockPrize && (
         <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
-          Закрыто недель блока: {info.closedWeeks} из {info.requiredWeeks.length} ({info.requiredWeeks[0]}–
+          Завершено недель блока: {info.closedWeeks} из {info.requiredWeeks.length} ({info.requiredWeeks[0]}–
           {info.requiredWeeks.at(-1)})
         </p>
       )}

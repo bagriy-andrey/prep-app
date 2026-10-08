@@ -1,18 +1,23 @@
 import { useState } from "react";
-import { itemsById, plan } from "../data/plan";
+import { itemsById } from "../data/plan";
 import type { Day } from "../data/types";
 import { markableSessionIds, sessionStatus } from "../domain/progress";
 import { itemTitle } from "../domain/tracker";
+import { locateDate } from "../domain/schedule";
 import { extraTasksOn } from "../domain/userState";
-import { dayName, formatDateRu, formatMinutes } from "../lib/format";
+import { useToday } from "../hooks/useToday";
+import { dayName, formatDateRu } from "../lib/format";
 import { useUserState } from "../state/UserStateProvider";
+import { DayMissed, useDayHeader } from "./DaySummary";
 import AttemptControls from "./AttemptControls";
 import ExtraTaskPanel from "./ExtraTaskPanel";
 import LightAlternative from "./LightAlternative";
 import ManualMarkControls from "./ManualMarkControls";
+import MoveSessionControls from "./MoveSessionControls";
 import NewTaskPanel from "./NewTaskPanel";
 import SessionNote from "./SessionNote";
 import SessionRow from "./SessionRow";
+import { cardHeaderClass } from "./HeaderBar";
 import TaskTabs, { NEW_TASK_KEY, taskPanelId, taskTabId, type TaskTab } from "./TaskTabs";
 import { subtleButton } from "./ui";
 
@@ -23,11 +28,13 @@ interface Props {
 }
 
 export default function DayCard({ day, date, isToday }: Props) {
-  const { state, actions } = useUserState();
-  const total = day.sessions.filter((s) => !s.optional).reduce((sum, s) => sum + s.minutes, 0);
+  const { state, actions, plan, startDate } = useUserState();
+  const today = useToday();
+  const loc = locateDate(plan, date, startDate);
+  const header = useDayHeader({ day, date, today });
   const markable = markableSessionIds(day.sessions);
   const unmarked = markable.filter((id) => !state.sessions[id]);
-  // «Отметить день» записывает время по плану. Для «лёгким» время не пишется: по плану оно завышено.
+  // «Выполнил день» записывает время по плану. Для «Всё коротко» время не пишется: по плану оно завышено.
   const plannedById = Object.fromEntries(day.sessions.map((s) => [s.id, s.minutes]));
   const headingId = `day-${date}`;
 
@@ -77,12 +84,15 @@ export default function DayCard({ day, date, isToday }: Props) {
         isToday ? "border-indigo-500 ring-2 ring-indigo-500/30" : "border-slate-200 dark:border-slate-800"
       }`}
     >
-      <header className="mb-3 flex flex-wrap items-baseline justify-between gap-x-3">
-        <h3 id={headingId} className="font-semibold">
-          {dayName(day.dow)}, {formatDateRu(date)}
-          {isToday && <span className="ml-2 text-xs font-medium text-indigo-600 dark:text-indigo-400">сегодня</span>}
-        </h3>
-        {total > 0 && <span className="text-xs text-slate-500 dark:text-slate-400">{formatMinutes(total)}</span>}
+      <header className={`mb-3 ${cardHeaderClass}`}>
+        <div className="flex flex-wrap items-center gap-2">
+          <h3 id={headingId} className="text-lg font-semibold">
+            {dayName(day.dow)}
+            <span className="text-sm font-normal text-slate-600 dark:text-slate-400"> · {formatDateRu(date)}</span>
+          </h3>
+          {header.badge}
+        </div>
+        {header.bars}
       </header>
 
       <TaskTabs scope={date} tabs={tabs} activeKey={activeKey} onSelect={setSelected} />
@@ -101,6 +111,14 @@ export default function DayCard({ day, date, isToday }: Props) {
               <ManualMarkControls id={activeSession.id} title={activeSession.title} plannedMinutes={activeSession.minutes} />
             )}
             <SessionNote sessionId={activeSession.id} itemId={activeSession.itemId} />
+            {loc && activeSession.block !== "rest" && (
+              <MoveSessionControls
+                key={activeSession.id}
+                sessionId={activeSession.id}
+                week={loc.week}
+                offset={loc.offset}
+              />
+            )}
           </SessionRow>
         ) : activeExtra ? (
           <ExtraTaskPanel key={activeExtra.id} task={activeExtra} />
@@ -113,14 +131,17 @@ export default function DayCard({ day, date, isToday }: Props) {
         )}
       </div>
 
+      <DayMissed day={day} date={date} today={today} />
+
       {markable.length > 0 && (
         <button
           type="button"
           onClick={() => actions.markUnmarked(unmarked, "done", plannedById)}
           disabled={unmarked.length === 0}
+          title="Отметить выполненными все оставшиеся сессии дня"
           className={`${subtleButton} mt-3`}
         >
-          Отметить день
+          Выполнил день
         </button>
       )}
 

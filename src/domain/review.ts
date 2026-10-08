@@ -12,7 +12,7 @@ export type ReviewInfo =
   | { closed: true; cleanCount: number };
 
 export const REVIEW_METHOD_LABEL: Record<ReviewMethod, string> = {
-  oral: "Устно, 3-5 мин",
+  oral: "Рассказать вслух, 3–5 мин",
   redo: "Решить заново",
 };
 

@@ -4,6 +4,7 @@ import JournalsPage from "./pages/JournalsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import CalendarPage from "./pages/CalendarPage";
 import ItemPage from "./pages/ItemPage";
+import PlanOverviewPage from "./pages/PlanOverviewPage";
 import PlanPage from "./pages/PlanPage";
 import PrizesPage from "./pages/PrizesPage";
 import SettingsPage from "./pages/SettingsPage";
@@ -17,6 +18,7 @@ export default function App() {
       <Route element={<AppShell />}>
         <Route index element={<TodayPage />} />
         <Route path="plan" element={<PlanPage />} />
+        <Route path="overview" element={<PlanOverviewPage />} />
         <Route path="plan/:week" element={<PlanPage />} />
         <Route path="calendar" element={<CalendarPage />} />
         <Route path="tracker" element={<TrackerPage />} />

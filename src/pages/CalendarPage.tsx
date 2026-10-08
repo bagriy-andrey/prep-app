@@ -1,6 +1,5 @@
 import { Link } from "react-router";
 import PhaseBadge from "../components/PhaseBadge";
-import { plan } from "../data/plan";
 import { DAY_STATUS_LABEL, dayStatus, plannedDayAt, type DayStatus } from "../domain/calendar";
 import { STYLE } from "../lib/dayStatusStyle";
 import { prizeInfo } from "../domain/prizes";
@@ -15,7 +14,7 @@ const ROW = "grid grid-cols-[3.25rem_repeat(7,minmax(0,1fr))] items-center gap-1
 
 export default function CalendarPage() {
   const today = useToday();
-  const { state, startDate } = useUserState();
+  const { state, startDate, plan } = useUserState();
 
   return (
     <>
@@ -54,7 +53,7 @@ export default function CalendarPage() {
               >
                 <div className="text-xs leading-tight">
                   <span className="block font-semibold">Нед. {week.n}</span>
-                  {isBuffer && <span className="block text-amber-800 dark:text-amber-300">буфер</span>}
+                  {isBuffer && <span className="block text-amber-800 dark:text-amber-300">повтор</span>}
                 </div>
                 {week.days.map((day) => {
                   const date = dayDate(startDate, week.n, day.offset);
@@ -103,7 +102,7 @@ export default function CalendarPage() {
                       ? "получен"
                       : prize.status === "available"
                         ? "доступен"
-                        : `закрыто недель блока: ${prize.closedWeeks} из ${prize.requiredWeeks.length}`}
+                        : `завершено недель блока: ${prize.closedWeeks} из ${prize.requiredWeeks.length}`}
                   </span>
                 </Link>
               )}

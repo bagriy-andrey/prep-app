@@ -124,7 +124,7 @@ function StartDate() {
 }
 
 function Schedule() {
-  const { startDate } = useUserState();
+  const { startDate, plan } = useUserState();
   return (
     <section aria-labelledby="schedule" className={card}>
       <h2 id="schedule" className="font-semibold">

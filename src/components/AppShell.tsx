@@ -6,6 +6,7 @@ import PrizeUnlockModal from "./PrizeUnlockModal";
 const links = [
   { to: "/", label: "Сегодня", end: true },
   { to: "/plan", label: "План", end: false },
+  { to: "/overview", label: "Весь план", end: true },
   { to: "/calendar", label: "Календарь", end: false },
   { to: "/tracker", label: "Трекер", end: false },
   { to: "/stats", label: "Статистика", end: false },
@@ -18,17 +19,19 @@ export default function AppShell() {
   const { saveError } = useUserState();
   return (
     <div className="mx-auto flex min-h-dvh max-w-6xl flex-col">
-      <header className="sticky top-0 z-10 border-b border-slate-200 bg-slate-50/90 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90">
-        <div className="px-4 pt-2 pb-2 sm:px-6 sm:pb-1 lg:px-8">
-          <CourseProgress />
+      <header className="sticky top-0 z-10 bg-slate-50/90 px-4 backdrop-blur sm:px-6 lg:px-8 dark:bg-slate-950/90">
+        <div className="border-b border-slate-200 dark:border-slate-800">
+          <div className="flex items-center gap-2 pt-2 pb-3">
+            <CourseProgress />
+          </div>
+          <nav aria-label="Основная навигация" className="hidden items-center gap-1 pb-2 sm:flex">
+            {links.map((l) => (
+              <NavLink key={l.to} to={l.to} end={l.end} className={navClass}>
+                {l.label}
+              </NavLink>
+            ))}
+          </nav>
         </div>
-        <nav aria-label="Основная навигация" className="hidden gap-1 px-4 pb-2 sm:flex sm:px-6 lg:px-8">
-          {links.map((l) => (
-            <NavLink key={l.to} to={l.to} end={l.end} className={navClass}>
-              {l.label}
-            </NavLink>
-          ))}
-        </nav>
       </header>
 
       {saveError && (

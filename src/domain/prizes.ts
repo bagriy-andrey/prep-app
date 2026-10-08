@@ -1,6 +1,7 @@
 // Призы (разд. 6.4).
 
 import type { Plan, Week } from "../data/types";
+import { applyMoves } from "./moves";
 import { weekProgress } from "./progress";
 import type { UserState } from "./userState";
 
@@ -41,7 +42,7 @@ export function prizeInfo(plan: Plan, week: Week, state: UserState): PrizeInfo {
   return { status, requiredWeeks, closedWeeks, remainingSessions };
 }
 
-/** Отмечает приз полученным; для недоступного приза состояние не меняется. */
+/** Отмечает приз полученным; `plan` должен быть эффективным (с переносами). Для недоступного приза состояние не меняется. */
 export function claimPrize(plan: Plan, state: UserState, weekNumber: number, date: string): UserState {
   const week = plan.weeks[weekNumber - 1];
   if (!week || prizeInfo(plan, week, state).status !== "available") return state;
@@ -54,10 +55,14 @@ export function claimPrize(plan: Plan, state: UserState, weekNumber: number, dat
  * и, если остальные недели блока уже закрыты, крупный.
  */
 export function newlyAvailablePrizes(plan: Plan, before: UserState, after: UserState): number[] {
+  // Перенос сессий меняет состав недель, поэтому у каждого состояния свой эффективный план.
+  const planBefore = applyMoves(plan, before.sessionMoves);
+  const planAfter = applyMoves(plan, after.sessionMoves);
   return plan.weeks
     .filter(
       (week) =>
-        prizeInfo(plan, week, after).status === "available" && prizeInfo(plan, week, before).status !== "available",
+        prizeInfo(planAfter, planAfter.weeks[week.n - 1], after).status === "available" &&
+        prizeInfo(planBefore, planBefore.weeks[week.n - 1], before).status !== "available",
     )
     .map((week) => week.n);
 }

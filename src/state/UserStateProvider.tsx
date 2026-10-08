@@ -1,6 +1,8 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useReducer, useRef, useState } from "react";
 import type { ReactNode } from "react";
-import { plan } from "../data/plan";
+import { plan as basePlan } from "../data/plan";
+import type { Plan } from "../data/types";
+import { applyMoves } from "../domain/moves";
 import { todayString } from "../domain/dates";
 import type { TopicKey } from "../domain/topics";
 import { newId } from "../lib/id";
@@ -21,7 +23,9 @@ import {
   setItemTitle,
   setSessionMinutes,
   setSessionNote,
+  setSessionMove,
   setSessionStatus,
+  type SessionMove,
   setStartDate,
   setWeekNote,
   updateEntry,
@@ -50,6 +54,7 @@ type Action =
   | { type: "setItemText"; itemId: string; field: ItemTextField; text: string }
   | { type: "setDayNote"; date: string; text: string }
   | { type: "setSessionNote"; id: string; text: string }
+  | { type: "setSessionMove"; id: string; target: SessionMove | null }
   | { type: "setWeekNote"; week: number; text: string }
   | { type: "addExtraTask"; task: ExtraTask; note?: string }
   | { type: "updateExtraTask"; id: string; patch: Partial<Omit<ExtraTask, "id">> }
@@ -82,6 +87,8 @@ function reducer(state: UserState, action: Action): UserState {
       return setDayNote(state, action.date, action.text);
     case "setSessionNote":
       return setSessionNote(state, action.id, action.text);
+    case "setSessionMove":
+      return setSessionMove(state, action.id, action.target);
     case "setWeekNote":
       return setWeekNote(state, action.week, action.text);
     case "addExtraTask":
@@ -95,7 +102,7 @@ function reducer(state: UserState, action: Action): UserState {
     case "markUnmarked":
       return markUnmarked(state, action.ids, action.status, action.date, action.minutesById);
     case "claimPrize":
-      return claimPrize(plan, state, action.week, action.date);
+      return claimPrize(applyMoves(basePlan, state.sessionMoves), state, action.week, action.date);
     case "setStartDate":
       try {
         return setStartDate(state, action.date);
@@ -122,6 +129,8 @@ export interface UserStateActions {
   setDayNote(date: string, text: string): void;
   setSessionNote(id: string, text: string): void;
   setWeekNote(week: number, text: string): void;
+  /** Переносит сессию плана на другой день; null возвращает её на место. */
+  moveSession(id: string, target: SessionMove | null): void;
   /** Добавляет свою дополнительную задачу на день (с необязательной заметкой) и возвращает её id. */
   addExtraTask(task: { date: string; title: string; topic: TopicKey; minutes?: number; note?: string }): string;
   updateExtraTask(id: string, patch: Partial<Omit<ExtraTask, "id">>): void;
@@ -147,6 +156,8 @@ export interface UserStateActions {
 interface Ctx {
   state: UserState;
   actions: UserStateActions;
+  /** План с учётом переносов сессий: его используют все расписания и подсчёты. Исходный план лежит в data/plan. */
+  plan: Plan;
   /** Текст ошибки последнего сохранения; null, если всё сохранено. */
   saveError: string | null;
   /**
@@ -198,7 +209,7 @@ export default function UserStateProvider({
       dispatch({ type: "replace", state: result.state });
     } else {
       // Первый запуск: журналы заполняются заготовками плана.
-      dispatch({ type: "replace", state: createSeededState(plan) });
+      dispatch({ type: "replace", state: createSeededState(basePlan) });
     }
     setEpoch((e) => e + 1);
     setPhase({ kind: "ready" });
@@ -224,6 +235,8 @@ export default function UserStateProvider({
     );
   }, [state, phase.kind, adapter]);
 
+  const plan = useMemo(() => applyMoves(basePlan, state.sessionMoves), [state.sessionMoves]);
+
   const actions = useMemo<UserStateActions>(
     () => ({
       addAttempt: (itemId, outcome, minutes) =>
@@ -235,6 +248,7 @@ export default function UserStateProvider({
       setItemText: (itemId, field, text) => dispatch({ type: "setItemText", itemId, field, text }),
       setDayNote: (date, text) => dispatch({ type: "setDayNote", date, text }),
       setSessionNote: (id, text) => dispatch({ type: "setSessionNote", id, text }),
+      moveSession: (id, target) => dispatch({ type: "setSessionMove", id, target }),
       setWeekNote: (week, text) => dispatch({ type: "setWeekNote", week, text }),
       addExtraTask: ({ note, ...task }) => {
         const id = newId();
@@ -268,7 +282,7 @@ export default function UserStateProvider({
         setEpoch((e) => e + 1);
       },
       reset: () => {
-        dispatch({ type: "replace", state: createSeededState(plan) });
+        dispatch({ type: "replace", state: createSeededState(basePlan) });
         setEpoch((e) => e + 1);
       },
     }),
@@ -291,7 +305,7 @@ export default function UserStateProvider({
         }}
         onStartFresh={() => {
           persisted.current = null;
-          dispatch({ type: "replace", state: createSeededState(plan) });
+          dispatch({ type: "replace", state: createSeededState(basePlan) });
           setEpoch((e) => e + 1);
           setPhase({ kind: "ready" });
         }}
@@ -301,7 +315,7 @@ export default function UserStateProvider({
 
   return (
     <UserStateContext.Provider
-      value={{ state, actions, saveError, epoch, startDate: state.startDate ?? plan.meta.startDate }}
+      value={{ state, actions, plan, saveError, epoch, startDate: state.startDate ?? plan.meta.startDate }}
     >
       {children}
     </UserStateContext.Provider>

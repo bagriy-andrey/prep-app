@@ -75,6 +75,12 @@ export interface ExtraTask {
   minutes?: number;
 }
 
+/** Куда перенесена сессия плана: неделя и сдвиг дня (0 — понедельник). */
+export interface SessionMove {
+  week: number;
+  offset: number;
+}
+
 export interface UserState {
   version: 1;
   startDate?: string;
@@ -83,6 +89,8 @@ export interface UserState {
   dayNotes: Record<string, string>;
   /** Заметки к ручным сессиям (ключ: id сессии). Для сессий с задачей заметка хранится в items[id].note. */
   sessionNotes: Record<string, string>;
+  /** Переносы сессий плана на другой день или неделю (ключ: id сессии). */
+  sessionMoves: Record<string, SessionMove>;
   /** Заметки к неделям плана (ключ: номер недели). */
   weekNotes: Record<number, string>;
   /** Свои дополнительные задачи. Заметка к задаче лежит в sessionNotes[id]. */
@@ -106,6 +114,7 @@ export function createInitialState(): UserState {
     sessions: {},
     dayNotes: {},
     sessionNotes: {},
+    sessionMoves: {},
     weekNotes: {},
     extraTasks: [],
     prizesClaimed: {},
@@ -212,6 +221,10 @@ export function removeExtraTask(state: UserState, id: string): UserState {
   return { ...state, extraTasks: state.extraTasks.filter((t) => t.id !== id), sessionNotes };
 }
 
+/** Все свои задачи по порядку дат (при равных датах по порядку добавления). */
+export const extraTasksSorted = (state: UserState) =>
+  [...state.extraTasks].sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
+
 export const extraTasksOn = (state: UserState, date: string) => state.extraTasks.filter((t) => t.date === date);
 
 /** Заметка к ручной сессии. Пустой текст удаляет заметку. */
@@ -220,6 +233,14 @@ export function setSessionNote(state: UserState, sessionId: string, text: string
   if (text) sessionNotes[sessionId] = text;
   else delete sessionNotes[sessionId];
   return { ...state, sessionNotes };
+}
+
+/** Переносит сессию плана на другой день; null возвращает её на место. */
+export function setSessionMove(state: UserState, sessionId: string, target: SessionMove | null): UserState {
+  const sessionMoves = { ...state.sessionMoves };
+  if (target) sessionMoves[sessionId] = { week: target.week, offset: target.offset };
+  else delete sessionMoves[sessionId];
+  return { ...state, sessionMoves };
 }
 
 /** Заметка к неделе по её номеру. Пустой текст удаляет заметку. */
@@ -389,6 +410,22 @@ export function parseUserState(raw: unknown): UserState {
   }
 
   // Поле добавлено позже: в старых сохранениях его нет.
+  const sessionMoves = raw.sessionMoves ?? {};
+  if (!isRecord(sessionMoves)) fail("sessionMoves: ожидался объект");
+  for (const [id, move] of Object.entries(sessionMoves)) {
+    if (
+      !isRecord(move) ||
+      !Number.isInteger(move.week) ||
+      (move.week as number) < 1 ||
+      !Number.isInteger(move.offset) ||
+      (move.offset as number) < 0 ||
+      (move.offset as number) > 6
+    ) {
+      fail(`sessionMoves.${id}: неверный перенос`);
+    }
+  }
+
+  // Поле добавлено позже: в старых сохранениях его нет.
   const weekNotes = raw.weekNotes ?? {};
   if (!isRecord(weekNotes)) fail("weekNotes: ожидался объект");
   for (const [week, note] of Object.entries(weekNotes)) {
@@ -435,6 +472,7 @@ export function parseUserState(raw: unknown): UserState {
     sessions: raw.sessions as Record<string, SessionMark>,
     dayNotes: raw.dayNotes as Record<string, string>,
     sessionNotes: sessionNotes as Record<string, string>,
+    sessionMoves: sessionMoves as Record<string, SessionMove>,
     weekNotes: weekNotes as Record<number, string>,
     extraTasks: extraTasks as ExtraTask[],
     prizesClaimed: raw.prizesClaimed as Record<number, string>,

@@ -9,6 +9,9 @@ export const dayShort = (dow: number) => DAY_SHORT[dow - 1];
 const dateFormat = new Intl.DateTimeFormat("ru-RU", { day: "numeric", month: "long" });
 export const formatDateRu = (date: string) => dateFormat.format(parseDate(date));
 
+const MONTH_SHORT = ["янв", "фев", "мар", "апр", "мая", "июн", "июл", "авг", "сен", "окт", "ноя", "дек"];
+export const monthShort = (date: string) => MONTH_SHORT[parseDate(date).getMonth()];
+
 /** «12–18 октября» или «26 октября – 1 ноября». */
 export function formatDateRange(from: string, to: string): string {
   const a = parseDate(from);

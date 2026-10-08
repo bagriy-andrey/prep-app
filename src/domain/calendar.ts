@@ -43,12 +43,12 @@ export function plannedDayAt(plan: Plan, date: string, startDate: string): Plann
 export type DayStatus = "all" | "partial" | "light" | "missed" | "rest" | "future";
 
 export const DAY_STATUS_LABEL: Record<DayStatus, string> = {
-  all: "Всё сделано",
-  partial: "Сделано частично",
-  light: "Лёгкий день",
+  all: "Выполнен",
+  partial: "В процессе",
+  light: "Короткий день",
   missed: "Пропущен",
   rest: "Выходной",
-  future: "Впереди",
+  future: "Запланирован",
 };
 
 /** День лёгкий, если хотя бы одна его сессия отмечена как light. */

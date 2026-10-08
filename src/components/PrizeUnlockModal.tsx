@@ -1,6 +1,6 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { useNavigate } from "react-router";
-import { plan } from "../data/plan";
+import { plan as basePlan } from "../data/plan";
 import { newlyAvailablePrizes, prizeInfo } from "../domain/prizes";
 import { TIER_LABEL } from "../lib/format";
 import { useUserState } from "../state/UserStateProvider";
@@ -8,10 +8,10 @@ import { primaryButton, subtleButton } from "./ui";
 
 /**
  * Модальное уведомление о разблокированном призе. Показывается, когда действие пользователя
- * (закрытие недели) открыло приз. Загрузка, импорт и сброс уведомления не вызывают.
+ * (завершение недели) открыло приз. Загрузка, импорт и сброс уведомления не вызывают.
  */
 export default function PrizeUnlockModal() {
-  const { state, epoch } = useUserState();
+  const { state, epoch, plan } = useUserState();
   const navigate = useNavigate();
   const [weeks, setWeeks] = useState<number[]>([]);
   const previous = useRef({ state, epoch });
@@ -22,7 +22,7 @@ export default function PrizeUnlockModal() {
     const before = previous.current;
     previous.current = { state, epoch };
     if (before.epoch !== epoch || before.state === state) return;
-    const unlocked = newlyAvailablePrizes(plan, before.state, state);
+    const unlocked = newlyAvailablePrizes(basePlan, before.state, state);
     if (unlocked.length > 0) setWeeks(unlocked);
   }, [state, epoch]);
 
@@ -64,7 +64,7 @@ export default function PrizeUnlockModal() {
                 <p className="text-xs text-slate-500 dark:text-slate-400">{TIER_LABEL[week.prize.tier]}</p>
                 <p className="text-lg font-semibold">{week.prize.title}</p>
                 <p className="text-sm text-slate-600 dark:text-slate-400">
-                  {info.requiredWeeks.length === 1 ? `Неделя ${n} закрыта.` : `Закрыты недели ${first}–${last}.`}
+                  {info.requiredWeeks.length === 1 ? `Неделя ${n} завершена.` : `Завершены недели ${first}–${last}.`}
                 </p>
               </li>
             );
