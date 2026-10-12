@@ -32,7 +32,7 @@ describe("plannedDayAt", () => {
 
   it("необязательные сессии помечены, а не отброшены", () => {
     const saturday = day("2026-10-17");
-    expect(saturday.sessions.at(-1)).toMatchObject({ id: "w01-d6-s4", required: false });
+    expect(saturday.sessions.at(-1)).toMatchObject({ id: "w01-d6-s5", required: false });
   });
 
   it("после недели 16 берёт дни maintenanceWeek с ключами m-<дата>-s<номер>", () => {
@@ -180,8 +180,8 @@ describe("hasLoadWarning (6.6)", () => {
 
 describe("dayProgress", () => {
   it("считает только обязательные сессии", () => {
-    const d = day("2026-10-17"); // три обязательные и одна необязательная
-    expect(dayProgress(d, empty)).toEqual({ done: 0, total: 3, remainingIds: ["w01-d6-s1", "w01-d6-s2", "w01-d6-s3"] });
+    const d = day("2026-10-17"); // четыре обязательные и одна необязательная
+    expect(dayProgress(d, empty)).toEqual({ done: 0, total: 4, remainingIds: ["w01-d6-s1", "w01-d6-s2", "w01-d6-s3", "w01-d6-s4"] });
   });
 
   it("сделанные и лёгкие сессии уменьшают остаток, перенесённые нет", () => {

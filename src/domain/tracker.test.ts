@@ -9,7 +9,7 @@ describe("kindCounts", () => {
   it("считает все задачи плана как запланированные", () => {
     const counts = kindCounts(plan, empty);
     expect(Object.values(counts).reduce((s, c) => s + c.total, 0)).toBe(plan.items.length);
-    expect(counts.dsa).toEqual({ done: 0, total: 67 });
+    expect(counts.dsa).toEqual({ done: 0, total: 64 });
   });
 
   it("задача сделана после первой попытки, повторные попытки не удваивают счёт", () => {

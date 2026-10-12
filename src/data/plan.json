@@ -74,14 +74,24 @@
      "sessions": [
       {
        "id": "w01-d1-s1",
-       "minutes": 20,
+       "minutes": 30,
        "block": "theory",
-       "title": "Теория: Массивы и хеши. Раздел курса NeetCode по теме, на скорости 1,5x",
+       "title": "Теория: Массивы и хеши. NeetCode: Static Arrays, Dynamic Arrays, Hash Usage, на скорости 1,5x",
        "links": [
         {
-         "label": "NeetCode: роадмап и курсы",
-         "url": "https://neetcode.io/roadmap",
-         "confidence": "pattern"
+         "label": "NeetCode: Static Arrays",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/2",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: Dynamic Arrays",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/3",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: Hash Usage",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/26",
+         "confidence": "checked"
         }
        ]
       },
@@ -93,14 +103,19 @@
        "itemId": "dsa-contains-duplicate",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/duplicate-integer",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/contains-duplicate/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Contains+Duplicate",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=3OamzN90kPg",
+         "confidence": "checked"
         }
        ]
       },
@@ -112,14 +127,19 @@
        "itemId": "dsa-two-sum",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/two-integer-sum",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/two-sum/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Two+Sum",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=KLlXCFG5TnA",
+         "confidence": "checked"
         }
        ]
       }
@@ -201,8 +221,20 @@
       {
        "id": "w01-d4-s1",
        "minutes": 20,
-       "block": "warmup",
-       "title": "Разминка: по памяти написать на JavaScript бинарный поиск, BFS и DFS"
+       "block": "theory",
+       "title": "Теория: префиксные суммы и bucket sort, к задачам выходных. NeetCode: Prefix Sums, Bucket Sort, на скорости 1,5x",
+       "links": [
+        {
+         "label": "NeetCode: Prefix Sums",
+         "url": "https://neetcode.io/courses/advanced-algorithms/4",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: Bucket Sort",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/13",
+         "confidence": "checked"
+        }
+       ]
       },
       {
        "id": "w01-d4-s2",
@@ -212,14 +244,19 @@
        "itemId": "dsa-valid-anagram",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/is-anagram",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/valid-anagram/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Valid+Anagram",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=9UtInBqnCgA",
+         "confidence": "checked"
         }
        ]
       },
@@ -231,14 +268,19 @@
        "itemId": "dsa-group-anagrams",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/anagram-groups",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/group-anagrams/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Group+Anagrams",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=vzdNOK2oB2E",
+         "confidence": "checked"
         }
        ]
       }
@@ -264,9 +306,9 @@
      "sessions": [
       {
        "id": "w01-d6-s1",
-       "minutes": 90,
+       "minutes": 45,
        "block": "sd-theory",
-       "title": "Прочитать Front End System Design Playbook и законспектировать фреймворк RADIO",
+       "title": "Прочитать Front End System Design Playbook: фреймворк RADIO, законспектировать",
        "links": [
         {
          "label": "GFE: Front End System Design Playbook",
@@ -297,19 +339,48 @@
        "itemId": "dsa-top-k-frequent-elements",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/top-k-elements-in-list",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/top-k-frequent-elements/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Top+K+Frequent+Elements",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=YPTqKIgVk-k",
+         "confidence": "checked"
         }
        ]
       },
       {
        "id": "w01-d6-s4",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: Product of Array Except Self (Medium)",
+       "itemId": "dsa-product-of-array-except-self",
+       "links": [
+        {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/products-of-array-discluding-self",
+         "confidence": "checked"
+        },
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/product-of-array-except-self/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=bNvIQI2wAjk",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w01-d6-s5",
        "minutes": 15,
        "block": "spare",
        "title": "Запас: дорешать то, что не успел за неделю",
@@ -339,24 +410,40 @@
        "id": "w01-d7-s2",
        "minutes": 30,
        "block": "theory",
-       "title": "Прочитать: как устроены фронтенд-интервью",
+       "title": "Прочитать: как устроены фронтенд-интервью; просмотреть список GFE 75",
        "links": [
         {
          "label": "GFE: Front End Interview Playbook",
          "url": "https://www.greatfrontend.com/front-end-interview-playbook",
          "confidence": "pattern"
+        },
+        {
+         "label": "GFE 75",
+         "url": "https://www.greatfrontend.com/interviews/study-plans/gfe75",
+         "confidence": "checked"
         }
        ]
       },
       {
        "id": "w01-d7-s3",
        "minutes": 30,
-       "block": "theory",
-       "title": "Список GFE 75: посмотреть, какие вопросы впереди",
+       "block": "dsa",
+       "title": "Новая задача: Longest Consecutive Sequence (Medium)",
+       "itemId": "dsa-longest-consecutive-sequence",
        "links": [
         {
-         "label": "GFE 75",
-         "url": "https://www.greatfrontend.com/interviews/study-plans/gfe75",
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/longest-consecutive-sequence",
+         "confidence": "checked"
+        },
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/longest-consecutive-sequence/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=P6RZZMu_maU",
          "confidence": "checked"
         }
        ]
@@ -388,45 +475,68 @@
      "sessions": [
       {
        "id": "w02-d1-s1",
+       "minutes": 10,
+       "block": "theory",
+       "title": "Теория: два указателя. NeetCode: Two Pointers, на скорости 1,5x",
+       "links": [
+        {
+         "label": "NeetCode: Two Pointers",
+         "url": "https://neetcode.io/courses/advanced-algorithms/3",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w02-d1-s2",
        "minutes": 20,
        "block": "review",
        "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
       },
       {
-       "id": "w02-d1-s2",
+       "id": "w02-d1-s3",
        "minutes": 25,
        "block": "dsa",
        "title": "Новая задача: Valid Palindrome (Easy)",
        "itemId": "dsa-valid-palindrome",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/is-palindrome",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/valid-palindrome/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Valid+Palindrome",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=jJXJ16kPFWg",
+         "confidence": "checked"
         }
        ]
       },
       {
-       "id": "w02-d1-s3",
+       "id": "w02-d1-s4",
        "minutes": 30,
        "block": "dsa",
        "title": "Новая задача: 3Sum (Medium)",
        "itemId": "dsa-3sum",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/three-integer-sum",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/3sum/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+3Sum",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=jzZsG8n2R9A",
+         "confidence": "checked"
         }
        ]
       }
@@ -489,12 +599,17 @@
        "id": "w02-d3-s2",
        "minutes": 30,
        "block": "sd-theory",
-       "title": "Типы вопросов: приложение и UI-компонент; оси оценки",
+       "title": "Типы вопросов: приложение и UI-компонент; оси оценки; как собирать требования",
        "links": [
         {
          "label": "GFE: Front End System Design Playbook",
          "url": "https://www.greatfrontend.com/front-end-system-design-playbook",
          "confidence": "pattern"
+        },
+        {
+         "label": "NeetCode: Design Requirements",
+         "url": "https://neetcode.io/courses/system-design-for-beginners/2",
+         "confidence": "checked"
         }
        ]
       }
@@ -508,44 +623,72 @@
       {
        "id": "w02-d4-s1",
        "minutes": 20,
+       "block": "theory",
+       "title": "Теория: скользящее окно. NeetCode: Sliding Window Fixed Size, Sliding Window Variable Size, на скорости 1,5x",
+       "links": [
+        {
+         "label": "NeetCode: Sliding Window Fixed Size",
+         "url": "https://neetcode.io/courses/advanced-algorithms/1",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: Sliding Window Variable Size",
+         "url": "https://neetcode.io/courses/advanced-algorithms/2",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w02-d4-s2",
+       "minutes": 20,
        "block": "review",
        "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
       },
       {
-       "id": "w02-d4-s2",
+       "id": "w02-d4-s3",
        "minutes": 25,
        "block": "dsa",
        "title": "Новая задача: Best Time to Buy and Sell Stock (Easy)",
        "itemId": "dsa-best-time-to-buy-and-sell-stock",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/buy-and-sell-crypto",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Best+Time+to+Buy+and+Sell+Stock",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=1pkOgXD63yU",
+         "confidence": "checked"
         }
        ]
       },
       {
-       "id": "w02-d4-s3",
+       "id": "w02-d4-s4",
        "minutes": 30,
        "block": "dsa",
        "title": "Новая задача: Longest Substring Without Repeating Characters (Medium)",
        "itemId": "dsa-longest-substring-without-repeating-characters",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/longest-substring-without-duplicates",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Longest+Substring+Without+Repeating+Characters",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=wiGpQwVHdE0",
+         "confidence": "checked"
         }
        ]
       }
@@ -571,7 +714,7 @@
      "sessions": [
       {
        "id": "w02-d6-s1",
-       "minutes": 90,
+       "minutes": 45,
        "block": "sd-theory",
        "title": "Разобрать по Playbook один готовый пример дизайна и выписать, что оценивают на senior",
        "links": [
@@ -598,25 +741,54 @@
       },
       {
        "id": "w02-d6-s3",
-       "minutes": 45,
+       "minutes": 30,
        "block": "dsa",
        "title": "Новая задача: Container With Most Water (Medium)",
        "itemId": "dsa-container-with-most-water",
        "links": [
+        {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/max-water-container",
+         "confidence": "checked"
+        },
         {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/container-with-most-water/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Container+With+Most+Water",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=UuiTKBwPgAo",
+         "confidence": "checked"
         }
        ]
       },
       {
        "id": "w02-d6-s4",
+       "minutes": 50,
+       "block": "dsa",
+       "title": "Новая задача: Minimum Window Substring (Hard)",
+       "itemId": "dsa-minimum-window-substring",
+       "links": [
+        {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/minimum-window-with-characters",
+         "confidence": "checked"
+        },
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/minimum-window-substring/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=jSto0O4AJbM",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w02-d6-s5",
        "minutes": 15,
        "block": "spare",
        "title": "Запас: дорешать то, что не успел за неделю",
@@ -688,45 +860,68 @@
      "sessions": [
       {
        "id": "w03-d1-s1",
+       "minutes": 5,
+       "block": "theory",
+       "title": "Теория: стек. NeetCode: Stacks, на скорости 1,5x",
+       "links": [
+        {
+         "label": "NeetCode: Stacks",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/4",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w03-d1-s2",
        "minutes": 20,
        "block": "review",
        "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
       },
       {
-       "id": "w03-d1-s2",
+       "id": "w03-d1-s3",
        "minutes": 25,
        "block": "dsa",
        "title": "Новая задача: Valid Parentheses (Easy)",
        "itemId": "dsa-valid-parentheses",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/validate-parentheses",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/valid-parentheses/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Valid+Parentheses",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=WTzjTskDFMg",
+         "confidence": "checked"
         }
        ]
       },
       {
-       "id": "w03-d1-s3",
+       "id": "w03-d1-s4",
        "minutes": 30,
        "block": "dsa",
-       "title": "Новая задача: Koko Eating Bananas (Medium)",
-       "itemId": "dsa-koko-eating-bananas",
+       "title": "Новая задача: Daily Temperatures (Medium)",
+       "itemId": "dsa-daily-temperatures",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/daily-temperatures",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problems/koko-eating-bananas/",
+         "url": "https://leetcode.com/problems/daily-temperatures/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Koko+Eating+Bananas",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=cTBiBSnjO3c",
+         "confidence": "checked"
         }
        ]
       }
@@ -789,11 +984,16 @@
        "id": "w03-d3-s2",
        "minutes": 30,
        "block": "sd-theory",
-       "title": "Перечитать фреймворк RADIO и свои слабые места по прошлым задачам",
+       "title": "Как отвечать на вопрос про UI-компонент: API, состояние, доступность (роли ARIA, клавиатура, фокус)",
        "links": [
         {
          "label": "GFE: Front End System Design Playbook",
          "url": "https://www.greatfrontend.com/front-end-system-design-playbook",
+         "confidence": "pattern"
+        },
+        {
+         "label": "WAI-ARIA APG: Combobox",
+         "url": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/",
          "confidence": "pattern"
         }
        ]
@@ -808,44 +1008,72 @@
       {
        "id": "w03-d4-s1",
        "minutes": 20,
-       "block": "review",
-       "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
-      },
-      {
-       "id": "w03-d4-s2",
-       "minutes": 25,
-       "block": "dsa",
-       "title": "Новая задача: Search in Rotated Sorted Array (Medium)",
-       "itemId": "dsa-search-in-rotated-sorted-array",
+       "block": "theory",
+       "title": "Теория: бинарный поиск. NeetCode: Search Array, Search Range, на скорости 1,5x",
        "links": [
         {
-         "label": "LeetCode",
-         "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
-         "confidence": "pattern"
+         "label": "NeetCode: Search Array",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/14",
+         "confidence": "checked"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Search+in+Rotated+Sorted+Array",
-         "confidence": "pattern"
+         "label": "NeetCode: Search Range",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/15",
+         "confidence": "checked"
         }
        ]
       },
       {
+       "id": "w03-d4-s2",
+       "minutes": 20,
+       "block": "review",
+       "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
+      },
+      {
        "id": "w03-d4-s3",
-       "minutes": 30,
+       "minutes": 25,
        "block": "dsa",
-       "title": "Новая задача: Daily Temperatures (Medium)",
-       "itemId": "dsa-daily-temperatures",
+       "title": "Новая задача: Binary Search (Easy)",
+       "itemId": "dsa-binary-search",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/binary-search",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problems/daily-temperatures/",
+         "url": "https://leetcode.com/problems/binary-search/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Daily+Temperatures",
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=s4DPM8ct1pI",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w03-d4-s4",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Новая задача: Koko Eating Bananas (Medium)",
+       "itemId": "dsa-koko-eating-bananas",
+       "links": [
+        {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/eating-bananas",
+         "confidence": "checked"
+        },
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/koko-eating-bananas/",
          "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=U2SozAs9RzA",
+         "confidence": "checked"
         }
        ]
       }
@@ -873,13 +1101,13 @@
        "id": "w03-d6-s1",
        "minutes": 45,
        "block": "fe-sd",
-       "title": "Решить самому с таймером на 45 минут: News Feed (Facebook) (Medium)",
-       "itemId": "fesd-news-feed-facebook",
+       "title": "Решить самому с таймером на 45 минут: Autocomplete (Medium)",
+       "itemId": "fesd-autocomplete",
        "links": [
         {
          "label": "GreatFrontEnd",
-         "url": "https://www.greatfrontend.com/interviews/study/gfe75/questions/system-design/news-feed-facebook",
-         "confidence": "checked"
+         "url": "https://www.greatfrontend.com/questions/system-design/autocomplete",
+         "confidence": "pattern"
         },
         {
          "label": "Excalidraw",
@@ -892,12 +1120,12 @@
        "id": "w03-d6-s2",
        "minutes": 45,
        "block": "sd-review",
-       "title": "Сверить своё решение с разбором, записать три слабых места",
+       "title": "Сверить своё решение с разбором GreatFrontEnd. Проверить, что было: debounce ввода, кеш результатов, отмена устаревших запросов, клавиатура и роль combobox, загрузка, ошибки и пустой результат, API компонента. Записать три слабых места",
        "links": [
         {
          "label": "GreatFrontEnd",
-         "url": "https://www.greatfrontend.com/interviews/study/gfe75/questions/system-design/news-feed-facebook",
-         "confidence": "checked"
+         "url": "https://www.greatfrontend.com/questions/system-design/autocomplete",
+         "confidence": "pattern"
         }
        ]
       },
@@ -917,20 +1145,25 @@
       },
       {
        "id": "w03-d6-s4",
-       "minutes": 50,
+       "minutes": 45,
        "block": "dsa",
-       "title": "Новая задача: Minimum Window Substring (Hard)",
-       "itemId": "dsa-minimum-window-substring",
+       "title": "Новая задача: Search in Rotated Sorted Array (Medium)",
+       "itemId": "dsa-search-in-rotated-sorted-array",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/find-target-in-rotated-sorted-array",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problems/minimum-window-substring/",
+         "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Minimum+Window+Substring",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=U8XENwh8Oy8",
+         "confidence": "checked"
         }
        ]
       },
@@ -1008,44 +1241,77 @@
       {
        "id": "w04-d1-s1",
        "minutes": 20,
+       "block": "theory",
+       "title": "Теория: Связные списки. NeetCode: Singly Linked Lists, Doubly Linked Lists, Queues, на скорости 1,5x",
+       "links": [
+        {
+         "label": "NeetCode: Singly Linked Lists",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/5",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: Doubly Linked Lists",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/6",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: Queues",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/7",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w04-d1-s2",
+       "minutes": 20,
        "block": "review",
        "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
       },
       {
-       "id": "w04-d1-s2",
+       "id": "w04-d1-s3",
        "minutes": 25,
        "block": "dsa",
        "title": "Новая задача: Reverse Linked List (Easy)",
        "itemId": "dsa-reverse-linked-list",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/reverse-a-linked-list",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/reverse-linked-list/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Reverse+Linked+List",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=G0_I-ZF0S38",
+         "confidence": "checked"
         }
        ]
       },
       {
-       "id": "w04-d1-s3",
+       "id": "w04-d1-s4",
        "minutes": 30,
        "block": "dsa",
        "title": "Новая задача: Merge Two Sorted Lists (Easy)",
        "itemId": "dsa-merge-two-sorted-lists",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/merge-two-sorted-linked-lists",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/merge-two-sorted-lists/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Merge+Two+Sorted+Lists",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=XIdigk956u0",
+         "confidence": "checked"
         }
        ]
       }
@@ -1127,44 +1393,67 @@
       {
        "id": "w04-d4-s1",
        "minutes": 20,
+       "block": "theory",
+       "title": "Теория: быстрый и медленный указатели. NeetCode: Fast and Slow Pointers, на скорости 1,5x",
+       "links": [
+        {
+         "label": "NeetCode: Fast and Slow Pointers",
+         "url": "https://neetcode.io/courses/advanced-algorithms/5",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w04-d4-s2",
+       "minutes": 20,
        "block": "review",
        "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
       },
       {
-       "id": "w04-d4-s2",
+       "id": "w04-d4-s3",
        "minutes": 25,
        "block": "dsa",
        "title": "Новая задача: Linked List Cycle (Easy)",
        "itemId": "dsa-linked-list-cycle",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/linked-list-cycle-detection",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/linked-list-cycle/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Linked+List+Cycle",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=gBTe7lFR3vc",
+         "confidence": "checked"
         }
        ]
       },
       {
-       "id": "w04-d4-s3",
+       "id": "w04-d4-s4",
        "minutes": 30,
        "block": "dsa",
        "title": "Новая задача: Remove Nth Node From End of List (Medium)",
        "itemId": "dsa-remove-nth-node-from-end-of-list",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/remove-node-from-end-of-linked-list",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Remove+Nth+Node+From+End+of+List",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=XVuQxVej6y8",
+         "confidence": "checked"
         }
        ]
       }
@@ -1192,12 +1481,12 @@
        "id": "w04-d6-s1",
        "minutes": 45,
        "block": "fe-sd",
-       "title": "Решить самому с таймером на 45 минут: Autocomplete (Medium)",
-       "itemId": "fesd-autocomplete",
+       "title": "Решить самому с таймером на 45 минут: Image Carousel (Medium)",
+       "itemId": "fesd-image-carousel",
        "links": [
         {
          "label": "GreatFrontEnd",
-         "url": "https://www.greatfrontend.com/questions/system-design/autocomplete",
+         "url": "https://www.greatfrontend.com/questions/system-design/image-carousel",
          "confidence": "pattern"
         },
         {
@@ -1211,11 +1500,11 @@
        "id": "w04-d6-s2",
        "minutes": 45,
        "block": "sd-review",
-       "title": "Сверить своё решение с разбором, записать три слабых места",
+       "title": "Сверить своё решение с разбором GreatFrontEnd. Проверить, что было: API компонента, ленивая загрузка и предзагрузка соседних слайдов, srcset, анимация через transform, клавиатура и свайпы, ARIA. Записать три слабых места",
        "links": [
         {
          "label": "GreatFrontEnd",
-         "url": "https://www.greatfrontend.com/questions/system-design/autocomplete",
+         "url": "https://www.greatfrontend.com/questions/system-design/image-carousel",
          "confidence": "pattern"
         }
        ]
@@ -1242,14 +1531,19 @@
        "itemId": "dsa-reorder-list",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/reorder-linked-list",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/reorder-list/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Reorder+List",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=S5bfdUTrKLM",
+         "confidence": "checked"
         }
        ]
       },
@@ -1326,45 +1620,73 @@
      "sessions": [
       {
        "id": "w05-d1-s1",
+       "minutes": 15,
+       "block": "theory",
+       "title": "Теория: рекурсия и бинарные деревья. NeetCode: Factorial, Binary Tree, на скорости 1,5x",
+       "links": [
+        {
+         "label": "NeetCode: Factorial",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/8",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: Binary Tree",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/16",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w05-d1-s2",
        "minutes": 20,
        "block": "review",
        "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
       },
       {
-       "id": "w05-d1-s2",
+       "id": "w05-d1-s3",
        "minutes": 25,
        "block": "dsa",
        "title": "Новая задача: Invert Binary Tree (Easy)",
        "itemId": "dsa-invert-binary-tree",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/invert-a-binary-tree",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/invert-binary-tree/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Invert+Binary+Tree",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=OnSn2XEQ4MY",
+         "confidence": "checked"
         }
        ]
       },
       {
-       "id": "w05-d1-s3",
+       "id": "w05-d1-s4",
        "minutes": 30,
        "block": "dsa",
        "title": "Новая задача: Maximum Depth of Binary Tree (Easy)",
        "itemId": "dsa-maximum-depth-of-binary-tree",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/depth-of-binary-tree",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Maximum+Depth+of+Binary+Tree",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=hTM3phVI6YQ",
+         "confidence": "checked"
         }
        ]
       }
@@ -1446,44 +1768,72 @@
       {
        "id": "w05-d4-s1",
        "minutes": 20,
+       "block": "theory",
+       "title": "Теория: DFS и BFS по дереву. NeetCode: Depth-First Search, Breadth-First Search, на скорости 1,5x",
+       "links": [
+        {
+         "label": "NeetCode: Depth-First Search",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/19",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: Breadth-First Search",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/20",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w05-d4-s2",
+       "minutes": 20,
        "block": "review",
        "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
       },
       {
-       "id": "w05-d4-s2",
+       "id": "w05-d4-s3",
        "minutes": 25,
        "block": "dsa",
        "title": "Новая задача: Same Tree (Easy)",
        "itemId": "dsa-same-tree",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/same-binary-tree",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/same-tree/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Same+Tree",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=vRbbcKXCxOw",
+         "confidence": "checked"
         }
        ]
       },
       {
-       "id": "w05-d4-s3",
+       "id": "w05-d4-s4",
        "minutes": 30,
        "block": "dsa",
        "title": "Новая задача: Subtree of Another Tree (Easy)",
        "itemId": "dsa-subtree-of-another-tree",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/subtree-of-a-binary-tree",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/subtree-of-another-tree/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Subtree+of+Another+Tree",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=E36O5SWp-LE",
+         "confidence": "checked"
         }
        ]
       }
@@ -1511,13 +1861,13 @@
        "id": "w05-d6-s1",
        "minutes": 45,
        "block": "fe-sd",
-       "title": "Решить самому с таймером на 45 минут: Image Carousel (Medium)",
-       "itemId": "fesd-image-carousel",
+       "title": "Решить самому с таймером на 45 минут: Poll Widget (Medium)",
+       "itemId": "fesd-poll-widget",
        "links": [
         {
          "label": "GreatFrontEnd",
-         "url": "https://www.greatfrontend.com/questions/system-design/image-carousel",
-         "confidence": "pattern"
+         "url": "https://www.greatfrontend.com/questions/system-design/poll-widget",
+         "confidence": "checked"
         },
         {
          "label": "Excalidraw",
@@ -1530,12 +1880,12 @@
        "id": "w05-d6-s2",
        "minutes": 45,
        "block": "sd-review",
-       "title": "Сверить своё решение с разбором, записать три слабых места",
+       "title": "Сверить своё решение с разбором GreatFrontEnd. Проверить, что было: встраивание на чужую страницу (iframe или скрипт), изоляция стилей, API виджета, оптимистичный голос, защита от повторного голоса, обновление результатов, доступность. Записать три слабых места",
        "links": [
         {
          "label": "GreatFrontEnd",
-         "url": "https://www.greatfrontend.com/questions/system-design/image-carousel",
-         "confidence": "pattern"
+         "url": "https://www.greatfrontend.com/questions/system-design/poll-widget",
+         "confidence": "checked"
         }
        ]
       },
@@ -1561,14 +1911,19 @@
        "itemId": "dsa-binary-tree-level-order-traversal",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/level-order-traversal-of-binary-tree",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Binary+Tree+Level+Order+Traversal",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=6ZnyEApgFYg",
+         "confidence": "checked"
         }
        ]
       },
@@ -1651,25 +2006,6 @@
       },
       {
        "id": "w06-d1-s2",
-       "minutes": 30,
-       "block": "dsa",
-       "title": "Новая задача: Product of Array Except Self (Medium)",
-       "itemId": "dsa-product-of-array-except-self",
-       "links": [
-        {
-         "label": "LeetCode",
-         "url": "https://leetcode.com/problems/product-of-array-except-self/",
-         "confidence": "pattern"
-        },
-        {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Product+of+Array+Except+Self",
-         "confidence": "pattern"
-        }
-       ]
-      },
-      {
-       "id": "w06-d1-s3",
        "minutes": 15,
        "block": "spare",
        "title": "Долги прошлых недель",
@@ -1767,11 +2103,16 @@
        "id": "w06-d6-s1",
        "minutes": 45,
        "block": "fe-sd",
-       "title": "С чистого листа за 45 минут: News Feed (Facebook)",
+       "title": "С чистого листа за 45 минут: Autocomplete",
        "links": [
         {
          "label": "Excalidraw",
          "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        },
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/system-design/autocomplete",
          "confidence": "pattern"
         }
        ]
@@ -1784,8 +2125,8 @@
        "links": [
         {
          "label": "GreatFrontEnd",
-         "url": "https://www.greatfrontend.com/interviews/study/gfe75/questions/system-design/news-feed-facebook",
-         "confidence": "checked"
+         "url": "https://www.greatfrontend.com/questions/system-design/autocomplete",
+         "confidence": "pattern"
         }
        ]
       },
@@ -1801,25 +2142,6 @@
          "confidence": "pattern"
         }
        ]
-      },
-      {
-       "id": "w06-d6-s4",
-       "minutes": 50,
-       "block": "dsa",
-       "title": "Новая задача: Merge k Sorted Lists (Hard)",
-       "itemId": "dsa-merge-k-sorted-lists",
-       "links": [
-        {
-         "label": "LeetCode",
-         "url": "https://leetcode.com/problems/merge-k-sorted-lists/",
-         "confidence": "pattern"
-        },
-        {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Merge+k+Sorted+Lists",
-         "confidence": "pattern"
-        }
-       ]
       }
      ]
     },
@@ -1830,37 +2152,18 @@
      "sessions": [
       {
        "id": "w06-d7-s1",
-       "minutes": 30,
-       "block": "dsa",
-       "title": "Новая задача: Longest Consecutive Sequence (Medium)",
-       "itemId": "dsa-longest-consecutive-sequence",
-       "links": [
-        {
-         "label": "LeetCode",
-         "url": "https://leetcode.com/problems/longest-consecutive-sequence/",
-         "confidence": "pattern"
-        },
-        {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Longest+Consecutive+Sequence",
-         "confidence": "pattern"
-        }
-       ]
-      },
-      {
-       "id": "w06-d7-s2",
        "minutes": 45,
        "block": "behavioral",
        "title": "Проговорить вслух все готовые истории, каждая за 2-3 минуты"
       },
       {
-       "id": "w06-d7-s3",
+       "id": "w06-d7-s2",
        "minutes": 30,
        "block": "checkpoint",
        "title": "Контрольная точка: сверить счётчики с целями этапа"
       },
       {
-       "id": "w06-d7-s4",
+       "id": "w06-d7-s3",
        "minutes": 15,
        "block": "week-review",
        "title": "Разбор недели: проверить отметки, записать три ошибки, посмотреть план и приз следующей недели"
@@ -1880,8 +2183,8 @@
   {
    "n": 7,
    "phase": "topics-mix",
-   "title": "Деревья, часть 2",
-   "webTopic": "React: рендер и коммит, reconciliation, хуки, мемоизация",
+   "title": "Деревья, часть 2 и trie",
+   "webTopic": "Сеть: HTTP-кеширование, REST и GraphQL, WebSocket и SSE",
    "prize": {
     "title": "Шорты в зал",
     "tier": "small"
@@ -1894,45 +2197,73 @@
      "sessions": [
       {
        "id": "w07-d1-s1",
+       "minutes": 25,
+       "block": "theory",
+       "title": "Теория: деревья поиска. NeetCode: Binary Search Tree, BST Insert and Remove, на скорости 1,5x",
+       "links": [
+        {
+         "label": "NeetCode: Binary Search Tree",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/17",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: BST Insert and Remove",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/18",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w07-d1-s2",
        "minutes": 20,
        "block": "review",
        "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
       },
       {
-       "id": "w07-d1-s2",
+       "id": "w07-d1-s3",
        "minutes": 25,
        "block": "dsa",
        "title": "Новая задача: Validate Binary Search Tree (Medium)",
        "itemId": "dsa-validate-binary-search-tree",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/valid-binary-search-tree",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/validate-binary-search-tree/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Validate+Binary+Search+Tree",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=s6ATEkipzow",
+         "confidence": "checked"
         }
        ]
       },
       {
-       "id": "w07-d1-s3",
+       "id": "w07-d1-s4",
        "minutes": 30,
        "block": "dsa",
        "title": "Новая задача: Lowest Common Ancestor of a Binary Search Tree (Medium)",
        "itemId": "dsa-lowest-common-ancestor-of-a-binary-search-tree",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/lowest-common-ancestor-in-binary-search-tree",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Lowest+Common+Ancestor+of+a+Binary+Search+Tree",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=gs2LMfuOR9k",
+         "confidence": "checked"
         }
        ]
       }
@@ -1980,27 +2311,34 @@
      "sessions": [
       {
        "id": "w07-d3-s1",
-       "minutes": 30,
+       "minutes": 60,
        "block": "web",
-       "title": "Веб-основы: React: рендер и коммит, reconciliation, хуки, мемоизация",
+       "title": "Веб-основы: Сеть: HTTP-кеширование, REST и GraphQL, WebSocket и SSE",
        "links": [
         {
-         "label": "react.dev: Render and Commit",
-         "url": "https://react.dev/learn/render-and-commit",
+         "label": "MDN: HTTP caching",
+         "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching",
          "confidence": "pattern"
-        }
-       ]
-      },
-      {
-       "id": "w07-d3-s2",
-       "minutes": 30,
-       "block": "fe-sd",
-       "title": "Повтор с чистого листа за 30 минут: Autocomplete",
-       "links": [
+        },
         {
-         "label": "Excalidraw",
-         "url": "https://excalidraw.com",
-         "confidence": "pattern"
+         "label": "NeetCode: HTTP",
+         "url": "https://neetcode.io/courses/system-design-for-beginners/6",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: WebSockets",
+         "url": "https://neetcode.io/courses/system-design-for-beginners/7",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: API Paradigms",
+         "url": "https://neetcode.io/courses/system-design-for-beginners/8",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: API Design",
+         "url": "https://neetcode.io/courses/system-design-for-beginners/9",
+         "confidence": "checked"
         }
        ]
       }
@@ -2013,45 +2351,73 @@
      "sessions": [
       {
        "id": "w07-d4-s1",
+       "minutes": 30,
+       "block": "theory",
+       "title": "Теория: trie и итеративный DFS. NeetCode: Trie, Iterative DFS, на скорости 1,5x",
+       "links": [
+        {
+         "label": "NeetCode: Trie",
+         "url": "https://neetcode.io/courses/advanced-algorithms/6",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: Iterative DFS",
+         "url": "https://neetcode.io/courses/advanced-algorithms/9",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w07-d4-s2",
        "minutes": 20,
        "block": "review",
        "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
       },
       {
-       "id": "w07-d4-s2",
+       "id": "w07-d4-s3",
        "minutes": 25,
        "block": "dsa",
        "title": "Новая задача: Kth Smallest Element in a BST (Medium)",
        "itemId": "dsa-kth-smallest-element-in-a-bst",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/kth-smallest-integer-in-bst",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Kth+Smallest+Element+in+a+BST",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=5LUXSvjmGCw",
+         "confidence": "checked"
         }
        ]
       },
       {
-       "id": "w07-d4-s3",
+       "id": "w07-d4-s4",
        "minutes": 30,
        "block": "dsa",
-       "title": "Новая задача: Construct Binary Tree from Preorder and Inorder Traversal (Medium)",
-       "itemId": "dsa-construct-binary-tree-from-preorder-and-inorder-traversal",
+       "title": "Новая задача: Implement Trie (Prefix Tree) (Medium)",
+       "itemId": "dsa-implement-trie-prefix-tree",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/implement-prefix-tree",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+         "url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Construct+Binary+Tree+from+Preorder+and+Inorder+Traversal",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=oobqoCJlHA0",
+         "confidence": "checked"
         }
        ]
       }
@@ -2079,13 +2445,13 @@
        "id": "w07-d6-s1",
        "minutes": 45,
        "block": "fe-sd",
-       "title": "Решить самому с таймером на 45 минут: Chat App (Messenger) (Medium)",
-       "itemId": "fesd-chat-application-messenger",
+       "title": "Решить самому с таймером на 45 минут: News Feed (Facebook) (Medium)",
+       "itemId": "fesd-news-feed-facebook",
        "links": [
         {
          "label": "GreatFrontEnd",
-         "url": "https://www.greatfrontend.com/questions/system-design/chat-application-messenger",
-         "confidence": "pattern"
+         "url": "https://www.greatfrontend.com/interviews/study/gfe75/questions/system-design/news-feed-facebook",
+         "confidence": "checked"
         },
         {
          "label": "Excalidraw",
@@ -2098,12 +2464,12 @@
        "id": "w07-d6-s2",
        "minutes": 45,
        "block": "sd-review",
-       "title": "Сверить своё решение с разбором, записать три слабых места",
+       "title": "Сверить своё решение с разбором GreatFrontEnd. Проверить, что было: нормализация данных, пагинация курсором, бесконечная прокрутка и виртуализация, оптимистичные лайки, новые посты без сдвига ленты, изображения, доступность. Записать три слабых места",
        "links": [
         {
          "label": "GreatFrontEnd",
-         "url": "https://www.greatfrontend.com/questions/system-design/chat-application-messenger",
-         "confidence": "pattern"
+         "url": "https://www.greatfrontend.com/interviews/study/gfe75/questions/system-design/news-feed-facebook",
+         "confidence": "checked"
         }
        ]
       },
@@ -2129,14 +2495,19 @@
        "itemId": "dsa-binary-tree-maximum-path-sum",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/binary-tree-maximum-path-sum",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Binary+Tree+Maximum+Path+Sum",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=Hr5cWUld4vU",
+         "confidence": "checked"
         }
        ]
       },
@@ -2199,7 +2570,7 @@
   {
    "n": 8,
    "phase": "topics-mix",
-   "title": "Графы и бэктрекинг",
+   "title": "Куча и бэктрекинг",
    "webTopic": "Состояние на клиенте: где хранить, нормализация, кеш запросов",
    "prize": {
     "title": "HomePod mini",
@@ -2213,45 +2584,73 @@
      "sessions": [
       {
        "id": "w08-d1-s1",
+       "minutes": 25,
+       "block": "theory",
+       "title": "Теория: куча. NeetCode: Heap Properties, Push and Pop, на скорости 1,5x",
+       "links": [
+        {
+         "label": "NeetCode: Heap Properties",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/23",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: Push and Pop",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/24",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w08-d1-s2",
        "minutes": 20,
        "block": "review",
        "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
       },
       {
-       "id": "w08-d1-s2",
+       "id": "w08-d1-s3",
        "minutes": 25,
        "block": "dsa",
-       "title": "Новая задача: Number of Islands (Medium)",
-       "itemId": "dsa-number-of-islands",
+       "title": "Новая задача: Kth Largest Element in an Array (Medium)",
+       "itemId": "dsa-kth-largest-element-in-an-array",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/kth-largest-element-in-an-array",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problems/number-of-islands/",
+         "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Number+of+Islands",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=XEmy13g1Qxc",
+         "confidence": "checked"
         }
        ]
       },
       {
-       "id": "w08-d1-s3",
+       "id": "w08-d1-s4",
        "minutes": 30,
        "block": "dsa",
-       "title": "Новая задача: Clone Graph (Medium)",
-       "itemId": "dsa-clone-graph",
+       "title": "Новая задача: K Closest Points to Origin (Medium)",
+       "itemId": "dsa-k-closest-points-to-origin",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/k-closest-points-to-origin",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problems/clone-graph/",
+         "url": "https://leetcode.com/problems/k-closest-points-to-origin/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Clone+Graph",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=rI2EBUEMfTk",
+         "confidence": "checked"
         }
        ]
       }
@@ -2314,11 +2713,21 @@
        "id": "w08-d3-s2",
        "minutes": 30,
        "block": "sd-theory",
-       "title": "Фреймворк ответа для бэкенд-дизайна, к задаче Bitly через неделю",
+       "title": "Бэкенд-дизайн: фреймворк ответа и балансировка нагрузки. К задаче Bitly через неделю",
        "links": [
         {
          "label": "Hello Interview: Delivery Framework",
          "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/delivery",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: How to Approach",
+         "url": "https://neetcode.io/courses/system-design-interview/0",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: Proxies and Load Balancing",
+         "url": "https://neetcode.io/courses/system-design-for-beginners/12",
          "confidence": "checked"
         }
        ]
@@ -2332,45 +2741,73 @@
      "sessions": [
       {
        "id": "w08-d4-s1",
+       "minutes": 30,
+       "block": "theory",
+       "title": "Теория: бэктрекинг. NeetCode: Subsets, Combinations, на скорости 1,5x",
+       "links": [
+        {
+         "label": "NeetCode: Subsets",
+         "url": "https://neetcode.io/courses/advanced-algorithms/11",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: Combinations",
+         "url": "https://neetcode.io/courses/advanced-algorithms/12",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w08-d4-s2",
        "minutes": 20,
        "block": "review",
        "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
       },
       {
-       "id": "w08-d4-s2",
+       "id": "w08-d4-s3",
        "minutes": 25,
        "block": "dsa",
-       "title": "Новая задача: Course Schedule (Medium)",
-       "itemId": "dsa-course-schedule",
+       "title": "Новая задача: Subsets (Medium)",
+       "itemId": "dsa-subsets",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/subsets",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problems/course-schedule/",
+         "url": "https://leetcode.com/problems/subsets/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Course+Schedule",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=REOH22Xwdkk",
+         "confidence": "checked"
         }
        ]
       },
       {
-       "id": "w08-d4-s3",
+       "id": "w08-d4-s4",
        "minutes": 30,
        "block": "dsa",
-       "title": "Новая задача: Pacific Atlantic Water Flow (Medium)",
-       "itemId": "dsa-pacific-atlantic-water-flow",
+       "title": "Новая задача: Combination Sum (Medium)",
+       "itemId": "dsa-combination-sum",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/combination-target-sum",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problems/pacific-atlantic-water-flow/",
+         "url": "https://leetcode.com/problems/combination-sum/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Pacific+Atlantic+Water+Flow",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=GBKI9VSKdGg",
+         "confidence": "checked"
         }
        ]
       }
@@ -2398,12 +2835,12 @@
        "id": "w08-d6-s1",
        "minutes": 45,
        "block": "fe-sd",
-       "title": "Решить самому с таймером на 45 минут: E-commerce (Amazon) (Medium)",
-       "itemId": "fesd-e-commerce-amazon",
+       "title": "Решить самому с таймером на 45 минут: Chat App (Messenger) (Medium)",
+       "itemId": "fesd-chat-application-messenger",
        "links": [
         {
          "label": "GreatFrontEnd",
-         "url": "https://www.greatfrontend.com/questions/system-design/e-commerce-amazon",
+         "url": "https://www.greatfrontend.com/questions/system-design/chat-application-messenger",
          "confidence": "pattern"
         },
         {
@@ -2417,11 +2854,11 @@
        "id": "w08-d6-s2",
        "minutes": 45,
        "block": "sd-review",
-       "title": "Сверить своё решение с разбором, записать три слабых места",
+       "title": "Сверить своё решение с разбором GreatFrontEnd. Проверить, что было: WebSocket и переподключение, порядок и дедупликация сообщений, оптимистичная отправка и статусы, офлайн-очередь, история в IndexedDB, виртуализация, непрочитанные. Записать три слабых места",
        "links": [
         {
          "label": "GreatFrontEnd",
-         "url": "https://www.greatfrontend.com/questions/system-design/e-commerce-amazon",
+         "url": "https://www.greatfrontend.com/questions/system-design/chat-application-messenger",
          "confidence": "pattern"
         }
        ]
@@ -2448,14 +2885,19 @@
        "itemId": "dsa-word-search",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/search-for-word",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/word-search/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Word+Search",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=pfiQ_PS1g8E",
+         "confidence": "checked"
         }
        ]
       },
@@ -2518,7 +2960,7 @@
   {
    "n": 9,
    "phase": "topics-mix",
-   "title": "Интервалы, комбинации, trie",
+   "title": "Графы",
    "webTopic": "Производительность: Core Web Vitals, code splitting, lazy loading",
    "prize": {
     "title": "Майка в зал",
@@ -2532,45 +2974,73 @@
      "sessions": [
       {
        "id": "w09-d1-s1",
+       "minutes": 30,
+       "block": "theory",
+       "title": "Теория: графы и DFS по матрице. NeetCode: Intro to Graphs, Matrix DFS, на скорости 1,5x",
+       "links": [
+        {
+         "label": "NeetCode: Intro to Graphs",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/28",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: Matrix DFS",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/29",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w09-d1-s2",
        "minutes": 20,
        "block": "review",
        "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
       },
       {
-       "id": "w09-d1-s2",
+       "id": "w09-d1-s3",
        "minutes": 25,
        "block": "dsa",
-       "title": "Новая задача: Merge Intervals (Medium)",
-       "itemId": "dsa-merge-intervals",
+       "title": "Новая задача: Number of Islands (Medium)",
+       "itemId": "dsa-number-of-islands",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/count-number-of-islands",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problems/merge-intervals/",
+         "url": "https://leetcode.com/problems/number-of-islands/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Merge+Intervals",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=pV2kpPD66nE",
+         "confidence": "checked"
         }
        ]
       },
       {
-       "id": "w09-d1-s3",
+       "id": "w09-d1-s4",
        "minutes": 30,
        "block": "dsa",
-       "title": "Новая задача: Insert Interval (Medium)",
-       "itemId": "dsa-insert-interval",
+       "title": "Новая задача: Pacific Atlantic Water Flow (Medium)",
+       "itemId": "dsa-pacific-atlantic-water-flow",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/pacific-atlantic-water-flow",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problems/insert-interval/",
+         "url": "https://leetcode.com/problems/pacific-atlantic-water-flow/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Insert+Interval",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=s-VkcjHqkGI",
+         "confidence": "checked"
         }
        ]
       }
@@ -2631,14 +3101,29 @@
       },
       {
        "id": "w09-d3-s2",
-       "minutes": 30,
-       "block": "fe-sd",
-       "title": "Повтор с чистого листа за 30 минут: Chat App (Messenger)",
+       "minutes": 50,
+       "block": "sd-theory",
+       "title": "Бэкенд-дизайн: кеш, SQL и NoSQL, репликация и шардинг. К задаче Bitly в субботу",
        "links": [
         {
-         "label": "Excalidraw",
-         "url": "https://excalidraw.com",
-         "confidence": "pattern"
+         "label": "NeetCode: Caching",
+         "url": "https://neetcode.io/courses/system-design-for-beginners/10",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: SQL",
+         "url": "https://neetcode.io/courses/system-design-for-beginners/14",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: NoSQL",
+         "url": "https://neetcode.io/courses/system-design-for-beginners/15",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: Replication and Sharding",
+         "url": "https://neetcode.io/courses/system-design-for-beginners/16",
+         "confidence": "checked"
         }
        ]
       }
@@ -2651,45 +3136,73 @@
      "sessions": [
       {
        "id": "w09-d4-s1",
+       "minutes": 25,
+       "block": "theory",
+       "title": "Теория: BFS по матрице и списки смежности. NeetCode: Matrix BFS, Adjacency List, на скорости 1,5x",
+       "links": [
+        {
+         "label": "NeetCode: Matrix BFS",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/30",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: Adjacency List",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/31",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w09-d4-s2",
        "minutes": 20,
        "block": "review",
        "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
       },
       {
-       "id": "w09-d4-s2",
+       "id": "w09-d4-s3",
        "minutes": 25,
        "block": "dsa",
-       "title": "Новая задача: Non-overlapping Intervals (Medium)",
-       "itemId": "dsa-non-overlapping-intervals",
+       "title": "Новая задача: Clone Graph (Medium)",
+       "itemId": "dsa-clone-graph",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/clone-graph",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problems/non-overlapping-intervals/",
+         "url": "https://leetcode.com/problems/clone-graph/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Non-overlapping+Intervals",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=mQeF6bN8hMk",
+         "confidence": "checked"
         }
        ]
       },
       {
-       "id": "w09-d4-s3",
+       "id": "w09-d4-s4",
        "minutes": 30,
        "block": "dsa",
-       "title": "Новая задача: Combination Sum (Medium)",
-       "itemId": "dsa-combination-sum",
+       "title": "Новая задача: Course Schedule (Medium)",
+       "itemId": "dsa-course-schedule",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/course-schedule",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problems/combination-sum/",
+         "url": "https://leetcode.com/problems/course-schedule/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Combination+Sum",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=EgI5nU9etnU",
+         "confidence": "checked"
         }
        ]
       }
@@ -2734,13 +3247,18 @@
       },
       {
        "id": "w09-d6-s2",
-       "minutes": 45,
+       "minutes": 60,
        "block": "sd-review",
-       "title": "Сверить своё решение с разбором, записать три слабых места",
+       "title": "Сверить своё решение с разбором Hello Interview. Проверить, что было: генерация кода без коллизий, редирект 301 или 302, кеш горячих ссылок, масштабирование чтения, срок жизни ссылок. Записать три слабых места. Затем второй разбор: NeetCode, Design TinyUrl",
        "links": [
         {
          "label": "Hello Interview",
          "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/bitly",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: Design TinyUrl",
+         "url": "https://neetcode.io/courses/system-design-interview/2",
          "confidence": "checked"
         }
        ]
@@ -2761,20 +3279,25 @@
       },
       {
        "id": "w09-d6-s4",
-       "minutes": 45,
+       "minutes": 30,
        "block": "dsa",
-       "title": "Новая задача: Implement Trie (Prefix Tree) (Medium)",
-       "itemId": "dsa-implement-trie-prefix-tree",
+       "title": "Новая задача: Rotting Oranges (Medium)",
+       "itemId": "dsa-rotting-oranges",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/rotting-fruit",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+         "url": "https://leetcode.com/problems/rotting-oranges/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Implement+Trie+%28Prefix+Tree%29",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=y704fEOx0s0",
+         "confidence": "checked"
         }
        ]
       },
@@ -2838,7 +3361,7 @@
    "n": 10,
    "phase": "topics-mix",
    "title": "Динамическое программирование",
-   "webTopic": "Сеть: HTTP-кеширование, REST и GraphQL, WebSocket и SSE",
+   "webTopic": "React: рендер и коммит, reconciliation, хуки, мемоизация; стратегии рендеринга",
    "prize": {
     "title": "Неоновая лампа",
     "tier": "small"
@@ -2851,45 +3374,73 @@
      "sessions": [
       {
        "id": "w10-d1-s1",
+       "minutes": 25,
+       "block": "theory",
+       "title": "Теория: одномерное DP. NeetCode: Fibonacci Sequence, 1-Dimension DP, на скорости 1,5x",
+       "links": [
+        {
+         "label": "NeetCode: Fibonacci Sequence",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/9",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: 1-Dimension DP",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/32",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w10-d1-s2",
        "minutes": 20,
        "block": "review",
        "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
       },
       {
-       "id": "w10-d1-s2",
+       "id": "w10-d1-s3",
        "minutes": 25,
        "block": "dsa",
        "title": "Новая задача: Climbing Stairs (Easy)",
        "itemId": "dsa-climbing-stairs",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/climbing-stairs",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/climbing-stairs/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Climbing+Stairs",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=Y0lT9Fck7qI",
+         "confidence": "checked"
         }
        ]
       },
       {
-       "id": "w10-d1-s3",
+       "id": "w10-d1-s4",
        "minutes": 30,
        "block": "dsa",
        "title": "Новая задача: House Robber (Medium)",
        "itemId": "dsa-house-robber",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/house-robber",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/house-robber/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+House+Robber",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=73r3KWiEvyk",
+         "confidence": "checked"
         }
        ]
       }
@@ -2939,11 +3490,11 @@
        "id": "w10-d3-s1",
        "minutes": 30,
        "block": "web",
-       "title": "Веб-основы: Сеть: HTTP-кеширование, REST и GraphQL, WebSocket и SSE",
+       "title": "Веб-основы: React: рендер и коммит, reconciliation, хуки, мемоизация",
        "links": [
         {
-         "label": "MDN: HTTP caching",
-         "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching",
+         "label": "react.dev: Render and Commit",
+         "url": "https://react.dev/learn/render-and-commit",
          "confidence": "pattern"
         }
        ]
@@ -2951,13 +3502,31 @@
       {
        "id": "w10-d3-s2",
        "minutes": 30,
+       "block": "web",
+       "title": "Веб-основы, доп.: стратегии рендеринга: CSR, SSR, SSG, стриминг",
+       "links": [
+        {
+         "label": "web.dev: Rendering on the Web",
+         "url": "https://web.dev/articles/rendering-on-the-web",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w10-d3-s3",
+       "minutes": 30,
        "block": "fe-sd",
-       "title": "Повтор с чистого листа за 30 минут: E-commerce (Amazon)",
+       "title": "Повтор с чистого листа за 30 минут: News Feed (Facebook). Затем сверить с чеклистом из разбора",
        "links": [
         {
          "label": "Excalidraw",
          "url": "https://excalidraw.com",
          "confidence": "pattern"
+        },
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/interviews/study/gfe75/questions/system-design/news-feed-facebook",
+         "confidence": "checked"
         }
        ]
       }
@@ -2971,44 +3540,67 @@
       {
        "id": "w10-d4-s1",
        "minutes": 20,
+       "block": "theory",
+       "title": "Теория: рюкзак без ограничений. NeetCode: Unbounded Knapsack, на скорости 1,5x",
+       "links": [
+        {
+         "label": "NeetCode: Unbounded Knapsack",
+         "url": "https://neetcode.io/courses/advanced-algorithms/19",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w10-d4-s2",
+       "minutes": 20,
        "block": "review",
        "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
       },
       {
-       "id": "w10-d4-s2",
+       "id": "w10-d4-s3",
        "minutes": 25,
        "block": "dsa",
        "title": "Новая задача: Coin Change (Medium)",
        "itemId": "dsa-coin-change",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/coin-change",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/coin-change/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Coin+Change",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=H9bfqozjoqs",
+         "confidence": "checked"
         }
        ]
       },
       {
-       "id": "w10-d4-s3",
+       "id": "w10-d4-s4",
        "minutes": 30,
        "block": "dsa",
        "title": "Новая задача: Longest Increasing Subsequence (Medium)",
        "itemId": "dsa-longest-increasing-subsequence",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/longest-increasing-subsequence",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/longest-increasing-subsequence/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Longest+Increasing+Subsequence",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=cjWnW0hdF1Y",
+         "confidence": "checked"
         }
        ]
       }
@@ -3036,12 +3628,12 @@
        "id": "w10-d6-s1",
        "minutes": 45,
        "block": "fe-sd",
-       "title": "Решить самому с таймером на 45 минут: Collaborative Editor (Google Docs) (Medium)",
-       "itemId": "fesd-collaborative-editor-google-docs",
+       "title": "Решить самому с таймером на 45 минут: E-commerce (Amazon) (Medium)",
+       "itemId": "fesd-e-commerce-amazon",
        "links": [
         {
          "label": "GreatFrontEnd",
-         "url": "https://www.greatfrontend.com/questions/system-design/collaborative-editor-google-docs",
+         "url": "https://www.greatfrontend.com/questions/system-design/e-commerce-amazon",
          "confidence": "pattern"
         },
         {
@@ -3055,11 +3647,11 @@
        "id": "w10-d6-s2",
        "minutes": 45,
        "block": "sd-review",
-       "title": "Сверить своё решение с разбором, записать три слабых места",
+       "title": "Сверить своё решение с разбором GreatFrontEnd. Проверить, что было: SSR или SSG каталога и SEO, Core Web Vitals, фильтры в URL, корзина и её синхронизация, оформление заказа и ошибки оплаты, изображения, i18n. Записать три слабых места",
        "links": [
         {
          "label": "GreatFrontEnd",
-         "url": "https://www.greatfrontend.com/questions/system-design/collaborative-editor-google-docs",
+         "url": "https://www.greatfrontend.com/questions/system-design/e-commerce-amazon",
          "confidence": "pattern"
         }
        ]
@@ -3086,14 +3678,19 @@
        "itemId": "dsa-word-break",
        "links": [
         {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/word-break",
+         "confidence": "checked"
+        },
+        {
          "label": "LeetCode",
          "url": "https://leetcode.com/problems/word-break/",
          "confidence": "pattern"
         },
         {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Word+Break",
-         "confidence": "pattern"
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=Sx9NNgInc3A",
+         "confidence": "checked"
         }
        ]
       },
@@ -3157,7 +3754,7 @@
    "n": 11,
    "phase": "buffer",
    "title": "Повтор и отдых: долги и повторения",
-   "webTopic": "Квиз по пройденному: React, производительность, сеть",
+   "webTopic": "Квиз по пройденному: сеть, состояние, производительность, React",
    "prize": {
     "title": "Чемодан S",
     "tier": "small"
@@ -3176,25 +3773,6 @@
       },
       {
        "id": "w11-d1-s2",
-       "minutes": 30,
-       "block": "dsa",
-       "title": "Новая задача: Maximum Subarray (Medium)",
-       "itemId": "dsa-maximum-subarray",
-       "links": [
-        {
-         "label": "LeetCode",
-         "url": "https://leetcode.com/problems/maximum-subarray/",
-         "confidence": "pattern"
-        },
-        {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Maximum+Subarray",
-         "confidence": "pattern"
-        }
-       ]
-      },
-      {
-       "id": "w11-d1-s3",
        "minutes": 15,
        "block": "spare",
        "title": "Долги прошлых недель",
@@ -3231,7 +3809,7 @@
        "id": "w11-d3-s1",
        "minutes": 45,
        "block": "web",
-       "title": "Веб-основы: Квиз по пройденному: React, производительность, сеть",
+       "title": "Веб-основы: Квиз по пройденному: сеть, состояние, производительность, React",
        "links": [
         {
          "label": "GreatFrontEnd: Quiz",
@@ -3277,11 +3855,16 @@
        "id": "w11-d6-s1",
        "minutes": 45,
        "block": "fe-sd",
-       "title": "С чистого листа за 45 минут: Collaborative Editor (Google Docs)",
+       "title": "С чистого листа за 45 минут: Chat App (Messenger)",
        "links": [
         {
          "label": "Excalidraw",
          "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        },
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/system-design/chat-application-messenger",
          "confidence": "pattern"
         }
        ]
@@ -3294,7 +3877,7 @@
        "links": [
         {
          "label": "GreatFrontEnd",
-         "url": "https://www.greatfrontend.com/questions/system-design/collaborative-editor-google-docs",
+         "url": "https://www.greatfrontend.com/questions/system-design/chat-application-messenger",
          "confidence": "pattern"
         }
        ]
@@ -3311,25 +3894,6 @@
          "confidence": "pattern"
         }
        ]
-      },
-      {
-       "id": "w11-d6-s4",
-       "minutes": 50,
-       "block": "dsa",
-       "title": "Новая задача: Longest Common Subsequence (Medium)",
-       "itemId": "dsa-longest-common-subsequence",
-       "links": [
-        {
-         "label": "LeetCode",
-         "url": "https://leetcode.com/problems/longest-common-subsequence/",
-         "confidence": "pattern"
-        },
-        {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Longest+Common+Subsequence",
-         "confidence": "pattern"
-        }
-       ]
       }
      ]
     },
@@ -3340,37 +3904,18 @@
      "sessions": [
       {
        "id": "w11-d7-s1",
-       "minutes": 30,
-       "block": "dsa",
-       "title": "Новая задача: Kth Largest Element in an Array (Medium)",
-       "itemId": "dsa-kth-largest-element-in-an-array",
-       "links": [
-        {
-         "label": "LeetCode",
-         "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
-         "confidence": "pattern"
-        },
-        {
-         "label": "Видеоразбор (поиск)",
-         "url": "https://www.youtube.com/results?search_query=neetcode+Kth+Largest+Element+in+an+Array",
-         "confidence": "pattern"
-        }
-       ]
-      },
-      {
-       "id": "w11-d7-s2",
        "minutes": 45,
        "block": "behavioral",
        "title": "Проговорить вслух все готовые истории, каждая за 2-3 минуты"
       },
       {
-       "id": "w11-d7-s3",
+       "id": "w11-d7-s2",
        "minutes": 30,
        "block": "checkpoint",
        "title": "Контрольная точка: сверить счётчики с целями этапа"
       },
       {
-       "id": "w11-d7-s4",
+       "id": "w11-d7-s3",
        "minutes": 15,
        "block": "week-review",
        "title": "Разбор недели: проверить отметки, записать три ошибки, посмотреть план и приз следующей недели"
@@ -3379,7 +3924,7 @@
     }
    ],
    "checkpoint": {
-    "dsa": 51,
+    "dsa": 48,
     "js": 20,
     "ui": 9,
     "sd": 7,
@@ -3390,8 +3935,8 @@
   {
    "n": 12,
    "phase": "simulation",
-   "title": "Симуляция интервью",
-   "webTopic": "Доступность: ARIA, клавиатура, управление фокусом; React, часть 2",
+   "title": "Симуляция: интервалы и жадные",
+   "webTopic": "React, часть 2: эффекты, ключи, Suspense, конкурентный рендер",
    "prize": {
     "title": "Очки Ray-Ban",
     "tier": "big"
@@ -3404,45 +3949,68 @@
      "sessions": [
       {
        "id": "w12-d1-s1",
+       "minutes": 15,
+       "block": "theory",
+       "title": "Теория: алгоритм Кадане. NeetCode: Kadane's Algorithm, на скорости 1,5x",
+       "links": [
+        {
+         "label": "NeetCode: Kadane's Algorithm",
+         "url": "https://neetcode.io/courses/advanced-algorithms/0",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w12-d1-s2",
        "minutes": 20,
        "block": "review",
        "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
       },
       {
-       "id": "w12-d1-s2",
+       "id": "w12-d1-s3",
        "minutes": 25,
        "block": "dsa",
-       "title": "Задача Google на время, префиксные суммы (пример: Subarray Sum Equals K): впиши название",
-       "itemId": "dsa-own-01",
+       "title": "Задача на время: Maximum Subarray (Medium)",
+       "itemId": "dsa-maximum-subarray",
        "links": [
         {
-         "label": "Вопросы Google (Hello Interview)",
-         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/maximum-subarray",
          "confidence": "checked"
         },
         {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problemset/",
+         "url": "https://leetcode.com/problems/maximum-subarray/",
          "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=5WZl3MMT0Eg",
+         "confidence": "checked"
         }
        ]
       },
       {
-       "id": "w12-d1-s3",
+       "id": "w12-d1-s4",
        "minutes": 30,
        "block": "dsa",
-       "title": "Задача Google на время, куча, Hard (пример: Find Median from Data Stream): впиши название",
-       "itemId": "dsa-own-02",
+       "title": "Задача на время: Merge Intervals (Medium)",
+       "itemId": "dsa-merge-intervals",
        "links": [
         {
-         "label": "Вопросы Google (Hello Interview)",
-         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/merge-intervals",
          "confidence": "checked"
         },
         {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problemset/",
+         "url": "https://leetcode.com/problems/merge-intervals/",
          "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=44H3cEC2fFM",
+         "confidence": "checked"
         }
        ]
       }
@@ -3492,20 +4060,7 @@
        "id": "w12-d3-s1",
        "minutes": 30,
        "block": "web",
-       "title": "Веб-основы: Доступность: ARIA, клавиатура, управление фокусом",
-       "links": [
-        {
-         "label": "web.dev: Learn Accessibility",
-         "url": "https://web.dev/learn/accessibility",
-         "confidence": "pattern"
-        }
-       ]
-      },
-      {
-       "id": "w12-d3-s2",
-       "minutes": 30,
-       "block": "web",
-       "title": "Веб-основы, доп.: React, часть 2: эффекты и устаревшие замыкания, ключи, Suspense, конкурентный рендер",
+       "title": "Веб-основы: React, часть 2: эффекты и устаревшие замыкания, ключи, Suspense, конкурентный рендер",
        "links": [
         {
          "label": "React: You Might Not Need an Effect",
@@ -3515,6 +4070,24 @@
         {
          "label": "React: Suspense",
          "url": "https://react.dev/reference/react/Suspense",
+         "confidence": "pattern"
+        }
+       ]
+      },
+      {
+       "id": "w12-d3-s2",
+       "minutes": 30,
+       "block": "fe-sd",
+       "title": "Повтор с чистого листа за 30 минут: E-commerce (Amazon). Затем сверить с чеклистом из разбора",
+       "links": [
+        {
+         "label": "Excalidraw",
+         "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        },
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/system-design/e-commerce-amazon",
          "confidence": "pattern"
         }
        ]
@@ -3536,18 +4109,23 @@
        "id": "w12-d4-s2",
        "minutes": 25,
        "block": "dsa",
-       "title": "Задача Google на время, матрицы (пример: Rotate Image или Spiral Matrix): впиши название",
-       "itemId": "dsa-own-03",
+       "title": "Задача на время: Insert Interval (Medium)",
+       "itemId": "dsa-insert-interval",
        "links": [
         {
-         "label": "Вопросы Google (Hello Interview)",
-         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/insert-new-interval",
          "confidence": "checked"
         },
         {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problemset/",
+         "url": "https://leetcode.com/problems/insert-interval/",
          "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=A8NUOmlwOlM",
+         "confidence": "checked"
         }
        ]
       },
@@ -3555,18 +4133,23 @@
        "id": "w12-d4-s3",
        "minutes": 30,
        "block": "dsa",
-       "title": "Задача Google на время, монотонный стек, Hard (пример: Largest Rectangle in Histogram): впиши название",
-       "itemId": "dsa-own-04",
+       "title": "Задача на время: Non-overlapping Intervals (Medium)",
+       "itemId": "dsa-non-overlapping-intervals",
        "links": [
         {
-         "label": "Вопросы Google (Hello Interview)",
-         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/non-overlapping-intervals",
          "confidence": "checked"
         },
         {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problemset/",
+         "url": "https://leetcode.com/problems/non-overlapping-intervals/",
          "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=nONCGxWoUfM",
+         "confidence": "checked"
         }
        ]
       }
@@ -3613,12 +4196,17 @@
        "id": "w12-d6-s2",
        "minutes": 45,
        "block": "sd-review",
-       "title": "Сверить с разбором, записать три слабых места",
+       "title": "Сверить своё решение с разбором GreatFrontEnd. Проверить, что было: адаптивный битрейт (HLS или DASH), буфер и предзагрузка, API плеера, каталог с ленивой загрузкой, продолжение просмотра, субтитры и доступность плеера. Записать три слабых места. По желанию: бэкенд той же задачи в NeetCode (Design Youtube)",
        "links": [
         {
          "label": "GreatFrontEnd",
          "url": "https://www.greatfrontend.com/questions/system-design/video-streaming-netflix",
          "confidence": "pattern"
+        },
+        {
+         "label": "NeetCode: Design Youtube",
+         "url": "https://neetcode.io/courses/system-design-interview/5",
+         "confidence": "checked"
         }
        ]
       },
@@ -3700,7 +4288,7 @@
   {
    "n": 13,
    "phase": "simulation",
-   "title": "Симуляция интервью",
+   "title": "Симуляция: продвинутые графы",
    "webTopic": "Безопасность: XSS, CSRF, CSP, CORS",
    "prize": {
     "title": "Массажный пистолет",
@@ -3714,45 +4302,73 @@
      "sessions": [
       {
        "id": "w13-d1-s1",
+       "minutes": 35,
+       "block": "theory",
+       "title": "Теория: топологическая сортировка и union-find. NeetCode: Topological Sort, Union-Find, на скорости 1,5x",
+       "links": [
+        {
+         "label": "NeetCode: Topological Sort",
+         "url": "https://neetcode.io/courses/advanced-algorithms/17",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: Union-Find",
+         "url": "https://neetcode.io/courses/advanced-algorithms/7",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w13-d1-s2",
        "minutes": 20,
        "block": "review",
        "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
       },
       {
-       "id": "w13-d1-s2",
+       "id": "w13-d1-s3",
        "minutes": 25,
        "block": "dsa",
-       "title": "Задача Google на время, топологическая сортировка (пример: Course Schedule II): впиши название",
-       "itemId": "dsa-own-05",
+       "title": "Задача на время: Course Schedule II (Medium)",
+       "itemId": "dsa-course-schedule-ii",
        "links": [
         {
-         "label": "Вопросы Google (Hello Interview)",
-         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/course-schedule-ii",
          "confidence": "checked"
         },
         {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problemset/",
+         "url": "https://leetcode.com/problems/course-schedule-ii/",
          "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=Akt3glAwyfY",
+         "confidence": "checked"
         }
        ]
       },
       {
-       "id": "w13-d1-s3",
+       "id": "w13-d1-s4",
        "minutes": 30,
        "block": "dsa",
-       "title": "Задача Google на время, union-find (пример: Redundant Connection или Number of Connected Components): впиши название",
-       "itemId": "dsa-own-06",
+       "title": "Задача на время: Redundant Connection (Medium)",
+       "itemId": "dsa-redundant-connection",
        "links": [
         {
-         "label": "Вопросы Google (Hello Interview)",
-         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/redundant-connection",
          "confidence": "checked"
         },
         {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problemset/",
+         "url": "https://leetcode.com/problems/redundant-connection/",
          "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=1lNK80tOTfc",
+         "confidence": "checked"
         }
        ]
       }
@@ -3810,19 +4426,6 @@
          "confidence": "pattern"
         }
        ]
-      },
-      {
-       "id": "w13-d3-s2",
-       "minutes": 30,
-       "block": "sd-theory",
-       "title": "Core Concepts бэкенд-дизайна: кеш, шардинг, очереди",
-       "links": [
-        {
-         "label": "Hello Interview: Core Concepts",
-         "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/core-concepts",
-         "confidence": "checked"
-        }
-       ]
       }
      ]
     },
@@ -3834,44 +4437,67 @@
       {
        "id": "w13-d4-s1",
        "minutes": 20,
-       "block": "review",
-       "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
-      },
-      {
-       "id": "w13-d4-s2",
-       "minutes": 25,
-       "block": "dsa",
-       "title": "Задача Google на время, BFS по сетке (пример: Rotting Oranges): впиши название",
-       "itemId": "dsa-own-07",
+       "block": "theory",
+       "title": "Теория: алгоритм Дейкстры. NeetCode: Dijkstra's, на скорости 1,5x",
        "links": [
         {
-         "label": "Вопросы Google (Hello Interview)",
-         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "label": "NeetCode: Dijkstra's",
+         "url": "https://neetcode.io/courses/advanced-algorithms/14",
          "confidence": "checked"
-        },
-        {
-         "label": "LeetCode",
-         "url": "https://leetcode.com/problemset/",
-         "confidence": "pattern"
         }
        ]
       },
       {
+       "id": "w13-d4-s2",
+       "minutes": 20,
+       "block": "review",
+       "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
+      },
+      {
        "id": "w13-d4-s3",
-       "minutes": 30,
+       "minutes": 25,
        "block": "dsa",
-       "title": "Задача Google на время, двумерное DP (пример: Edit Distance): впиши название",
-       "itemId": "dsa-own-08",
+       "title": "Задача на время: Network Delay Time (Medium)",
+       "itemId": "dsa-network-delay-time",
        "links": [
         {
-         "label": "Вопросы Google (Hello Interview)",
-         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/network-delay-time",
          "confidence": "checked"
         },
         {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problemset/",
+         "url": "https://leetcode.com/problems/network-delay-time/",
          "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=EaphyqKU4PQ",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w13-d4-s4",
+       "minutes": 30,
+       "block": "dsa",
+       "title": "Задача на время: Word Ladder (Hard)",
+       "itemId": "dsa-word-ladder",
+       "links": [
+        {
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/word-ladder",
+         "confidence": "checked"
+        },
+        {
+         "label": "LeetCode",
+         "url": "https://leetcode.com/problems/word-ladder/",
+         "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=h9iTnkgv05E",
+         "confidence": "checked"
         }
        ]
       }
@@ -3916,13 +4542,18 @@
       },
       {
        "id": "w13-d6-s2",
-       "minutes": 45,
+       "minutes": 60,
        "block": "sd-review",
-       "title": "Сверить с разбором, записать три слабых места",
+       "title": "Сверить своё решение с разбором Hello Interview. Проверить, что было: fan-out на запись или на чтение, аккаунты с миллионами подписчиков, кеш ленты, пагинация, хранение постов. Записать три слабых места. Затем второй разбор: NeetCode, Design Twitter",
        "links": [
         {
          "label": "Hello Interview",
          "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/fb-news-feed",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: Design Twitter",
+         "url": "https://neetcode.io/courses/system-design-interview/3",
          "confidence": "checked"
         }
        ]
@@ -4005,8 +4636,8 @@
   {
    "n": 14,
    "phase": "simulation",
-   "title": "Симуляция интервью",
-   "webTopic": "Стратегии рендеринга: CSR, SSR, SSG, стриминг",
+   "title": "Симуляция: двумерное DP и куча",
+   "webTopic": "Доступность, часть 2: ARIA, клавиатура, управление фокусом",
    "prize": {
     "title": "Катана",
     "tier": "small"
@@ -4019,45 +4650,73 @@
      "sessions": [
       {
        "id": "w14-d1-s1",
+       "minutes": 40,
+       "block": "theory",
+       "title": "Теория: двумерное DP. NeetCode: 2-Dimension DP, LCS, на скорости 1,5x",
+       "links": [
+        {
+         "label": "NeetCode: 2-Dimension DP",
+         "url": "https://neetcode.io/courses/dsa-for-beginners/33",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: LCS",
+         "url": "https://neetcode.io/courses/advanced-algorithms/20",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w14-d1-s2",
        "minutes": 20,
        "block": "review",
        "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
       },
       {
-       "id": "w14-d1-s2",
+       "id": "w14-d1-s3",
        "minutes": 25,
        "block": "dsa",
-       "title": "Задача Google на время, куча (пример: K Closest Points to Origin или Task Scheduler): впиши название",
-       "itemId": "dsa-own-09",
+       "title": "Задача на время: Unique Paths (Medium)",
+       "itemId": "dsa-unique-paths",
        "links": [
         {
-         "label": "Вопросы Google (Hello Interview)",
-         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/count-paths",
          "confidence": "checked"
         },
         {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problemset/",
+         "url": "https://leetcode.com/problems/unique-paths/",
          "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=IlEsdxuD4lY",
+         "confidence": "checked"
         }
        ]
       },
       {
-       "id": "w14-d1-s3",
+       "id": "w14-d1-s4",
        "minutes": 30,
        "block": "dsa",
-       "title": "Задача Google на время, Дейкстра (пример: Network Delay Time): впиши название",
-       "itemId": "dsa-own-10",
+       "title": "Задача на время: Longest Common Subsequence (Medium)",
+       "itemId": "dsa-longest-common-subsequence",
        "links": [
         {
-         "label": "Вопросы Google (Hello Interview)",
-         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/longest-common-subsequence",
          "confidence": "checked"
         },
         {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problemset/",
+         "url": "https://leetcode.com/problems/longest-common-subsequence/",
          "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=Ua0GhsJSlWM",
+         "confidence": "checked"
         }
        ]
       }
@@ -4107,11 +4766,11 @@
        "id": "w14-d3-s1",
        "minutes": 30,
        "block": "web",
-       "title": "Веб-основы: Стратегии рендеринга: CSR, SSR, SSG, стриминг",
+       "title": "Веб-основы: Доступность, часть 2: ARIA, клавиатура, управление фокусом",
        "links": [
         {
-         "label": "web.dev: Rendering on the Web",
-         "url": "https://web.dev/articles/rendering-on-the-web",
+         "label": "web.dev: Learn Accessibility",
+         "url": "https://web.dev/learn/accessibility",
          "confidence": "pattern"
         }
        ]
@@ -4120,11 +4779,16 @@
        "id": "w14-d3-s2",
        "minutes": 30,
        "block": "fe-sd",
-       "title": "Повтор с чистого листа за 30 минут: Video Streaming (Netflix)",
+       "title": "Повтор с чистого листа за 30 минут: Video Streaming (Netflix). Затем сверить с чеклистом из разбора",
        "links": [
         {
          "label": "Excalidraw",
          "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        },
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/system-design/video-streaming-netflix",
          "confidence": "pattern"
         }
        ]
@@ -4138,45 +4802,68 @@
      "sessions": [
       {
        "id": "w14-d4-s1",
+       "minutes": 15,
+       "block": "theory",
+       "title": "Теория: две кучи. NeetCode: Two Heaps, на скорости 1,5x",
+       "links": [
+        {
+         "label": "NeetCode: Two Heaps",
+         "url": "https://neetcode.io/courses/advanced-algorithms/10",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w14-d4-s2",
        "minutes": 20,
        "block": "review",
        "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
       },
       {
-       "id": "w14-d4-s2",
-       "minutes": 25,
+       "id": "w14-d4-s3",
+       "minutes": 30,
        "block": "dsa",
-       "title": "Задача Google на время, интервалы и куча (пример: Meeting Rooms II (бесплатно на NeetCode) или Car Pooling): впиши название",
-       "itemId": "dsa-own-11",
+       "title": "Задача на время: Merge k Sorted Lists (Hard)",
+       "itemId": "dsa-merge-k-sorted-lists",
        "links": [
         {
-         "label": "Вопросы Google (Hello Interview)",
-         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/merge-k-sorted-linked-lists",
          "confidence": "checked"
         },
         {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problemset/",
+         "url": "https://leetcode.com/problems/merge-k-sorted-lists/",
          "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=q5a5OiGbT6Q",
+         "confidence": "checked"
         }
        ]
       },
       {
-       "id": "w14-d4-s3",
+       "id": "w14-d4-s4",
        "minutes": 30,
        "block": "dsa",
-       "title": "Задача Google на время, графы, Hard (пример: Word Ladder): впиши название",
-       "itemId": "dsa-own-12",
+       "title": "Задача на время: Find Median from Data Stream (Hard)",
+       "itemId": "dsa-find-median-from-data-stream",
        "links": [
         {
-         "label": "Вопросы Google (Hello Interview)",
-         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/find-median-in-a-data-stream",
          "confidence": "checked"
         },
         {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problemset/",
+         "url": "https://leetcode.com/problems/find-median-from-data-stream/",
          "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=itmhHWaHupI",
+         "confidence": "checked"
         }
        ]
       }
@@ -4204,12 +4891,12 @@
        "id": "w14-d6-s1",
        "minutes": 45,
        "block": "fe-sd",
-       "title": "Решить самому с таймером на 45 минут: Photo Sharing (Instagram) (Medium)",
-       "itemId": "fesd-photo-sharing-instagram",
+       "title": "Решить самому с таймером на 45 минут: Collaborative Editor (Google Docs) (Medium)",
+       "itemId": "fesd-collaborative-editor-google-docs",
        "links": [
         {
          "label": "GreatFrontEnd",
-         "url": "https://www.greatfrontend.com/questions/system-design/photo-sharing-instagram",
+         "url": "https://www.greatfrontend.com/questions/system-design/collaborative-editor-google-docs",
          "confidence": "pattern"
         },
         {
@@ -4223,12 +4910,17 @@
        "id": "w14-d6-s2",
        "minutes": 45,
        "block": "sd-review",
-       "title": "Сверить с разбором, записать три слабых места",
+       "title": "Сверить своё решение с разбором GreatFrontEnd. Проверить, что было: модель документа, OT или CRDT, курсоры других пользователей, офлайн и слияние, история и отмена, WebSocket, большие документы. Записать три слабых места. По желанию: бэкенд той же задачи в NeetCode (Design Google Drive)",
        "links": [
         {
          "label": "GreatFrontEnd",
-         "url": "https://www.greatfrontend.com/questions/system-design/photo-sharing-instagram",
+         "url": "https://www.greatfrontend.com/questions/system-design/collaborative-editor-google-docs",
          "confidence": "pattern"
+        },
+        {
+         "label": "NeetCode: Design Google Drive",
+         "url": "https://neetcode.io/courses/system-design-interview/6",
+         "confidence": "checked"
         }
        ]
       },
@@ -4310,7 +5002,7 @@
   {
    "n": 15,
    "phase": "simulation",
-   "title": "Симуляция интервью",
+   "title": "Симуляция: бэктрекинг, рюкзак, Hard",
    "webTopic": "TypeScript: дженерики и utility types; тестирование",
    "prize": {
     "title": "Фигурка Funko или Lego",
@@ -4324,45 +5016,73 @@
      "sessions": [
       {
        "id": "w15-d1-s1",
+       "minutes": 35,
+       "block": "theory",
+       "title": "Теория: перестановки и рюкзак 0/1. NeetCode: Permutations, 0/1 Knapsack, на скорости 1,5x",
+       "links": [
+        {
+         "label": "NeetCode: Permutations",
+         "url": "https://neetcode.io/courses/advanced-algorithms/13",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: 0/1 Knapsack",
+         "url": "https://neetcode.io/courses/advanced-algorithms/18",
+         "confidence": "checked"
+        }
+       ]
+      },
+      {
+       "id": "w15-d1-s2",
        "minutes": 20,
        "block": "review",
        "title": "Что повторить сегодня. Решили сами: проговорите вслух за 3–5 минут. С подсказкой или не решили: решайте заново"
       },
       {
-       "id": "w15-d1-s2",
+       "id": "w15-d1-s3",
        "minutes": 25,
        "block": "dsa",
-       "title": "Задача Google на время, бэктрекинг (пример: Subsets или Permutations): впиши название",
-       "itemId": "dsa-own-13",
+       "title": "Задача на время: Permutations (Medium)",
+       "itemId": "dsa-permutations",
        "links": [
         {
-         "label": "Вопросы Google (Hello Interview)",
-         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/permutations",
          "confidence": "checked"
         },
         {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problemset/",
+         "url": "https://leetcode.com/problems/permutations/",
          "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=FZe0UqISmUw",
+         "confidence": "checked"
         }
        ]
       },
       {
-       "id": "w15-d1-s3",
+       "id": "w15-d1-s4",
        "minutes": 30,
        "block": "dsa",
-       "title": "Задача Google на время, DP (пример: Decode Ways или Partition Equal Subset Sum): впиши название",
-       "itemId": "dsa-own-14",
+       "title": "Задача на время: Partition Equal Subset Sum (Medium)",
+       "itemId": "dsa-partition-equal-subset-sum",
        "links": [
         {
-         "label": "Вопросы Google (Hello Interview)",
-         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/partition-equal-subset-sum",
          "confidence": "checked"
         },
         {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problemset/",
+         "url": "https://leetcode.com/problems/partition-equal-subset-sum/",
          "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=IsvocB5BJhw",
+         "confidence": "checked"
         }
        ]
       }
@@ -4449,39 +5169,44 @@
       },
       {
        "id": "w15-d4-s2",
-       "minutes": 25,
+       "minutes": 30,
        "block": "dsa",
-       "title": "Задача Google на время, свободный выбор (пример: любая задача из вопросов Google): впиши название",
-       "itemId": "dsa-own-15",
+       "title": "Задача на время: Trapping Rain Water (Hard)",
+       "itemId": "dsa-trapping-rain-water",
        "links": [
         {
-         "label": "Вопросы Google (Hello Interview)",
-         "url": "https://www.hellointerview.com/community/questions/company/Google",
+         "label": "NeetCode",
+         "url": "https://neetcode.io/problems/trapping-rain-water",
          "confidence": "checked"
         },
         {
          "label": "LeetCode",
-         "url": "https://leetcode.com/problemset/",
+         "url": "https://leetcode.com/problems/trapping-rain-water/",
          "confidence": "pattern"
+        },
+        {
+         "label": "Видеоразбор NeetCode",
+         "url": "https://www.youtube.com/watch?v=ZI2z5pq0TqA",
+         "confidence": "checked"
         }
        ]
       },
       {
        "id": "w15-d4-s3",
-       "minutes": 30,
+       "minutes": 25,
        "block": "dsa",
-       "title": "Задача Google на время, два указателя, Hard (пример: Trapping Rain Water): впиши название",
-       "itemId": "dsa-own-16",
+       "title": "Задача Google на время, свободный выбор по тегу Google в NeetCode: впиши название",
+       "itemId": "dsa-own-15",
        "links": [
+        {
+         "label": "NeetCode: задачи",
+         "url": "https://neetcode.io/practice",
+         "confidence": "pattern"
+        },
         {
          "label": "Вопросы Google (Hello Interview)",
          "url": "https://www.hellointerview.com/community/questions/company/Google",
          "confidence": "checked"
-        },
-        {
-         "label": "LeetCode",
-         "url": "https://leetcode.com/problemset/",
-         "confidence": "pattern"
         }
        ]
       }
@@ -4526,13 +5251,18 @@
       },
       {
        "id": "w15-d6-s2",
-       "minutes": 45,
+       "minutes": 60,
        "block": "sd-review",
-       "title": "Сверить с разбором, записать три слабых места",
+       "title": "Сверить своё решение с разбором Hello Interview. Проверить, что было: шлюз WebSocket-соединений, доставка офлайн, порядок сообщений, групповые чаты, статусы доставки. Записать три слабых места. Затем второй разбор: NeetCode, Design Discord",
        "links": [
         {
          "label": "Hello Interview",
          "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/whatsapp",
+         "confidence": "checked"
+        },
+        {
+         "label": "NeetCode: Design Discord",
+         "url": "https://neetcode.io/courses/system-design-interview/4",
          "confidence": "checked"
         }
        ]
@@ -4703,11 +5433,16 @@
        "id": "w16-d3-s2",
        "minutes": 30,
        "block": "fe-sd",
-       "title": "Повтор с чистого листа за 30 минут: Photo Sharing (Instagram)",
+       "title": "Повтор с чистого листа за 30 минут: Collaborative Editor (Google Docs). Затем сверить с чеклистом из разбора",
        "links": [
         {
          "label": "Excalidraw",
          "url": "https://excalidraw.com",
+         "confidence": "pattern"
+        },
+        {
+         "label": "GreatFrontEnd",
+         "url": "https://www.greatfrontend.com/questions/system-design/collaborative-editor-google-docs",
          "confidence": "pattern"
         }
        ]
@@ -4849,14 +5584,19 @@
    "topic": "Массивы и хеши",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/duplicate-integer",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/contains-duplicate/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Contains+Duplicate",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=3OamzN90kPg",
+     "confidence": "checked"
     }
    ]
   },
@@ -4869,14 +5609,19 @@
    "topic": "Массивы и хеши",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/two-integer-sum",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/two-sum/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Two+Sum",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=KLlXCFG5TnA",
+     "confidence": "checked"
     }
    ]
   },
@@ -4889,14 +5634,19 @@
    "topic": "Массивы и хеши",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/is-anagram",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/valid-anagram/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Valid+Anagram",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=9UtInBqnCgA",
+     "confidence": "checked"
     }
    ]
   },
@@ -4909,14 +5659,19 @@
    "topic": "Массивы и хеши",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/anagram-groups",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/group-anagrams/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Group+Anagrams",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=vzdNOK2oB2E",
+     "confidence": "checked"
     }
    ]
   },
@@ -4929,14 +5684,69 @@
    "topic": "Массивы и хеши",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/top-k-elements-in-list",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/top-k-frequent-elements/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Top+K+Frequent+Elements",
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=YPTqKIgVk-k",
+     "confidence": "checked"
+    }
+   ]
+  },
+  {
+   "id": "dsa-product-of-array-except-self",
+   "kind": "dsa",
+   "title": "Product of Array Except Self",
+   "week": 1,
+   "difficulty": "Medium",
+   "topic": "Массивы и хеши",
+   "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/products-of-array-discluding-self",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/product-of-array-except-self/",
      "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=bNvIQI2wAjk",
+     "confidence": "checked"
+    }
+   ]
+  },
+  {
+   "id": "dsa-longest-consecutive-sequence",
+   "kind": "dsa",
+   "title": "Longest Consecutive Sequence",
+   "week": 1,
+   "difficulty": "Medium",
+   "topic": "Массивы и хеши",
+   "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/longest-consecutive-sequence",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/longest-consecutive-sequence/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=P6RZZMu_maU",
+     "confidence": "checked"
     }
    ]
   },
@@ -4949,14 +5759,19 @@
    "topic": "Два указателя и скользящее окно",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/is-palindrome",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/valid-palindrome/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Valid+Palindrome",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=jJXJ16kPFWg",
+     "confidence": "checked"
     }
    ]
   },
@@ -4969,14 +5784,19 @@
    "topic": "Два указателя и скользящее окно",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/three-integer-sum",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/3sum/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+3Sum",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=jzZsG8n2R9A",
+     "confidence": "checked"
     }
    ]
   },
@@ -4989,14 +5809,19 @@
    "topic": "Два указателя и скользящее окно",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/buy-and-sell-crypto",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Best+Time+to+Buy+and+Sell+Stock",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=1pkOgXD63yU",
+     "confidence": "checked"
     }
    ]
   },
@@ -5009,14 +5834,19 @@
    "topic": "Два указателя и скользящее окно",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/longest-substring-without-duplicates",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Longest+Substring+Without+Repeating+Characters",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=wiGpQwVHdE0",
+     "confidence": "checked"
     }
    ]
   },
@@ -5029,14 +5859,44 @@
    "topic": "Два указателя и скользящее окно",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/max-water-container",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/container-with-most-water/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Container+With+Most+Water",
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=UuiTKBwPgAo",
+     "confidence": "checked"
+    }
+   ]
+  },
+  {
+   "id": "dsa-minimum-window-substring",
+   "kind": "dsa",
+   "title": "Minimum Window Substring",
+   "week": 2,
+   "difficulty": "Hard",
+   "topic": "Два указателя и скользящее окно",
+   "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/minimum-window-with-characters",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/minimum-window-substring/",
      "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=jSto0O4AJbM",
+     "confidence": "checked"
     }
    ]
   },
@@ -5049,54 +5909,19 @@
    "topic": "Стек и бинарный поиск",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/validate-parentheses",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/valid-parentheses/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Valid+Parentheses",
-     "confidence": "pattern"
-    }
-   ]
-  },
-  {
-   "id": "dsa-koko-eating-bananas",
-   "kind": "dsa",
-   "title": "Koko Eating Bananas",
-   "week": 3,
-   "difficulty": "Medium",
-   "topic": "Стек и бинарный поиск",
-   "links": [
-    {
-     "label": "LeetCode",
-     "url": "https://leetcode.com/problems/koko-eating-bananas/",
-     "confidence": "pattern"
-    },
-    {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Koko+Eating+Bananas",
-     "confidence": "pattern"
-    }
-   ]
-  },
-  {
-   "id": "dsa-search-in-rotated-sorted-array",
-   "kind": "dsa",
-   "title": "Search in Rotated Sorted Array",
-   "week": 3,
-   "difficulty": "Medium",
-   "topic": "Стек и бинарный поиск",
-   "links": [
-    {
-     "label": "LeetCode",
-     "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
-     "confidence": "pattern"
-    },
-    {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Search+in+Rotated+Sorted+Array",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=WTzjTskDFMg",
+     "confidence": "checked"
     }
    ]
   },
@@ -5109,34 +5934,94 @@
    "topic": "Стек и бинарный поиск",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/daily-temperatures",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/daily-temperatures/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Daily+Temperatures",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=cTBiBSnjO3c",
+     "confidence": "checked"
     }
    ]
   },
   {
-   "id": "dsa-minimum-window-substring",
+   "id": "dsa-binary-search",
    "kind": "dsa",
-   "title": "Minimum Window Substring",
+   "title": "Binary Search",
    "week": 3,
-   "difficulty": "Hard",
+   "difficulty": "Easy",
    "topic": "Стек и бинарный поиск",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/binary-search",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
-     "url": "https://leetcode.com/problems/minimum-window-substring/",
+     "url": "https://leetcode.com/problems/binary-search/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Minimum+Window+Substring",
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=s4DPM8ct1pI",
+     "confidence": "checked"
+    }
+   ]
+  },
+  {
+   "id": "dsa-koko-eating-bananas",
+   "kind": "dsa",
+   "title": "Koko Eating Bananas",
+   "week": 3,
+   "difficulty": "Medium",
+   "topic": "Стек и бинарный поиск",
+   "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/eating-bananas",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/koko-eating-bananas/",
      "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=U2SozAs9RzA",
+     "confidence": "checked"
+    }
+   ]
+  },
+  {
+   "id": "dsa-search-in-rotated-sorted-array",
+   "kind": "dsa",
+   "title": "Search in Rotated Sorted Array",
+   "week": 3,
+   "difficulty": "Medium",
+   "topic": "Стек и бинарный поиск",
+   "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/find-target-in-rotated-sorted-array",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=U8XENwh8Oy8",
+     "confidence": "checked"
     }
    ]
   },
@@ -5149,14 +6034,19 @@
    "topic": "Связные списки",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/reverse-a-linked-list",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/reverse-linked-list/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Reverse+Linked+List",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=G0_I-ZF0S38",
+     "confidence": "checked"
     }
    ]
   },
@@ -5169,14 +6059,19 @@
    "topic": "Связные списки",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/merge-two-sorted-linked-lists",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/merge-two-sorted-lists/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Merge+Two+Sorted+Lists",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=XIdigk956u0",
+     "confidence": "checked"
     }
    ]
   },
@@ -5189,14 +6084,19 @@
    "topic": "Связные списки",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/linked-list-cycle-detection",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/linked-list-cycle/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Linked+List+Cycle",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=gBTe7lFR3vc",
+     "confidence": "checked"
     }
    ]
   },
@@ -5209,14 +6109,19 @@
    "topic": "Связные списки",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/remove-node-from-end-of-linked-list",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Remove+Nth+Node+From+End+of+List",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=XVuQxVej6y8",
+     "confidence": "checked"
     }
    ]
   },
@@ -5229,14 +6134,19 @@
    "topic": "Связные списки",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/reorder-linked-list",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/reorder-list/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Reorder+List",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=S5bfdUTrKLM",
+     "confidence": "checked"
     }
    ]
   },
@@ -5249,14 +6159,19 @@
    "topic": "Деревья, часть 1",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/invert-a-binary-tree",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/invert-binary-tree/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Invert+Binary+Tree",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=OnSn2XEQ4MY",
+     "confidence": "checked"
     }
    ]
   },
@@ -5269,14 +6184,19 @@
    "topic": "Деревья, часть 1",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/depth-of-binary-tree",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Maximum+Depth+of+Binary+Tree",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=hTM3phVI6YQ",
+     "confidence": "checked"
     }
    ]
   },
@@ -5289,14 +6209,19 @@
    "topic": "Деревья, часть 1",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/same-binary-tree",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/same-tree/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Same+Tree",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=vRbbcKXCxOw",
+     "confidence": "checked"
     }
    ]
   },
@@ -5309,14 +6234,19 @@
    "topic": "Деревья, часть 1",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/subtree-of-a-binary-tree",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/subtree-of-another-tree/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Subtree+of+Another+Tree",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=E36O5SWp-LE",
+     "confidence": "checked"
     }
    ]
   },
@@ -5329,14 +6259,19 @@
    "topic": "Деревья, часть 1",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/level-order-traversal-of-binary-tree",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Binary+Tree+Level+Order+Traversal",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=6ZnyEApgFYg",
+     "confidence": "checked"
     }
    ]
   },
@@ -5346,17 +6281,22 @@
    "title": "Validate Binary Search Tree",
    "week": 7,
    "difficulty": "Medium",
-   "topic": "Деревья, часть 2",
+   "topic": "Деревья, часть 2 и trie",
    "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/valid-binary-search-tree",
+     "confidence": "checked"
+    },
     {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/validate-binary-search-tree/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Validate+Binary+Search+Tree",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=s6ATEkipzow",
+     "confidence": "checked"
     }
    ]
   },
@@ -5366,17 +6306,22 @@
    "title": "Lowest Common Ancestor of a Binary Search Tree",
    "week": 7,
    "difficulty": "Medium",
-   "topic": "Деревья, часть 2",
+   "topic": "Деревья, часть 2 и trie",
    "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/lowest-common-ancestor-in-binary-search-tree",
+     "confidence": "checked"
+    },
     {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Lowest+Common+Ancestor+of+a+Binary+Search+Tree",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=gs2LMfuOR9k",
+     "confidence": "checked"
     }
    ]
   },
@@ -5386,37 +6331,47 @@
    "title": "Kth Smallest Element in a BST",
    "week": 7,
    "difficulty": "Medium",
-   "topic": "Деревья, часть 2",
+   "topic": "Деревья, часть 2 и trie",
    "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/kth-smallest-integer-in-bst",
+     "confidence": "checked"
+    },
     {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Kth+Smallest+Element+in+a+BST",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=5LUXSvjmGCw",
+     "confidence": "checked"
     }
    ]
   },
   {
-   "id": "dsa-construct-binary-tree-from-preorder-and-inorder-traversal",
+   "id": "dsa-implement-trie-prefix-tree",
    "kind": "dsa",
-   "title": "Construct Binary Tree from Preorder and Inorder Traversal",
+   "title": "Implement Trie (Prefix Tree)",
    "week": 7,
    "difficulty": "Medium",
-   "topic": "Деревья, часть 2",
+   "topic": "Деревья, часть 2 и trie",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/implement-prefix-tree",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
-     "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+     "url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Construct+Binary+Tree+from+Preorder+and+Inorder+Traversal",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=oobqoCJlHA0",
+     "confidence": "checked"
     }
    ]
   },
@@ -5426,97 +6381,122 @@
    "title": "Binary Tree Maximum Path Sum",
    "week": 7,
    "difficulty": "Hard",
-   "topic": "Деревья, часть 2",
+   "topic": "Деревья, часть 2 и trie",
    "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/binary-tree-maximum-path-sum",
+     "confidence": "checked"
+    },
     {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Binary+Tree+Maximum+Path+Sum",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=Hr5cWUld4vU",
+     "confidence": "checked"
     }
    ]
   },
   {
-   "id": "dsa-number-of-islands",
+   "id": "dsa-kth-largest-element-in-an-array",
    "kind": "dsa",
-   "title": "Number of Islands",
+   "title": "Kth Largest Element in an Array",
    "week": 8,
    "difficulty": "Medium",
-   "topic": "Графы и бэктрекинг",
+   "topic": "Куча и бэктрекинг",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/kth-largest-element-in-an-array",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
-     "url": "https://leetcode.com/problems/number-of-islands/",
+     "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Number+of+Islands",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=XEmy13g1Qxc",
+     "confidence": "checked"
     }
    ]
   },
   {
-   "id": "dsa-clone-graph",
+   "id": "dsa-k-closest-points-to-origin",
    "kind": "dsa",
-   "title": "Clone Graph",
+   "title": "K Closest Points to Origin",
    "week": 8,
    "difficulty": "Medium",
-   "topic": "Графы и бэктрекинг",
+   "topic": "Куча и бэктрекинг",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/k-closest-points-to-origin",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
-     "url": "https://leetcode.com/problems/clone-graph/",
+     "url": "https://leetcode.com/problems/k-closest-points-to-origin/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Clone+Graph",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=rI2EBUEMfTk",
+     "confidence": "checked"
     }
    ]
   },
   {
-   "id": "dsa-course-schedule",
+   "id": "dsa-subsets",
    "kind": "dsa",
-   "title": "Course Schedule",
+   "title": "Subsets",
    "week": 8,
    "difficulty": "Medium",
-   "topic": "Графы и бэктрекинг",
+   "topic": "Куча и бэктрекинг",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/subsets",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
-     "url": "https://leetcode.com/problems/course-schedule/",
+     "url": "https://leetcode.com/problems/subsets/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Course+Schedule",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=REOH22Xwdkk",
+     "confidence": "checked"
     }
    ]
   },
   {
-   "id": "dsa-pacific-atlantic-water-flow",
+   "id": "dsa-combination-sum",
    "kind": "dsa",
-   "title": "Pacific Atlantic Water Flow",
+   "title": "Combination Sum",
    "week": 8,
    "difficulty": "Medium",
-   "topic": "Графы и бэктрекинг",
+   "topic": "Куча и бэктрекинг",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/combination-target-sum",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
-     "url": "https://leetcode.com/problems/pacific-atlantic-water-flow/",
+     "url": "https://leetcode.com/problems/combination-sum/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Pacific+Atlantic+Water+Flow",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=GBKI9VSKdGg",
+     "confidence": "checked"
     }
    ]
   },
@@ -5526,117 +6506,147 @@
    "title": "Word Search",
    "week": 8,
    "difficulty": "Medium",
-   "topic": "Графы и бэктрекинг",
+   "topic": "Куча и бэктрекинг",
    "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/search-for-word",
+     "confidence": "checked"
+    },
     {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/word-search/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Word+Search",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=pfiQ_PS1g8E",
+     "confidence": "checked"
     }
    ]
   },
   {
-   "id": "dsa-merge-intervals",
+   "id": "dsa-number-of-islands",
    "kind": "dsa",
-   "title": "Merge Intervals",
+   "title": "Number of Islands",
    "week": 9,
    "difficulty": "Medium",
-   "topic": "Интервалы, комбинации, trie",
+   "topic": "Графы",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/count-number-of-islands",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
-     "url": "https://leetcode.com/problems/merge-intervals/",
+     "url": "https://leetcode.com/problems/number-of-islands/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Merge+Intervals",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=pV2kpPD66nE",
+     "confidence": "checked"
     }
    ]
   },
   {
-   "id": "dsa-insert-interval",
+   "id": "dsa-pacific-atlantic-water-flow",
    "kind": "dsa",
-   "title": "Insert Interval",
+   "title": "Pacific Atlantic Water Flow",
    "week": 9,
    "difficulty": "Medium",
-   "topic": "Интервалы, комбинации, trie",
+   "topic": "Графы",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/pacific-atlantic-water-flow",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
-     "url": "https://leetcode.com/problems/insert-interval/",
+     "url": "https://leetcode.com/problems/pacific-atlantic-water-flow/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Insert+Interval",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=s-VkcjHqkGI",
+     "confidence": "checked"
     }
    ]
   },
   {
-   "id": "dsa-non-overlapping-intervals",
+   "id": "dsa-clone-graph",
    "kind": "dsa",
-   "title": "Non-overlapping Intervals",
+   "title": "Clone Graph",
    "week": 9,
    "difficulty": "Medium",
-   "topic": "Интервалы, комбинации, trie",
+   "topic": "Графы",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/clone-graph",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
-     "url": "https://leetcode.com/problems/non-overlapping-intervals/",
+     "url": "https://leetcode.com/problems/clone-graph/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Non-overlapping+Intervals",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=mQeF6bN8hMk",
+     "confidence": "checked"
     }
    ]
   },
   {
-   "id": "dsa-combination-sum",
+   "id": "dsa-course-schedule",
    "kind": "dsa",
-   "title": "Combination Sum",
+   "title": "Course Schedule",
    "week": 9,
    "difficulty": "Medium",
-   "topic": "Интервалы, комбинации, trie",
+   "topic": "Графы",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/course-schedule",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
-     "url": "https://leetcode.com/problems/combination-sum/",
+     "url": "https://leetcode.com/problems/course-schedule/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Combination+Sum",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=EgI5nU9etnU",
+     "confidence": "checked"
     }
    ]
   },
   {
-   "id": "dsa-implement-trie-prefix-tree",
+   "id": "dsa-rotting-oranges",
    "kind": "dsa",
-   "title": "Implement Trie (Prefix Tree)",
+   "title": "Rotting Oranges",
    "week": 9,
    "difficulty": "Medium",
-   "topic": "Интервалы, комбинации, trie",
+   "topic": "Графы",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/rotting-fruit",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
-     "url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+     "url": "https://leetcode.com/problems/rotting-oranges/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Implement+Trie+%28Prefix+Tree%29",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=y704fEOx0s0",
+     "confidence": "checked"
     }
    ]
   },
@@ -5649,14 +6659,19 @@
    "topic": "Динамическое программирование",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/climbing-stairs",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/climbing-stairs/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Climbing+Stairs",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=Y0lT9Fck7qI",
+     "confidence": "checked"
     }
    ]
   },
@@ -5669,14 +6684,19 @@
    "topic": "Динамическое программирование",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/house-robber",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/house-robber/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+House+Robber",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=73r3KWiEvyk",
+     "confidence": "checked"
     }
    ]
   },
@@ -5689,14 +6709,19 @@
    "topic": "Динамическое программирование",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/coin-change",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/coin-change/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Coin+Change",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=H9bfqozjoqs",
+     "confidence": "checked"
     }
    ]
   },
@@ -5709,14 +6734,19 @@
    "topic": "Динамическое программирование",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/longest-increasing-subsequence",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/longest-increasing-subsequence/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Longest+Increasing+Subsequence",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=cjWnW0hdF1Y",
+     "confidence": "checked"
     }
    ]
   },
@@ -5729,74 +6759,19 @@
    "topic": "Динамическое программирование",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/word-break",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/word-break/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Word+Break",
-     "confidence": "pattern"
-    }
-   ]
-  },
-  {
-   "id": "dsa-product-of-array-except-self",
-   "kind": "dsa",
-   "title": "Product of Array Except Self",
-   "week": 6,
-   "difficulty": "Medium",
-   "topic": "Массивы и хеши",
-   "links": [
-    {
-     "label": "LeetCode",
-     "url": "https://leetcode.com/problems/product-of-array-except-self/",
-     "confidence": "pattern"
-    },
-    {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Product+of+Array+Except+Self",
-     "confidence": "pattern"
-    }
-   ]
-  },
-  {
-   "id": "dsa-longest-consecutive-sequence",
-   "kind": "dsa",
-   "title": "Longest Consecutive Sequence",
-   "week": 6,
-   "difficulty": "Medium",
-   "topic": "Массивы и хеши",
-   "links": [
-    {
-     "label": "LeetCode",
-     "url": "https://leetcode.com/problems/longest-consecutive-sequence/",
-     "confidence": "pattern"
-    },
-    {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Longest+Consecutive+Sequence",
-     "confidence": "pattern"
-    }
-   ]
-  },
-  {
-   "id": "dsa-merge-k-sorted-lists",
-   "kind": "dsa",
-   "title": "Merge k Sorted Lists",
-   "week": 6,
-   "difficulty": "Hard",
-   "topic": "Связные списки",
-   "links": [
-    {
-     "label": "LeetCode",
-     "url": "https://leetcode.com/problems/merge-k-sorted-lists/",
-     "confidence": "pattern"
-    },
-    {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Merge+k+Sorted+Lists",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=Sx9NNgInc3A",
+     "confidence": "checked"
     }
    ]
   },
@@ -5804,61 +6779,413 @@
    "id": "dsa-maximum-subarray",
    "kind": "dsa",
    "title": "Maximum Subarray",
-   "week": 11,
+   "week": 12,
    "difficulty": "Medium",
-   "topic": "Жадные",
+   "topic": "Интервалы и жадные",
    "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/maximum-subarray",
+     "confidence": "checked"
+    },
     {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/maximum-subarray/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Maximum+Subarray",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=5WZl3MMT0Eg",
+     "confidence": "checked"
     }
-   ]
+   ],
+   "hint": "На время, вслух, в документе без автодополнения. Редактор NeetCode только для проверки"
   },
   {
-   "id": "dsa-kth-largest-element-in-an-array",
+   "id": "dsa-merge-intervals",
    "kind": "dsa",
-   "title": "Kth Largest Element in an Array",
-   "week": 11,
+   "title": "Merge Intervals",
+   "week": 12,
    "difficulty": "Medium",
-   "topic": "Куча",
+   "topic": "Интервалы и жадные",
    "links": [
     {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/merge-intervals",
+     "confidence": "checked"
+    },
+    {
      "label": "LeetCode",
-     "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+     "url": "https://leetcode.com/problems/merge-intervals/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Kth+Largest+Element+in+an+Array",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=44H3cEC2fFM",
+     "confidence": "checked"
     }
-   ]
+   ],
+   "hint": "На время, вслух, в документе без автодополнения. Редактор NeetCode только для проверки"
+  },
+  {
+   "id": "dsa-insert-interval",
+   "kind": "dsa",
+   "title": "Insert Interval",
+   "week": 12,
+   "difficulty": "Medium",
+   "topic": "Интервалы и жадные",
+   "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/insert-new-interval",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/insert-interval/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=A8NUOmlwOlM",
+     "confidence": "checked"
+    }
+   ],
+   "hint": "На время, вслух, в документе без автодополнения. Редактор NeetCode только для проверки"
+  },
+  {
+   "id": "dsa-non-overlapping-intervals",
+   "kind": "dsa",
+   "title": "Non-overlapping Intervals",
+   "week": 12,
+   "difficulty": "Medium",
+   "topic": "Интервалы и жадные",
+   "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/non-overlapping-intervals",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/non-overlapping-intervals/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=nONCGxWoUfM",
+     "confidence": "checked"
+    }
+   ],
+   "hint": "На время, вслух, в документе без автодополнения. Редактор NeetCode только для проверки"
+  },
+  {
+   "id": "dsa-course-schedule-ii",
+   "kind": "dsa",
+   "title": "Course Schedule II",
+   "week": 13,
+   "difficulty": "Medium",
+   "topic": "Продвинутые графы",
+   "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/course-schedule-ii",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/course-schedule-ii/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=Akt3glAwyfY",
+     "confidence": "checked"
+    }
+   ],
+   "hint": "На время, вслух, в документе без автодополнения. Редактор NeetCode только для проверки"
+  },
+  {
+   "id": "dsa-redundant-connection",
+   "kind": "dsa",
+   "title": "Redundant Connection",
+   "week": 13,
+   "difficulty": "Medium",
+   "topic": "Продвинутые графы",
+   "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/redundant-connection",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/redundant-connection/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=1lNK80tOTfc",
+     "confidence": "checked"
+    }
+   ],
+   "hint": "На время, вслух, в документе без автодополнения. Редактор NeetCode только для проверки"
+  },
+  {
+   "id": "dsa-network-delay-time",
+   "kind": "dsa",
+   "title": "Network Delay Time",
+   "week": 13,
+   "difficulty": "Medium",
+   "topic": "Продвинутые графы",
+   "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/network-delay-time",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/network-delay-time/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=EaphyqKU4PQ",
+     "confidence": "checked"
+    }
+   ],
+   "hint": "На время, вслух, в документе без автодополнения. Редактор NeetCode только для проверки"
+  },
+  {
+   "id": "dsa-word-ladder",
+   "kind": "dsa",
+   "title": "Word Ladder",
+   "week": 13,
+   "difficulty": "Hard",
+   "topic": "Продвинутые графы",
+   "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/word-ladder",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/word-ladder/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=h9iTnkgv05E",
+     "confidence": "checked"
+    }
+   ],
+   "hint": "На время, вслух, в документе без автодополнения. Редактор NeetCode только для проверки"
+  },
+  {
+   "id": "dsa-unique-paths",
+   "kind": "dsa",
+   "title": "Unique Paths",
+   "week": 14,
+   "difficulty": "Medium",
+   "topic": "Двумерное DP и куча",
+   "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/count-paths",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/unique-paths/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=IlEsdxuD4lY",
+     "confidence": "checked"
+    }
+   ],
+   "hint": "На время, вслух, в документе без автодополнения. Редактор NeetCode только для проверки"
   },
   {
    "id": "dsa-longest-common-subsequence",
    "kind": "dsa",
    "title": "Longest Common Subsequence",
-   "week": 11,
+   "week": 14,
    "difficulty": "Medium",
-   "topic": "DP двумерное",
+   "topic": "Двумерное DP и куча",
    "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/longest-common-subsequence",
+     "confidence": "checked"
+    },
     {
      "label": "LeetCode",
      "url": "https://leetcode.com/problems/longest-common-subsequence/",
      "confidence": "pattern"
     },
     {
-     "label": "Видеоразбор (поиск)",
-     "url": "https://www.youtube.com/results?search_query=neetcode+Longest+Common+Subsequence",
-     "confidence": "pattern"
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=Ua0GhsJSlWM",
+     "confidence": "checked"
     }
-   ]
+   ],
+   "hint": "На время, вслух, в документе без автодополнения. Редактор NeetCode только для проверки"
+  },
+  {
+   "id": "dsa-merge-k-sorted-lists",
+   "kind": "dsa",
+   "title": "Merge k Sorted Lists",
+   "week": 14,
+   "difficulty": "Hard",
+   "topic": "Двумерное DP и куча",
+   "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/merge-k-sorted-linked-lists",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/merge-k-sorted-lists/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=q5a5OiGbT6Q",
+     "confidence": "checked"
+    }
+   ],
+   "hint": "На время, вслух, в документе без автодополнения. Редактор NeetCode только для проверки"
+  },
+  {
+   "id": "dsa-find-median-from-data-stream",
+   "kind": "dsa",
+   "title": "Find Median from Data Stream",
+   "week": 14,
+   "difficulty": "Hard",
+   "topic": "Двумерное DP и куча",
+   "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/find-median-in-a-data-stream",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/find-median-from-data-stream/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=itmhHWaHupI",
+     "confidence": "checked"
+    }
+   ],
+   "hint": "На время, вслух, в документе без автодополнения. Редактор NeetCode только для проверки"
+  },
+  {
+   "id": "dsa-permutations",
+   "kind": "dsa",
+   "title": "Permutations",
+   "week": 15,
+   "difficulty": "Medium",
+   "topic": "Бэктрекинг, рюкзак, Hard",
+   "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/permutations",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/permutations/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=FZe0UqISmUw",
+     "confidence": "checked"
+    }
+   ],
+   "hint": "На время, вслух, в документе без автодополнения. Редактор NeetCode только для проверки"
+  },
+  {
+   "id": "dsa-partition-equal-subset-sum",
+   "kind": "dsa",
+   "title": "Partition Equal Subset Sum",
+   "week": 15,
+   "difficulty": "Medium",
+   "topic": "Бэктрекинг, рюкзак, Hard",
+   "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/partition-equal-subset-sum",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/partition-equal-subset-sum/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=IsvocB5BJhw",
+     "confidence": "checked"
+    }
+   ],
+   "hint": "На время, вслух, в документе без автодополнения. Редактор NeetCode только для проверки"
+  },
+  {
+   "id": "dsa-trapping-rain-water",
+   "kind": "dsa",
+   "title": "Trapping Rain Water",
+   "week": 15,
+   "difficulty": "Hard",
+   "topic": "Бэктрекинг, рюкзак, Hard",
+   "links": [
+    {
+     "label": "NeetCode",
+     "url": "https://neetcode.io/problems/trapping-rain-water",
+     "confidence": "checked"
+    },
+    {
+     "label": "LeetCode",
+     "url": "https://leetcode.com/problems/trapping-rain-water/",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Видеоразбор NeetCode",
+     "url": "https://www.youtube.com/watch?v=ZI2z5pq0TqA",
+     "confidence": "checked"
+    }
+   ],
+   "hint": "На время, вслух, в документе без автодополнения. Редактор NeetCode только для проверки"
+  },
+  {
+   "id": "dsa-own-15",
+   "kind": "dsa",
+   "title": null,
+   "week": 15,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "NeetCode: задачи",
+     "url": "https://neetcode.io/practice",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Вопросы Google (Hello Interview)",
+     "url": "https://www.hellointerview.com/community/questions/company/Google",
+     "confidence": "checked"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Задача с тегом Google на NeetCode, которую ещё не решал. Пример: Largest Rectangle in Histogram. На время, вслух, в документе без автодополнения"
   },
   {
    "id": "js-debounce",
@@ -6161,6 +7488,74 @@
    ]
   },
   {
+   "id": "js-own-01",
+   "kind": "js",
+   "title": null,
+   "week": 12,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "GreatFrontEnd: все вопросы",
+     "url": "https://www.greatfrontend.com/questions",
+     "confidence": "checked"
+    }
+   ],
+   "userNamed": true,
+   "hint": "LRU Cache на Map: get и put за O(1). Или другая утилита из вопросов Google и Netflix"
+  },
+  {
+   "id": "js-own-02",
+   "kind": "js",
+   "title": null,
+   "week": 13,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "GreatFrontEnd: все вопросы",
+     "url": "https://www.greatfrontend.com/questions",
+     "confidence": "checked"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Своя реализация Promise: then с цепочкой, catch, resolve с thenable. Или другая утилита из вопросов Google и Netflix"
+  },
+  {
+   "id": "js-own-03",
+   "kind": "js",
+   "title": null,
+   "week": 14,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "GreatFrontEnd: все вопросы",
+     "url": "https://www.greatfrontend.com/questions",
+     "confidence": "checked"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Retry с экспоненциальной задержкой и Promise.race с таймаутом. Или другая утилита из вопросов Google и Netflix"
+  },
+  {
+   "id": "js-own-04",
+   "kind": "js",
+   "title": null,
+   "week": 15,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "GreatFrontEnd: все вопросы",
+     "url": "https://www.greatfrontend.com/questions",
+     "confidence": "checked"
+    }
+   ],
+   "userNamed": true,
+   "hint": "get по пути (как lodash.get) и рендер JSON-дерева в DOM. Или другая утилита из вопросов Google и Netflix"
+  },
+  {
    "id": "ui-todo-list",
    "kind": "ui",
    "title": "Todo List",
@@ -6296,6 +7691,23 @@
    ]
   },
   {
+   "id": "ui-own-01",
+   "kind": "ui",
+   "title": null,
+   "week": 12,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "GreatFrontEnd: все вопросы",
+     "url": "https://www.greatfrontend.com/questions",
+     "confidence": "checked"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Autocomplete: debounce, отмена устаревших запросов, клавиатура, роль combobox. Или другой компонент из вопросов Google и Netflix"
+  },
+  {
    "id": "ui-like-button",
    "kind": "ui",
    "title": "Like Button",
@@ -6309,6 +7721,23 @@
      "confidence": "pattern"
     }
    ]
+  },
+  {
+   "id": "ui-own-02",
+   "kind": "ui",
+   "title": null,
+   "week": 13,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "GreatFrontEnd: все вопросы",
+     "url": "https://www.greatfrontend.com/questions",
+     "confidence": "checked"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Бесконечная лента на IntersectionObserver, если успеешь, с виртуализацией. Или другой компонент из вопросов Google и Netflix"
   },
   {
    "id": "ui-nested-checkboxes",
@@ -6326,6 +7755,23 @@
    ]
   },
   {
+   "id": "ui-own-03",
+   "kind": "ui",
+   "title": null,
+   "week": 14,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "GreatFrontEnd: все вопросы",
+     "url": "https://www.greatfrontend.com/questions",
+     "confidence": "checked"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Progress Bars с ограничением параллельности. Или другой компонент из вопросов Google и Netflix"
+  },
+  {
    "id": "ui-transfer-list",
    "kind": "ui",
    "title": "Transfer List",
@@ -6339,6 +7785,23 @@
      "confidence": "pattern"
     }
    ]
+  },
+  {
+   "id": "ui-own-04",
+   "kind": "ui",
+   "title": null,
+   "week": 15,
+   "difficulty": null,
+   "topic": "Выбираешь сам",
+   "links": [
+    {
+     "label": "GreatFrontEnd: все вопросы",
+     "url": "https://www.greatfrontend.com/questions",
+     "confidence": "checked"
+    }
+   ],
+   "userNamed": true,
+   "hint": "Список с drag-and-drop или Stopwatch. Или другой компонент из вопросов Google и Netflix"
   },
   {
    "id": "ui-tic-tac-toe",
@@ -6356,30 +7819,10 @@
    ]
   },
   {
-   "id": "fesd-news-feed-facebook",
-   "kind": "fe-sd",
-   "title": "News Feed (Facebook)",
-   "week": 3,
-   "difficulty": "Medium",
-   "topic": "Фронтенд system design",
-   "links": [
-    {
-     "label": "GreatFrontEnd",
-     "url": "https://www.greatfrontend.com/interviews/study/gfe75/questions/system-design/news-feed-facebook",
-     "confidence": "checked"
-    },
-    {
-     "label": "Excalidraw",
-     "url": "https://excalidraw.com",
-     "confidence": "pattern"
-    }
-   ]
-  },
-  {
    "id": "fesd-autocomplete",
    "kind": "fe-sd",
    "title": "Autocomplete",
-   "week": 4,
+   "week": 3,
    "difficulty": "Medium",
    "topic": "Фронтенд system design",
    "links": [
@@ -6399,7 +7842,7 @@
    "id": "fesd-image-carousel",
    "kind": "fe-sd",
    "title": "Image Carousel",
-   "week": 5,
+   "week": 4,
    "difficulty": "Medium",
    "topic": "Фронтенд system design",
    "links": [
@@ -6416,10 +7859,50 @@
    ]
   },
   {
+   "id": "fesd-poll-widget",
+   "kind": "fe-sd",
+   "title": "Poll Widget",
+   "difficulty": "Medium",
+   "topic": "Фронтенд system design",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/system-design/poll-widget",
+     "confidence": "checked"
+    },
+    {
+     "label": "Excalidraw",
+     "url": "https://excalidraw.com",
+     "confidence": "pattern"
+    }
+   ],
+   "week": 5
+  },
+  {
+   "id": "fesd-news-feed-facebook",
+   "kind": "fe-sd",
+   "title": "News Feed (Facebook)",
+   "week": 7,
+   "difficulty": "Medium",
+   "topic": "Фронтенд system design",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/interviews/study/gfe75/questions/system-design/news-feed-facebook",
+     "confidence": "checked"
+    },
+    {
+     "label": "Excalidraw",
+     "url": "https://excalidraw.com",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
    "id": "fesd-chat-application-messenger",
    "kind": "fe-sd",
    "title": "Chat App (Messenger)",
-   "week": 7,
+   "week": 8,
    "difficulty": "Medium",
    "topic": "Фронтенд system design",
    "links": [
@@ -6439,53 +7922,13 @@
    "id": "fesd-e-commerce-amazon",
    "kind": "fe-sd",
    "title": "E-commerce (Amazon)",
-   "week": 8,
-   "difficulty": "Medium",
-   "topic": "Фронтенд system design",
-   "links": [
-    {
-     "label": "GreatFrontEnd",
-     "url": "https://www.greatfrontend.com/questions/system-design/e-commerce-amazon",
-     "confidence": "pattern"
-    },
-    {
-     "label": "Excalidraw",
-     "url": "https://excalidraw.com",
-     "confidence": "pattern"
-    }
-   ]
-  },
-  {
-   "id": "besd-bitly",
-   "kind": "be-sd",
-   "title": "Bitly (URL shortener)",
-   "week": 9,
-   "difficulty": "Easy",
-   "topic": "Бэкенд system design",
-   "links": [
-    {
-     "label": "Hello Interview",
-     "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/bitly",
-     "confidence": "checked"
-    },
-    {
-     "label": "Excalidraw",
-     "url": "https://excalidraw.com",
-     "confidence": "pattern"
-    }
-   ]
-  },
-  {
-   "id": "fesd-collaborative-editor-google-docs",
-   "kind": "fe-sd",
-   "title": "Collaborative Editor (Google Docs)",
    "week": 10,
    "difficulty": "Medium",
    "topic": "Фронтенд system design",
    "links": [
     {
      "label": "GreatFrontEnd",
-     "url": "https://www.greatfrontend.com/questions/system-design/collaborative-editor-google-docs",
+     "url": "https://www.greatfrontend.com/questions/system-design/e-commerce-amazon",
      "confidence": "pattern"
     },
     {
@@ -6516,6 +7959,46 @@
    ]
   },
   {
+   "id": "fesd-collaborative-editor-google-docs",
+   "kind": "fe-sd",
+   "title": "Collaborative Editor (Google Docs)",
+   "week": 14,
+   "difficulty": "Medium",
+   "topic": "Фронтенд system design",
+   "links": [
+    {
+     "label": "GreatFrontEnd",
+     "url": "https://www.greatfrontend.com/questions/system-design/collaborative-editor-google-docs",
+     "confidence": "pattern"
+    },
+    {
+     "label": "Excalidraw",
+     "url": "https://excalidraw.com",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "besd-bitly",
+   "kind": "be-sd",
+   "title": "Bitly (URL shortener)",
+   "week": 9,
+   "difficulty": "Easy",
+   "topic": "Бэкенд system design",
+   "links": [
+    {
+     "label": "Hello Interview",
+     "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/bitly",
+     "confidence": "checked"
+    },
+    {
+     "label": "Excalidraw",
+     "url": "https://excalidraw.com",
+     "confidence": "pattern"
+    }
+   ]
+  },
+  {
    "id": "besd-fb-news-feed",
    "kind": "be-sd",
    "title": "FB News Feed, взгляд с бэкенда",
@@ -6527,26 +8010,6 @@
      "label": "Hello Interview",
      "url": "https://www.hellointerview.com/learn/system-design/problem-breakdowns/fb-news-feed",
      "confidence": "checked"
-    },
-    {
-     "label": "Excalidraw",
-     "url": "https://excalidraw.com",
-     "confidence": "pattern"
-    }
-   ]
-  },
-  {
-   "id": "fesd-photo-sharing-instagram",
-   "kind": "fe-sd",
-   "title": "Photo Sharing (Instagram)",
-   "week": 14,
-   "difficulty": "Medium",
-   "topic": "Фронтенд system design",
-   "links": [
-    {
-     "label": "GreatFrontEnd",
-     "url": "https://www.greatfrontend.com/questions/system-design/photo-sharing-instagram",
-     "confidence": "pattern"
     },
     {
      "label": "Excalidraw",
@@ -6574,494 +8037,6 @@
      "confidence": "pattern"
     }
    ]
-  },
-  {
-   "id": "dsa-own-01",
-   "kind": "dsa",
-   "title": null,
-   "week": 12,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "Вопросы Google (Hello Interview)",
-     "url": "https://www.hellointerview.com/community/questions/company/Google",
-     "confidence": "checked"
-    },
-    {
-     "label": "LeetCode",
-     "url": "https://leetcode.com/problemset/",
-     "confidence": "pattern"
-    }
-   ],
-   "userNamed": true,
-   "hint": "Тема: префиксные суммы. Пример: Subarray Sum Equals K. На время, вслух, в документе без автодополнения"
-  },
-  {
-   "id": "dsa-own-02",
-   "kind": "dsa",
-   "title": null,
-   "week": 12,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "Вопросы Google (Hello Interview)",
-     "url": "https://www.hellointerview.com/community/questions/company/Google",
-     "confidence": "checked"
-    },
-    {
-     "label": "LeetCode",
-     "url": "https://leetcode.com/problemset/",
-     "confidence": "pattern"
-    }
-   ],
-   "userNamed": true,
-   "hint": "Тема: куча, Hard. Пример: Find Median from Data Stream. На время, вслух, в документе без автодополнения"
-  },
-  {
-   "id": "dsa-own-03",
-   "kind": "dsa",
-   "title": null,
-   "week": 12,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "Вопросы Google (Hello Interview)",
-     "url": "https://www.hellointerview.com/community/questions/company/Google",
-     "confidence": "checked"
-    },
-    {
-     "label": "LeetCode",
-     "url": "https://leetcode.com/problemset/",
-     "confidence": "pattern"
-    }
-   ],
-   "userNamed": true,
-   "hint": "Тема: матрицы. Пример: Rotate Image или Spiral Matrix. На время, вслух, в документе без автодополнения"
-  },
-  {
-   "id": "dsa-own-04",
-   "kind": "dsa",
-   "title": null,
-   "week": 12,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "Вопросы Google (Hello Interview)",
-     "url": "https://www.hellointerview.com/community/questions/company/Google",
-     "confidence": "checked"
-    },
-    {
-     "label": "LeetCode",
-     "url": "https://leetcode.com/problemset/",
-     "confidence": "pattern"
-    }
-   ],
-   "userNamed": true,
-   "hint": "Тема: монотонный стек, Hard. Пример: Largest Rectangle in Histogram. На время, вслух, в документе без автодополнения"
-  },
-  {
-   "id": "js-own-01",
-   "kind": "js",
-   "title": null,
-   "week": 12,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "GreatFrontEnd: все вопросы",
-     "url": "https://www.greatfrontend.com/questions",
-     "confidence": "checked"
-    }
-   ],
-   "userNamed": true,
-   "hint": "LRU Cache на Map: get и put за O(1). Или другая утилита из вопросов Google и Netflix"
-  },
-  {
-   "id": "ui-own-01",
-   "kind": "ui",
-   "title": null,
-   "week": 12,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "GreatFrontEnd: все вопросы",
-     "url": "https://www.greatfrontend.com/questions",
-     "confidence": "checked"
-    }
-   ],
-   "userNamed": true,
-   "hint": "Autocomplete: debounce, отмена устаревших запросов, клавиатура, роль combobox. Или другой компонент из вопросов Google и Netflix"
-  },
-  {
-   "id": "dsa-own-05",
-   "kind": "dsa",
-   "title": null,
-   "week": 13,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "Вопросы Google (Hello Interview)",
-     "url": "https://www.hellointerview.com/community/questions/company/Google",
-     "confidence": "checked"
-    },
-    {
-     "label": "LeetCode",
-     "url": "https://leetcode.com/problemset/",
-     "confidence": "pattern"
-    }
-   ],
-   "userNamed": true,
-   "hint": "Тема: топологическая сортировка. Пример: Course Schedule II. На время, вслух, в документе без автодополнения"
-  },
-  {
-   "id": "dsa-own-06",
-   "kind": "dsa",
-   "title": null,
-   "week": 13,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "Вопросы Google (Hello Interview)",
-     "url": "https://www.hellointerview.com/community/questions/company/Google",
-     "confidence": "checked"
-    },
-    {
-     "label": "LeetCode",
-     "url": "https://leetcode.com/problemset/",
-     "confidence": "pattern"
-    }
-   ],
-   "userNamed": true,
-   "hint": "Тема: union-find. Пример: Redundant Connection или Number of Connected Components. На время, вслух, в документе без автодополнения"
-  },
-  {
-   "id": "dsa-own-07",
-   "kind": "dsa",
-   "title": null,
-   "week": 13,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "Вопросы Google (Hello Interview)",
-     "url": "https://www.hellointerview.com/community/questions/company/Google",
-     "confidence": "checked"
-    },
-    {
-     "label": "LeetCode",
-     "url": "https://leetcode.com/problemset/",
-     "confidence": "pattern"
-    }
-   ],
-   "userNamed": true,
-   "hint": "Тема: BFS по сетке. Пример: Rotting Oranges. На время, вслух, в документе без автодополнения"
-  },
-  {
-   "id": "dsa-own-08",
-   "kind": "dsa",
-   "title": null,
-   "week": 13,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "Вопросы Google (Hello Interview)",
-     "url": "https://www.hellointerview.com/community/questions/company/Google",
-     "confidence": "checked"
-    },
-    {
-     "label": "LeetCode",
-     "url": "https://leetcode.com/problemset/",
-     "confidence": "pattern"
-    }
-   ],
-   "userNamed": true,
-   "hint": "Тема: двумерное DP. Пример: Edit Distance. На время, вслух, в документе без автодополнения"
-  },
-  {
-   "id": "js-own-02",
-   "kind": "js",
-   "title": null,
-   "week": 13,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "GreatFrontEnd: все вопросы",
-     "url": "https://www.greatfrontend.com/questions",
-     "confidence": "checked"
-    }
-   ],
-   "userNamed": true,
-   "hint": "Своя реализация Promise: then с цепочкой, catch, resolve с thenable. Или другая утилита из вопросов Google и Netflix"
-  },
-  {
-   "id": "ui-own-02",
-   "kind": "ui",
-   "title": null,
-   "week": 13,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "GreatFrontEnd: все вопросы",
-     "url": "https://www.greatfrontend.com/questions",
-     "confidence": "checked"
-    }
-   ],
-   "userNamed": true,
-   "hint": "Бесконечная лента на IntersectionObserver, если успеешь, с виртуализацией. Или другой компонент из вопросов Google и Netflix"
-  },
-  {
-   "id": "dsa-own-09",
-   "kind": "dsa",
-   "title": null,
-   "week": 14,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "Вопросы Google (Hello Interview)",
-     "url": "https://www.hellointerview.com/community/questions/company/Google",
-     "confidence": "checked"
-    },
-    {
-     "label": "LeetCode",
-     "url": "https://leetcode.com/problemset/",
-     "confidence": "pattern"
-    }
-   ],
-   "userNamed": true,
-   "hint": "Тема: куча. Пример: K Closest Points to Origin или Task Scheduler. На время, вслух, в документе без автодополнения"
-  },
-  {
-   "id": "dsa-own-10",
-   "kind": "dsa",
-   "title": null,
-   "week": 14,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "Вопросы Google (Hello Interview)",
-     "url": "https://www.hellointerview.com/community/questions/company/Google",
-     "confidence": "checked"
-    },
-    {
-     "label": "LeetCode",
-     "url": "https://leetcode.com/problemset/",
-     "confidence": "pattern"
-    }
-   ],
-   "userNamed": true,
-   "hint": "Тема: Дейкстра. Пример: Network Delay Time. На время, вслух, в документе без автодополнения"
-  },
-  {
-   "id": "dsa-own-11",
-   "kind": "dsa",
-   "title": null,
-   "week": 14,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "Вопросы Google (Hello Interview)",
-     "url": "https://www.hellointerview.com/community/questions/company/Google",
-     "confidence": "checked"
-    },
-    {
-     "label": "LeetCode",
-     "url": "https://leetcode.com/problemset/",
-     "confidence": "pattern"
-    }
-   ],
-   "userNamed": true,
-   "hint": "Тема: интервалы и куча. Пример: Meeting Rooms II (бесплатно на NeetCode) или Car Pooling. На время, вслух, в документе без автодополнения"
-  },
-  {
-   "id": "dsa-own-12",
-   "kind": "dsa",
-   "title": null,
-   "week": 14,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "Вопросы Google (Hello Interview)",
-     "url": "https://www.hellointerview.com/community/questions/company/Google",
-     "confidence": "checked"
-    },
-    {
-     "label": "LeetCode",
-     "url": "https://leetcode.com/problemset/",
-     "confidence": "pattern"
-    }
-   ],
-   "userNamed": true,
-   "hint": "Тема: графы, Hard. Пример: Word Ladder. На время, вслух, в документе без автодополнения"
-  },
-  {
-   "id": "js-own-03",
-   "kind": "js",
-   "title": null,
-   "week": 14,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "GreatFrontEnd: все вопросы",
-     "url": "https://www.greatfrontend.com/questions",
-     "confidence": "checked"
-    }
-   ],
-   "userNamed": true,
-   "hint": "Retry с экспоненциальной задержкой и Promise.race с таймаутом. Или другая утилита из вопросов Google и Netflix"
-  },
-  {
-   "id": "ui-own-03",
-   "kind": "ui",
-   "title": null,
-   "week": 14,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "GreatFrontEnd: все вопросы",
-     "url": "https://www.greatfrontend.com/questions",
-     "confidence": "checked"
-    }
-   ],
-   "userNamed": true,
-   "hint": "Progress Bars с ограничением параллельности. Или другой компонент из вопросов Google и Netflix"
-  },
-  {
-   "id": "dsa-own-13",
-   "kind": "dsa",
-   "title": null,
-   "week": 15,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "Вопросы Google (Hello Interview)",
-     "url": "https://www.hellointerview.com/community/questions/company/Google",
-     "confidence": "checked"
-    },
-    {
-     "label": "LeetCode",
-     "url": "https://leetcode.com/problemset/",
-     "confidence": "pattern"
-    }
-   ],
-   "userNamed": true,
-   "hint": "Тема: бэктрекинг. Пример: Subsets или Permutations. На время, вслух, в документе без автодополнения"
-  },
-  {
-   "id": "dsa-own-14",
-   "kind": "dsa",
-   "title": null,
-   "week": 15,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "Вопросы Google (Hello Interview)",
-     "url": "https://www.hellointerview.com/community/questions/company/Google",
-     "confidence": "checked"
-    },
-    {
-     "label": "LeetCode",
-     "url": "https://leetcode.com/problemset/",
-     "confidence": "pattern"
-    }
-   ],
-   "userNamed": true,
-   "hint": "Тема: DP. Пример: Decode Ways или Partition Equal Subset Sum. На время, вслух, в документе без автодополнения"
-  },
-  {
-   "id": "dsa-own-15",
-   "kind": "dsa",
-   "title": null,
-   "week": 15,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "Вопросы Google (Hello Interview)",
-     "url": "https://www.hellointerview.com/community/questions/company/Google",
-     "confidence": "checked"
-    },
-    {
-     "label": "LeetCode",
-     "url": "https://leetcode.com/problemset/",
-     "confidence": "pattern"
-    }
-   ],
-   "userNamed": true,
-   "hint": "Тема: свободный выбор. Пример: любая задача из вопросов Google. На время, вслух, в документе без автодополнения"
-  },
-  {
-   "id": "dsa-own-16",
-   "kind": "dsa",
-   "title": null,
-   "week": 15,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "Вопросы Google (Hello Interview)",
-     "url": "https://www.hellointerview.com/community/questions/company/Google",
-     "confidence": "checked"
-    },
-    {
-     "label": "LeetCode",
-     "url": "https://leetcode.com/problemset/",
-     "confidence": "pattern"
-    }
-   ],
-   "userNamed": true,
-   "hint": "Тема: два указателя, Hard. Пример: Trapping Rain Water. На время, вслух, в документе без автодополнения"
-  },
-  {
-   "id": "js-own-04",
-   "kind": "js",
-   "title": null,
-   "week": 15,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "GreatFrontEnd: все вопросы",
-     "url": "https://www.greatfrontend.com/questions",
-     "confidence": "checked"
-    }
-   ],
-   "userNamed": true,
-   "hint": "get по пути (как lodash.get) и рендер JSON-дерева в DOM. Или другая утилита из вопросов Google и Netflix"
-  },
-  {
-   "id": "ui-own-04",
-   "kind": "ui",
-   "title": null,
-   "week": 15,
-   "difficulty": null,
-   "topic": "Выбираешь сам",
-   "links": [
-    {
-     "label": "GreatFrontEnd: все вопросы",
-     "url": "https://www.greatfrontend.com/questions",
-     "confidence": "checked"
-    }
-   ],
-   "userNamed": true,
-   "hint": "Список с drag-and-drop или Stopwatch. Или другой компонент из вопросов Google и Netflix"
   }
  ],
  "maintenanceWeek": {
@@ -7302,8 +8277,8 @@
   {
    "track": "Алгоритмы",
    "name": "NeetCode",
-   "role": "Список задач, курсы как теория по теме, видеоразборы",
-   "url": "https://neetcode.io/roadmap",
+   "role": "Задачи в редакторе на JavaScript, видеоразборы, задачи с метками компаний (Pro)",
+   "url": "https://neetcode.io/practice",
    "primary": true
   },
   {
@@ -7311,6 +8286,20 @@
    "name": "LeetCode",
    "role": "Решение задач, на JavaScript или TypeScript",
    "url": "https://leetcode.com/problemset/",
+   "primary": true
+  },
+  {
+   "track": "Алгоритмы",
+   "name": "NeetCode: DSA for Beginners",
+   "role": "Теория по структурам данных, уроки в понедельник",
+   "url": "https://neetcode.io/courses/dsa-for-beginners/0",
+   "primary": true
+  },
+  {
+   "track": "Алгоритмы",
+   "name": "NeetCode: Advanced Algorithms",
+   "role": "Теория по шаблонам решений, уроки в четверг",
+   "url": "https://neetcode.io/courses/advanced-algorithms/0",
    "primary": true
   },
   {
@@ -7332,6 +8321,20 @@
    "name": "Hello Interview",
    "role": "Бэкенд-дизайн в сокращённом объёме",
    "url": "https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction",
+   "primary": false
+  },
+  {
+   "track": "System design",
+   "name": "NeetCode: System Design for Beginners",
+   "role": "Сеть, API, кеш и CDN для веб-основ; хранилища и очереди для бэкенд-дизайна",
+   "url": "https://neetcode.io/courses/system-design-for-beginners/0",
+   "primary": true
+  },
+  {
+   "track": "System design",
+   "name": "NeetCode: System Design Interview",
+   "role": "Второй разбор после своей попытки; Google Maps, Rate Limiter и другие для режима поддержания",
+   "url": "https://neetcode.io/courses/system-design-interview/0",
    "primary": false
   },
   {

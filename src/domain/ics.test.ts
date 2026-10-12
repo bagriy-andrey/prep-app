@@ -26,7 +26,7 @@ describe("buildIcs", () => {
     const first = events[0].replaceAll("\r\n ", "");
     expect(first).toContain("DTSTART;VALUE=DATE:20261012");
     expect(first).toContain("DTEND;VALUE=DATE:20261013");
-    expect(first).toContain("SUMMARY:Подготовка к интервью: 1 ч 15 мин"); // 20 + 25 + 30
+    expect(first).toContain("SUMMARY:Подготовка к интервью: 1 ч 25 мин"); // 30 + 25 + 30
     expect(first).toContain("Contains Duplicate");
     expect(first).toContain("UID:prep-w01-d1@prep-app");
     expect(first).toContain("DTSTAMP:20261007T123000Z");
@@ -34,7 +34,7 @@ describe("buildIcs", () => {
 
   it("необязательные сессии в сумму не входят, но в списке отмечены", () => {
     const saturday = events.find((e) => e.includes("DTSTART;VALUE=DATE:20261017"))!.replaceAll("\r\n ", "");
-    expect(saturday).toContain("SUMMARY:Подготовка к интервью: 3 ч 15 мин"); // 90 + 60 + 45
+    expect(saturday).toContain("SUMMARY:Подготовка к интервью: 3 ч"); // 45 + 60 + 45 + 30
     expect(saturday).toContain("(необязательно)");
   });
 

@@ -204,8 +204,8 @@ describe("суммы", () => {
 
 describe("плановое время", () => {
   it("день: сумма обязательных сессий, необязательные не входят", () => {
-    expect(plannedMinutesForDay(plan.weeks[0].days[0])).toBe(75); // 20 + 25 + 30
-    expect(plannedMinutesForDay(plan.weeks[0].days[5])).toBe(195); // 90 + 60 + 45, запас 15 не входит
+    expect(plannedMinutesForDay(plan.weeks[0].days[0])).toBe(85); // 30 + 25 + 30
+    expect(plannedMinutesForDay(plan.weeks[0].days[5])).toBe(180); // 45 + 60 + 45 + 30, запас 15 не входит
     expect(plannedMinutesForDay(plan.weeks[0].days[4])).toBe(0); // выходной
   });
 });

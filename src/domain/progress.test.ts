@@ -14,9 +14,9 @@ describe("какие сессии учитываются", () => {
     expect(countsTowardProgress(find((s) => s.block === "dsa" && !s.optional))).toBe(true);
   });
 
-  it("в неделе 1: 17 обязательных сессий, 8 из них с задачей", () => {
-    expect(weekProgress(week1, emptyState())).toEqual({ done: 0, total: 17, remaining: 17, closed: false });
-    expect(weekSessions(week1).filter((s) => countsTowardProgress(s) && s.itemId)).toHaveLength(8);
+  it("в неделе 1: 18 обязательных сессий, 10 из них с задачей", () => {
+    expect(weekProgress(week1, emptyState())).toEqual({ done: 0, total: 18, remaining: 18, closed: false });
+    expect(weekSessions(week1).filter((s) => countsTowardProgress(s) && s.itemId)).toHaveLength(10);
   });
 });
 
@@ -65,7 +65,7 @@ describe("закрытие недели (6.3)", () => {
 
   it("неделя закрывается, когда сделаны все обязательные сессии", () => {
     const state = completeWeek(emptyState(), 1);
-    expect(weekProgress(week1, state)).toEqual({ done: 17, total: 17, remaining: 0, closed: true });
+    expect(weekProgress(week1, state)).toEqual({ done: 18, total: 18, remaining: 0, closed: true });
   });
 
   it("light закрывает неделю так же, как done", () => {

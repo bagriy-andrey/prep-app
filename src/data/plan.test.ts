@@ -45,6 +45,17 @@ describe("целостность plan.json", () => {
     }
   });
 
+  it("задачи по алгоритмам в неделе на одну тему, в буферных неделях новых нет", () => {
+    for (const week of plan.weeks) {
+      const dsa = week.days
+        .flatMap((d) => d.sessions)
+        .map((s) => (s.itemId ? itemsById.get(s.itemId) : undefined))
+        .filter((item) => item?.kind === "dsa" && !item.userNamed);
+      if (week.phase === "buffer") expect(dsa, `неделя ${week.n}`).toHaveLength(0);
+      expect(new Set(dsa.map((item) => item!.topic)).size, `неделя ${week.n}`).toBeLessThanOrEqual(1);
+    }
+  });
+
   it("крупные призы стоят в неделях bigPrizeWeeks", () => {
     for (const week of plan.weeks) {
       const isBigWeek = plan.rules.bigPrizeWeeks.includes(week.n);
